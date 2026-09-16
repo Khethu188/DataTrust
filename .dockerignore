@@ -1,0 +1,35 @@
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# Docker
+docker-compose.yml
+Dockerfile
+
+# Terraform
+terraform/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+
+# Cache
+__pycache__/
+*.pyc
+
+# CI/CD
+.github/
+

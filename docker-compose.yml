@@ -1,0 +1,108 @@
+
+# ═══════════════════════════════════════════════════════════════
+# DataTrust — Docker Compose (Local Stack)
+# ═══════════════════════════════════════════════════════════════
+# Run everything locally for FREE — no AWS charges!
+#
+# Usage:
+#   docker-compose up -d                    # Start all services
+#   docker-compose exec datatrust python datatrust.py run    # Full pipeline
+#   docker-compose exec datatrust python datatrust.py status # Check health
+#   docker-compose down                     # Stop everything
+# ═══════════════════════════════════════════════════════════════
+
+services:
+  # ── PostgreSQL Database ──────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    container_name: datatrust-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: datatrust
+      POSTGRES_USER: datatrust_admin
+      POSTGRES_PASSWORD: datatrust_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./docker/init-db.sql:/docker-entrypoint-initdb.d/01-init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U datatrust_admin -d datatrust"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - datatrust-network
+
+  # ── DataTrust Application ────────────────────────────────
+  datatrust:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: datatrust-app
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: datatrust
+      DB_USER: datatrust_admin
+      DB_PASSWORD: datatrust_pass
+      PYTHONPATH: /app/src/validation:/app/src/data_generation:/app/src/utils:/app/src
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./src:/app/src
+    ports:
+      - "8080:8080"
+    networks:
+      - datatrust-network
+    # Keep container running for exec commands
+    command: tail -f /dev/null
+
+  # ── Dashboard Web Server ─────────────────────────────────
+  dashboard:
+    image: nginx:alpine
+    container_name: datatrust-dashboard
+    restart: unless-stopped
+    depends_on:
+      - datatrust
+    ports:
+      - "3000:80"
+    volumes:
+      - ./data/dashboard:/usr/share/nginx/html:ro
+      - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - datatrust-network
+
+  # ── pgAdmin (Database GUI) ──────────────────────────────
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: datatrust-pgadmin
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@datatrust.local
+      PGADMIN_DEFAULT_PASSWORD: admin123
+      PGADMIN_LISTEN_PORT: 5050
+    ports:
+      - "5050:5050"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - datatrust-network
+
+volumes:
+  postgres_data:
+    driver: local
+  pgadmin_data:
+    driver: local
+
+networks:
+  datatrust-network:
+    driver: bridge
+    name: datatrust-network
+
