@@ -1,0 +1,8 @@
+2026-09-16 14:23:07 | INFO     | ============================================================
+2026-09-16 14:23:07 | INFO     |   Dashboard Generation
+2026-09-16 14:23:07 | INFO     | ============================================================
+2026-09-16 14:23:07 | INFO     |   Validation reports: 6
+2026-09-16 14:23:07 | INFO     |   Anomaly reports:    6
+2026-09-16 14:23:07 | INFO     |   Recovery reports:   6
+2026-09-16 14:23:07 | INFO     | [32m[OK][0m Dashboard saved: data\dashboard\index.html
+2026-09-16 14:23:07 | INFO     |   Stage 'Dashboard' completed in 0.0s

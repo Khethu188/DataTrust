@@ -2,14 +2,6 @@
 # ═══════════════════════════════════════════════════════════════
 # DataTrust — Docker Compose (Local Stack)
 # ═══════════════════════════════════════════════════════════════
-# Run everything locally for FREE — no AWS charges!
-#
-# Usage:
-#   docker-compose up -d                    # Start all services
-#   docker-compose exec datatrust python datatrust.py run    # Full pipeline
-#   docker-compose exec datatrust python datatrust.py status # Check health
-#   docker-compose down                     # Stop everything
-# ═══════════════════════════════════════════════════════════════
 
 services:
   # ── PostgreSQL Database ──────────────────────────────────
@@ -59,7 +51,6 @@ services:
       - "8080:8080"
     networks:
       - datatrust-network
-    # Keep container running for exec commands
     command: tail -f /dev/null
 
   # ── Dashboard Web Server ─────────────────────────────────
@@ -85,11 +76,11 @@ services:
     depends_on:
       - postgres
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@datatrust.local
+      PGADMIN_DEFAULT_EMAIL: khethukuthula.sabela@outlook.com
       PGADMIN_DEFAULT_PASSWORD: admin123
-      PGADMIN_LISTEN_PORT: 5050
+      PGADMIN_LISTEN_PORT: 80
     ports:
-      - "5050:5050"
+      - "5050:80"
     volumes:
       - pgadmin_data:/var/lib/pgadmin
     networks:
@@ -105,4 +96,5 @@ networks:
   datatrust-network:
     driver: bridge
     name: datatrust-network
+
 

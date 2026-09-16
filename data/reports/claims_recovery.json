@@ -6,7 +6,7 @@
   "recovery_rate": 86.0,
   "total_actions": 10,
   "total_rows_fixed": 750,
-  "duration_seconds": 0.032552,
+  "duration_seconds": 0.030708,
   "actions": [
     {
       "action_type": "DEDUPLICATION",
@@ -15,7 +15,7 @@
       "rows_affected": 50,
       "strategy": "keep_first",
       "details": {},
-      "timestamp": "2026-09-16T12:46:41.802373"
+      "timestamp": "2026-09-16T14:22:46.769676"
     },
     {
       "action_type": "DEDUPLICATION",
@@ -24,7 +24,7 @@
       "rows_affected": 30,
       "strategy": "keep_first_by_key",
       "details": {},
-      "timestamp": "2026-09-16T12:46:41.806064"
+      "timestamp": "2026-09-16T14:22:46.771740"
     },
     {
       "action_type": "NULL_IMPUTATION",
@@ -33,7 +33,7 @@
       "rows_affected": 77,
       "strategy": "UNKNOWN",
       "details": {},
-      "timestamp": "2026-09-16T12:46:41.807334"
+      "timestamp": "2026-09-16T14:22:46.773049"
     },
     {
       "action_type": "NULL_IMPUTATION",
@@ -42,7 +42,7 @@
       "rows_affected": 4,
       "strategy": "forward_fill",
       "details": {},
-      "timestamp": "2026-09-16T12:46:41.808992"
+      "timestamp": "2026-09-16T14:22:46.774476"
     },
     {
       "action_type": "NULL_IMPUTATION",
@@ -51,7 +51,7 @@
       "rows_affected": 75,
       "strategy": "median (19224.70)",
       "details": {},
-      "timestamp": "2026-09-16T12:46:41.809731"
+      "timestamp": "2026-09-16T14:22:46.775283"
     },
     {
       "action_type": "NEGATIVE_AMOUNT_FIX",
@@ -60,7 +60,7 @@
       "rows_affected": 48,
       "strategy": "absolute_value",
       "details": {},
-      "timestamp": "2026-09-16T12:46:41.812446"
+      "timestamp": "2026-09-16T14:22:46.779160"
     },
     {
       "action_type": "OUTLIER_CAPPING",
@@ -74,7 +74,7 @@
         "capped_below": 0,
         "capped_above": 128
       },
-      "timestamp": "2026-09-16T12:46:41.814688"
+      "timestamp": "2026-09-16T14:22:46.781495"
     },
     {
       "action_type": "OUTLIER_CAPPING",
@@ -88,7 +88,7 @@
         "capped_below": 0,
         "capped_above": 74
       },
-      "timestamp": "2026-09-16T12:46:41.817422"
+      "timestamp": "2026-09-16T14:22:46.783318"
     },
     {
       "action_type": "DATE_FIX",
@@ -97,7 +97,7 @@
       "rows_affected": 52,
       "strategy": "median_replace_and_clamp",
       "details": {},
-      "timestamp": "2026-09-16T12:46:41.822401"
+      "timestamp": "2026-09-16T14:22:46.787025"
     },
     {
       "action_type": "FOREIGN_KEY_QUARANTINE",
@@ -106,7 +106,7 @@
       "rows_affected": 212,
       "strategy": "quarantine_orphans",
       "details": {},
-      "timestamp": "2026-09-16T12:46:41.827487"
+      "timestamp": "2026-09-16T14:22:46.791641"
     }
   ]
 }

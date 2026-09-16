@@ -9,7 +9,7 @@
     "medium": 0,
     "low": 0
   },
-  "duration_seconds": 0.18307,
+  "duration_seconds": 0.189175,
   "anomalies": [
     {
       "anomaly_type": "IQR_OUTLIER",
@@ -27,7 +27,7 @@
         "below_lower": 0,
         "above_upper": 112
       },
-      "timestamp": "2026-09-16T12:46:43.392209"
+      "timestamp": "2026-09-16T14:22:47.962809"
     },
     {
       "anomaly_type": "NEGATIVE_AMOUNT",
@@ -42,7 +42,7 @@
         "max_negative": -7.63,
         "total_negative_sum": -14839923.76
       },
-      "timestamp": "2026-09-16T12:46:43.393853"
+      "timestamp": "2026-09-16T14:22:47.964374"
     },
     {
       "anomaly_type": "ISOLATION_FOREST",
@@ -60,7 +60,7 @@
         "mean_anomaly_score": -0.0168,
         "worst_score": -0.0586
       },
-      "timestamp": "2026-09-16T12:46:43.560835"
+      "timestamp": "2026-09-16T14:22:48.135943"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -84,7 +84,7 @@
         "total_categories": 1448,
         "rare_categories": 1448
       },
-      "timestamp": "2026-09-16T12:46:43.564619"
+      "timestamp": "2026-09-16T14:22:48.140084"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -108,7 +108,7 @@
         "total_categories": 754,
         "rare_categories": 338
       },
-      "timestamp": "2026-09-16T12:46:43.565603"
+      "timestamp": "2026-09-16T14:22:48.141143"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -132,7 +132,7 @@
         "total_categories": 1195,
         "rare_categories": 970
       },
-      "timestamp": "2026-09-16T12:46:43.567859"
+      "timestamp": "2026-09-16T14:22:48.143600"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -156,7 +156,7 @@
         "total_categories": 715,
         "rare_categories": 278
       },
-      "timestamp": "2026-09-16T12:46:43.569388"
+      "timestamp": "2026-09-16T14:22:48.145436"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -180,7 +180,7 @@
         "total_categories": 1066,
         "rare_categories": 776
       },
-      "timestamp": "2026-09-16T12:46:43.570351"
+      "timestamp": "2026-09-16T14:22:48.146610"
     }
   ]
 }

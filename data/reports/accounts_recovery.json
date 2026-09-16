@@ -6,7 +6,7 @@
   "recovery_rate": 96.5,
   "total_actions": 3,
   "total_rows_fixed": 161,
-  "duration_seconds": 0.046128,
+  "duration_seconds": 0.018409,
   "actions": [
     {
       "action_type": "NULL_IMPUTATION",
@@ -15,7 +15,7 @@
       "rows_affected": 22,
       "strategy": "UNKNOWN",
       "details": {},
-      "timestamp": "2026-09-16T12:46:41.393722"
+      "timestamp": "2026-09-16T14:22:46.447934"
     },
     {
       "action_type": "OUTLIER_CAPPING",
@@ -29,7 +29,7 @@
         "capped_below": 0,
         "capped_above": 87
       },
-      "timestamp": "2026-09-16T12:46:41.416880"
+      "timestamp": "2026-09-16T14:22:46.452396"
     },
     {
       "action_type": "FOREIGN_KEY_QUARANTINE",
@@ -38,7 +38,7 @@
       "rows_affected": 52,
       "strategy": "quarantine_orphans",
       "details": {},
-      "timestamp": "2026-09-16T12:46:41.434705"
+      "timestamp": "2026-09-16T14:22:46.459705"
     }
   ]
 }

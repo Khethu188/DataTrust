@@ -9,7 +9,7 @@
     "medium": 0,
     "low": 0
   },
-  "duration_seconds": 0.053339,
+  "duration_seconds": 0.051627,
   "anomalies": [
     {
       "anomaly_type": "IQR_OUTLIER",
@@ -27,7 +27,7 @@
         "below_lower": 0,
         "above_upper": 452
       },
-      "timestamp": "2026-09-16T12:46:43.890990"
+      "timestamp": "2026-09-16T14:22:48.354492"
     },
     {
       "anomaly_type": "DUPLICATE_KEY",
@@ -40,7 +40,7 @@
         "duplicate_count": 4786,
         "duplicate_rate": 0.5141
       },
-      "timestamp": "2026-09-16T12:46:43.904219"
+      "timestamp": "2026-09-16T14:22:48.368142"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -64,7 +64,7 @@
         "total_categories": 9309,
         "rare_categories": 9309
       },
-      "timestamp": "2026-09-16T12:46:43.916094"
+      "timestamp": "2026-09-16T14:22:48.379628"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -88,7 +88,7 @@
         "total_categories": 768,
         "rare_categories": 167
       },
-      "timestamp": "2026-09-16T12:46:43.918100"
+      "timestamp": "2026-09-16T14:22:48.382475"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -112,7 +112,7 @@
         "total_categories": 1445,
         "rare_categories": 1271
       },
-      "timestamp": "2026-09-16T12:46:43.920421"
+      "timestamp": "2026-09-16T14:22:48.384872"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -136,7 +136,7 @@
         "total_categories": 782,
         "rare_categories": 209
       },
-      "timestamp": "2026-09-16T12:46:43.922154"
+      "timestamp": "2026-09-16T14:22:48.386616"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -160,7 +160,7 @@
         "total_categories": 989,
         "rare_categories": 544
       },
-      "timestamp": "2026-09-16T12:46:43.925382"
+      "timestamp": "2026-09-16T14:22:48.390552"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -170,21 +170,21 @@
       "affected_rows": 9309,
       "details": {
         "rare_values": {
-          "PAYREFCA69061640": 1,
-          "PAYREF39A736434E": 1,
-          "PAYREFECEB36D4A4": 1,
-          "PAYREF596CCC18DB": 1,
-          "PAYREF4943789C5F": 1,
-          "PAYREF948B4AF50A": 1,
-          "PAYREFEC915BA8A7": 1,
-          "PAYREF382E725C19": 1,
-          "PAYREF095E00CEEE": 1,
-          "PAYREF2060871089": 1
+          "PAYREF27E35C89B3": 1,
+          "PAYREF9BFE1F2BE0": 1,
+          "PAYREF83FB138188": 1,
+          "PAYREF9334B2D87D": 1,
+          "PAYREF3C131F1353": 1,
+          "PAYREF14E8883B51": 1,
+          "PAYREF90F3357013": 1,
+          "PAYREFAC747066DF": 1,
+          "PAYREFD241BE2723": 1,
+          "PAYREF26D0D08C27": 1
         },
         "total_categories": 9309,
         "rare_categories": 9309
       },
-      "timestamp": "2026-09-16T12:46:43.932983"
+      "timestamp": "2026-09-16T14:22:48.397747"
     },
     {
       "anomaly_type": "NULL_SPIKE",
@@ -196,7 +196,7 @@
         "null_count": 3741,
         "null_rate": 0.4019
       },
-      "timestamp": "2026-09-16T12:46:43.937120"
+      "timestamp": "2026-09-16T14:22:48.400388"
     },
     {
       "anomaly_type": "NULL_SPIKE",
@@ -208,7 +208,7 @@
         "null_count": 8656,
         "null_rate": 0.9299
       },
-      "timestamp": "2026-09-16T12:46:43.940675"
+      "timestamp": "2026-09-16T14:22:48.402674"
     }
   ]
 }

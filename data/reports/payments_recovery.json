@@ -6,7 +6,7 @@
   "recovery_rate": 92.0,
   "total_actions": 10,
   "total_rows_fixed": 1782,
-  "duration_seconds": 0.057873,
+  "duration_seconds": 0.066692,
   "actions": [
     {
       "action_type": "DEDUPLICATION",
@@ -15,7 +15,7 @@
       "rows_affected": 103,
       "strategy": "keep_first",
       "details": {},
-      "timestamp": "2026-09-16T12:46:41.848307"
+      "timestamp": "2026-09-16T14:22:46.818386"
     },
     {
       "action_type": "DEDUPLICATION",
@@ -24,7 +24,7 @@
       "rows_affected": 17,
       "strategy": "keep_first_by_key",
       "details": {},
-      "timestamp": "2026-09-16T12:46:41.852018"
+      "timestamp": "2026-09-16T14:22:46.822736"
     },
     {
       "action_type": "NULL_IMPUTATION",
@@ -33,7 +33,7 @@
       "rows_affected": 253,
       "strategy": "UNKNOWN",
       "details": {},
-      "timestamp": "2026-09-16T12:46:41.855452"
+      "timestamp": "2026-09-16T14:22:46.825127"
     },
     {
       "action_type": "NULL_IMPUTATION",
@@ -42,7 +42,7 @@
       "rows_affected": 250,
       "strategy": "median (1102.76)",
       "details": {},
-      "timestamp": "2026-09-16T12:46:41.857344"
+      "timestamp": "2026-09-16T14:22:46.827183"
     },
     {
       "action_type": "NULL_IMPUTATION",
@@ -51,7 +51,7 @@
       "rows_affected": 24,
       "strategy": "mode (ZAR)",
       "details": {},
-      "timestamp": "2026-09-16T12:46:41.859346"
+      "timestamp": "2026-09-16T14:22:46.830555"
     },
     {
       "action_type": "INVALID_CATEGORY_FIX",
@@ -68,7 +68,7 @@
           "XXX"
         ]
       },
-      "timestamp": "2026-09-16T12:46:41.864701"
+      "timestamp": "2026-09-16T14:22:46.836122"
     },
     {
       "action_type": "OUTLIER_CAPPING",
@@ -82,7 +82,7 @@
         "capped_below": 0,
         "capped_above": 390
       },
-      "timestamp": "2026-09-16T12:46:41.869405"
+      "timestamp": "2026-09-16T14:22:46.840911"
     },
     {
       "action_type": "FOREIGN_KEY_QUARANTINE",
@@ -91,7 +91,7 @@
       "rows_affected": 253,
       "strategy": "quarantine_orphans",
       "details": {},
-      "timestamp": "2026-09-16T12:46:41.877585"
+      "timestamp": "2026-09-16T14:22:46.850969"
     },
     {
       "action_type": "FOREIGN_KEY_QUARANTINE",
@@ -100,7 +100,7 @@
       "rows_affected": 321,
       "strategy": "quarantine_orphans",
       "details": {},
-      "timestamp": "2026-09-16T12:46:41.884504"
+      "timestamp": "2026-09-16T14:22:46.860325"
     },
     {
       "action_type": "FOREIGN_KEY_QUARANTINE",
@@ -109,7 +109,7 @@
       "rows_affected": 117,
       "strategy": "quarantine_orphans",
       "details": {},
-      "timestamp": "2026-09-16T12:46:41.889723"
+      "timestamp": "2026-09-16T14:22:46.866161"
     }
   ]
 }

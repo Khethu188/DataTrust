@@ -1,25 +1,28 @@
 
 #!/usr/bin/env python3
 """
-DataTrust — Dashboard & Report Generator
-==========================================
-Reads JSON reports from validation, anomaly detection, and
-recovery engines, then generates a full interactive HTML
-dashboard with charts, tables, and health indicators.
+DataTrust — Premium Animated Dashboard Generator
+====================================================
+Generates a stunning, modern HTML dashboard with:
+  - Animated counters
+  - Smooth fade-in/slide-up animations
+  - Glassmorphism cards
+  - Animated progress rings
+  - Particle background
+  - Responsive grid layout
+  - Dark theme with gradient accents
 
-Usage:
-    from dashboard_generator import DashboardGenerator
-    gen = DashboardGenerator(reports_dir="data/reports")
-    gen.generate("data/dashboard/index.html")
+Author: Khethukuthula Sabela
 """
 
 import json
+import os
 from datetime import datetime
 from pathlib import Path
 
 
 class DashboardGenerator:
-    """Generates an interactive HTML dashboard from DataTrust reports."""
+    """Generates a premium animated HTML dashboard from pipeline reports."""
 
     def __init__(self, reports_dir="data/reports"):
         self.reports_dir = Path(reports_dir)
@@ -29,710 +32,1028 @@ class DashboardGenerator:
         self._load_reports()
 
     def _load_reports(self):
-        """Load all JSON reports."""
-        for filepath in self.reports_dir.glob("*_validation.json"):
-            with open(filepath) as f:
-                data = json.load(f)
-            self.validation_reports[data["dataset"]] = data
+        """Load all JSON reports from the reports directory."""
+        if not self.reports_dir.exists():
+            return
 
-        for filepath in self.reports_dir.glob("*_anomalies.json"):
-            with open(filepath) as f:
-                data = json.load(f)
-            self.anomaly_reports[data["dataset"]] = data
+        for f in self.reports_dir.glob("*.json"):
+            try:
+                data = json.loads(f.read_text(encoding="utf-8"))
+                name = f.stem
 
-        for filepath in self.reports_dir.glob("*_recovery.json"):
-            with open(filepath) as f:
-                data = json.load(f)
-            self.recovery_reports[data["dataset"]] = data
+                if "trust_score" in data:
+                    dataset = data.get("dataset", name.replace("_validation", ""))
+                    self.validation_reports[dataset] = data
+                elif "health_score" in data:
+                    dataset = data.get("dataset", name.replace("_anomalies", ""))
+                    self.anomaly_reports[dataset] = data
+                elif "recovery_rate" in data:
+                    dataset = data.get("dataset", name.replace("_recovery", ""))
+                    self.recovery_reports[dataset] = data
+            except (json.JSONDecodeError, KeyError):
+                continue
 
     def generate(self, output_path="data/dashboard/index.html"):
         """Generate the full HTML dashboard."""
-        output = Path(output_path)
-        output.parent.mkdir(parents=True, exist_ok=True)
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
-        html = self._build_html()
+        # Calculate summary stats
+        trust_scores = {k: v.get("trust_score", 0) for k, v in self.validation_reports.items()}
+        health_scores = {k: v.get("health_score", 0) for k, v in self.anomaly_reports.items()}
+        recovery_rates = {k: v.get("recovery_rate", 0) for k, v in self.recovery_reports.items()}
 
-        with open(output, "w", encoding="utf-8") as f:
-            f.write(html)
+        avg_trust = sum(trust_scores.values()) / max(len(trust_scores), 1)
+        avg_health = sum(health_scores.values()) / max(len(health_scores), 1)
+        total_anomalies = sum(
+            len(v.get("anomalies", [])) for v in self.anomaly_reports.values()
+        )
+        avg_recovery = sum(recovery_rates.values()) / max(len(recovery_rates), 1)
 
-        print(f"  Dashboard saved: {output}")
-        return output
+        total_rows_recovered = sum(
+            v.get("rows_after_recovery", 0) for v in self.recovery_reports.values()
+        )
+        total_quarantined = sum(
+            v.get("quarantined_rows", 0) for v in self.recovery_reports.values()
+        )
+        total_actions = sum(
+            len(v.get("actions", [])) for v in self.recovery_reports.values()
+        )
 
-    def _build_html(self):
-        """Build the complete HTML document."""
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-        # Calculate summary metrics
+        # Build dataset cards
+        dataset_cards = ""
         datasets = sorted(set(
             list(self.validation_reports.keys()) +
             list(self.anomaly_reports.keys()) +
             list(self.recovery_reports.keys())
         ))
 
-        trust_scores = {}
-        health_scores = {}
-        recovery_rates = {}
+        for i, ds in enumerate(datasets):
+            ts = trust_scores.get(ds, 0)
+            hs = health_scores.get(ds, 0)
+            rr = recovery_rates.get(ds, 0)
 
+            val = self.validation_reports.get(ds, {})
+            anom = self.anomaly_reports.get(ds, {})
+            rec = self.recovery_reports.get(ds, {})
+
+            checks_pass = sum(1 for c in val.get("checks", []) if c.get("verdict") == "PASS")
+            checks_fail = sum(1 for c in val.get("checks", []) if c.get("verdict") == "FAIL")
+            checks_warn = sum(1 for c in val.get("checks", []) if c.get("verdict") == "WARN")
+            total_checks = checks_pass + checks_fail + checks_warn
+
+            anom_count = len(anom.get("anomalies", []))
+            anom_summary = anom.get("summary", {})
+            critical = anom_summary.get("critical", 0) if isinstance(anom_summary, dict) else 0
+            high = anom_summary.get("high", 0) if isinstance(anom_summary, dict) else 0
+
+            rec_actions = len(rec.get("actions", []))
+            rec_quarantined = rec.get("quarantined_rows", 0)
+
+            ts_color = "#00ff88" if ts >= 80 else "#ffaa00" if ts >= 60 else "#ff4466"
+            hs_color = "#00ff88" if hs >= 80 else "#ffaa00" if hs >= 60 else "#ff4466"
+
+            dataset_cards += f"""
+            <div class="dataset-card" style="animation-delay: {i * 0.1}s">
+                <div class="dataset-header">
+                    <h3>{ds.upper()}</h3>
+                    <span class="badge" style="background: {ts_color}20; color: {ts_color}">
+                        {"HEALTHY" if ts >= 80 else "WARNING" if ts >= 60 else "CRITICAL"}
+                    </span>
+                </div>
+                <div class="rings-row">
+                    <div class="ring-container">
+                        <svg class="progress-ring" viewBox="0 0 120 120">
+                            <circle class="ring-bg" cx="60" cy="60" r="52"/>
+                            <circle class="ring-fill" cx="60" cy="60" r="52"
+                                stroke="{ts_color}"
+                                stroke-dasharray="{ts * 3.267} {326.7 - ts * 3.267}"
+                                stroke-dashoffset="81.675"/>
+                        </svg>
+                        <div class="ring-label">
+                            <span class="ring-value" data-target="{ts:.1f}" style="color:{ts_color}">{ts:.1f}%</span>
+                            <span class="ring-text">Trust</span>
+                        </div>
+                    </div>
+                    <div class="ring-container">
+                        <svg class="progress-ring" viewBox="0 0 120 120">
+                            <circle class="ring-bg" cx="60" cy="60" r="52"/>
+                            <circle class="ring-fill" cx="60" cy="60" r="52"
+                                stroke="{hs_color}"
+                                stroke-dasharray="{hs * 3.267} {326.7 - hs * 3.267}"
+                                stroke-dashoffset="81.675"/>
+                        </svg>
+                        <div class="ring-label">
+                            <span class="ring-value" data-target="{hs:.1f}" style="color:{hs_color}">{hs:.1f}%</span>
+                            <span class="ring-text">Health</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dataset-stats">
+                    <div class="stat-row">
+                        <span class="stat-icon">✓</span>
+                        <span>Checks Passed</span>
+                        <span class="stat-val pass">{checks_pass}/{total_checks}</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-icon">⚠</span>
+                        <span>Anomalies</span>
+                        <span class="stat-val warn">{anom_count}</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-icon">🔧</span>
+                        <span>Recovery Actions</span>
+                        <span class="stat-val info">{rec_actions}</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-icon">🚫</span>
+                        <span>Quarantined</span>
+                        <span class="stat-val fail">{rec_quarantined:,}</span>
+                    </div>
+                </div>
+                <div class="recovery-bar-container">
+                    <div class="recovery-bar-label">
+                        <span>Recovery Rate</span>
+                        <span style="color: #00ff88">{rr:.1f}%</span>
+                    </div>
+                    <div class="recovery-bar-bg">
+                        <div class="recovery-bar-fill" style="width: {rr}%"></div>
+                    </div>
+                </div>
+            </div>
+            """
+
+        # Build trust score chart data
+        trust_chart_labels = json.dumps(list(trust_scores.keys()))
+        trust_chart_data = json.dumps([round(v, 1) for v in trust_scores.values()])
+        health_chart_data = json.dumps([round(v, 1) for v in health_scores.values()])
+        recovery_chart_data = json.dumps([round(v, 1) for v in recovery_rates.values()])
+
+        # Validation details table
+        validation_rows = ""
         for ds in datasets:
-            if ds in self.validation_reports:
-                trust_scores[ds] = self.validation_reports[ds].get("trust_score", 0)
-            if ds in self.anomaly_reports:
-                health_scores[ds] = self.anomaly_reports[ds].get("health_score", 0)
-            if ds in self.recovery_reports:
-                recovery_rates[ds] = self.recovery_reports[ds].get("recovery_rate", 0)
+            val = self.validation_reports.get(ds, {})
+            for check in val.get("checks", []):
+                verdict = check.get("verdict", "N/A")
+                v_class = "pass" if verdict == "PASS" else "fail" if verdict == "FAIL" else "warn"
+                validation_rows += f"""
+                <tr>
+                    <td>{ds}</td>
+                    <td>{check.get("check_name", "N/A")}</td>
+                    <td><span class="verdict-badge {v_class}">{verdict}</span></td>
+                    <td>{check.get("message", "")}</td>
+                </tr>"""
 
-        avg_trust = sum(trust_scores.values()) / len(trust_scores) if trust_scores else 0
-        avg_health = sum(health_scores.values()) / len(health_scores) if health_scores else 0
-        avg_recovery = sum(recovery_rates.values()) / len(recovery_rates) if recovery_rates else 0
+        # Anomaly details table
+        anomaly_rows = ""
+        for ds in datasets:
+            anom = self.anomaly_reports.get(ds, {})
+            for a in anom.get("anomalies", []):
+                sev = a.get("severity", "LOW")
+                s_class = sev.lower()
+                anomaly_rows += f"""
+                <tr>
+                    <td>{ds}</td>
+                    <td>{a.get("anomaly_type", "N/A")}</td>
+                    <td><span class="severity-badge {s_class}">{sev}</span></td>
+                    <td>{a.get("column", "N/A")}</td>
+                    <td>{a.get("affected_rows", 0):,}</td>
+                    <td>{a.get("description", "")}</td>
+                </tr>"""
 
-        total_anomalies = sum(
-            r.get("summary", {}).get("total_anomalies", 0)
-            for r in self.anomaly_reports.values()
-        )
-        total_fixed = sum(
-            r.get("total_rows_fixed", 0)
-            for r in self.recovery_reports.values()
-        )
-        total_quarantined = sum(
-            r.get("quarantined_rows", 0)
-            for r in self.recovery_reports.values()
-        )
+        # Recovery details table
+        recovery_rows = ""
+        for ds in datasets:
+            rec = self.recovery_reports.get(ds, {})
+            for action in rec.get("actions", []):
+                recovery_rows += f"""
+                <tr>
+                    <td>{ds}</td>
+                    <td>{action.get("action_type", "N/A")}</td>
+                    <td>{action.get("column", "N/A")}</td>
+                    <td>{action.get("rows_affected", 0):,}</td>
+                    <td>{action.get("strategy", "N/A")}</td>
+                    <td>{action.get("description", "")}</td>
+                </tr>"""
 
-        # Build HTML sections
-        hero_cards = self._build_hero_cards(
-            avg_trust, avg_health, total_anomalies,
-            total_fixed, total_quarantined, avg_recovery
-        )
-        trust_table = self._build_trust_score_table(datasets, trust_scores)
-        anomaly_table = self._build_anomaly_table(datasets)
-        recovery_table = self._build_recovery_table(datasets)
-        validation_details = self._build_validation_details(datasets)
-        anomaly_details = self._build_anomaly_details(datasets)
-        recovery_details = self._build_recovery_details(datasets)
-        trust_chart_data = self._build_chart_data(datasets, trust_scores, health_scores)
-        recovery_chart_data = self._build_recovery_chart_data(datasets)
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
         html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DataTrust Dashboard</title>
+    <title>DataTrust — Dashboard</title>
     <style>
-        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-        body {{
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0f1117;
-            color: #e1e4e8;
-            line-height: 1.6;
-        }}
-        .container {{ max-width: 1400px; margin: 0 auto; padding: 20px; }}
+        /* ═══ RESET & BASE ═══ */
+        *, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
 
-        /* Header */
-        .header {{
-            background: linear-gradient(135deg, #1a1f36 0%, #0d1117 100%);
-            border: 1px solid #30363d;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 24px;
-            text-align: center;
+        :root {{
+            --bg-primary: #0a0e1a;
+            --bg-secondary: #111827;
+            --bg-card: rgba(17, 24, 39, 0.7);
+            --border: rgba(255, 255, 255, 0.06);
+            --text-primary: #f0f4ff;
+            --text-secondary: #8892a4;
+            --accent-green: #00ff88;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-orange: #f59e0b;
+            --accent-red: #ef4444;
+            --accent-cyan: #06b6d4;
+            --glow-green: rgba(0, 255, 136, 0.15);
+            --glow-blue: rgba(59, 130, 246, 0.15);
+            --glow-purple: rgba(139, 92, 246, 0.15);
         }}
+
+        body {{
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }}
+
+        /* ═══ PARTICLE BACKGROUND ═══ */
+        #particles {{
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }}
+
+        .particle {{
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float linear infinite;
+        }}
+
+        @keyframes float {{
+            0% {{ transform: translateY(100vh) rotate(0deg); opacity: 0; }}
+            10% {{ opacity: 0.3; }}
+            90% {{ opacity: 0.3; }}
+            100% {{ transform: translateY(-10vh) rotate(720deg); opacity: 0; }}
+        }}
+
+        /* ═══ ANIMATIONS ═══ */
+        @keyframes fadeInUp {{
+            from {{ opacity: 0; transform: translateY(30px); }}
+            to {{ opacity: 1; transform: translateY(0); }}
+        }}
+
+        @keyframes fadeIn {{
+            from {{ opacity: 0; }}
+            to {{ opacity: 1; }}
+        }}
+
+        @keyframes slideInLeft {{
+            from {{ opacity: 0; transform: translateX(-30px); }}
+            to {{ opacity: 1; transform: translateX(0); }}
+        }}
+
+        @keyframes pulse {{
+            0%, 100% {{ opacity: 1; }}
+            50% {{ opacity: 0.7; }}
+        }}
+
+        @keyframes shimmer {{
+            0% {{ background-position: -200% 0; }}
+            100% {{ background-position: 200% 0; }}
+        }}
+
+        @keyframes ringGrow {{
+            from {{ stroke-dasharray: 0 326.7; }}
+        }}
+
+        @keyframes countUp {{
+            from {{ opacity: 0; transform: scale(0.5); }}
+            to {{ opacity: 1; transform: scale(1); }}
+        }}
+
+        @keyframes gradientShift {{
+            0% {{ background-position: 0% 50%; }}
+            50% {{ background-position: 100% 50%; }}
+            100% {{ background-position: 0% 50%; }}
+        }}
+
+        @keyframes borderGlow {{
+            0%, 100% {{ border-color: rgba(0, 255, 136, 0.1); }}
+            50% {{ border-color: rgba(0, 255, 136, 0.3); }}
+        }}
+
+        .animate-in {{
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }}
+
+        /* ═══ LAYOUT ═══ */
+        .container {{
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }}
+
+        /* ═══ HEADER ═══ */
+        .header {{
+            text-align: center;
+            padding: 40px 0 30px;
+            animation: fadeIn 1s ease-out;
+        }}
+
         .header h1 {{
-            font-size: 2.2em;
-            background: linear-gradient(90deg, #58a6ff, #3fb950, #58a6ff);
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-green), var(--accent-blue), var(--accent-purple));
+            background-size: 200% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 8px;
+            background-clip: text;
+            animation: gradientShift 4s ease infinite;
+            letter-spacing: -1px;
         }}
-        .header .subtitle {{ color: #8b949e; font-size: 1.1em; }}
-        .header .timestamp {{ color: #6e7681; font-size: 0.85em; margin-top: 8px; }}
 
-        /* Hero Cards */
+        .header .subtitle {{
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-top: 8px;
+            font-weight: 300;
+        }}
+
+        .header .timestamp {{
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 12px;
+            opacity: 0.6;
+        }}
+
+        .header .live-dot {{
+            display: inline-block;
+            width: 8px; height: 8px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            margin-right: 6px;
+            animation: pulse 2s ease-in-out infinite;
+            vertical-align: middle;
+        }}
+
+        /* ═══ HERO CARDS ═══ */
         .hero-grid {{
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-            margin-bottom: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
         }}
+
         .hero-card {{
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 10px;
-            padding: 20px;
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }}
+
+        .hero-card:hover {{
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }}
+
+        .hero-card::before {{
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            border-radius: 16px 16px 0 0;
+        }}
+
+        .hero-card:nth-child(1)::before {{ background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan)); }}
+        .hero-card:nth-child(2)::before {{ background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple)); }}
+        .hero-card:nth-child(3)::before {{ background: linear-gradient(90deg, var(--accent-orange), var(--accent-red)); }}
+        .hero-card:nth-child(4)::before {{ background: linear-gradient(90deg, var(--accent-purple), var(--accent-green)); }}
+        .hero-card:nth-child(5)::before {{ background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue)); }}
+        .hero-card:nth-child(6)::before {{ background: linear-gradient(90deg, var(--accent-green), var(--accent-orange)); }}
+
+        .hero-card .hero-icon {{
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }}
+
+        .hero-card .hero-value {{
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            animation: countUp 1s ease-out;
+        }}
+
+        .hero-card .hero-label {{
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }}
+
+        .hero-card .hero-sub {{
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            margin-top: 8px;
+        }}
+
+        /* ═══ SECTION HEADERS ═══ */
+        .section-header {{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 40px 0 20px;
+            animation: slideInLeft 0.6s ease-out;
+        }}
+
+        .section-header h2 {{
+            font-size: 1.5rem;
+            font-weight: 700;
+        }}
+
+        .section-header .section-line {{
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--border), transparent);
+        }}
+
+        /* ═══ CHART CONTAINER ═══ */
+        .chart-grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }}
+
+        .chart-card {{
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }}
+
+        .chart-card h3 {{
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }}
+
+        .bar-chart {{
+            display: flex;
+            align-items: flex-end;
+            gap: 12px;
+            height: 200px;
+            padding-top: 20px;
+        }}
+
+        .bar-group {{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            height: 100%;
+            justify-content: flex-end;
+        }}
+
+        .bar {{
+            width: 100%;
+            max-width: 60px;
+            border-radius: 8px 8px 4px 4px;
+            position: relative;
+            animation: barGrow 1s ease-out forwards;
+            transform-origin: bottom;
+            min-height: 4px;
+            transition: filter 0.3s ease;
+        }}
+
+        .bar:hover {{
+            filter: brightness(1.3);
+        }}
+
+        @keyframes barGrow {{
+            from {{ transform: scaleY(0); }}
+            to {{ transform: scaleY(1); }}
+        }}
+
+        .bar-label {{
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }}
+
+        .bar-value {{
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }}
+
+        /* ═══ DATASET CARDS ═══ */
+        .dataset-grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }}
+
+        .dataset-card {{
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }}
+
+        .dataset-card:hover {{
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.12);
+        }}
+
+        .dataset-header {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }}
+
+        .dataset-header h3 {{
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }}
+
+        .badge {{
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }}
+
+        /* ═══ PROGRESS RINGS ═══ */
+        .rings-row {{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }}
+
+        .ring-container {{
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }}
+
+        .progress-ring {{
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }}
+
+        .ring-bg {{
+            fill: none;
+            stroke: rgba(255, 255, 255, 0.05);
+            stroke-width: 8;
+        }}
+
+        .ring-fill {{
+            fill: none;
+            stroke-width: 8;
+            stroke-linecap: round;
+            animation: ringGrow 1.5s ease-out forwards;
+        }}
+
+        .ring-label {{
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
         }}
-        .hero-card .label {{ color: #8b949e; font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px; }}
-        .hero-card .value {{ font-size: 2.2em; font-weight: 700; margin: 8px 0; }}
-        .hero-card .sub {{ color: #6e7681; font-size: 0.8em; }}
-        .green {{ color: #3fb950; }}
-        .yellow {{ color: #d29922; }}
-        .red {{ color: #f85149; }}
-        .blue {{ color: #58a6ff; }}
-        .purple {{ color: #bc8cff; }}
-        .orange {{ color: #db6d28; }}
 
-        /* Section */
-        .section {{
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 10px;
-            padding: 24px;
-            margin-bottom: 24px;
+        .ring-value {{
+            font-size: 1rem;
+            font-weight: 800;
+            display: block;
         }}
-        .section h2 {{
-            font-size: 1.4em;
+
+        .ring-text {{
+            font-size: 0.65rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }}
+
+        /* ═══ DATASET STATS ═══ */
+        .dataset-stats {{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
             margin-bottom: 16px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #30363d;
-        }}
-        .section h3 {{
-            font-size: 1.1em;
-            margin: 16px 0 8px 0;
-            color: #58a6ff;
         }}
 
-        /* Tables */
+        .stat-row {{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.85rem;
+        }}
+
+        .stat-row:last-child {{ border-bottom: none; }}
+
+        .stat-icon {{ font-size: 0.9rem; width: 24px; text-align: center; }}
+
+        .stat-row span:nth-child(2) {{ flex: 1; color: var(--text-secondary); }}
+
+        .stat-val {{ font-weight: 700; }}
+        .stat-val.pass {{ color: var(--accent-green); }}
+        .stat-val.warn {{ color: var(--accent-orange); }}
+        .stat-val.fail {{ color: var(--accent-red); }}
+        .stat-val.info {{ color: var(--accent-blue); }}
+
+        /* ═══ RECOVERY BAR ═══ */
+        .recovery-bar-container {{ margin-top: 8px; }}
+
+        .recovery-bar-label {{
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            margin-bottom: 6px;
+            color: var(--text-secondary);
+        }}
+
+        .recovery-bar-bg {{
+            height: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+            overflow: hidden;
+        }}
+
+        .recovery-bar-fill {{
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan));
+            border-radius: 3px;
+            animation: barGrow 1.5s ease-out;
+            transform-origin: left;
+        }}
+
+        /* ═══ TABS ═══ */
+        .tabs {{
+            display: flex;
+            gap: 4px;
+            margin-bottom: 20px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 4px;
+            overflow-x: auto;
+        }}
+
+        .tab {{
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            border: none;
+            background: none;
+        }}
+
+        .tab:hover {{ color: var(--text-primary); background: rgba(255,255,255,0.05); }}
+        .tab.active {{
+            color: var(--text-primary);
+            background: var(--accent-blue);
+        }}
+
+        .tab-content {{ display: none; animation: fadeIn 0.4s ease-out; }}
+        .tab-content.active {{ display: block; }}
+
+        /* ═══ TABLES ═══ */
+        .table-container {{
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.6s ease-out;
+        }}
+
         table {{
             width: 100%;
             border-collapse: collapse;
-            margin: 12px 0;
         }}
+
         th {{
-            background: #0d1117;
-            color: #58a6ff;
-            padding: 10px 14px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 14px 16px;
             text-align: left;
-            font-size: 0.85em;
+            font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-bottom: 2px solid #30363d;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
         }}
+
         td {{
-            padding: 10px 14px;
-            border-bottom: 1px solid #21262d;
+            padding: 12px 16px;
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
         }}
-        tr:hover {{ background: #1c2128; }}
 
-        /* Badges */
-        .badge {{
-            display: inline-block;
-            padding: 2px 10px;
+        tr:hover td {{ background: rgba(255, 255, 255, 0.02); }}
+        tr:last-child td {{ border-bottom: none; }}
+
+        .verdict-badge, .severity-badge {{
+            padding: 3px 10px;
             border-radius: 12px;
-            font-size: 0.8em;
-            font-weight: 600;
-        }}
-        .badge-pass {{ background: #0d2818; color: #3fb950; }}
-        .badge-warn {{ background: #2d1b00; color: #d29922; }}
-        .badge-fail {{ background: #2d0000; color: #f85149; }}
-        .badge-critical {{ background: #3d0000; color: #ff6b6b; }}
-        .badge-high {{ background: #2d1500; color: #db6d28; }}
-        .badge-medium {{ background: #2d2200; color: #d29922; }}
-        .badge-low {{ background: #0d2818; color: #3fb950; }}
-
-        /* Progress Bar */
-        .progress-bar {{
-            background: #21262d;
-            border-radius: 6px;
-            height: 24px;
-            overflow: hidden;
-            position: relative;
-        }}
-        .progress-fill {{
-            height: 100%;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75em;
-            font-weight: 600;
-            color: #fff;
-            min-width: 40px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }}
 
-        /* Chart Container */
-        .chart-container {{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin: 16px 0;
-        }}
-        .chart-box {{
-            background: #0d1117;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            padding: 16px;
-        }}
-        .chart-box h4 {{
-            color: #8b949e;
-            font-size: 0.9em;
-            margin-bottom: 12px;
-            text-align: center;
-        }}
-        .bar-chart {{ display: flex; flex-direction: column; gap: 8px; }}
-        .bar-row {{ display: flex; align-items: center; gap: 10px; }}
-        .bar-label {{ width: 100px; font-size: 0.85em; text-align: right; color: #8b949e; }}
-        .bar-track {{ flex: 1; background: #21262d; border-radius: 4px; height: 20px; overflow: hidden; }}
-        .bar-fill {{ height: 100%; border-radius: 4px; display: flex; align-items: center; padding-left: 8px; font-size: 0.75em; font-weight: 600; }}
-        .bar-value {{ width: 50px; font-size: 0.85em; text-align: right; }}
+        .verdict-badge.pass {{ background: rgba(0,255,136,0.15); color: var(--accent-green); }}
+        .verdict-badge.fail {{ background: rgba(239,68,68,0.15); color: var(--accent-red); }}
+        .verdict-badge.warn {{ background: rgba(245,158,11,0.15); color: var(--accent-orange); }}
 
-        /* Detail blocks */
-        .detail-item {{
-            background: #0d1117;
-            border: 1px solid #21262d;
-            border-radius: 6px;
-            padding: 10px 14px;
-            margin: 6px 0;
-            font-size: 0.9em;
-        }}
-        .detail-pass {{ border-left: 3px solid #3fb950; }}
-        .detail-warn {{ border-left: 3px solid #d29922; }}
-        .detail-fail {{ border-left: 3px solid #f85149; }}
+        .severity-badge.critical {{ background: rgba(239,68,68,0.2); color: #ff6b6b; }}
+        .severity-badge.high {{ background: rgba(245,158,11,0.2); color: var(--accent-orange); }}
+        .severity-badge.medium {{ background: rgba(59,130,246,0.15); color: var(--accent-blue); }}
+        .severity-badge.low {{ background: rgba(255,255,255,0.05); color: var(--text-secondary); }}
 
-        /* Tabs */
-        .tab-container {{ margin: 16px 0; }}
-        .tab-buttons {{ display: flex; gap: 4px; margin-bottom: 12px; flex-wrap: wrap; }}
-        .tab-btn {{
-            background: #0d1117;
-            border: 1px solid #30363d;
-            color: #8b949e;
-            padding: 8px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.85em;
-        }}
-        .tab-btn:hover {{ background: #1c2128; color: #e1e4e8; }}
-        .tab-btn.active {{ background: #1f6feb; color: #fff; border-color: #1f6feb; }}
-        .tab-content {{ display: none; }}
-        .tab-content.active {{ display: block; }}
-
-        /* Footer */
+        /* ═══ FOOTER ═══ */
         .footer {{
             text-align: center;
-            color: #6e7681;
-            font-size: 0.8em;
-            padding: 20px;
-            border-top: 1px solid #21262d;
-            margin-top: 24px;
+            padding: 40px 0;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            opacity: 0.5;
         }}
 
+        /* ═══ RESPONSIVE ═══ */
         @media (max-width: 768px) {{
+            .header h1 {{ font-size: 2rem; }}
             .hero-grid {{ grid-template-columns: repeat(2, 1fr); }}
-            .chart-container {{ grid-template-columns: 1fr; }}
+            .dataset-grid {{ grid-template-columns: 1fr; }}
+            .chart-grid {{ grid-template-columns: 1fr; }}
         }}
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1>DataTrust Dashboard</h1>
-            <div class="subtitle">Autonomous Data Integrity, Observability &amp; Recovery</div>
-            <div class="timestamp">Generated: {timestamp}</div>
-        </div>
 
-        <!-- Hero Cards -->
-        {hero_cards}
+<!-- Particle Background -->
+<div id="particles"></div>
 
-        <!-- Charts -->
-        <div class="section">
-            <h2>Data Health Overview</h2>
-            <div class="chart-container">
-                <div class="chart-box">
-                    <h4>Trust Score by Dataset</h4>
-                    {trust_chart_data}
-                </div>
-                <div class="chart-box">
-                    <h4>Recovery: Before vs After</h4>
-                    {recovery_chart_data}
-                </div>
-            </div>
-        </div>
+<div class="container">
 
-        <!-- Trust Score Table -->
-        <div class="section">
-            <h2>Validation Results</h2>
-            {trust_table}
-        </div>
-
-        <!-- Anomaly Table -->
-        <div class="section">
-            <h2>Anomaly Detection Results</h2>
-            {anomaly_table}
-        </div>
-
-        <!-- Recovery Table -->
-        <div class="section">
-            <h2>Recovery Results</h2>
-            {recovery_table}
-        </div>
-
-        <!-- Validation Details -->
-        <div class="section">
-            <h2>Validation Details</h2>
-            {validation_details}
-        </div>
-
-        <!-- Anomaly Details -->
-        <div class="section">
-            <h2>Anomaly Details</h2>
-            {anomaly_details}
-        </div>
-
-        <!-- Recovery Details -->
-        <div class="section">
-            <h2>Recovery Action Details</h2>
-            {recovery_details}
-        </div>
-
-        <!-- Footer -->
-        <div class="footer">
-            DataTrust v1.0 | Built by Khethukuthula | {timestamp}
+    <!-- Header -->
+    <div class="header">
+        <h1>DataTrust</h1>
+        <div class="subtitle">Autonomous Data Integrity, Observability & Recovery</div>
+        <div class="timestamp">
+            <span class="live-dot"></span>
+            Last updated: {timestamp}
         </div>
     </div>
 
-    <script>
-        // Tab switching
-        document.querySelectorAll('.tab-btn').forEach(btn => {{
-            btn.addEventListener('click', () => {{
-                const group = btn.dataset.group;
-                const target = btn.dataset.target;
+    <!-- Hero Cards -->
+    <div class="hero-grid">
+        <div class="hero-card" style="animation-delay: 0.1s">
+            <div class="hero-icon">🛡️</div>
+            <div class="hero-value" style="color: {"var(--accent-green)" if avg_trust >= 80 else "var(--accent-orange)" if avg_trust >= 60 else "var(--accent-red)"}">{avg_trust:.1f}%</div>
+            <div class="hero-label">Avg Trust Score</div>
+            <div class="hero-sub">{len(trust_scores)} datasets validated</div>
+        </div>
+        <div class="hero-card" style="animation-delay: 0.2s">
+            <div class="hero-icon">💓</div>
+            <div class="hero-value" style="color: {"var(--accent-green)" if avg_health >= 80 else "var(--accent-orange)" if avg_health >= 60 else "var(--accent-red)"}">{avg_health:.1f}%</div>
+            <div class="hero-label">Avg Health Score</div>
+            <div class="hero-sub">{len(health_scores)} datasets scanned</div>
+        </div>
+        <div class="hero-card" style="animation-delay: 0.3s">
+            <div class="hero-icon">🔍</div>
+            <div class="hero-value" style="color: var(--accent-orange)">{total_anomalies}</div>
+            <div class="hero-label">Anomalies Found</div>
+            <div class="hero-sub">Across all datasets</div>
+        </div>
+        <div class="hero-card" style="animation-delay: 0.4s">
+            <div class="hero-icon">🔧</div>
+            <div class="hero-value" style="color: var(--accent-green)">{avg_recovery:.1f}%</div>
+            <div class="hero-label">Recovery Rate</div>
+            <div class="hero-sub">{total_actions} actions taken</div>
+        </div>
+        <div class="hero-card" style="animation-delay: 0.5s">
+            <div class="hero-icon">✅</div>
+            <div class="hero-value" style="color: var(--accent-cyan)">{total_rows_recovered:,}</div>
+            <div class="hero-label">Rows Recovered</div>
+            <div class="hero-sub">Automatically repaired</div>
+        </div>
+        <div class="hero-card" style="animation-delay: 0.6s">
+            <div class="hero-icon">🚫</div>
+            <div class="hero-value" style="color: var(--accent-red)">{total_quarantined:,}</div>
+            <div class="hero-label">Quarantined</div>
+            <div class="hero-sub">Unfixable records isolated</div>
+        </div>
+    </div>
 
-                document.querySelectorAll(`.tab-btn[data-group="${{group}}"]`).forEach(b => b.classList.remove('active'));
-                document.querySelectorAll(`.tab-content[data-group="${{group}}"]`).forEach(c => c.classList.remove('active'));
+    <!-- Charts -->
+    <div class="section-header">
+        <h2>📊 Score Overview</h2>
+        <div class="section-line"></div>
+    </div>
 
-                btn.classList.add('active');
-                document.getElementById(target).classList.add('active');
-            }});
+    <div class="chart-grid">
+        <div class="chart-card" style="animation-delay: 0.2s">
+            <h3>Trust Scores by Dataset</h3>
+            <div class="bar-chart" id="trustChart"></div>
+        </div>
+        <div class="chart-card" style="animation-delay: 0.3s">
+            <h3>Health Scores by Dataset</h3>
+            <div class="bar-chart" id="healthChart"></div>
+        </div>
+    </div>
+
+    <!-- Dataset Cards -->
+    <div class="section-header">
+        <h2>📋 Dataset Details</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="dataset-grid">
+        {dataset_cards}
+    </div>
+
+    <!-- Detail Tables -->
+    <div class="section-header">
+        <h2>🔎 Detailed Reports</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab active" onclick="switchTab('validation')">Validation Checks</button>
+        <button class="tab" onclick="switchTab('anomalies')">Anomalies</button>
+        <button class="tab" onclick="switchTab('recovery')">Recovery Actions</button>
+    </div>
+
+    <div id="tab-validation" class="tab-content active">
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dataset</th>
+                        <th>Check</th>
+                        <th>Verdict</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>{validation_rows}</tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="tab-anomalies" class="tab-content">
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dataset</th>
+                        <th>Type</th>
+                        <th>Severity</th>
+                        <th>Column</th>
+                        <th>Affected</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>{anomaly_rows}</tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="tab-recovery" class="tab-content">
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dataset</th>
+                        <th>Action</th>
+                        <th>Column</th>
+                        <th>Rows Fixed</th>
+                        <th>Strategy</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>{recovery_rows}</tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer">
+        DataTrust v1.0 — Built by Khethukuthula Sabela — {timestamp}
+    </div>
+</div>
+
+<script>
+    // ═══ PARTICLE SYSTEM ═══
+    (function() {{
+        const container = document.getElementById('particles');
+        const colors = ['#00ff88', '#3b82f6', '#8b5cf6', '#06b6d4'];
+        for (let i = 0; i < 50; i++) {{
+            const p = document.createElement('div');
+            p.className = 'particle';
+            const size = Math.random() * 4 + 1;
+            p.style.width = size + 'px';
+            p.style.height = size + 'px';
+            p.style.left = Math.random() * 100 + '%';
+            p.style.background = colors[Math.floor(Math.random() * colors.length)];
+            p.style.animationDuration = (Math.random() * 20 + 15) + 's';
+            p.style.animationDelay = (Math.random() * 20) + 's';
+            container.appendChild(p);
+        }}
+    }})();
+
+    // ═══ BAR CHARTS ═══
+    function createBarChart(containerId, labels, data, colorFn) {{
+        const container = document.getElementById(containerId);
+        const max = Math.max(...data, 100);
+        labels.forEach((label, i) => {{
+            const group = document.createElement('div');
+            group.className = 'bar-group';
+            const height = (data[i] / max) * 100;
+            const color = colorFn(data[i]);
+            group.innerHTML =
+                '<div class="bar-value">' + data[i] + '%</div>' +
+                '<div class="bar" style="height:' + height + '%;background:linear-gradient(180deg,' + color + ',' + color + '88);animation-delay:' + (i*0.1) + 's"></div>' +
+                '<div class="bar-label">' + label + '</div>';
+            container.appendChild(group);
         }});
-    </script>
+    }}
+
+    function scoreColor(v) {{
+        return v >= 80 ? '#00ff88' : v >= 60 ? '#f59e0b' : '#ef4444';
+    }}
+
+    const labels = {trust_chart_labels};
+    createBarChart('trustChart', labels, {trust_chart_data}, scoreColor);
+    createBarChart('healthChart', labels, {health_chart_data}, scoreColor);
+
+    // ═══ TAB SWITCHING ═══
+    function switchTab(name) {{
+        document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.getElementById('tab-' + name).classList.add('active');
+        event.target.classList.add('active');
+    }}
+
+    // ═══ INTERSECTION OBSERVER (animate on scroll) ═══
+    const observer = new IntersectionObserver((entries) => {{
+        entries.forEach(entry => {{
+            if (entry.isIntersecting) {{
+                entry.target.style.animationPlayState = 'running';
+            }}
+        }});
+    }}, {{ threshold: 0.1 }});
+
+    document.querySelectorAll('.hero-card, .chart-card, .dataset-card').forEach(el => {{
+        observer.observe(el);
+    }});
+</script>
+
 </body>
 </html>"""
-        return html
 
-    # ── Hero Cards ───────────────────────────────────────
+        with open(output_path, "w", encoding="utf-8") as f:
+            f.write(html)
 
-    def _build_hero_cards(self, avg_trust, avg_health, total_anomalies,
-                          total_fixed, total_quarantined, avg_recovery):
-        trust_color = "green" if avg_trust >= 80 else "yellow" if avg_trust >= 60 else "red"
-        health_color = "green" if avg_health >= 80 else "yellow" if avg_health >= 60 else "red"
+        print(f"Dashboard generated: {output_path}")
+        return output_path
 
-        return f"""
-        <div class="hero-grid">
-            <div class="hero-card">
-                <div class="label">Avg Trust Score</div>
-                <div class="value {trust_color}">{avg_trust:.1f}%</div>
-                <div class="sub">Validation Engine</div>
-            </div>
-            <div class="hero-card">
-                <div class="label">Avg Health Score</div>
-                <div class="value {health_color}">{avg_health:.1f}%</div>
-                <div class="sub">Anomaly Detection</div>
-            </div>
-            <div class="hero-card">
-                <div class="label">Anomalies Found</div>
-                <div class="value orange">{total_anomalies}</div>
-                <div class="sub">Across all datasets</div>
-            </div>
-            <div class="hero-card">
-                <div class="label">Rows Fixed</div>
-                <div class="value blue">{total_fixed:,}</div>
-                <div class="sub">Auto-recovered</div>
-            </div>
-            <div class="hero-card">
-                <div class="label">Quarantined</div>
-                <div class="value purple">{total_quarantined:,}</div>
-                <div class="sub">Unfixable records</div>
-            </div>
-            <div class="hero-card">
-                <div class="label">Recovery Rate</div>
-                <div class="value green">{avg_recovery:.1f}%</div>
-                <div class="sub">Data preserved</div>
-            </div>
-        </div>"""
 
-    # ── Trust Score Table ────────────────────────────────
-
-    def _build_trust_score_table(self, datasets, trust_scores):
-        rows = ""
-        for ds in datasets:
-            if ds not in self.validation_reports:
-                continue
-            report = self.validation_reports[ds]
-            score = trust_scores.get(ds, 0)
-            verdict = report.get("overall_verdict", "N/A")
-            summary = report.get("summary", {})
-
-            badge_class = "badge-pass" if verdict == "PASS" else "badge-warn" if verdict == "WARN" else "badge-fail"
-            bar_color = "#3fb950" if score >= 80 else "#d29922" if score >= 60 else "#f85149"
-
-            rows += f"""
-            <tr>
-                <td><strong>{ds}</strong></td>
-                <td><span class="badge {badge_class}">{verdict}</span></td>
-                <td>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width:{score}%;background:{bar_color}">{score}%</div>
-                    </div>
-                </td>
-                <td class="green">{summary.get('passed', 0)}</td>
-                <td class="yellow">{summary.get('warnings', 0)}</td>
-                <td class="red">{summary.get('failed', 0)}</td>
-                <td>{summary.get('total_checks', 0)}</td>
-            </tr>"""
-
-        return f"""
-        <table>
-            <thead>
-                <tr>
-                    <th>Dataset</th>
-                    <th>Verdict</th>
-                    <th>Trust Score</th>
-                    <th>Pass</th>
-                    <th>Warn</th>
-                    <th>Fail</th>
-                    <th>Total</th>
-                </tr>
-            </thead>
-            <tbody>{rows}</tbody>
-        </table>"""
-
-    # ── Anomaly Table ────────────────────────────────────
-
-    def _build_anomaly_table(self, datasets):
-        rows = ""
-        for ds in datasets:
-            if ds not in self.anomaly_reports:
-                continue
-            report = self.anomaly_reports[ds]
-            health = report.get("health_score", 0)
-            summary = report.get("summary", {})
-
-            bar_color = "#3fb950" if health >= 80 else "#d29922" if health >= 60 else "#f85149"
-
-            rows += f"""
-            <tr>
-                <td><strong>{ds}</strong></td>
-                <td>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width:{max(health, 5)}%;background:{bar_color}">{health}%</div>
-                    </div>
-                </td>
-                <td>{summary.get('total_anomalies', 0)}</td>
-                <td class="red">{summary.get('critical', 0)}</td>
-                <td class="orange">{summary.get('high', 0)}</td>
-                <td class="yellow">{summary.get('medium', 0)}</td>
-                <td class="green">{summary.get('low', 0)}</td>
-                <td>{report.get('rows_scanned', 0):,}</td>
-            </tr>"""
-
-        return f"""
-        <table>
-            <thead>
-                <tr>
-                    <th>Dataset</th>
-                    <th>Health Score</th>
-                    <th>Total</th>
-                    <th>Critical</th>
-                    <th>High</th>
-                    <th>Medium</th>
-                    <th>Low</th>
-                    <th>Rows Scanned</th>
-                </tr>
-            </thead>
-            <tbody>{rows}</tbody>
-        </table>"""
-
-    # ── Recovery Table ───────────────────────────────────
-
-    def _build_recovery_table(self, datasets):
-        rows = ""
-        for ds in datasets:
-            if ds not in self.recovery_reports:
-                continue
-            report = self.recovery_reports[ds]
-            rate = report.get("recovery_rate", 0)
-            bar_color = "#3fb950" if rate >= 90 else "#d29922" if rate >= 70 else "#f85149"
-
-            rows += f"""
-            <tr>
-                <td><strong>{ds}</strong></td>
-                <td>{report.get('rows_before', 0):,}</td>
-                <td>{report.get('rows_after', 0):,}</td>
-                <td class="purple">{report.get('quarantined_rows', 0):,}</td>
-                <td class="blue">{report.get('total_rows_fixed', 0):,}</td>
-                <td>{report.get('total_actions', 0)}</td>
-                <td>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width:{rate}%;background:{bar_color}">{rate}%</div>
-                    </div>
-                </td>
-            </tr>"""
-
-        return f"""
-        <table>
-            <thead>
-                <tr>
-                    <th>Dataset</th>
-                    <th>Before</th>
-                    <th>After</th>
-                    <th>Quarantined</th>
-                    <th>Rows Fixed</th>
-                    <th>Actions</th>
-                    <th>Recovery Rate</th>
-                </tr>
-            </thead>
-            <tbody>{rows}</tbody>
-        </table>"""
-
-    # ── Validation Details ───────────────────────────────
-
-    def _build_validation_details(self, datasets):
-        tabs_buttons = ""
-        tabs_content = ""
-
-        valid_datasets = [ds for ds in datasets if ds in self.validation_reports]
-        for i, ds in enumerate(valid_datasets):
-            active = "active" if i == 0 else ""
-            tabs_buttons += f'<button class="tab-btn {active}" data-group="val" data-target="val-{ds}">{ds}</button>'
-
-            report = self.validation_reports[ds]
-            checks_html = ""
-            for check in report.get("checks", []):
-                verdict = check.get("verdict", "N/A")
-                css_class = f"detail-{verdict.lower()}"
-                badge_class = f"badge-{verdict.lower()}"
-                checks_html += f"""
-                <div class="detail-item {css_class}">
-                    <span class="badge {badge_class}">{verdict}</span>
-                    <strong>{check.get('check_name', '')}</strong> — {check.get('message', '')}
-                </div>"""
-
-            tabs_content += f'<div id="val-{ds}" class="tab-content {active}" data-group="val">{checks_html}</div>'
-
-        return f"""
-        <div class="tab-container">
-            <div class="tab-buttons">{tabs_buttons}</div>
-            {tabs_content}
-        </div>"""
-
-    # ── Anomaly Details ──────────────────────────────────
-
-    def _build_anomaly_details(self, datasets):
-        tabs_buttons = ""
-        tabs_content = ""
-
-        valid_datasets = [ds for ds in datasets if ds in self.anomaly_reports]
-        for i, ds in enumerate(valid_datasets):
-            active = "active" if i == 0 else ""
-            tabs_buttons += f'<button class="tab-btn {active}" data-group="anom" data-target="anom-{ds}">{ds}</button>'
-
-            report = self.anomaly_reports[ds]
-            anomalies_html = ""
-
-            if not report.get("anomalies"):
-                anomalies_html = '<div class="detail-item detail-pass">No anomalies detected</div>'
-            else:
-                severity_order = {"CRITICAL": 0, "HIGH": 1, "MEDIUM": 2, "LOW": 3}
-                sorted_anomalies = sorted(
-                    report["anomalies"],
-                    key=lambda a: severity_order.get(a.get("severity", "LOW"), 4)
-                )
-                for anomaly in sorted_anomalies:
-                    severity = anomaly.get("severity", "LOW")
-                    badge_class = f"badge-{severity.lower()}"
-                    css_class = "detail-fail" if severity in ("CRITICAL", "HIGH") else "detail-warn" if severity == "MEDIUM" else "detail-pass"
-                    anomalies_html += f"""
-                    <div class="detail-item {css_class}">
-                        <span class="badge {badge_class}">{severity}</span>
-                        <strong>[{anomaly.get('anomaly_type', '')}]</strong>
-                        {anomaly.get('description', '')}
-                    </div>"""
-
-            tabs_content += f'<div id="anom-{ds}" class="tab-content {active}" data-group="anom">{anomalies_html}</div>'
-
-        return f"""
-        <div class="tab-container">
-            <div class="tab-buttons">{tabs_buttons}</div>
-            {tabs_content}
-        </div>"""
-
-    # ── Recovery Details ─────────────────────────────────
-
-    def _build_recovery_details(self, datasets):
-        tabs_buttons = ""
-        tabs_content = ""
-
-        valid_datasets = [ds for ds in datasets if ds in self.recovery_reports]
-        for i, ds in enumerate(valid_datasets):
-            active = "active" if i == 0 else ""
-            tabs_buttons += f'<button class="tab-btn {active}" data-group="rec" data-target="rec-{ds}">{ds}</button>'
-
-            report = self.recovery_reports[ds]
-            actions_html = ""
-
-            if not report.get("actions"):
-                actions_html = '<div class="detail-item detail-pass">No recovery actions needed</div>'
-            else:
-                for action in report["actions"]:
-                    actions_html += f"""
-                    <div class="detail-item detail-warn">
-                        <strong>[{action.get('action_type', '')}]</strong>
-                        {action.get('description', '')}
-                        <br><small style="color:#6e7681">Strategy: {action.get('strategy', 'N/A')} | Rows affected: {action.get('rows_affected', 0):,}</small>
-                    </div>"""
-
-            tabs_content += f'<div id="rec-{ds}" class="tab-content {active}" data-group="rec">{actions_html}</div>'
-
-        return f"""
-        <div class="tab-container">
-            <div class="tab-buttons">{tabs_buttons}</div>
-            {tabs_content}
-        </div>"""
-
-    # ── Chart Data (Bar Charts via HTML/CSS) ─────────────
-
-    def _build_chart_data(self, datasets, trust_scores, health_scores):
-        bars = ""
-        for ds in datasets:
-            trust = trust_scores.get(ds, 0)
-            health = health_scores.get(ds, 0)
-            trust_color = "#3fb950" if trust >= 80 else "#d29922" if trust >= 60 else "#f85149"
-            health_color = "#58a6ff" if health >= 80 else "#d29922" if health >= 60 else "#f85149"
-
-            bars += f"""
-            <div class="bar-row">
-                <div class="bar-label">{ds}</div>
-                <div class="bar-track">
-                    <div class="bar-fill" style="width:{max(trust, 3)}%;background:{trust_color}">{trust:.0f}%</div>
-                </div>
-            </div>"""
-
-        return f'<div class="bar-chart">{bars}</div>'
-
-    def _build_recovery_chart_data(self, datasets):
-        bars = ""
-        for ds in datasets:
-            if ds not in self.recovery_reports:
-                continue
-            report = self.recovery_reports[ds]
-            before = report.get("rows_before", 0)
-            after = report.get("rows_after", 0)
-            quarantined = report.get("quarantined_rows", 0)
-
-            if before == 0:
-                continue
-
-            after_pct = (after / before) * 100
-            quarantine_pct = (quarantined / before) * 100
-
-            bars += f"""
-            <div class="bar-row">
-                <div class="bar-label">{ds}</div>
-                <div class="bar-track">
-                    <div class="bar-fill" style="width:{after_pct}%;background:#3fb950">{after:,}</div>
-                </div>
-                <div class="bar-value" style="color:#bc8cff">-{quarantined:,}</div>
-            </div>"""
-
-        return f'<div class="bar-chart">{bars}</div>'
+if __name__ == "__main__":
+    gen = DashboardGenerator()
+    gen.generate()
+    print("Open data/dashboard/index.html in your browser")
 
