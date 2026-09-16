@@ -8,7 +8,7 @@
     "warnings": 0,
     "failed": 1
   },
-  "duration_seconds": 0.018046,
+  "duration_seconds": 0.041398,
   "checks": [
     {
       "check_name": "schema_missing_columns",
@@ -16,7 +16,7 @@
       "verdict": "PASS",
       "message": "All expected columns present",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.456068"
+      "timestamp": "2026-09-16T15:25:43.653366"
     },
     {
       "check_name": "schema_unexpected_columns",
@@ -24,7 +24,7 @@
       "verdict": "PASS",
       "message": "No unexpected columns",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.456075"
+      "timestamp": "2026-09-16T15:25:43.653457"
     },
     {
       "check_name": "completeness_overall",
@@ -37,7 +37,7 @@
         "null_cells": 2900,
         "total_cells": 21456
       },
-      "timestamp": "2026-09-16T14:22:47.457598"
+      "timestamp": "2026-09-16T15:25:43.657239"
     },
     {
       "check_name": "completeness_claim_id",
@@ -49,7 +49,7 @@
         "null_count": 0,
         "completeness": 1.0
       },
-      "timestamp": "2026-09-16T14:22:47.457957"
+      "timestamp": "2026-09-16T15:25:43.657991"
     },
     {
       "check_name": "completeness_policy_id",
@@ -61,7 +61,7 @@
         "null_count": 0,
         "completeness": 1.0
       },
-      "timestamp": "2026-09-16T14:22:47.458110"
+      "timestamp": "2026-09-16T15:25:43.658454"
     },
     {
       "check_name": "completeness_claim_amount",
@@ -73,7 +73,7 @@
         "null_count": 0,
         "completeness": 1.0
       },
-      "timestamp": "2026-09-16T14:22:47.458197"
+      "timestamp": "2026-09-16T15:25:43.658779"
     },
     {
       "check_name": "uniqueness_claim_id",
@@ -84,7 +84,7 @@
         "column": "claim_id",
         "duplicate_count": 0
       },
-      "timestamp": "2026-09-16T14:22:47.458624"
+      "timestamp": "2026-09-16T15:25:43.660022"
     },
     {
       "check_name": "uniqueness_duplicate_rows",
@@ -96,7 +96,7 @@
         "duplicate_rate": 0.0,
         "threshold": 0.02
       },
-      "timestamp": "2026-09-16T14:22:47.462414"
+      "timestamp": "2026-09-16T15:25:43.666541"
     },
     {
       "check_name": "volume_row_count",
@@ -108,7 +108,7 @@
         "min_rows": 100,
         "max_rows": 100000
       },
-      "timestamp": "2026-09-16T14:22:47.462431"
+      "timestamp": "2026-09-16T15:25:43.666571"
     },
     {
       "check_name": "validity_claim_id_pattern",
@@ -116,7 +116,7 @@
       "verdict": "PASS",
       "message": "Column 'claim_id': all values match pattern",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.463546"
+      "timestamp": "2026-09-16T15:25:43.668246"
     },
     {
       "check_name": "validity_policy_id_pattern",
@@ -124,7 +124,7 @@
       "verdict": "PASS",
       "message": "Column 'policy_id': all values match pattern",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.464503"
+      "timestamp": "2026-09-16T15:25:43.669685"
     },
     {
       "check_name": "validity_customer_id_pattern",
@@ -132,7 +132,7 @@
       "verdict": "PASS",
       "message": "Column 'customer_id': all values match pattern",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.465406"
+      "timestamp": "2026-09-16T15:25:43.671248"
     },
     {
       "check_name": "validity_claim_type_allowed",
@@ -140,7 +140,7 @@
       "verdict": "PASS",
       "message": "Column 'claim_type': all values in allowed set",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.466014"
+      "timestamp": "2026-09-16T15:25:43.671914"
     },
     {
       "check_name": "validity_claim_date_date_range",
@@ -148,7 +148,7 @@
       "verdict": "PASS",
       "message": "Column 'claim_date': all dates valid and in range",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.468265"
+      "timestamp": "2026-09-16T15:25:43.674242"
     },
     {
       "check_name": "validity_claim_amount_range",
@@ -156,7 +156,7 @@
       "verdict": "PASS",
       "message": "Column 'claim_amount': all values within range",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.468602"
+      "timestamp": "2026-09-16T15:25:43.674933"
     },
     {
       "check_name": "validity_approved_amount_range",
@@ -164,7 +164,7 @@
       "verdict": "PASS",
       "message": "Column 'approved_amount': all values within range",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.469112"
+      "timestamp": "2026-09-16T15:25:43.675510"
     },
     {
       "check_name": "validity_currency_allowed",
@@ -172,7 +172,7 @@
       "verdict": "PASS",
       "message": "Column 'currency': all values in allowed set",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.469620"
+      "timestamp": "2026-09-16T15:25:43.676262"
     },
     {
       "check_name": "validity_status_allowed",
@@ -180,7 +180,7 @@
       "verdict": "PASS",
       "message": "Column 'status': all values in allowed set",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.470022"
+      "timestamp": "2026-09-16T15:25:43.677607"
     },
     {
       "check_name": "validity_assessor_id_pattern",
@@ -188,7 +188,7 @@
       "verdict": "PASS",
       "message": "Column 'assessor_id': all values match pattern",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.471063"
+      "timestamp": "2026-09-16T15:25:43.680471"
     },
     {
       "check_name": "fk_policy_id_to_policies",
@@ -196,7 +196,7 @@
       "verdict": "PASS",
       "message": "FK 'policy_id' \u2192 'policies.policy_id': all references valid",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.472670"
+      "timestamp": "2026-09-16T15:25:43.689336"
     },
     {
       "check_name": "fk_customer_id_to_customers",
@@ -204,7 +204,7 @@
       "verdict": "PASS",
       "message": "FK 'customer_id' \u2192 'customers.customer_id': all references valid",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.474004"
+      "timestamp": "2026-09-16T15:25:43.694218"
     },
     {
       "check_name": "freshness_age",
@@ -215,7 +215,7 @@
         "age_hours": 0.0,
         "max_age_hours": 48
       },
-      "timestamp": "2026-09-16T14:22:47.474074"
+      "timestamp": "2026-09-16T15:25:43.694324"
     }
   ]
 }

@@ -8,7 +8,7 @@
     "warnings": 0,
     "failed": 1
   },
-  "duration_seconds": 0.049488,
+  "duration_seconds": 0.123846,
   "checks": [
     {
       "check_name": "schema_missing_columns",
@@ -16,7 +16,7 @@
       "verdict": "PASS",
       "message": "All expected columns present",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.500524"
+      "timestamp": "2026-09-16T15:25:43.774635"
     },
     {
       "check_name": "schema_unexpected_columns",
@@ -24,7 +24,7 @@
       "verdict": "PASS",
       "message": "No unexpected columns",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.500530"
+      "timestamp": "2026-09-16T15:25:43.774657"
     },
     {
       "check_name": "completeness_overall",
@@ -37,7 +37,7 @@
         "null_cells": 12397,
         "total_cells": 102399
       },
-      "timestamp": "2026-09-16T14:22:47.504611"
+      "timestamp": "2026-09-16T15:25:43.786396"
     },
     {
       "check_name": "completeness_payment_id",
@@ -49,7 +49,7 @@
         "null_count": 0,
         "completeness": 1.0
       },
-      "timestamp": "2026-09-16T14:22:47.505176"
+      "timestamp": "2026-09-16T15:25:43.787980"
     },
     {
       "check_name": "completeness_customer_id",
@@ -61,7 +61,7 @@
         "null_count": 0,
         "completeness": 1.0
       },
-      "timestamp": "2026-09-16T14:22:47.505551"
+      "timestamp": "2026-09-16T15:25:43.789022"
     },
     {
       "check_name": "completeness_amount",
@@ -73,7 +73,7 @@
         "null_count": 0,
         "completeness": 1.0
       },
-      "timestamp": "2026-09-16T14:22:47.505654"
+      "timestamp": "2026-09-16T15:25:43.789409"
     },
     {
       "check_name": "uniqueness_payment_id",
@@ -84,7 +84,7 @@
         "column": "payment_id",
         "duplicate_count": 0
       },
-      "timestamp": "2026-09-16T14:22:47.507030"
+      "timestamp": "2026-09-16T15:25:43.794410"
     },
     {
       "check_name": "uniqueness_reference",
@@ -95,7 +95,7 @@
         "column": "reference",
         "duplicate_count": 0
       },
-      "timestamp": "2026-09-16T14:22:47.508277"
+      "timestamp": "2026-09-16T15:25:43.803909"
     },
     {
       "check_name": "uniqueness_duplicate_rows",
@@ -107,7 +107,7 @@
         "duplicate_rate": 0.0,
         "threshold": 0.01
       },
-      "timestamp": "2026-09-16T14:22:47.518681"
+      "timestamp": "2026-09-16T15:25:43.826656"
     },
     {
       "check_name": "volume_row_count",
@@ -119,7 +119,7 @@
         "min_rows": 500,
         "max_rows": 500000
       },
-      "timestamp": "2026-09-16T14:22:47.518700"
+      "timestamp": "2026-09-16T15:25:43.826707"
     },
     {
       "check_name": "validity_payment_id_pattern",
@@ -127,7 +127,7 @@
       "verdict": "PASS",
       "message": "Column 'payment_id': all values match pattern",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.522848"
+      "timestamp": "2026-09-16T15:25:43.839324"
     },
     {
       "check_name": "validity_customer_id_pattern",
@@ -135,7 +135,7 @@
       "verdict": "PASS",
       "message": "Column 'customer_id': all values match pattern",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.527462"
+      "timestamp": "2026-09-16T15:25:43.853302"
     },
     {
       "check_name": "validity_account_id_pattern",
@@ -143,7 +143,7 @@
       "verdict": "PASS",
       "message": "Column 'account_id': all values match pattern",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.531788"
+      "timestamp": "2026-09-16T15:25:43.866023"
     },
     {
       "check_name": "validity_policy_id_pattern",
@@ -151,7 +151,7 @@
       "verdict": "PASS",
       "message": "Column 'policy_id': all values match pattern",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.534717"
+      "timestamp": "2026-09-16T15:25:43.875049"
     },
     {
       "check_name": "validity_amount_range",
@@ -159,7 +159,7 @@
       "verdict": "PASS",
       "message": "Column 'amount': all values within range",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.535136"
+      "timestamp": "2026-09-16T15:25:43.878482"
     },
     {
       "check_name": "validity_currency_allowed",
@@ -167,7 +167,7 @@
       "verdict": "PASS",
       "message": "Column 'currency': all values in allowed set",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.535962"
+      "timestamp": "2026-09-16T15:25:43.880376"
     },
     {
       "check_name": "validity_payment_date_date_range",
@@ -175,7 +175,7 @@
       "verdict": "PASS",
       "message": "Column 'payment_date': all dates valid and in range",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.539876"
+      "timestamp": "2026-09-16T15:25:43.884702"
     },
     {
       "check_name": "validity_payment_method_allowed",
@@ -183,7 +183,7 @@
       "verdict": "PASS",
       "message": "Column 'payment_method': all values in allowed set",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.540890"
+      "timestamp": "2026-09-16T15:25:43.886133"
     },
     {
       "check_name": "validity_status_allowed",
@@ -191,7 +191,7 @@
       "verdict": "PASS",
       "message": "Column 'status': all values in allowed set",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.541685"
+      "timestamp": "2026-09-16T15:25:43.887304"
     },
     {
       "check_name": "fk_customer_id_to_customers",
@@ -199,7 +199,7 @@
       "verdict": "PASS",
       "message": "FK 'customer_id' \u2192 'customers.customer_id': all references valid",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.544623"
+      "timestamp": "2026-09-16T15:25:43.891239"
     },
     {
       "check_name": "fk_account_id_to_accounts",
@@ -207,7 +207,7 @@
       "verdict": "PASS",
       "message": "FK 'account_id' \u2192 'accounts.account_id': all references valid",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.547699"
+      "timestamp": "2026-09-16T15:25:43.895712"
     },
     {
       "check_name": "fk_policy_id_to_policies",
@@ -215,7 +215,7 @@
       "verdict": "PASS",
       "message": "FK 'policy_id' \u2192 'policies.policy_id': all references valid",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.549917"
+      "timestamp": "2026-09-16T15:25:43.898338"
     },
     {
       "check_name": "freshness_age",
@@ -226,7 +226,7 @@
         "age_hours": 0.0,
         "max_age_hours": 48
       },
-      "timestamp": "2026-09-16T14:22:47.549976"
+      "timestamp": "2026-09-16T15:25:43.898400"
     }
   ]
 }

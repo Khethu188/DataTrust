@@ -9,7 +9,7 @@
     "medium": 2,
     "low": 0
   },
-  "duration_seconds": 0.20702,
+  "duration_seconds": 0.332865,
   "anomalies": [
     {
       "anomaly_type": "ZSCORE_OUTLIER",
@@ -33,7 +33,7 @@
           4501463.89
         ]
       },
-      "timestamp": "2026-09-16T14:22:48.408769"
+      "timestamp": "2026-09-16T15:25:45.519396"
     },
     {
       "anomaly_type": "IQR_OUTLIER",
@@ -51,7 +51,7 @@
         "below_lower": 0,
         "above_upper": 24
       },
-      "timestamp": "2026-09-16T14:22:48.411990"
+      "timestamp": "2026-09-16T15:25:45.536512"
     },
     {
       "anomaly_type": "IQR_OUTLIER",
@@ -69,7 +69,7 @@
         "below_lower": 0,
         "above_upper": 14
       },
-      "timestamp": "2026-09-16T14:22:48.413346"
+      "timestamp": "2026-09-16T15:25:45.548923"
     },
     {
       "anomaly_type": "ISOLATION_FOREST",
@@ -88,7 +88,7 @@
         "mean_anomaly_score": -0.0319,
         "worst_score": -0.1098
       },
-      "timestamp": "2026-09-16T14:22:48.603435"
+      "timestamp": "2026-09-16T15:25:45.832823"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -112,7 +112,7 @@
         "total_categories": 784,
         "rare_categories": 784
       },
-      "timestamp": "2026-09-16T14:22:48.607314"
+      "timestamp": "2026-09-16T15:25:45.837427"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -136,7 +136,7 @@
         "total_categories": 538,
         "rare_categories": 347
       },
-      "timestamp": "2026-09-16T14:22:48.608171"
+      "timestamp": "2026-09-16T15:25:45.838481"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -160,7 +160,7 @@
         "total_categories": 718,
         "rare_categories": 654
       },
-      "timestamp": "2026-09-16T14:22:48.610164"
+      "timestamp": "2026-09-16T15:25:45.841111"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -184,7 +184,7 @@
         "total_categories": 756,
         "rare_categories": 729
       },
-      "timestamp": "2026-09-16T14:22:48.611002"
+      "timestamp": "2026-09-16T15:25:45.842187"
     }
   ]
 }

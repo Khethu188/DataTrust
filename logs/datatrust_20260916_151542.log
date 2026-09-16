@@ -1,0 +1,29 @@
+2026-09-16 15:15:42 | INFO     | ============================================================
+2026-09-16 15:15:42 | INFO     |   DataTrust — Project Status
+2026-09-16 15:15:42 | INFO     | ============================================================
+2026-09-16 15:15:42 | INFO     | 
+  Directories:
+2026-09-16 15:15:42 | INFO     |     [OK] Clean data           data/clean                     (6 files)
+2026-09-16 15:15:42 | INFO     |     [OK] Corrupted data       data/corrupted                 (7 files)
+2026-09-16 15:15:42 | INFO     |     [OK] Recovered data       data/recovered                 (6 files)
+2026-09-16 15:15:42 | INFO     |     [OK] Quarantine           data/quarantine                (6 files)
+2026-09-16 15:15:42 | INFO     |     [OK] Reports              data/reports                   (18 files)
+2026-09-16 15:15:42 | INFO     |     [OK] Contracts            src/contracts                  (6 files)
+2026-09-16 15:15:42 | INFO     |     [OK] Logs                 logs                           (8 files)
+2026-09-16 15:15:42 | INFO     | 
+  Reports:
+2026-09-16 15:15:42 | INFO     |     Validation:  6
+2026-09-16 15:15:42 | INFO     |     Anomaly:     6
+2026-09-16 15:15:42 | INFO     |     Recovery:    6
+2026-09-16 15:15:42 | INFO     | 
+  Latest Trust Scores:
+2026-09-16 15:15:42 | INFO     |     [OK] accounts         100.0%  (PASS)
+2026-09-16 15:15:42 | INFO     |     [XX] claims            95.5%  (FAIL)
+2026-09-16 15:15:42 | INFO     |     [XX] customers         79.2%  (FAIL)
+2026-09-16 15:15:42 | INFO     |     [XX] payments          95.7%  (FAIL)
+2026-09-16 15:15:42 | INFO     |     [OK] policies         100.0%  (PASS)
+2026-09-16 15:15:42 | INFO     |     [OK] transactions     100.0%  (PASS)
+2026-09-16 15:15:42 | INFO     | 
+  Dashboard: data/dashboard/index.html
+2026-09-16 15:15:42 | INFO     |     Last updated: 2026-09-16 14:35:15
+2026-09-16 15:15:42 | INFO     | ------------------------------------------------------------

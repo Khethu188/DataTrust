@@ -1,0 +1,121 @@
+2026-09-16 15:25:34 | INFO     | ============================================================
+2026-09-16 15:25:34 | INFO     |   DataTrust — Full Pipeline
+2026-09-16 15:25:34 | INFO     | ============================================================
+2026-09-16 15:25:34 | INFO     |   Started: 2026-09-16 15:25:34
+2026-09-16 15:25:34 | INFO     |   Config:  {
+  "clean_data": "data/clean",
+  "corrupted_data": "data/corrupted",
+  "recovered_data": "data/recovered",
+  "quarantine_data": "data/quarantine",
+  "reports": "data/reports",
+  "dashboard": "data/dashboard/index.html",
+  "contracts": "src/contracts",
+  "logs": "logs"
+}
+2026-09-16 15:25:34 | INFO     | ============================================================
+2026-09-16 15:25:34 | INFO     |   Validation — CLEAN Data
+2026-09-16 15:25:34 | INFO     | ============================================================
+2026-09-16 15:25:34 | INFO     |   Loaded accounts           1,500 rows
+2026-09-16 15:25:34 | INFO     |   Loaded claims             2,000 rows
+2026-09-16 15:25:34 | INFO     |   Loaded customers          1,000 rows
+2026-09-16 15:25:34 | INFO     |   Loaded payments          10,000 rows
+2026-09-16 15:25:34 | INFO     |   Loaded policies             800 rows
+2026-09-16 15:25:34 | INFO     |   Loaded transactions      50,000 rows
+2026-09-16 15:25:35 | INFO     | [32m[OK][0m Validation (clean) complete
+2026-09-16 15:25:35 | INFO     |   Stage 'Validation (clean)' completed in 1.2s
+2026-09-16 15:25:35 | INFO     | ============================================================
+2026-09-16 15:25:35 | INFO     |   Validation — CORRUPTED Data
+2026-09-16 15:25:35 | INFO     | ============================================================
+2026-09-16 15:25:35 | INFO     |   Loaded accounts           1,500 rows
+2026-09-16 15:25:35 | INFO     |   Loaded claims             2,080 rows
+2026-09-16 15:25:35 | INFO     |   Loaded customers          1,015 rows
+2026-09-16 15:25:35 | INFO     |   Loaded payments          10,120 rows
+2026-09-16 15:25:35 | INFO     |   Loaded policies             800 rows
+2026-09-16 15:25:35 | INFO     |   Loaded transactions      50,500 rows
+2026-09-16 15:25:36 | INFO     | [32m[OK][0m Validation (corrupted) complete
+2026-09-16 15:25:36 | INFO     |   Stage 'Validation (corrupted)' completed in 1.2s
+2026-09-16 15:25:36 | INFO     | ============================================================
+2026-09-16 15:25:36 | INFO     |   Anomaly Detection — CORRUPTED Data
+2026-09-16 15:25:36 | INFO     | ============================================================
+2026-09-16 15:25:36 | INFO     |   Loaded accounts           1,500 rows
+2026-09-16 15:25:36 | INFO     |   Loaded claims             2,080 rows
+2026-09-16 15:25:36 | INFO     |   Loaded customers          1,015 rows
+2026-09-16 15:25:36 | INFO     |   Loaded payments          10,120 rows
+2026-09-16 15:25:36 | INFO     |   Loaded policies             800 rows
+2026-09-16 15:25:36 | INFO     |   Loaded transactions      50,500 rows
+2026-09-16 15:25:38 | INFO     | [32m[OK][0m Anomaly detection (corrupted) complete
+2026-09-16 15:25:38 | INFO     |   Stage 'Anomaly Detection (corrupted)' completed in 2.1s
+2026-09-16 15:25:38 | INFO     | ============================================================
+2026-09-16 15:25:38 | INFO     |   Auto-Recovery
+2026-09-16 15:25:38 | INFO     | ============================================================
+2026-09-16 15:25:38 | INFO     |   Loaded accounts           1,500 rows
+2026-09-16 15:25:38 | INFO     |   Loaded claims             2,080 rows
+2026-09-16 15:25:38 | INFO     |   Loaded customers          1,015 rows
+2026-09-16 15:25:38 | INFO     |   Loaded payments          10,120 rows
+2026-09-16 15:25:38 | INFO     |   Loaded policies             800 rows
+2026-09-16 15:25:39 | INFO     |   Loaded transactions      50,500 rows
+2026-09-16 15:25:39 | INFO     |   Loaded accounts           1,500 rows
+2026-09-16 15:25:39 | INFO     |   Loaded claims             2,000 rows
+2026-09-16 15:25:39 | INFO     |   Loaded customers          1,000 rows
+2026-09-16 15:25:39 | INFO     |   Loaded payments          10,000 rows
+2026-09-16 15:25:39 | INFO     |   Loaded policies             800 rows
+2026-09-16 15:25:39 | INFO     |   Loaded transactions      50,000 rows
+2026-09-16 15:25:41 | INFO     |   Saved data/recovered/customers.csv (1,000 rows)
+2026-09-16 15:25:41 | INFO     |   Saved data/recovered/accounts.csv (1,448 rows)
+2026-09-16 15:25:41 | INFO     |   Saved data/recovered/policies.csv (784 rows)
+2026-09-16 15:25:42 | INFO     |   Saved data/recovered/transactions.csv (45,730 rows)
+2026-09-16 15:25:42 | INFO     |   Saved data/recovered/claims.csv (1,788 rows)
+2026-09-16 15:25:42 | INFO     |   Saved data/recovered/payments.csv (9,309 rows)
+2026-09-16 15:25:42 | INFO     |   Quarantined data/quarantine/customers_quarantine.csv (15 rows)
+2026-09-16 15:25:42 | INFO     |   Quarantined data/quarantine/accounts_quarantine.csv (52 rows)
+2026-09-16 15:25:42 | INFO     |   Quarantined data/quarantine/policies_quarantine.csv (16 rows)
+2026-09-16 15:25:42 | INFO     |   Quarantined data/quarantine/transactions_quarantine.csv (4,770 rows)
+2026-09-16 15:25:42 | INFO     |   Quarantined data/quarantine/claims_quarantine.csv (292 rows)
+2026-09-16 15:25:42 | INFO     |   Quarantined data/quarantine/payments_quarantine.csv (811 rows)
+2026-09-16 15:25:42 | INFO     | [32m[OK][0m Recovery complete
+2026-09-16 15:25:42 | INFO     |   Stage 'Recovery' completed in 4.2s
+2026-09-16 15:25:43 | INFO     | ============================================================
+2026-09-16 15:25:43 | INFO     |   Validation — RECOVERED Data
+2026-09-16 15:25:43 | INFO     | ============================================================
+2026-09-16 15:25:43 | INFO     |   Loaded accounts           1,448 rows
+2026-09-16 15:25:43 | INFO     |   Loaded claims             1,788 rows
+2026-09-16 15:25:43 | INFO     |   Loaded customers          1,000 rows
+2026-09-16 15:25:43 | INFO     |   Loaded payments           9,309 rows
+2026-09-16 15:25:43 | INFO     |   Loaded policies             784 rows
+2026-09-16 15:25:43 | INFO     |   Loaded transactions      45,730 rows
+2026-09-16 15:25:44 | INFO     | [32m[OK][0m Validation (recovered) complete
+2026-09-16 15:25:44 | INFO     |   Stage 'Validation (recovered)' completed in 1.3s
+2026-09-16 15:25:44 | INFO     | ============================================================
+2026-09-16 15:25:44 | INFO     |   Anomaly Detection — RECOVERED Data
+2026-09-16 15:25:44 | INFO     | ============================================================
+2026-09-16 15:25:44 | INFO     |   Loaded accounts           1,448 rows
+2026-09-16 15:25:44 | INFO     |   Loaded claims             1,788 rows
+2026-09-16 15:25:44 | INFO     |   Loaded customers          1,000 rows
+2026-09-16 15:25:44 | INFO     |   Loaded payments           9,309 rows
+2026-09-16 15:25:44 | INFO     |   Loaded policies             784 rows
+2026-09-16 15:25:44 | INFO     |   Loaded transactions      45,730 rows
+2026-09-16 15:25:46 | INFO     | [32m[OK][0m Anomaly detection (recovered) complete
+2026-09-16 15:25:46 | INFO     |   Stage 'Anomaly Detection (recovered)' completed in 1.9s
+2026-09-16 15:25:46 | INFO     | ============================================================
+2026-09-16 15:25:46 | INFO     |   Dashboard Generation
+2026-09-16 15:25:46 | INFO     | ============================================================
+2026-09-16 15:25:46 | INFO     |   Validation reports: 6
+2026-09-16 15:25:46 | INFO     |   Anomaly reports:    6
+2026-09-16 15:25:46 | INFO     |   Recovery reports:   6
+2026-09-16 15:25:46 | INFO     | [32m[OK][0m Dashboard saved: data/dashboard/index.html
+2026-09-16 15:25:46 | INFO     |   Stage 'Dashboard' completed in 0.1s
+2026-09-16 15:25:46 | INFO     | ============================================================
+2026-09-16 15:25:46 | INFO     |   PIPELINE COMPLETE
+2026-09-16 15:25:46 | INFO     | ============================================================
+2026-09-16 15:25:46 | INFO     |   Total time: 12.2 seconds
+2026-09-16 15:25:46 | INFO     | ------------------------------------------------------------
+2026-09-16 15:25:46 | INFO     |   Stage Timings:
+2026-09-16 15:25:46 | INFO     |     Validation (clean)                     1.2s
+2026-09-16 15:25:46 | INFO     |     Validation (corrupted)                 1.2s
+2026-09-16 15:25:46 | INFO     |     Anomaly Detection (corrupted)          2.1s
+2026-09-16 15:25:46 | INFO     |     Recovery                               4.2s
+2026-09-16 15:25:46 | INFO     |     Validation (recovered)                 1.3s
+2026-09-16 15:25:46 | INFO     |     Anomaly Detection (recovered)          1.9s
+2026-09-16 15:25:46 | INFO     |     Dashboard                              0.1s
+2026-09-16 15:25:46 | INFO     | ------------------------------------------------------------
+2026-09-16 15:25:46 | INFO     | [32m[OK][0m All stages completed successfully!

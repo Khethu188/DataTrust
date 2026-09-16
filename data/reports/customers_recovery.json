@@ -6,7 +6,7 @@
   "recovery_rate": 98.5,
   "total_actions": 4,
   "total_rows_fixed": 75,
-  "duration_seconds": 0.015729,
+  "duration_seconds": 0.060624,
   "actions": [
     {
       "action_type": "DEDUPLICATION",
@@ -15,7 +15,7 @@
       "rows_affected": 15,
       "strategy": "keep_first",
       "details": {},
-      "timestamp": "2026-09-16T14:22:46.426982"
+      "timestamp": "2026-09-16T15:25:40.036285"
     },
     {
       "action_type": "NULL_IMPUTATION",
@@ -24,7 +24,7 @@
       "rows_affected": 20,
       "strategy": "UNKNOWN",
       "details": {},
-      "timestamp": "2026-09-16T14:22:46.429310"
+      "timestamp": "2026-09-16T15:25:40.041698"
     },
     {
       "action_type": "NULL_IMPUTATION",
@@ -33,7 +33,7 @@
       "rows_affected": 20,
       "strategy": "UNKNOWN",
       "details": {},
-      "timestamp": "2026-09-16T14:22:46.430497"
+      "timestamp": "2026-09-16T15:25:40.043997"
     },
     {
       "action_type": "NULL_IMPUTATION",
@@ -42,7 +42,7 @@
       "rows_affected": 20,
       "strategy": "UNKNOWN",
       "details": {},
-      "timestamp": "2026-09-16T14:22:46.431208"
+      "timestamp": "2026-09-16T15:25:40.047297"
     }
   ]
 }

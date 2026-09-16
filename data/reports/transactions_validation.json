@@ -8,7 +8,7 @@
     "warnings": 0,
     "failed": 0
   },
-  "duration_seconds": 0.218941,
+  "duration_seconds": 0.301548,
   "checks": [
     {
       "check_name": "schema_missing_columns",
@@ -16,7 +16,7 @@
       "verdict": "PASS",
       "message": "All expected columns present",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.576343"
+      "timestamp": "2026-09-16T15:25:43.971090"
     },
     {
       "check_name": "schema_unexpected_columns",
@@ -24,7 +24,7 @@
       "verdict": "PASS",
       "message": "No unexpected columns",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.576350"
+      "timestamp": "2026-09-16T15:25:43.971118"
     },
     {
       "check_name": "completeness_overall",
@@ -37,7 +37,7 @@
         "null_cells": 0,
         "total_cells": 548760
       },
-      "timestamp": "2026-09-16T14:22:47.597889"
+      "timestamp": "2026-09-16T15:25:44.001330"
     },
     {
       "check_name": "completeness_transaction_id",
@@ -49,7 +49,7 @@
         "null_count": 0,
         "completeness": 1.0
       },
-      "timestamp": "2026-09-16T14:22:47.599673"
+      "timestamp": "2026-09-16T15:25:44.006063"
     },
     {
       "check_name": "completeness_customer_id",
@@ -61,7 +61,7 @@
         "null_count": 0,
         "completeness": 1.0
       },
-      "timestamp": "2026-09-16T14:22:47.601246"
+      "timestamp": "2026-09-16T15:25:44.008975"
     },
     {
       "check_name": "completeness_account_id",
@@ -73,7 +73,7 @@
         "null_count": 0,
         "completeness": 1.0
       },
-      "timestamp": "2026-09-16T14:22:47.602933"
+      "timestamp": "2026-09-16T15:25:44.011354"
     },
     {
       "check_name": "completeness_amount",
@@ -85,7 +85,7 @@
         "null_count": 0,
         "completeness": 1.0
       },
-      "timestamp": "2026-09-16T14:22:47.603140"
+      "timestamp": "2026-09-16T15:25:44.011752"
     },
     {
       "check_name": "uniqueness_transaction_id",
@@ -96,7 +96,7 @@
         "column": "transaction_id",
         "duplicate_count": 0
       },
-      "timestamp": "2026-09-16T14:22:47.612637"
+      "timestamp": "2026-09-16T15:25:44.020969"
     },
     {
       "check_name": "uniqueness_reference_number",
@@ -107,7 +107,7 @@
         "column": "reference_number",
         "duplicate_count": 0
       },
-      "timestamp": "2026-09-16T14:22:47.619440"
+      "timestamp": "2026-09-16T15:25:44.030093"
     },
     {
       "check_name": "uniqueness_duplicate_rows",
@@ -119,7 +119,7 @@
         "duplicate_rate": 0.0,
         "threshold": 0.005
       },
-      "timestamp": "2026-09-16T14:22:47.677258"
+      "timestamp": "2026-09-16T15:25:44.107693"
     },
     {
       "check_name": "volume_row_count",
@@ -131,7 +131,7 @@
         "min_rows": 1000,
         "max_rows": 1000000
       },
-      "timestamp": "2026-09-16T14:22:47.677276"
+      "timestamp": "2026-09-16T15:25:44.107724"
     },
     {
       "check_name": "validity_transaction_id_pattern",
@@ -139,7 +139,7 @@
       "verdict": "PASS",
       "message": "Column 'transaction_id': all values match pattern",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.696080"
+      "timestamp": "2026-09-16T15:25:44.132894"
     },
     {
       "check_name": "validity_customer_id_pattern",
@@ -147,7 +147,7 @@
       "verdict": "PASS",
       "message": "Column 'customer_id': all values match pattern",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.714186"
+      "timestamp": "2026-09-16T15:25:44.158375"
     },
     {
       "check_name": "validity_account_id_pattern",
@@ -155,7 +155,7 @@
       "verdict": "PASS",
       "message": "Column 'account_id': all values match pattern",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.731869"
+      "timestamp": "2026-09-16T15:25:44.181244"
     },
     {
       "check_name": "validity_amount_range",
@@ -163,7 +163,7 @@
       "verdict": "PASS",
       "message": "Column 'amount': all values within range",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.732482"
+      "timestamp": "2026-09-16T15:25:44.182183"
     },
     {
       "check_name": "validity_currency_allowed",
@@ -171,7 +171,7 @@
       "verdict": "PASS",
       "message": "Column 'currency': all values in allowed set",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.735424"
+      "timestamp": "2026-09-16T15:25:44.185825"
     },
     {
       "check_name": "validity_transaction_date_date_range",
@@ -179,7 +179,7 @@
       "verdict": "PASS",
       "message": "Column 'transaction_date': all dates valid and in range",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.747264"
+      "timestamp": "2026-09-16T15:25:44.198916"
     },
     {
       "check_name": "validity_transaction_time_pattern",
@@ -187,7 +187,7 @@
       "verdict": "PASS",
       "message": "Column 'transaction_time': all values match pattern",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.768352"
+      "timestamp": "2026-09-16T15:25:44.228218"
     },
     {
       "check_name": "validity_transaction_type_allowed",
@@ -195,7 +195,7 @@
       "verdict": "PASS",
       "message": "Column 'transaction_type': all values in allowed set",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.772333"
+      "timestamp": "2026-09-16T15:25:44.232324"
     },
     {
       "check_name": "validity_channel_allowed",
@@ -203,7 +203,7 @@
       "verdict": "PASS",
       "message": "Column 'channel': all values in allowed set",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.777574"
+      "timestamp": "2026-09-16T15:25:44.239054"
     },
     {
       "check_name": "validity_status_allowed",
@@ -211,7 +211,7 @@
       "verdict": "PASS",
       "message": "Column 'status': all values in allowed set",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.780436"
+      "timestamp": "2026-09-16T15:25:44.244538"
     },
     {
       "check_name": "fk_customer_id_to_customers",
@@ -219,7 +219,7 @@
       "verdict": "PASS",
       "message": "FK 'customer_id' \u2192 'customers.customer_id': all references valid",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.786844"
+      "timestamp": "2026-09-16T15:25:44.253430"
     },
     {
       "check_name": "fk_account_id_to_accounts",
@@ -227,7 +227,7 @@
       "verdict": "PASS",
       "message": "FK 'account_id' \u2192 'accounts.account_id': all references valid",
       "details": {},
-      "timestamp": "2026-09-16T14:22:47.792023"
+      "timestamp": "2026-09-16T15:25:44.264776"
     },
     {
       "check_name": "statistical_amount_outliers",
@@ -241,7 +241,7 @@
         "mean": 3772.45,
         "std": 5028.55
       },
-      "timestamp": "2026-09-16T14:22:47.795221"
+      "timestamp": "2026-09-16T15:25:44.272490"
     },
     {
       "check_name": "freshness_age",
@@ -252,7 +252,7 @@
         "age_hours": 0.0,
         "max_age_hours": 24
       },
-      "timestamp": "2026-09-16T14:22:47.795241"
+      "timestamp": "2026-09-16T15:25:44.272540"
     }
   ]
 }

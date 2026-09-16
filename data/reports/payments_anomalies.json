@@ -9,7 +9,7 @@
     "medium": 0,
     "low": 0
   },
-  "duration_seconds": 0.051627,
+  "duration_seconds": 0.101755,
   "anomalies": [
     {
       "anomaly_type": "IQR_OUTLIER",
@@ -27,7 +27,7 @@
         "below_lower": 0,
         "above_upper": 452
       },
-      "timestamp": "2026-09-16T14:22:48.354492"
+      "timestamp": "2026-09-16T15:25:45.405301"
     },
     {
       "anomaly_type": "DUPLICATE_KEY",
@@ -40,7 +40,7 @@
         "duplicate_count": 4786,
         "duplicate_rate": 0.5141
       },
-      "timestamp": "2026-09-16T14:22:48.368142"
+      "timestamp": "2026-09-16T15:25:45.439957"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -64,7 +64,7 @@
         "total_categories": 9309,
         "rare_categories": 9309
       },
-      "timestamp": "2026-09-16T14:22:48.379628"
+      "timestamp": "2026-09-16T15:25:45.456622"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -88,7 +88,7 @@
         "total_categories": 768,
         "rare_categories": 167
       },
-      "timestamp": "2026-09-16T14:22:48.382475"
+      "timestamp": "2026-09-16T15:25:45.459156"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -112,7 +112,7 @@
         "total_categories": 1445,
         "rare_categories": 1271
       },
-      "timestamp": "2026-09-16T14:22:48.384872"
+      "timestamp": "2026-09-16T15:25:45.462217"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -136,7 +136,7 @@
         "total_categories": 782,
         "rare_categories": 209
       },
-      "timestamp": "2026-09-16T14:22:48.386616"
+      "timestamp": "2026-09-16T15:25:45.464509"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -160,7 +160,7 @@
         "total_categories": 989,
         "rare_categories": 544
       },
-      "timestamp": "2026-09-16T14:22:48.390552"
+      "timestamp": "2026-09-16T15:25:45.468588"
     },
     {
       "anomaly_type": "RARE_CATEGORY",
@@ -184,7 +184,7 @@
         "total_categories": 9309,
         "rare_categories": 9309
       },
-      "timestamp": "2026-09-16T14:22:48.397747"
+      "timestamp": "2026-09-16T15:25:45.478033"
     },
     {
       "anomaly_type": "NULL_SPIKE",
@@ -196,7 +196,7 @@
         "null_count": 3741,
         "null_rate": 0.4019
       },
-      "timestamp": "2026-09-16T14:22:48.400388"
+      "timestamp": "2026-09-16T15:25:45.481406"
     },
     {
       "anomaly_type": "NULL_SPIKE",
@@ -208,7 +208,7 @@
         "null_count": 8656,
         "null_rate": 0.9299
       },
-      "timestamp": "2026-09-16T14:22:48.402674"
+      "timestamp": "2026-09-16T15:25:45.484064"
     }
   ]
 }
