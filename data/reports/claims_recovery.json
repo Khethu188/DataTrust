@@ -1,0 +1,112 @@
+{
+  "dataset": "claims",
+  "rows_before": 2080,
+  "rows_after": 1788,
+  "quarantined_rows": 292,
+  "recovery_rate": 86.0,
+  "total_actions": 10,
+  "total_rows_fixed": 750,
+  "duration_seconds": 0.032552,
+  "actions": [
+    {
+      "action_type": "DEDUPLICATION",
+      "column": "[all]",
+      "description": "Removed 50 exact duplicate rows",
+      "rows_affected": 50,
+      "strategy": "keep_first",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.802373"
+    },
+    {
+      "action_type": "DEDUPLICATION",
+      "column": "claim_id",
+      "description": "Removed 30 duplicate 'claim_id' values",
+      "rows_affected": 30,
+      "strategy": "keep_first_by_key",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.806064"
+    },
+    {
+      "action_type": "NULL_IMPUTATION",
+      "column": "policy_id",
+      "description": "Filled 77 nulls in 'policy_id'",
+      "rows_affected": 77,
+      "strategy": "UNKNOWN",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.807334"
+    },
+    {
+      "action_type": "NULL_IMPUTATION",
+      "column": "claim_date",
+      "description": "Filled 4 nulls in 'claim_date'",
+      "rows_affected": 4,
+      "strategy": "forward_fill",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.808992"
+    },
+    {
+      "action_type": "NULL_IMPUTATION",
+      "column": "claim_amount",
+      "description": "Filled 75 nulls in 'claim_amount'",
+      "rows_affected": 75,
+      "strategy": "median (19224.70)",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.809731"
+    },
+    {
+      "action_type": "NEGATIVE_AMOUNT_FIX",
+      "column": "claim_amount",
+      "description": "Converted 48 negative values to absolute in 'claim_amount'",
+      "rows_affected": 48,
+      "strategy": "absolute_value",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.812446"
+    },
+    {
+      "action_type": "OUTLIER_CAPPING",
+      "column": "claim_amount",
+      "description": "Capped 128 outliers in 'claim_amount' to [0.01, 203,662.42]",
+      "rows_affected": 128,
+      "strategy": "iqr_winsorization",
+      "details": {
+        "lower_bound": 0.01,
+        "upper_bound": 203662.42,
+        "capped_below": 0,
+        "capped_above": 128
+      },
+      "timestamp": "2026-09-16T12:46:41.814688"
+    },
+    {
+      "action_type": "OUTLIER_CAPPING",
+      "column": "approved_amount",
+      "description": "Capped 74 outliers in 'approved_amount' to [0.01, 147,335.33]",
+      "rows_affected": 74,
+      "strategy": "iqr_winsorization",
+      "details": {
+        "lower_bound": 0.01,
+        "upper_bound": 147335.33,
+        "capped_below": 0,
+        "capped_above": 74
+      },
+      "timestamp": "2026-09-16T12:46:41.817422"
+    },
+    {
+      "action_type": "DATE_FIX",
+      "column": "claim_date",
+      "description": "Fixed 52 date issues in 'claim_date' (17 unparseable, 35 out of range)",
+      "rows_affected": 52,
+      "strategy": "median_replace_and_clamp",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.822401"
+    },
+    {
+      "action_type": "FOREIGN_KEY_QUARANTINE",
+      "column": "policy_id",
+      "description": "Quarantined 212 records with broken FK 'policy_id' -> 'policies.policy_id'",
+      "rows_affected": 212,
+      "strategy": "quarantine_orphans",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.827487"
+    }
+  ]
+}

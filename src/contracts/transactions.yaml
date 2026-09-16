@@ -1,0 +1,87 @@
+
+# DataTrust — Data Contract: TRANSACTIONS
+dataset: transactions
+version: "1.0.0"
+owner: data-engineering
+description: "Financial transaction records"
+source: "src/data_generation/generate_data.py"
+refresh_frequency: hourly
+
+schema:
+  primary_key: transaction_id
+  foreign_keys:
+    - column: customer_id
+      references:
+        dataset: customers
+        column: customer_id
+    - column: account_id
+      references:
+        dataset: accounts
+        column: account_id
+  columns:
+    transaction_id:
+      type: string
+      pattern: "^TX\\d{6}$"
+      nullable: false
+    customer_id:
+      type: string
+      nullable: false
+      pattern: "^C\\d{4}$"
+    account_id:
+      type: string
+      nullable: false
+      pattern: "^A\\d{4}$"
+    amount:
+      type: numeric
+      nullable: false
+      min_value: 0.01
+      max_value: 5000000
+    currency:
+      type: string
+      nullable: false
+      allowed_values: ["ZAR"]
+    transaction_date:
+      type: date
+      nullable: false
+      min_value: "2020-01-01"
+      max_value: "2026-09-15"
+    transaction_time:
+      type: string
+      nullable: false
+      pattern: "^\\d{2}:\\d{2}:\\d{2}$"
+    transaction_type:
+      type: string
+      nullable: false
+      allowed_values: ["PAYMENT", "TRANSFER", "DEPOSIT", "WITHDRAWAL", "DEBIT_ORDER", "FEE", "INTEREST", "REVERSAL"]
+    description:
+      type: string
+      nullable: true
+    channel:
+      type: string
+      nullable: false
+      allowed_values: ["ONLINE", "MOBILE", "BRANCH", "ATM", "POS"]
+    status:
+      type: string
+      nullable: false
+      allowed_values: ["COMPLETED", "PENDING", "FAILED", "REVERSED"]
+    reference_number:
+      type: string
+      nullable: false
+
+quality_rules:
+  completeness:
+    min_completeness: 0.97
+    critical_columns: ["transaction_id", "customer_id", "account_id", "amount"]
+  uniqueness:
+    unique_columns: ["transaction_id", "reference_number"]
+  volume:
+    min_rows: 1000
+    max_rows: 1000000
+    max_duplicate_rate: 0.005
+  freshness:
+    max_age_hours: 24
+  statistical:
+    amount:
+      z_score_threshold: 4.0
+      iqr_multiplier: 3.0
+

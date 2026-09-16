@@ -1,0 +1,277 @@
+{
+  "dataset": "customers",
+  "overall_verdict": "FAIL",
+  "trust_score": 79.2,
+  "summary": {
+    "total_checks": 24,
+    "passed": 19,
+    "warnings": 0,
+    "failed": 5
+  },
+  "duration_seconds": 0.014422,
+  "checks": [
+    {
+      "check_name": "schema_missing_columns",
+      "category": "SCHEMA",
+      "verdict": "PASS",
+      "message": "All expected columns present",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.754132"
+    },
+    {
+      "check_name": "schema_unexpected_columns",
+      "category": "SCHEMA",
+      "verdict": "PASS",
+      "message": "No unexpected columns",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.754140"
+    },
+    {
+      "check_name": "completeness_overall",
+      "category": "COMPLETENESS",
+      "verdict": "PASS",
+      "message": "Overall completeness: 100.0% (threshold: 98%)",
+      "details": {
+        "completeness": 1.0,
+        "threshold": 0.98,
+        "null_cells": 0,
+        "total_cells": 15000
+      },
+      "timestamp": "2026-09-16T12:46:42.755607"
+    },
+    {
+      "check_name": "completeness_customer_id",
+      "category": "COMPLETENESS",
+      "verdict": "PASS",
+      "message": "Column 'customer_id': 0 nulls (100.0% complete)",
+      "details": {
+        "column": "customer_id",
+        "null_count": 0,
+        "completeness": 1.0
+      },
+      "timestamp": "2026-09-16T12:46:42.755818"
+    },
+    {
+      "check_name": "completeness_id_number",
+      "category": "COMPLETENESS",
+      "verdict": "PASS",
+      "message": "Column 'id_number': 0 nulls (100.0% complete)",
+      "details": {
+        "column": "id_number",
+        "null_count": 0,
+        "completeness": 1.0
+      },
+      "timestamp": "2026-09-16T12:46:42.755977"
+    },
+    {
+      "check_name": "completeness_email",
+      "category": "COMPLETENESS",
+      "verdict": "PASS",
+      "message": "Column 'email': 0 nulls (100.0% complete)",
+      "details": {
+        "column": "email",
+        "null_count": 0,
+        "completeness": 1.0
+      },
+      "timestamp": "2026-09-16T12:46:42.756124"
+    },
+    {
+      "check_name": "completeness_phone",
+      "category": "COMPLETENESS",
+      "verdict": "PASS",
+      "message": "Column 'phone': 0 nulls (100.0% complete)",
+      "details": {
+        "column": "phone",
+        "null_count": 0,
+        "completeness": 1.0
+      },
+      "timestamp": "2026-09-16T12:46:42.756259"
+    },
+    {
+      "check_name": "uniqueness_customer_id",
+      "category": "UNIQUENESS",
+      "verdict": "PASS",
+      "message": "Column 'customer_id': all values unique",
+      "details": {
+        "column": "customer_id",
+        "duplicate_count": 0
+      },
+      "timestamp": "2026-09-16T12:46:42.756642"
+    },
+    {
+      "check_name": "uniqueness_id_number",
+      "category": "UNIQUENESS",
+      "verdict": "FAIL",
+      "message": "Column 'id_number': 19 duplicate values found",
+      "details": {
+        "column": "id_number",
+        "duplicate_count": 19
+      },
+      "timestamp": "2026-09-16T12:46:42.756980"
+    },
+    {
+      "check_name": "uniqueness_email",
+      "category": "UNIQUENESS",
+      "verdict": "FAIL",
+      "message": "Column 'email': 19 duplicate values found",
+      "details": {
+        "column": "email",
+        "duplicate_count": 19
+      },
+      "timestamp": "2026-09-16T12:46:42.757308"
+    },
+    {
+      "check_name": "uniqueness_duplicate_rows",
+      "category": "UNIQUENESS",
+      "verdict": "PASS",
+      "message": "Duplicate rows: 0 (0.00%)",
+      "details": {
+        "duplicate_rows": 0,
+        "duplicate_rate": 0.0,
+        "threshold": 0.01
+      },
+      "timestamp": "2026-09-16T12:46:42.759924"
+    },
+    {
+      "check_name": "volume_row_count",
+      "category": "VOLUME",
+      "verdict": "PASS",
+      "message": "Row count 1,000 within range [500, 50,000]",
+      "details": {
+        "row_count": 1000,
+        "min_rows": 500,
+        "max_rows": 50000
+      },
+      "timestamp": "2026-09-16T12:46:42.759939"
+    },
+    {
+      "check_name": "validity_customer_id_pattern",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'customer_id': all values match pattern",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.760757"
+    },
+    {
+      "check_name": "validity_id_number_pattern",
+      "category": "VALIDITY",
+      "verdict": "FAIL",
+      "message": "Column 'id_number': 1,000 values don't match pattern",
+      "details": {
+        "invalid_count": 1000,
+        "pattern": "^\\d{13}$",
+        "sample_invalid": [
+          "6611248935089.0",
+          "512145574182.0",
+          "1906193150080.0",
+          "703156216188.0",
+          "2008054339083.0"
+        ]
+      },
+      "timestamp": "2026-09-16T12:46:42.761932"
+    },
+    {
+      "check_name": "validity_date_of_birth_date_range",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'date_of_birth': all dates valid and in range",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.763282"
+    },
+    {
+      "check_name": "validity_gender_allowed",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'gender': all values in allowed set",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.763710"
+    },
+    {
+      "check_name": "validity_email_pattern",
+      "category": "VALIDITY",
+      "verdict": "FAIL",
+      "message": "Column 'email': 20 values don't match pattern",
+      "details": {
+        "invalid_count": 20,
+        "pattern": "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$",
+        "sample_invalid": [
+          "UNKNOWN",
+          "UNKNOWN",
+          "UNKNOWN",
+          "UNKNOWN",
+          "UNKNOWN"
+        ]
+      },
+      "timestamp": "2026-09-16T12:46:42.764701"
+    },
+    {
+      "check_name": "validity_phone_pattern",
+      "category": "VALIDITY",
+      "verdict": "FAIL",
+      "message": "Column 'phone': 1,000 values don't match pattern",
+      "details": {
+        "invalid_count": 1000,
+        "pattern": "^\\+27\\d{9,10}$",
+        "sample_invalid": [
+          "27679478454.0",
+          "27637022674.0",
+          "27637377459.0",
+          "27616292423.0",
+          "27827700828.0"
+        ]
+      },
+      "timestamp": "2026-09-16T12:46:42.765465"
+    },
+    {
+      "check_name": "validity_province_allowed",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'province': all values in allowed set",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.765881"
+    },
+    {
+      "check_name": "validity_registration_date_date_range",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'registration_date': all dates valid and in range",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.767326"
+    },
+    {
+      "check_name": "validity_customer_segment_allowed",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'customer_segment': all values in allowed set",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.767742"
+    },
+    {
+      "check_name": "validity_kyc_status_allowed",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'kyc_status': all values in allowed set",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.768095"
+    },
+    {
+      "check_name": "validity_risk_rating_allowed",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'risk_rating': all values in allowed set",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.768434"
+    },
+    {
+      "check_name": "freshness_age",
+      "category": "FRESHNESS",
+      "verdict": "PASS",
+      "message": "Data age: 0.0 hours (max: 48 hours)",
+      "details": {
+        "age_hours": 0.0,
+        "max_age_hours": 48
+      },
+      "timestamp": "2026-09-16T12:46:42.768508"
+    }
+  ]
+}

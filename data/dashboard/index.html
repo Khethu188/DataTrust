@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataTrust Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0f1117;
+            color: #e1e4e8;
+            line-height: 1.6;
+        }
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a1f36 0%, #0d1117 100%);
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.2em;
+            background: linear-gradient(90deg, #58a6ff, #3fb950, #58a6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+        .header .subtitle { color: #8b949e; font-size: 1.1em; }
+        .header .timestamp { color: #6e7681; font-size: 0.85em; margin-top: 8px; }
+
+        /* Hero Cards */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .hero-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        .hero-card .label { color: #8b949e; font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px; }
+        .hero-card .value { font-size: 2.2em; font-weight: 700; margin: 8px 0; }
+        .hero-card .sub { color: #6e7681; font-size: 0.8em; }
+        .green { color: #3fb950; }
+        .yellow { color: #d29922; }
+        .red { color: #f85149; }
+        .blue { color: #58a6ff; }
+        .purple { color: #bc8cff; }
+        .orange { color: #db6d28; }
+
+        /* Section */
+        .section {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .section h2 {
+            font-size: 1.4em;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #30363d;
+        }
+        .section h3 {
+            font-size: 1.1em;
+            margin: 16px 0 8px 0;
+            color: #58a6ff;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+        }
+        th {
+            background: #0d1117;
+            color: #58a6ff;
+            padding: 10px 14px;
+            text-align: left;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #30363d;
+        }
+        td {
+            padding: 10px 14px;
+            border-bottom: 1px solid #21262d;
+        }
+        tr:hover { background: #1c2128; }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 600;
+        }
+        .badge-pass { background: #0d2818; color: #3fb950; }
+        .badge-warn { background: #2d1b00; color: #d29922; }
+        .badge-fail { background: #2d0000; color: #f85149; }
+        .badge-critical { background: #3d0000; color: #ff6b6b; }
+        .badge-high { background: #2d1500; color: #db6d28; }
+        .badge-medium { background: #2d2200; color: #d29922; }
+        .badge-low { background: #0d2818; color: #3fb950; }
+
+        /* Progress Bar */
+        .progress-bar {
+            background: #21262d;
+            border-radius: 6px;
+            height: 24px;
+            overflow: hidden;
+            position: relative;
+        }
+        .progress-fill {
+            height: 100%;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75em;
+            font-weight: 600;
+            color: #fff;
+            min-width: 40px;
+        }
+
+        /* Chart Container */
+        .chart-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+        .chart-box {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 16px;
+        }
+        .chart-box h4 {
+            color: #8b949e;
+            font-size: 0.9em;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .bar-chart { display: flex; flex-direction: column; gap: 8px; }
+        .bar-row { display: flex; align-items: center; gap: 10px; }
+        .bar-label { width: 100px; font-size: 0.85em; text-align: right; color: #8b949e; }
+        .bar-track { flex: 1; background: #21262d; border-radius: 4px; height: 20px; overflow: hidden; }
+        .bar-fill { height: 100%; border-radius: 4px; display: flex; align-items: center; padding-left: 8px; font-size: 0.75em; font-weight: 600; }
+        .bar-value { width: 50px; font-size: 0.85em; text-align: right; }
+
+        /* Detail blocks */
+        .detail-item {
+            background: #0d1117;
+            border: 1px solid #21262d;
+            border-radius: 6px;
+            padding: 10px 14px;
+            margin: 6px 0;
+            font-size: 0.9em;
+        }
+        .detail-pass { border-left: 3px solid #3fb950; }
+        .detail-warn { border-left: 3px solid #d29922; }
+        .detail-fail { border-left: 3px solid #f85149; }
+
+        /* Tabs */
+        .tab-container { margin: 16px 0; }
+        .tab-buttons { display: flex; gap: 4px; margin-bottom: 12px; flex-wrap: wrap; }
+        .tab-btn {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            color: #8b949e;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85em;
+        }
+        .tab-btn:hover { background: #1c2128; color: #e1e4e8; }
+        .tab-btn.active { background: #1f6feb; color: #fff; border-color: #1f6feb; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: #6e7681;
+            font-size: 0.8em;
+            padding: 20px;
+            border-top: 1px solid #21262d;
+            margin-top: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-grid { grid-template-columns: repeat(2, 1fr); }
+            .chart-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>DataTrust Dashboard</h1>
+            <div class="subtitle">Autonomous Data Integrity, Observability &amp; Recovery</div>
+            <div class="timestamp">Generated: 2026-09-16 12:46:44</div>
+        </div>
+
+        <!-- Hero Cards -->
+        
+        <div class="hero-grid">
+            <div class="hero-card">
+                <div class="label">Avg Trust Score</div>
+                <div class="value green">95.1%</div>
+                <div class="sub">Validation Engine</div>
+            </div>
+            <div class="hero-card">
+                <div class="label">Avg Health Score</div>
+                <div class="value red">0.0%</div>
+                <div class="sub">Anomaly Detection</div>
+            </div>
+            <div class="hero-card">
+                <div class="label">Anomalies Found</div>
+                <div class="value orange">52</div>
+                <div class="sub">Across all datasets</div>
+            </div>
+            <div class="hero-card">
+                <div class="label">Rows Fixed</div>
+                <div class="value blue">15,835</div>
+                <div class="sub">Auto-recovered</div>
+            </div>
+            <div class="hero-card">
+                <div class="label">Quarantined</div>
+                <div class="value purple">5,956</div>
+                <div class="sub">Unfixable records</div>
+            </div>
+            <div class="hero-card">
+                <div class="label">Recovery Rate</div>
+                <div class="value green">93.6%</div>
+                <div class="sub">Data preserved</div>
+            </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="section">
+            <h2>Data Health Overview</h2>
+            <div class="chart-container">
+                <div class="chart-box">
+                    <h4>Trust Score by Dataset</h4>
+                    <div class="bar-chart">
+            <div class="bar-row">
+                <div class="bar-label">accounts</div>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width:100.0%;background:#3fb950">100%</div>
+                </div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">claims</div>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width:95.5%;background:#3fb950">96%</div>
+                </div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">customers</div>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width:79.2%;background:#d29922">79%</div>
+                </div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">payments</div>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width:95.7%;background:#3fb950">96%</div>
+                </div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">policies</div>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width:100.0%;background:#3fb950">100%</div>
+                </div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">transactions</div>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width:100.0%;background:#3fb950">100%</div>
+                </div>
+            </div></div>
+                </div>
+                <div class="chart-box">
+                    <h4>Recovery: Before vs After</h4>
+                    <div class="bar-chart">
+            <div class="bar-row">
+                <div class="bar-label">accounts</div>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width:96.53333333333333%;background:#3fb950">1,448</div>
+                </div>
+                <div class="bar-value" style="color:#bc8cff">-52</div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">claims</div>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width:85.96153846153847%;background:#3fb950">1,788</div>
+                </div>
+                <div class="bar-value" style="color:#bc8cff">-292</div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">customers</div>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width:98.52216748768473%;background:#3fb950">1,000</div>
+                </div>
+                <div class="bar-value" style="color:#bc8cff">-15</div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">payments</div>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width:91.98616600790514%;background:#3fb950">9,309</div>
+                </div>
+                <div class="bar-value" style="color:#bc8cff">-811</div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">policies</div>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width:98.0%;background:#3fb950">784</div>
+                </div>
+                <div class="bar-value" style="color:#bc8cff">-16</div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">transactions</div>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width:90.55445544554456%;background:#3fb950">45,730</div>
+                </div>
+                <div class="bar-value" style="color:#bc8cff">-4,770</div>
+            </div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trust Score Table -->
+        <div class="section">
+            <h2>Validation Results</h2>
+            
+        <table>
+            <thead>
+                <tr>
+                    <th>Dataset</th>
+                    <th>Verdict</th>
+                    <th>Trust Score</th>
+                    <th>Pass</th>
+                    <th>Warn</th>
+                    <th>Fail</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><strong>accounts</strong></td>
+                <td><span class="badge badge-pass">PASS</span></td>
+                <td>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:100.0%;background:#3fb950">100.0%</div>
+                    </div>
+                </td>
+                <td class="green">19</td>
+                <td class="yellow">0</td>
+                <td class="red">0</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td><strong>claims</strong></td>
+                <td><span class="badge badge-fail">FAIL</span></td>
+                <td>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:95.5%;background:#3fb950">95.5%</div>
+                    </div>
+                </td>
+                <td class="green">21</td>
+                <td class="yellow">0</td>
+                <td class="red">1</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td><strong>customers</strong></td>
+                <td><span class="badge badge-fail">FAIL</span></td>
+                <td>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:79.2%;background:#d29922">79.2%</div>
+                    </div>
+                </td>
+                <td class="green">19</td>
+                <td class="yellow">0</td>
+                <td class="red">5</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td><strong>payments</strong></td>
+                <td><span class="badge badge-fail">FAIL</span></td>
+                <td>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:95.7%;background:#3fb950">95.7%</div>
+                    </div>
+                </td>
+                <td class="green">22</td>
+                <td class="yellow">0</td>
+                <td class="red">1</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td><strong>policies</strong></td>
+                <td><span class="badge badge-pass">PASS</span></td>
+                <td>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:100.0%;background:#3fb950">100.0%</div>
+                    </div>
+                </td>
+                <td class="green">22</td>
+                <td class="yellow">0</td>
+                <td class="red">0</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td><strong>transactions</strong></td>
+                <td><span class="badge badge-pass">PASS</span></td>
+                <td>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:100.0%;background:#3fb950">100.0%</div>
+                    </div>
+                </td>
+                <td class="green">25</td>
+                <td class="yellow">0</td>
+                <td class="red">0</td>
+                <td>25</td>
+            </tr></tbody>
+        </table>
+        </div>
+
+        <!-- Anomaly Table -->
+        <div class="section">
+            <h2>Anomaly Detection Results</h2>
+            
+        <table>
+            <thead>
+                <tr>
+                    <th>Dataset</th>
+                    <th>Health Score</th>
+                    <th>Total</th>
+                    <th>Critical</th>
+                    <th>High</th>
+                    <th>Medium</th>
+                    <th>Low</th>
+                    <th>Rows Scanned</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><strong>accounts</strong></td>
+                <td>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:5%;background:#f85149">0%</div>
+                    </div>
+                </td>
+                <td>8</td>
+                <td class="red">8</td>
+                <td class="orange">0</td>
+                <td class="yellow">0</td>
+                <td class="green">0</td>
+                <td>1,448</td>
+            </tr>
+            <tr>
+                <td><strong>claims</strong></td>
+                <td>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:5%;background:#f85149">0%</div>
+                    </div>
+                </td>
+                <td>12</td>
+                <td class="red">11</td>
+                <td class="orange">1</td>
+                <td class="yellow">0</td>
+                <td class="green">0</td>
+                <td>1,788</td>
+            </tr>
+            <tr>
+                <td><strong>customers</strong></td>
+                <td>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:5%;background:#f85149">0%</div>
+                    </div>
+                </td>
+                <td>6</td>
+                <td class="red">6</td>
+                <td class="orange">0</td>
+                <td class="yellow">0</td>
+                <td class="green">0</td>
+                <td>1,000</td>
+            </tr>
+            <tr>
+                <td><strong>payments</strong></td>
+                <td>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:5%;background:#f85149">0%</div>
+                    </div>
+                </td>
+                <td>10</td>
+                <td class="red">9</td>
+                <td class="orange">1</td>
+                <td class="yellow">0</td>
+                <td class="green">0</td>
+                <td>9,309</td>
+            </tr>
+            <tr>
+                <td><strong>policies</strong></td>
+                <td>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:5%;background:#f85149">0%</div>
+                    </div>
+                </td>
+                <td>8</td>
+                <td class="red">5</td>
+                <td class="orange">1</td>
+                <td class="yellow">2</td>
+                <td class="green">0</td>
+                <td>784</td>
+            </tr>
+            <tr>
+                <td><strong>transactions</strong></td>
+                <td>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:5%;background:#f85149">0%</div>
+                    </div>
+                </td>
+                <td>8</td>
+                <td class="red">8</td>
+                <td class="orange">0</td>
+                <td class="yellow">0</td>
+                <td class="green">0</td>
+                <td>45,730</td>
+            </tr></tbody>
+        </table>
+        </div>
+
+        <!-- Recovery Table -->
+        <div class="section">
+            <h2>Recovery Results</h2>
+            
+        <table>
+            <thead>
+                <tr>
+                    <th>Dataset</th>
+                    <th>Before</th>
+                    <th>After</th>
+                    <th>Quarantined</th>
+                    <th>Rows Fixed</th>
+                    <th>Actions</th>
+                    <th>Recovery Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><strong>accounts</strong></td>
+                <td>1,500</td>
+                <td>1,448</td>
+                <td class="purple">52</td>
+                <td class="blue">161</td>
+                <td>3</td>
+                <td>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:96.5%;background:#3fb950">96.5%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>claims</strong></td>
+                <td>2,080</td>
+                <td>1,788</td>
+                <td class="purple">292</td>
+                <td class="blue">750</td>
+                <td>10</td>
+                <td>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:86.0%;background:#d29922">86.0%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>customers</strong></td>
+                <td>1,015</td>
+                <td>1,000</td>
+                <td class="purple">15</td>
+                <td class="blue">75</td>
+                <td>4</td>
+                <td>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:98.5%;background:#3fb950">98.5%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>payments</strong></td>
+                <td>10,120</td>
+                <td>9,309</td>
+                <td class="purple">811</td>
+                <td class="blue">1,782</td>
+                <td>10</td>
+                <td>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:92.0%;background:#3fb950">92.0%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>policies</strong></td>
+                <td>800</td>
+                <td>784</td>
+                <td class="purple">16</td>
+                <td class="blue">81</td>
+                <td>6</td>
+                <td>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:98.0%;background:#3fb950">98.0%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>transactions</strong></td>
+                <td>50,500</td>
+                <td>45,730</td>
+                <td class="purple">4,770</td>
+                <td class="blue">12,986</td>
+                <td>12</td>
+                <td>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width:90.6%;background:#3fb950">90.6%</div>
+                    </div>
+                </td>
+            </tr></tbody>
+        </table>
+        </div>
+
+        <!-- Validation Details -->
+        <div class="section">
+            <h2>Validation Details</h2>
+            
+        <div class="tab-container">
+            <div class="tab-buttons"><button class="tab-btn active" data-group="val" data-target="val-accounts">accounts</button><button class="tab-btn " data-group="val" data-target="val-claims">claims</button><button class="tab-btn " data-group="val" data-target="val-customers">customers</button><button class="tab-btn " data-group="val" data-target="val-payments">payments</button><button class="tab-btn " data-group="val" data-target="val-policies">policies</button><button class="tab-btn " data-group="val" data-target="val-transactions">transactions</button></div>
+            <div id="val-accounts" class="tab-content active" data-group="val">
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>schema_missing_columns</strong> — All expected columns present
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>schema_unexpected_columns</strong> — No unexpected columns
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_overall</strong> — Overall completeness: 100.0% (threshold: 98%)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_account_id</strong> — Column 'account_id': 0 nulls (100.0% complete)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_customer_id</strong> — Column 'customer_id': 0 nulls (100.0% complete)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>uniqueness_account_id</strong> — Column 'account_id': all values unique
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>uniqueness_duplicate_rows</strong> — Duplicate rows: 0 (0.00%)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>volume_row_count</strong> — Row count 1,448 within range [100, 100,000]
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_account_id_pattern</strong> — Column 'account_id': all values match pattern
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_customer_id_pattern</strong> — Column 'customer_id': all values match pattern
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_account_type_allowed</strong> — Column 'account_type': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_currency_allowed</strong> — Column 'currency': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_balance_range</strong> — Column 'balance': all values within range
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_opened_date_date_range</strong> — Column 'opened_date': all dates valid and in range
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_status_allowed</strong> — Column 'status': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_branch_code_pattern</strong> — Column 'branch_code': all values match pattern
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_interest_rate_range</strong> — Column 'interest_rate': all values within range
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>fk_customer_id_to_customers</strong> — FK 'customer_id' → 'customers.customer_id': all references valid
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>freshness_age</strong> — Data age: 0.0 hours (max: 48 hours)
+                </div></div><div id="val-claims" class="tab-content " data-group="val">
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>schema_missing_columns</strong> — All expected columns present
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>schema_unexpected_columns</strong> — No unexpected columns
+                </div>
+                <div class="detail-item detail-fail">
+                    <span class="badge badge-fail">FAIL</span>
+                    <strong>completeness_overall</strong> — Overall completeness: 86.5% (threshold: 95%)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_claim_id</strong> — Column 'claim_id': 0 nulls (100.0% complete)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_policy_id</strong> — Column 'policy_id': 0 nulls (100.0% complete)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_claim_amount</strong> — Column 'claim_amount': 0 nulls (100.0% complete)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>uniqueness_claim_id</strong> — Column 'claim_id': all values unique
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>uniqueness_duplicate_rows</strong> — Duplicate rows: 0 (0.00%)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>volume_row_count</strong> — Row count 1,788 within range [100, 100,000]
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_claim_id_pattern</strong> — Column 'claim_id': all values match pattern
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_policy_id_pattern</strong> — Column 'policy_id': all values match pattern
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_customer_id_pattern</strong> — Column 'customer_id': all values match pattern
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_claim_type_allowed</strong> — Column 'claim_type': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_claim_date_date_range</strong> — Column 'claim_date': all dates valid and in range
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_claim_amount_range</strong> — Column 'claim_amount': all values within range
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_approved_amount_range</strong> — Column 'approved_amount': all values within range
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_currency_allowed</strong> — Column 'currency': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_status_allowed</strong> — Column 'status': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_assessor_id_pattern</strong> — Column 'assessor_id': all values match pattern
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>fk_policy_id_to_policies</strong> — FK 'policy_id' → 'policies.policy_id': all references valid
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>fk_customer_id_to_customers</strong> — FK 'customer_id' → 'customers.customer_id': all references valid
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>freshness_age</strong> — Data age: 0.0 hours (max: 48 hours)
+                </div></div><div id="val-customers" class="tab-content " data-group="val">
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>schema_missing_columns</strong> — All expected columns present
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>schema_unexpected_columns</strong> — No unexpected columns
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_overall</strong> — Overall completeness: 100.0% (threshold: 98%)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_customer_id</strong> — Column 'customer_id': 0 nulls (100.0% complete)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_id_number</strong> — Column 'id_number': 0 nulls (100.0% complete)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_email</strong> — Column 'email': 0 nulls (100.0% complete)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_phone</strong> — Column 'phone': 0 nulls (100.0% complete)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>uniqueness_customer_id</strong> — Column 'customer_id': all values unique
+                </div>
+                <div class="detail-item detail-fail">
+                    <span class="badge badge-fail">FAIL</span>
+                    <strong>uniqueness_id_number</strong> — Column 'id_number': 19 duplicate values found
+                </div>
+                <div class="detail-item detail-fail">
+                    <span class="badge badge-fail">FAIL</span>
+                    <strong>uniqueness_email</strong> — Column 'email': 19 duplicate values found
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>uniqueness_duplicate_rows</strong> — Duplicate rows: 0 (0.00%)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>volume_row_count</strong> — Row count 1,000 within range [500, 50,000]
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_customer_id_pattern</strong> — Column 'customer_id': all values match pattern
+                </div>
+                <div class="detail-item detail-fail">
+                    <span class="badge badge-fail">FAIL</span>
+                    <strong>validity_id_number_pattern</strong> — Column 'id_number': 1,000 values don't match pattern
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_date_of_birth_date_range</strong> — Column 'date_of_birth': all dates valid and in range
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_gender_allowed</strong> — Column 'gender': all values in allowed set
+                </div>
+                <div class="detail-item detail-fail">
+                    <span class="badge badge-fail">FAIL</span>
+                    <strong>validity_email_pattern</strong> — Column 'email': 20 values don't match pattern
+                </div>
+                <div class="detail-item detail-fail">
+                    <span class="badge badge-fail">FAIL</span>
+                    <strong>validity_phone_pattern</strong> — Column 'phone': 1,000 values don't match pattern
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_province_allowed</strong> — Column 'province': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_registration_date_date_range</strong> — Column 'registration_date': all dates valid and in range
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_customer_segment_allowed</strong> — Column 'customer_segment': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_kyc_status_allowed</strong> — Column 'kyc_status': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_risk_rating_allowed</strong> — Column 'risk_rating': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>freshness_age</strong> — Data age: 0.0 hours (max: 48 hours)
+                </div></div><div id="val-payments" class="tab-content " data-group="val">
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>schema_missing_columns</strong> — All expected columns present
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>schema_unexpected_columns</strong> — No unexpected columns
+                </div>
+                <div class="detail-item detail-fail">
+                    <span class="badge badge-fail">FAIL</span>
+                    <strong>completeness_overall</strong> — Overall completeness: 87.9% (threshold: 97%)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_payment_id</strong> — Column 'payment_id': 0 nulls (100.0% complete)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_customer_id</strong> — Column 'customer_id': 0 nulls (100.0% complete)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_amount</strong> — Column 'amount': 0 nulls (100.0% complete)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>uniqueness_payment_id</strong> — Column 'payment_id': all values unique
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>uniqueness_reference</strong> — Column 'reference': all values unique
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>uniqueness_duplicate_rows</strong> — Duplicate rows: 0 (0.00%)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>volume_row_count</strong> — Row count 9,309 within range [500, 500,000]
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_payment_id_pattern</strong> — Column 'payment_id': all values match pattern
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_customer_id_pattern</strong> — Column 'customer_id': all values match pattern
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_account_id_pattern</strong> — Column 'account_id': all values match pattern
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_policy_id_pattern</strong> — Column 'policy_id': all values match pattern
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_amount_range</strong> — Column 'amount': all values within range
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_currency_allowed</strong> — Column 'currency': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_payment_date_date_range</strong> — Column 'payment_date': all dates valid and in range
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_payment_method_allowed</strong> — Column 'payment_method': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_status_allowed</strong> — Column 'status': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>fk_customer_id_to_customers</strong> — FK 'customer_id' → 'customers.customer_id': all references valid
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>fk_account_id_to_accounts</strong> — FK 'account_id' → 'accounts.account_id': all references valid
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>fk_policy_id_to_policies</strong> — FK 'policy_id' → 'policies.policy_id': all references valid
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>freshness_age</strong> — Data age: 0.0 hours (max: 48 hours)
+                </div></div><div id="val-policies" class="tab-content " data-group="val">
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>schema_missing_columns</strong> — All expected columns present
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>schema_unexpected_columns</strong> — No unexpected columns
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_overall</strong> — Overall completeness: 100.0% (threshold: 98%)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_policy_id</strong> — Column 'policy_id': 0 nulls (100.0% complete)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_customer_id</strong> — Column 'customer_id': 0 nulls (100.0% complete)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_premium_amount</strong> — Column 'premium_amount': 0 nulls (100.0% complete)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>uniqueness_policy_id</strong> — Column 'policy_id': all values unique
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>uniqueness_duplicate_rows</strong> — Duplicate rows: 0 (0.00%)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>volume_row_count</strong> — Row count 784 within range [100, 50,000]
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_policy_id_pattern</strong> — Column 'policy_id': all values match pattern
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_customer_id_pattern</strong> — Column 'customer_id': all values match pattern
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_policy_type_allowed</strong> — Column 'policy_type': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_status_allowed</strong> — Column 'status': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_start_date_date_range</strong> — Column 'start_date': all dates valid and in range
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_premium_amount_range</strong> — Column 'premium_amount': all values within range
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_cover_amount_range</strong> — Column 'cover_amount': all values within range
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_currency_allowed</strong> — Column 'currency': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_payment_frequency_allowed</strong> — Column 'payment_frequency': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_beneficiary_count_range</strong> — Column 'beneficiary_count': all values within range
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_underwriting_status_allowed</strong> — Column 'underwriting_status': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>fk_customer_id_to_customers</strong> — FK 'customer_id' → 'customers.customer_id': all references valid
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>freshness_age</strong> — Data age: 0.0 hours (max: 48 hours)
+                </div></div><div id="val-transactions" class="tab-content " data-group="val">
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>schema_missing_columns</strong> — All expected columns present
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>schema_unexpected_columns</strong> — No unexpected columns
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_overall</strong> — Overall completeness: 100.0% (threshold: 97%)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_transaction_id</strong> — Column 'transaction_id': 0 nulls (100.0% complete)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_customer_id</strong> — Column 'customer_id': 0 nulls (100.0% complete)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_account_id</strong> — Column 'account_id': 0 nulls (100.0% complete)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>completeness_amount</strong> — Column 'amount': 0 nulls (100.0% complete)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>uniqueness_transaction_id</strong> — Column 'transaction_id': all values unique
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>uniqueness_reference_number</strong> — Column 'reference_number': all values unique
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>uniqueness_duplicate_rows</strong> — Duplicate rows: 0 (0.00%)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>volume_row_count</strong> — Row count 45,730 within range [1,000, 1,000,000]
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_transaction_id_pattern</strong> — Column 'transaction_id': all values match pattern
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_customer_id_pattern</strong> — Column 'customer_id': all values match pattern
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_account_id_pattern</strong> — Column 'account_id': all values match pattern
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_amount_range</strong> — Column 'amount': all values within range
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_currency_allowed</strong> — Column 'currency': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_transaction_date_date_range</strong> — Column 'transaction_date': all dates valid and in range
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_transaction_time_pattern</strong> — Column 'transaction_time': all values match pattern
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_transaction_type_allowed</strong> — Column 'transaction_type': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_channel_allowed</strong> — Column 'channel': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>validity_status_allowed</strong> — Column 'status': all values in allowed set
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>fk_customer_id_to_customers</strong> — FK 'customer_id' → 'customers.customer_id': all references valid
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>fk_account_id_to_accounts</strong> — FK 'account_id' → 'accounts.account_id': all references valid
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>statistical_amount_outliers</strong> — Column 'amount': 0 outliers detected (0.00%)
+                </div>
+                <div class="detail-item detail-pass">
+                    <span class="badge badge-pass">PASS</span>
+                    <strong>freshness_age</strong> — Data age: 0.0 hours (max: 24 hours)
+                </div></div>
+        </div>
+        </div>
+
+        <!-- Anomaly Details -->
+        <div class="section">
+            <h2>Anomaly Details</h2>
+            
+        <div class="tab-container">
+            <div class="tab-buttons"><button class="tab-btn active" data-group="anom" data-target="anom-accounts">accounts</button><button class="tab-btn " data-group="anom" data-target="anom-claims">claims</button><button class="tab-btn " data-group="anom" data-target="anom-customers">customers</button><button class="tab-btn " data-group="anom" data-target="anom-payments">payments</button><button class="tab-btn " data-group="anom" data-target="anom-policies">policies</button><button class="tab-btn " data-group="anom" data-target="anom-transactions">transactions</button></div>
+            <div id="anom-accounts" class="tab-content active" data-group="anom">
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[IQR_OUTLIER]</strong>
+                        IQR outliers in 'balance': 112 values outside [-2,317,568.59, 3,322,175.71]
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[NEGATIVE_AMOUNT]</strong>
+                        Negative amounts in 'balance': 301 records (20.79%)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[ISOLATION_FOREST]</strong>
+                        Isolation Forest detected 73 multivariate anomalies (5.04%) across 2 features
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'account_id': 1448 rare categories (1,448 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'customer_id': 338 rare categories (338 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'opened_date': 970 rare categories (970 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'branch_code': 278 rare categories (278 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'last_activity_date': 776 rare categories (776 records)
+                    </div></div><div id="anom-claims" class="tab-content " data-group="anom">
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[IQR_OUTLIER]</strong>
+                        IQR outliers in 'claim_amount': 137 values outside [-112,518.94, 175,835.94]
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[IQR_OUTLIER]</strong>
+                        IQR outliers in 'approved_amount': 79 values outside [-83,983.12, 131,401.55]
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[ISOLATION_FOREST]</strong>
+                        Isolation Forest detected 49 multivariate anomalies (5.03%) across 2 features
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[DUPLICATE_KEY]</strong>
+                        Duplicate values in 'policy_id': 1,095 (61.24%)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'claim_id': 1788 rare categories (1,788 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'policy_id': 170 rare categories (170 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'claim_date': 479 rare categories (479 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'resolution_date': 494 rare categories (494 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[NULL_SPIKE]</strong>
+                        High null rate in 'approved_amount': 814 nulls (45.53%)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[NULL_SPIKE]</strong>
+                        High null rate in 'resolution_date': 556 nulls (31.10%)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[NULL_SPIKE]</strong>
+                        High null rate in 'rejection_reason': 1,530 nulls (85.57%)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-high">HIGH</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'customer_id': 86 rare categories (86 records)
+                    </div></div><div id="anom-customers" class="tab-content " data-group="anom">
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'customer_id': 1000 rare categories (1,000 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'id_number': 980 rare categories (980 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'date_of_birth': 946 rare categories (946 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'email': 980 rare categories (980 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'phone': 980 rare categories (980 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'registration_date': 803 rare categories (803 records)
+                    </div></div><div id="anom-payments" class="tab-content " data-group="anom">
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[DUPLICATE_KEY]</strong>
+                        Duplicate values in 'policy_id': 4,786 (51.41%)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'payment_id': 9309 rare categories (9,309 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'customer_id': 167 rare categories (1,274 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'account_id': 1271 rare categories (7,415 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'policy_id': 209 rare categories (848 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'payment_date': 544 rare categories (3,892 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'reference': 9309 rare categories (9,309 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[NULL_SPIKE]</strong>
+                        High null rate in 'policy_id': 3,741 nulls (40.19%)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[NULL_SPIKE]</strong>
+                        High null rate in 'failure_reason': 8,656 nulls (92.99%)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-high">HIGH</span>
+                        <strong>[IQR_OUTLIER]</strong>
+                        IQR outliers in 'amount': 452 values outside [-3,428.29, 6,152.56]
+                    </div></div><div id="anom-policies" class="tab-content " data-group="anom">
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[ISOLATION_FOREST]</strong>
+                        Isolation Forest detected 40 multivariate anomalies (5.10%) across 3 features
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'policy_id': 784 rare categories (784 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'customer_id': 347 rare categories (347 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'start_date': 654 rare categories (654 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'end_date': 729 rare categories (729 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-high">HIGH</span>
+                        <strong>[IQR_OUTLIER]</strong>
+                        IQR outliers in 'premium_amount': 24 values outside [-14,882.81, 23,378.62]
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <span class="badge badge-medium">MEDIUM</span>
+                        <strong>[ZSCORE_OUTLIER]</strong>
+                        Z-score outliers in 'cover_amount': 9 values exceed 3.5 std devs (1.15%)
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <span class="badge badge-medium">MEDIUM</span>
+                        <strong>[IQR_OUTLIER]</strong>
+                        IQR outliers in 'cover_amount': 14 values outside [-2,781,628.18, 4,207,294.44]
+                    </div></div><div id="anom-transactions" class="tab-content " data-group="anom">
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[IQR_OUTLIER]</strong>
+                        IQR outliers in 'amount': 5,298 values outside [-9,228.87, 13,995.85]
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'transaction_id': 45730 rare categories (45,730 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'customer_id': 336 rare categories (10,613 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'account_id': 1438 rare categories (45,253 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'transaction_date': 482 rare categories (19,491 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'transaction_time': 35691 rare categories (45,730 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'description': 45572 rare categories (45,730 records)
+                    </div>
+                    <div class="detail-item detail-fail">
+                        <span class="badge badge-critical">CRITICAL</span>
+                        <strong>[RARE_CATEGORY]</strong>
+                        Rare categorical values in 'reference_number': 45730 rare categories (45,730 records)
+                    </div></div>
+        </div>
+        </div>
+
+        <!-- Recovery Details -->
+        <div class="section">
+            <h2>Recovery Action Details</h2>
+            
+        <div class="tab-container">
+            <div class="tab-buttons"><button class="tab-btn active" data-group="rec" data-target="rec-accounts">accounts</button><button class="tab-btn " data-group="rec" data-target="rec-claims">claims</button><button class="tab-btn " data-group="rec" data-target="rec-customers">customers</button><button class="tab-btn " data-group="rec" data-target="rec-payments">payments</button><button class="tab-btn " data-group="rec" data-target="rec-policies">policies</button><button class="tab-btn " data-group="rec" data-target="rec-transactions">transactions</button></div>
+            <div id="rec-accounts" class="tab-content active" data-group="rec">
+                    <div class="detail-item detail-warn">
+                        <strong>[NULL_IMPUTATION]</strong>
+                        Filled 22 nulls in 'customer_id'
+                        <br><small style="color:#6e7681">Strategy: UNKNOWN | Rows affected: 22</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[OUTLIER_CAPPING]</strong>
+                        Capped 87 outliers in 'balance' to [-200,000.00, 3,817,907.96]
+                        <br><small style="color:#6e7681">Strategy: iqr_winsorization | Rows affected: 87</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[FOREIGN_KEY_QUARANTINE]</strong>
+                        Quarantined 52 records with broken FK 'customer_id' -> 'customers.customer_id'
+                        <br><small style="color:#6e7681">Strategy: quarantine_orphans | Rows affected: 52</small>
+                    </div></div><div id="rec-claims" class="tab-content " data-group="rec">
+                    <div class="detail-item detail-warn">
+                        <strong>[DEDUPLICATION]</strong>
+                        Removed 50 exact duplicate rows
+                        <br><small style="color:#6e7681">Strategy: keep_first | Rows affected: 50</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[DEDUPLICATION]</strong>
+                        Removed 30 duplicate 'claim_id' values
+                        <br><small style="color:#6e7681">Strategy: keep_first_by_key | Rows affected: 30</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[NULL_IMPUTATION]</strong>
+                        Filled 77 nulls in 'policy_id'
+                        <br><small style="color:#6e7681">Strategy: UNKNOWN | Rows affected: 77</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[NULL_IMPUTATION]</strong>
+                        Filled 4 nulls in 'claim_date'
+                        <br><small style="color:#6e7681">Strategy: forward_fill | Rows affected: 4</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[NULL_IMPUTATION]</strong>
+                        Filled 75 nulls in 'claim_amount'
+                        <br><small style="color:#6e7681">Strategy: median (19224.70) | Rows affected: 75</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[NEGATIVE_AMOUNT_FIX]</strong>
+                        Converted 48 negative values to absolute in 'claim_amount'
+                        <br><small style="color:#6e7681">Strategy: absolute_value | Rows affected: 48</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[OUTLIER_CAPPING]</strong>
+                        Capped 128 outliers in 'claim_amount' to [0.01, 203,662.42]
+                        <br><small style="color:#6e7681">Strategy: iqr_winsorization | Rows affected: 128</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[OUTLIER_CAPPING]</strong>
+                        Capped 74 outliers in 'approved_amount' to [0.01, 147,335.33]
+                        <br><small style="color:#6e7681">Strategy: iqr_winsorization | Rows affected: 74</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[DATE_FIX]</strong>
+                        Fixed 52 date issues in 'claim_date' (17 unparseable, 35 out of range)
+                        <br><small style="color:#6e7681">Strategy: median_replace_and_clamp | Rows affected: 52</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[FOREIGN_KEY_QUARANTINE]</strong>
+                        Quarantined 212 records with broken FK 'policy_id' -> 'policies.policy_id'
+                        <br><small style="color:#6e7681">Strategy: quarantine_orphans | Rows affected: 212</small>
+                    </div></div><div id="rec-customers" class="tab-content " data-group="rec">
+                    <div class="detail-item detail-warn">
+                        <strong>[DEDUPLICATION]</strong>
+                        Removed 15 exact duplicate rows
+                        <br><small style="color:#6e7681">Strategy: keep_first | Rows affected: 15</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[NULL_IMPUTATION]</strong>
+                        Filled 20 nulls in 'id_number'
+                        <br><small style="color:#6e7681">Strategy: UNKNOWN | Rows affected: 20</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[NULL_IMPUTATION]</strong>
+                        Filled 20 nulls in 'email'
+                        <br><small style="color:#6e7681">Strategy: UNKNOWN | Rows affected: 20</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[NULL_IMPUTATION]</strong>
+                        Filled 20 nulls in 'phone'
+                        <br><small style="color:#6e7681">Strategy: UNKNOWN | Rows affected: 20</small>
+                    </div></div><div id="rec-payments" class="tab-content " data-group="rec">
+                    <div class="detail-item detail-warn">
+                        <strong>[DEDUPLICATION]</strong>
+                        Removed 103 exact duplicate rows
+                        <br><small style="color:#6e7681">Strategy: keep_first | Rows affected: 103</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[DEDUPLICATION]</strong>
+                        Removed 17 duplicate 'payment_id' values
+                        <br><small style="color:#6e7681">Strategy: keep_first_by_key | Rows affected: 17</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[NULL_IMPUTATION]</strong>
+                        Filled 253 nulls in 'customer_id'
+                        <br><small style="color:#6e7681">Strategy: UNKNOWN | Rows affected: 253</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[NULL_IMPUTATION]</strong>
+                        Filled 250 nulls in 'amount'
+                        <br><small style="color:#6e7681">Strategy: median (1102.76) | Rows affected: 250</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[NULL_IMPUTATION]</strong>
+                        Filled 24 nulls in 'currency'
+                        <br><small style="color:#6e7681">Strategy: mode (ZAR) | Rows affected: 24</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[INVALID_CATEGORY_FIX]</strong>
+                        Fixed 54 invalid values in 'currency'
+                        <br><small style="color:#6e7681">Strategy: replace_with_mode (ZAR) | Rows affected: 54</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[OUTLIER_CAPPING]</strong>
+                        Capped 390 outliers in 'amount' to [0.01, 6,939.57]
+                        <br><small style="color:#6e7681">Strategy: iqr_winsorization | Rows affected: 390</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[FOREIGN_KEY_QUARANTINE]</strong>
+                        Quarantined 253 records with broken FK 'customer_id' -> 'customers.customer_id'
+                        <br><small style="color:#6e7681">Strategy: quarantine_orphans | Rows affected: 253</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[FOREIGN_KEY_QUARANTINE]</strong>
+                        Quarantined 321 records with broken FK 'account_id' -> 'accounts.account_id'
+                        <br><small style="color:#6e7681">Strategy: quarantine_orphans | Rows affected: 321</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[FOREIGN_KEY_QUARANTINE]</strong>
+                        Quarantined 117 records with broken FK 'policy_id' -> 'policies.policy_id'
+                        <br><small style="color:#6e7681">Strategy: quarantine_orphans | Rows affected: 117</small>
+                    </div></div><div id="rec-policies" class="tab-content " data-group="rec">
+                    <div class="detail-item detail-warn">
+                        <strong>[NULL_IMPUTATION]</strong>
+                        Filled 16 nulls in 'customer_id'
+                        <br><small style="color:#6e7681">Strategy: UNKNOWN | Rows affected: 16</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[NULL_IMPUTATION]</strong>
+                        Filled 16 nulls in 'premium_amount'
+                        <br><small style="color:#6e7681">Strategy: median (2975.19) | Rows affected: 16</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[NEGATIVE_AMOUNT_FIX]</strong>
+                        Converted 20 negative values to absolute in 'premium_amount'
+                        <br><small style="color:#6e7681">Strategy: absolute_value | Rows affected: 20</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[OUTLIER_CAPPING]</strong>
+                        Capped 9 outliers in 'premium_amount' to [0.01, 27,521.42]
+                        <br><small style="color:#6e7681">Strategy: iqr_winsorization | Rows affected: 9</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[OUTLIER_CAPPING]</strong>
+                        Capped 4 outliers in 'cover_amount' to [1,000.00, 4,789,704.66]
+                        <br><small style="color:#6e7681">Strategy: iqr_winsorization | Rows affected: 4</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[FOREIGN_KEY_QUARANTINE]</strong>
+                        Quarantined 16 records with broken FK 'customer_id' -> 'customers.customer_id'
+                        <br><small style="color:#6e7681">Strategy: quarantine_orphans | Rows affected: 16</small>
+                    </div></div><div id="rec-transactions" class="tab-content " data-group="rec">
+                    <div class="detail-item detail-warn">
+                        <strong>[DEDUPLICATION]</strong>
+                        Removed 433 exact duplicate rows
+                        <br><small style="color:#6e7681">Strategy: keep_first | Rows affected: 433</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[DEDUPLICATION]</strong>
+                        Removed 67 duplicate 'transaction_id' values
+                        <br><small style="color:#6e7681">Strategy: keep_first_by_key | Rows affected: 67</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[NULL_IMPUTATION]</strong>
+                        Filled 993 nulls in 'customer_id'
+                        <br><small style="color:#6e7681">Strategy: UNKNOWN | Rows affected: 993</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[NULL_IMPUTATION]</strong>
+                        Filled 1,001 nulls in 'account_id'
+                        <br><small style="color:#6e7681">Strategy: UNKNOWN | Rows affected: 1,001</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[NULL_IMPUTATION]</strong>
+                        Filled 50 nulls in 'currency'
+                        <br><small style="color:#6e7681">Strategy: mode (ZAR) | Rows affected: 50</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[NULL_IMPUTATION]</strong>
+                        Filled 27 nulls in 'transaction_date'
+                        <br><small style="color:#6e7681">Strategy: forward_fill | Rows affected: 27</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[INVALID_CATEGORY_FIX]</strong>
+                        Fixed 145 invalid values in 'currency'
+                        <br><small style="color:#6e7681">Strategy: replace_with_mode (ZAR) | Rows affected: 145</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[NEGATIVE_AMOUNT_FIX]</strong>
+                        Converted 299 negative values to absolute in 'amount'
+                        <br><small style="color:#6e7681">Strategy: absolute_value | Rows affected: 299</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[OUTLIER_CAPPING]</strong>
+                        Capped 5,331 outliers in 'amount' to [0.01, 15,907.66]
+                        <br><small style="color:#6e7681">Strategy: iqr_winsorization | Rows affected: 5,331</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[DATE_FIX]</strong>
+                        Fixed 370 date issues in 'transaction_date' (91 unparseable, 279 out of range)
+                        <br><small style="color:#6e7681">Strategy: median_replace_and_clamp | Rows affected: 370</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[FOREIGN_KEY_QUARANTINE]</strong>
+                        Quarantined 1,343 records with broken FK 'customer_id' -> 'customers.customer_id'
+                        <br><small style="color:#6e7681">Strategy: quarantine_orphans | Rows affected: 1,343</small>
+                    </div>
+                    <div class="detail-item detail-warn">
+                        <strong>[FOREIGN_KEY_QUARANTINE]</strong>
+                        Quarantined 2,927 records with broken FK 'account_id' -> 'accounts.account_id'
+                        <br><small style="color:#6e7681">Strategy: quarantine_orphans | Rows affected: 2,927</small>
+                    </div></div>
+        </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            DataTrust v1.0 | Built by Khethukuthula | 2026-09-16 12:46:44
+        </div>
+    </div>
+
+    <script>
+        // Tab switching
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const group = btn.dataset.group;
+                const target = btn.dataset.target;
+
+                document.querySelectorAll(`.tab-btn[data-group="${group}"]`).forEach(b => b.classList.remove('active'));
+                document.querySelectorAll(`.tab-content[data-group="${group}"]`).forEach(c => c.classList.remove('active'));
+
+                btn.classList.add('active');
+                document.getElementById(target).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

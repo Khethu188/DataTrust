@@ -1,0 +1,84 @@
+
+# DataTrust — Data Contract: CLAIMS
+dataset: claims
+version: "1.0.0"
+owner: data-engineering
+description: "Insurance claim records"
+source: "src/data_generation/generate_data.py"
+refresh_frequency: daily
+
+schema:
+  primary_key: claim_id
+  foreign_keys:
+    - column: policy_id
+      references:
+        dataset: policies
+        column: policy_id
+    - column: customer_id
+      references:
+        dataset: customers
+        column: customer_id
+  columns:
+    claim_id:
+      type: string
+      pattern: "^CLM\\d{5}$"
+      nullable: false
+    policy_id:
+      type: string
+      nullable: false
+      pattern: "^POL\\d{4}$"
+    customer_id:
+      type: string
+      nullable: false
+      pattern: "^C\\d{4}$"
+    claim_type:
+      type: string
+      nullable: false
+      allowed_values: ["DEATH", "DISABILITY", "HOSPITAL", "MATURITY", "SURRENDER", "RETRENCHMENT"]
+    claim_date:
+      type: date
+      nullable: false
+      min_value: "2020-01-01"
+      max_value: "2026-09-15"
+    claim_amount:
+      type: numeric
+      nullable: false
+      min_value: 0.01
+      max_value: 10000000
+    approved_amount:
+      type: numeric
+      nullable: true
+      min_value: 0.01
+      max_value: 10000000
+    currency:
+      type: string
+      nullable: false
+      allowed_values: ["ZAR"]
+    status:
+      type: string
+      nullable: false
+      allowed_values: ["SUBMITTED", "UNDER_REVIEW", "APPROVED", "REJECTED", "PAID", "DISPUTED"]
+    assessor_id:
+      type: string
+      nullable: false
+      pattern: "^ASR\\d{3}$"
+    resolution_date:
+      type: date
+      nullable: true
+    rejection_reason:
+      type: string
+      nullable: true
+
+quality_rules:
+  completeness:
+    min_completeness: 0.95
+    critical_columns: ["claim_id", "policy_id", "claim_amount"]
+  uniqueness:
+    unique_columns: ["claim_id"]
+  volume:
+    min_rows: 100
+    max_rows: 100000
+    max_duplicate_rate: 0.02
+  freshness:
+    max_age_hours: 48
+

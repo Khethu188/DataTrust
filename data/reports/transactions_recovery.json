@@ -1,0 +1,133 @@
+{
+  "dataset": "transactions",
+  "rows_before": 50500,
+  "rows_after": 45730,
+  "quarantined_rows": 4770,
+  "recovery_rate": 90.6,
+  "total_actions": 12,
+  "total_rows_fixed": 12986,
+  "duration_seconds": 0.284597,
+  "actions": [
+    {
+      "action_type": "DEDUPLICATION",
+      "column": "[all]",
+      "description": "Removed 433 exact duplicate rows",
+      "rows_affected": 433,
+      "strategy": "keep_first",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.608301"
+    },
+    {
+      "action_type": "DEDUPLICATION",
+      "column": "transaction_id",
+      "description": "Removed 67 duplicate 'transaction_id' values",
+      "rows_affected": 67,
+      "strategy": "keep_first_by_key",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.629615"
+    },
+    {
+      "action_type": "NULL_IMPUTATION",
+      "column": "customer_id",
+      "description": "Filled 993 nulls in 'customer_id'",
+      "rows_affected": 993,
+      "strategy": "UNKNOWN",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.641436"
+    },
+    {
+      "action_type": "NULL_IMPUTATION",
+      "column": "account_id",
+      "description": "Filled 1,001 nulls in 'account_id'",
+      "rows_affected": 1001,
+      "strategy": "UNKNOWN",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.647784"
+    },
+    {
+      "action_type": "NULL_IMPUTATION",
+      "column": "currency",
+      "description": "Filled 50 nulls in 'currency'",
+      "rows_affected": 50,
+      "strategy": "mode (ZAR)",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.656975"
+    },
+    {
+      "action_type": "NULL_IMPUTATION",
+      "column": "transaction_date",
+      "description": "Filled 27 nulls in 'transaction_date'",
+      "rows_affected": 27,
+      "strategy": "forward_fill",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.666904"
+    },
+    {
+      "action_type": "INVALID_CATEGORY_FIX",
+      "column": "currency",
+      "description": "Fixed 145 invalid values in 'currency'",
+      "rows_affected": 145,
+      "strategy": "replace_with_mode (ZAR)",
+      "details": {
+        "sample_invalid": [
+          "GBP",
+          "USD",
+          "EUR",
+          "XXX",
+          "ZZZ"
+        ]
+      },
+      "timestamp": "2026-09-16T12:46:41.693072"
+    },
+    {
+      "action_type": "NEGATIVE_AMOUNT_FIX",
+      "column": "amount",
+      "description": "Converted 299 negative values to absolute in 'amount'",
+      "rows_affected": 299,
+      "strategy": "absolute_value",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.706387"
+    },
+    {
+      "action_type": "OUTLIER_CAPPING",
+      "column": "amount",
+      "description": "Capped 5,331 outliers in 'amount' to [0.01, 15,907.66]",
+      "rows_affected": 5331,
+      "strategy": "iqr_winsorization",
+      "details": {
+        "lower_bound": 0.01,
+        "upper_bound": 15907.66,
+        "capped_below": 0,
+        "capped_above": 5331
+      },
+      "timestamp": "2026-09-16T12:46:41.711170"
+    },
+    {
+      "action_type": "DATE_FIX",
+      "column": "transaction_date",
+      "description": "Fixed 370 date issues in 'transaction_date' (91 unparseable, 279 out of range)",
+      "rows_affected": 370,
+      "strategy": "median_replace_and_clamp",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.748149"
+    },
+    {
+      "action_type": "FOREIGN_KEY_QUARANTINE",
+      "column": "customer_id",
+      "description": "Quarantined 1,343 records with broken FK 'customer_id' -> 'customers.customer_id'",
+      "rows_affected": 1343,
+      "strategy": "quarantine_orphans",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.765468"
+    },
+    {
+      "action_type": "FOREIGN_KEY_QUARANTINE",
+      "column": "account_id",
+      "description": "Quarantined 2,927 records with broken FK 'account_id' -> 'accounts.account_id'",
+      "rows_affected": 2927,
+      "strategy": "quarantine_orphans",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.784325"
+    }
+  ]
+}

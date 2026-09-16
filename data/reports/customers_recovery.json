@@ -1,0 +1,48 @@
+{
+  "dataset": "customers",
+  "rows_before": 1015,
+  "rows_after": 1000,
+  "quarantined_rows": 15,
+  "recovery_rate": 98.5,
+  "total_actions": 4,
+  "total_rows_fixed": 75,
+  "duration_seconds": 0.015385,
+  "actions": [
+    {
+      "action_type": "DEDUPLICATION",
+      "column": "[all]",
+      "description": "Removed 15 exact duplicate rows",
+      "rows_affected": 15,
+      "strategy": "keep_first",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.368947"
+    },
+    {
+      "action_type": "NULL_IMPUTATION",
+      "column": "id_number",
+      "description": "Filled 20 nulls in 'id_number'",
+      "rows_affected": 20,
+      "strategy": "UNKNOWN",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.371549"
+    },
+    {
+      "action_type": "NULL_IMPUTATION",
+      "column": "email",
+      "description": "Filled 20 nulls in 'email'",
+      "rows_affected": 20,
+      "strategy": "UNKNOWN",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.372881"
+    },
+    {
+      "action_type": "NULL_IMPUTATION",
+      "column": "phone",
+      "description": "Filled 20 nulls in 'phone'",
+      "rows_affected": 20,
+      "strategy": "UNKNOWN",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.373748"
+    }
+  ]
+}

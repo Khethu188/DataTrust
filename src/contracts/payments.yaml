@@ -1,0 +1,83 @@
+
+# DataTrust — Data Contract: PAYMENTS
+dataset: payments
+version: "1.0.0"
+owner: data-engineering
+description: "Payment transaction records"
+source: "src/data_generation/generate_data.py"
+refresh_frequency: daily
+
+schema:
+  primary_key: payment_id
+  foreign_keys:
+    - column: customer_id
+      references:
+        dataset: customers
+        column: customer_id
+    - column: account_id
+      references:
+        dataset: accounts
+        column: account_id
+    - column: policy_id
+      references:
+        dataset: policies
+        column: policy_id
+  columns:
+    payment_id:
+      type: string
+      pattern: "^PAY\\d{6}$"
+      nullable: false
+    customer_id:
+      type: string
+      nullable: false
+      pattern: "^C\\d{4}$"
+    account_id:
+      type: string
+      nullable: false
+      pattern: "^A\\d{4}$"
+    policy_id:
+      type: string
+      nullable: true
+      pattern: "^POL\\d{4}$"
+    amount:
+      type: numeric
+      nullable: false
+      min_value: 0.01
+      max_value: 1000000
+    currency:
+      type: string
+      nullable: false
+      allowed_values: ["ZAR"]
+    payment_date:
+      type: date
+      nullable: false
+      min_value: "2020-01-01"
+      max_value: "2026-09-15"
+    payment_method:
+      type: string
+      nullable: false
+      allowed_values: ["EFT", "DEBIT_ORDER", "CASH", "CARD", "MOBILE"]
+    status:
+      type: string
+      nullable: false
+      allowed_values: ["COMPLETED", "PENDING", "FAILED", "REVERSED"]
+    reference:
+      type: string
+      nullable: false
+    failure_reason:
+      type: string
+      nullable: true
+
+quality_rules:
+  completeness:
+    min_completeness: 0.97
+    critical_columns: ["payment_id", "customer_id", "amount"]
+  uniqueness:
+    unique_columns: ["payment_id", "reference"]
+  volume:
+    min_rows: 500
+    max_rows: 500000
+    max_duplicate_rate: 0.01
+  freshness:
+    max_age_hours: 48
+

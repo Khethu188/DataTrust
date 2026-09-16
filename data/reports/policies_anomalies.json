@@ -1,0 +1,190 @@
+{
+  "dataset": "policies",
+  "health_score": 0,
+  "rows_scanned": 784,
+  "summary": {
+    "total_anomalies": 8,
+    "critical": 5,
+    "high": 1,
+    "medium": 2,
+    "low": 0
+  },
+  "duration_seconds": 0.241783,
+  "anomalies": [
+    {
+      "anomaly_type": "ZSCORE_OUTLIER",
+      "severity": "MEDIUM",
+      "column": "cover_amount",
+      "description": "Z-score outliers in 'cover_amount': 9 values exceed 3.5 std devs (1.15%)",
+      "affected_rows": 9,
+      "details": {
+        "threshold": 3.5,
+        "outlier_count": 9,
+        "anomaly_rate": 0.0115,
+        "mean": 892876.48,
+        "std": 1025162.71,
+        "min_outlier": 4501463.89,
+        "max_outlier": 4789704.66,
+        "sample_values": [
+          4789704.66,
+          4789704.66,
+          4542581.33,
+          4623031.14,
+          4501463.89
+        ]
+      },
+      "timestamp": "2026-09-16T12:46:43.950069"
+    },
+    {
+      "anomaly_type": "IQR_OUTLIER",
+      "severity": "HIGH",
+      "column": "premium_amount",
+      "description": "IQR outliers in 'premium_amount': 24 values outside [-14,882.81, 23,378.62]",
+      "affected_rows": 24,
+      "details": {
+        "q1": 1059.46,
+        "q3": 7436.36,
+        "iqr": 6376.91,
+        "lower_bound": -14882.81,
+        "upper_bound": 23378.62,
+        "outlier_count": 24,
+        "below_lower": 0,
+        "above_upper": 24
+      },
+      "timestamp": "2026-09-16T12:46:43.954005"
+    },
+    {
+      "anomaly_type": "IQR_OUTLIER",
+      "severity": "MEDIUM",
+      "column": "cover_amount",
+      "description": "IQR outliers in 'cover_amount': 14 values outside [-2,781,628.18, 4,207,294.44]",
+      "affected_rows": 14,
+      "details": {
+        "q1": 130422.91,
+        "q3": 1295243.35,
+        "iqr": 1164820.44,
+        "lower_bound": -2781628.18,
+        "upper_bound": 4207294.44,
+        "outlier_count": 14,
+        "below_lower": 0,
+        "above_upper": 14
+      },
+      "timestamp": "2026-09-16T12:46:43.956873"
+    },
+    {
+      "anomaly_type": "ISOLATION_FOREST",
+      "severity": "CRITICAL",
+      "column": "[multivariate]",
+      "description": "Isolation Forest detected 40 multivariate anomalies (5.10%) across 3 features",
+      "affected_rows": 40,
+      "details": {
+        "anomaly_count": 40,
+        "anomaly_rate": 0.051,
+        "features_used": [
+          "premium_amount",
+          "cover_amount",
+          "beneficiary_count"
+        ],
+        "mean_anomaly_score": -0.0319,
+        "worst_score": -0.1098
+      },
+      "timestamp": "2026-09-16T12:46:44.177220"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "policy_id",
+      "description": "Rare categorical values in 'policy_id': 784 rare categories (784 records)",
+      "affected_rows": 784,
+      "details": {
+        "rare_values": {
+          "POL0001": 1,
+          "POL0002": 1,
+          "POL0003": 1,
+          "POL0004": 1,
+          "POL0006": 1,
+          "POL0007": 1,
+          "POL0008": 1,
+          "POL0009": 1,
+          "POL0010": 1,
+          "POL0011": 1
+        },
+        "total_categories": 784,
+        "rare_categories": 784
+      },
+      "timestamp": "2026-09-16T12:46:44.181486"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "customer_id",
+      "description": "Rare categorical values in 'customer_id': 347 rare categories (347 records)",
+      "affected_rows": 347,
+      "details": {
+        "rare_values": {
+          "C0043": 1,
+          "C0595": 1,
+          "C0146": 1,
+          "C0430": 1,
+          "C0573": 1,
+          "C0200": 1,
+          "C0624": 1,
+          "C0891": 1,
+          "C0633": 1,
+          "C0263": 1
+        },
+        "total_categories": 538,
+        "rare_categories": 347
+      },
+      "timestamp": "2026-09-16T12:46:44.182468"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "start_date",
+      "description": "Rare categorical values in 'start_date': 654 rare categories (654 records)",
+      "affected_rows": 654,
+      "details": {
+        "rare_values": {
+          "2022-04-28": 1,
+          "2017-06-12": 1,
+          "2020-04-14": 1,
+          "2017-10-28": 1,
+          "2021-01-27": 1,
+          "2020-09-07": 1,
+          "2020-11-21": 1,
+          "2019-03-31": 1,
+          "2021-12-15": 1,
+          "2025-11-22": 1
+        },
+        "total_categories": 718,
+        "rare_categories": 654
+      },
+      "timestamp": "2026-09-16T12:46:44.184511"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "end_date",
+      "description": "Rare categorical values in 'end_date': 729 rare categories (729 records)",
+      "affected_rows": 729,
+      "details": {
+        "rare_values": {
+          "2037-04-24": 1,
+          "2042-06-06": 1,
+          "2052-11-19": 1,
+          "2050-04-07": 1,
+          "2047-10-21": 1,
+          "2036-01-24": 1,
+          "2030-09-05": 1,
+          "2053-11-19": 1,
+          "2049-03-23": 1,
+          "2031-12-13": 1
+        },
+        "total_categories": 756,
+        "rare_categories": 729
+      },
+      "timestamp": "2026-09-16T12:46:44.185453"
+    }
+  ]
+}

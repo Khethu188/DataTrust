@@ -1,0 +1,238 @@
+{
+  "dataset": "claims",
+  "health_score": 0,
+  "rows_scanned": 1788,
+  "summary": {
+    "total_anomalies": 12,
+    "critical": 11,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+  },
+  "duration_seconds": 0.284866,
+  "anomalies": [
+    {
+      "anomaly_type": "IQR_OUTLIER",
+      "severity": "CRITICAL",
+      "column": "claim_amount",
+      "description": "IQR outliers in 'claim_amount': 137 values outside [-112,518.94, 175,835.94]",
+      "affected_rows": 137,
+      "details": {
+        "q1": 7628.93,
+        "q3": 55688.07,
+        "iqr": 48059.15,
+        "lower_bound": -112518.94,
+        "upper_bound": 175835.94,
+        "outlier_count": 137,
+        "below_lower": 0,
+        "above_upper": 137
+      },
+      "timestamp": "2026-09-16T12:46:43.579568"
+    },
+    {
+      "anomaly_type": "IQR_OUTLIER",
+      "severity": "CRITICAL",
+      "column": "approved_amount",
+      "description": "IQR outliers in 'approved_amount': 79 values outside [-83,983.12, 131,401.55]",
+      "affected_rows": 79,
+      "details": {
+        "q1": 5760.49,
+        "q3": 41657.94,
+        "iqr": 35897.44,
+        "lower_bound": -83983.12,
+        "upper_bound": 131401.55,
+        "outlier_count": 79,
+        "below_lower": 0,
+        "above_upper": 79
+      },
+      "timestamp": "2026-09-16T12:46:43.580682"
+    },
+    {
+      "anomaly_type": "ISOLATION_FOREST",
+      "severity": "CRITICAL",
+      "column": "[multivariate]",
+      "description": "Isolation Forest detected 49 multivariate anomalies (5.03%) across 2 features",
+      "affected_rows": 49,
+      "details": {
+        "anomaly_count": 49,
+        "anomaly_rate": 0.0503,
+        "features_used": [
+          "claim_amount",
+          "approved_amount"
+        ],
+        "mean_anomaly_score": -0.0488,
+        "worst_score": -0.1122
+      },
+      "timestamp": "2026-09-16T12:46:43.834294"
+    },
+    {
+      "anomaly_type": "DUPLICATE_KEY",
+      "severity": "CRITICAL",
+      "column": "policy_id",
+      "description": "Duplicate values in 'policy_id': 1,095 (61.24%)",
+      "affected_rows": 1095,
+      "details": {
+        "column": "policy_id",
+        "duplicate_count": 1095,
+        "duplicate_rate": 0.6124
+      },
+      "timestamp": "2026-09-16T12:46:43.840271"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "claim_id",
+      "description": "Rare categorical values in 'claim_id': 1788 rare categories (1,788 records)",
+      "affected_rows": 1788,
+      "details": {
+        "rare_values": {
+          "CLM00001": 1,
+          "CLM00002": 1,
+          "CLM00003": 1,
+          "CLM00004": 1,
+          "CLM00005": 1,
+          "CLM00006": 1,
+          "CLM00007": 1,
+          "CLM00008": 1,
+          "CLM00010": 1,
+          "CLM00011": 1
+        },
+        "total_categories": 1788,
+        "rare_categories": 1788
+      },
+      "timestamp": "2026-09-16T12:46:43.848165"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "policy_id",
+      "description": "Rare categorical values in 'policy_id': 170 rare categories (170 records)",
+      "affected_rows": 170,
+      "details": {
+        "rare_values": {
+          "POL0259": 1,
+          "POL0243": 1,
+          "POL0623": 1,
+          "POL0407": 1,
+          "POL0239": 1,
+          "POL0267": 1,
+          "POL0787": 1,
+          "POL0328": 1,
+          "POL0454": 1,
+          "POL0732": 1
+        },
+        "total_categories": 693,
+        "rare_categories": 170
+      },
+      "timestamp": "2026-09-16T12:46:43.849520"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "HIGH",
+      "column": "customer_id",
+      "description": "Rare categorical values in 'customer_id': 86 rare categories (86 records)",
+      "affected_rows": 86,
+      "details": {
+        "rare_values": {
+          "C0685": 1,
+          "C0014": 1,
+          "C0020": 1,
+          "C0406": 1,
+          "C0586": 1,
+          "C0753": 1,
+          "C0502": 1,
+          "C0683": 1,
+          "C0507": 1,
+          "C0104": 1
+        },
+        "total_categories": 503,
+        "rare_categories": 86
+      },
+      "timestamp": "2026-09-16T12:46:43.850721"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "claim_date",
+      "description": "Rare categorical values in 'claim_date': 479 rare categories (479 records)",
+      "affected_rows": 479,
+      "details": {
+        "rare_values": {
+          "2026-05-31": 1,
+          "2026-08-23": 1,
+          "2023-04-17": 1,
+          "2023-07-15": 1,
+          "2026-01-15": 1,
+          "2023-07-05": 1,
+          "2026-02-22": 1,
+          "2024-10-28": 1,
+          "2024-07-17": 1,
+          "2026-04-23": 1
+        },
+        "total_categories": 987,
+        "rare_categories": 479
+      },
+      "timestamp": "2026-09-16T12:46:43.853594"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "resolution_date",
+      "description": "Rare categorical values in 'resolution_date': 494 rare categories (494 records)",
+      "affected_rows": 494,
+      "details": {
+        "rare_values": {
+          "2025-06-06": 1,
+          "2023-06-22": 1,
+          "2026-06-10": 1,
+          "2023-07-14": 1,
+          "2026-10-19": 1,
+          "2023-05-18": 1,
+          "2025-10-13": 1,
+          "2024-07-25": 1,
+          "2025-06-18": 1,
+          "2025-01-05": 1
+        },
+        "total_categories": 804,
+        "rare_categories": 494
+      },
+      "timestamp": "2026-09-16T12:46:43.857893"
+    },
+    {
+      "anomaly_type": "NULL_SPIKE",
+      "severity": "CRITICAL",
+      "column": "approved_amount",
+      "description": "High null rate in 'approved_amount': 814 nulls (45.53%)",
+      "affected_rows": 814,
+      "details": {
+        "null_count": 814,
+        "null_rate": 0.4553
+      },
+      "timestamp": "2026-09-16T12:46:43.859808"
+    },
+    {
+      "anomaly_type": "NULL_SPIKE",
+      "severity": "CRITICAL",
+      "column": "resolution_date",
+      "description": "High null rate in 'resolution_date': 556 nulls (31.10%)",
+      "affected_rows": 556,
+      "details": {
+        "null_count": 556,
+        "null_rate": 0.311
+      },
+      "timestamp": "2026-09-16T12:46:43.860763"
+    },
+    {
+      "anomaly_type": "NULL_SPIKE",
+      "severity": "CRITICAL",
+      "column": "rejection_reason",
+      "description": "High null rate in 'rejection_reason': 1,530 nulls (85.57%)",
+      "affected_rows": 1530,
+      "details": {
+        "null_count": 1530,
+        "null_rate": 0.8557
+      },
+      "timestamp": "2026-09-16T12:46:43.860971"
+    }
+  ]
+}

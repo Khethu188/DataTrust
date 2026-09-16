@@ -1,0 +1,150 @@
+{
+  "generated_at": "2026-09-15T00:00:00",
+  "corruptions": [
+    {
+      "type": "DUPLICATE_ROWS",
+      "count": 500,
+      "description": "Injected 500 exact duplicate rows"
+    },
+    {
+      "type": "MISSING_VALUES",
+      "count": 2020,
+      "columns": [
+        "customer_id",
+        "account_id"
+      ],
+      "description": "Injected 2020 null values across ['customer_id', 'account_id']"
+    },
+    {
+      "type": "NEGATIVE_AMOUNTS",
+      "count": 300,
+      "description": "Flipped 300 amounts to negative"
+    },
+    {
+      "type": "INVALID_DATES",
+      "count": 400,
+      "column": "transaction_date",
+      "description": "Injected 400 invalid dates in transaction_date"
+    },
+    {
+      "type": "INVALID_CURRENCY",
+      "count": 200,
+      "description": "Replaced 200 currency values with invalid codes"
+    },
+    {
+      "type": "BROKEN_FOREIGN_KEY",
+      "count": 350,
+      "column": "customer_id",
+      "description": "Replaced 350 customer_id values with non-existent IDs"
+    },
+    {
+      "type": "BROKEN_FOREIGN_KEY",
+      "count": 250,
+      "column": "account_id",
+      "description": "Replaced 250 account_id values with non-existent IDs"
+    },
+    {
+      "type": "ABNORMAL_AMOUNTS",
+      "count": 150,
+      "description": "Multiplied 150 amounts by 100x"
+    },
+    {
+      "type": "DUPLICATE_ROWS",
+      "count": 80,
+      "description": "Injected 80 exact duplicate rows"
+    },
+    {
+      "type": "MISSING_VALUES",
+      "count": 166,
+      "columns": [
+        "policy_id",
+        "claim_amount"
+      ],
+      "description": "Injected 166 null values across ['policy_id', 'claim_amount']"
+    },
+    {
+      "type": "BROKEN_FOREIGN_KEY",
+      "count": 100,
+      "column": "policy_id",
+      "description": "Replaced 100 policy_id values with non-existent IDs"
+    },
+    {
+      "type": "NEGATIVE_AMOUNTS",
+      "count": 50,
+      "description": "Flipped 50 amounts to negative"
+    },
+    {
+      "type": "INVALID_DATES",
+      "count": 60,
+      "column": "claim_date",
+      "description": "Injected 60 invalid dates in claim_date"
+    },
+    {
+      "type": "DUPLICATE_ROWS",
+      "count": 120,
+      "description": "Injected 120 exact duplicate rows"
+    },
+    {
+      "type": "MISSING_VALUES",
+      "count": 506,
+      "columns": [
+        "customer_id",
+        "amount"
+      ],
+      "description": "Injected 506 null values across ['customer_id', 'amount']"
+    },
+    {
+      "type": "INVALID_CURRENCY",
+      "count": 80,
+      "description": "Replaced 80 currency values with invalid codes"
+    },
+    {
+      "type": "ABNORMAL_AMOUNTS",
+      "count": 60,
+      "description": "Multiplied 60 amounts by 50x"
+    },
+    {
+      "type": "MISSING_VALUES",
+      "count": 60,
+      "columns": [
+        "email",
+        "phone",
+        "id_number"
+      ],
+      "description": "Injected 60 null values across ['email', 'phone', 'id_number']"
+    },
+    {
+      "type": "DUPLICATE_ROWS",
+      "count": 15,
+      "description": "Injected 15 exact duplicate rows"
+    },
+    {
+      "type": "MISSING_VALUES",
+      "count": 22,
+      "columns": [
+        "customer_id"
+      ],
+      "description": "Injected 22 null values across ['customer_id']"
+    },
+    {
+      "type": "BROKEN_FOREIGN_KEY",
+      "count": 30,
+      "column": "customer_id",
+      "description": "Replaced 30 customer_id values with non-existent IDs"
+    },
+    {
+      "type": "MISSING_VALUES",
+      "count": 32,
+      "columns": [
+        "customer_id",
+        "premium_amount"
+      ],
+      "description": "Injected 32 null values across ['customer_id', 'premium_amount']"
+    },
+    {
+      "type": "NEGATIVE_AMOUNTS",
+      "count": 20,
+      "description": "Flipped 20 amounts to negative"
+    }
+  ]
+}

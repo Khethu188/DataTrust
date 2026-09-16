@@ -1,0 +1,186 @@
+{
+  "dataset": "accounts",
+  "health_score": 0,
+  "rows_scanned": 1448,
+  "summary": {
+    "total_anomalies": 8,
+    "critical": 8,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "duration_seconds": 0.18307,
+  "anomalies": [
+    {
+      "anomaly_type": "IQR_OUTLIER",
+      "severity": "CRITICAL",
+      "column": "balance",
+      "description": "IQR outliers in 'balance': 112 values outside [-2,317,568.59, 3,322,175.71]",
+      "affected_rows": 112,
+      "details": {
+        "q1": 32324.87,
+        "q3": 972282.25,
+        "iqr": 939957.38,
+        "lower_bound": -2317568.59,
+        "upper_bound": 3322175.71,
+        "outlier_count": 112,
+        "below_lower": 0,
+        "above_upper": 112
+      },
+      "timestamp": "2026-09-16T12:46:43.392209"
+    },
+    {
+      "anomaly_type": "NEGATIVE_AMOUNT",
+      "severity": "CRITICAL",
+      "column": "balance",
+      "description": "Negative amounts in 'balance': 301 records (20.79%)",
+      "affected_rows": 301,
+      "details": {
+        "negative_count": 301,
+        "anomaly_rate": 0.2079,
+        "min_value": -99770.04,
+        "max_negative": -7.63,
+        "total_negative_sum": -14839923.76
+      },
+      "timestamp": "2026-09-16T12:46:43.393853"
+    },
+    {
+      "anomaly_type": "ISOLATION_FOREST",
+      "severity": "CRITICAL",
+      "column": "[multivariate]",
+      "description": "Isolation Forest detected 73 multivariate anomalies (5.04%) across 2 features",
+      "affected_rows": 73,
+      "details": {
+        "anomaly_count": 73,
+        "anomaly_rate": 0.0504,
+        "features_used": [
+          "balance",
+          "interest_rate"
+        ],
+        "mean_anomaly_score": -0.0168,
+        "worst_score": -0.0586
+      },
+      "timestamp": "2026-09-16T12:46:43.560835"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "account_id",
+      "description": "Rare categorical values in 'account_id': 1448 rare categories (1,448 records)",
+      "affected_rows": 1448,
+      "details": {
+        "rare_values": {
+          "A0001": 1,
+          "A0002": 1,
+          "A0003": 1,
+          "A0004": 1,
+          "A0005": 1,
+          "A0006": 1,
+          "A0007": 1,
+          "A0008": 1,
+          "A0009": 1,
+          "A0010": 1
+        },
+        "total_categories": 1448,
+        "rare_categories": 1448
+      },
+      "timestamp": "2026-09-16T12:46:43.564619"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "customer_id",
+      "description": "Rare categorical values in 'customer_id': 338 rare categories (338 records)",
+      "affected_rows": 338,
+      "details": {
+        "rare_values": {
+          "C0606": 1,
+          "C0978": 1,
+          "C0015": 1,
+          "C0036": 1,
+          "C0522": 1,
+          "C0007": 1,
+          "C0989": 1,
+          "C0877": 1,
+          "C0813": 1,
+          "C0772": 1
+        },
+        "total_categories": 754,
+        "rare_categories": 338
+      },
+      "timestamp": "2026-09-16T12:46:43.565603"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "opened_date",
+      "description": "Rare categorical values in 'opened_date': 970 rare categories (970 records)",
+      "affected_rows": 970,
+      "details": {
+        "rare_values": {
+          "2025-04-20": 1,
+          "2018-03-01": 1,
+          "2017-06-29": 1,
+          "2025-09-02": 1,
+          "2021-01-18": 1,
+          "2023-09-25": 1,
+          "2024-10-03": 1,
+          "2017-02-08": 1,
+          "2022-08-02": 1,
+          "2019-04-01": 1
+        },
+        "total_categories": 1195,
+        "rare_categories": 970
+      },
+      "timestamp": "2026-09-16T12:46:43.567859"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "branch_code",
+      "description": "Rare categorical values in 'branch_code': 278 rare categories (278 records)",
+      "affected_rows": 278,
+      "details": {
+        "rare_values": {
+          "BR678": 1,
+          "BR160": 1,
+          "BR911": 1,
+          "BR450": 1,
+          "BR453": 1,
+          "BR961": 1,
+          "BR734": 1,
+          "BR886": 1,
+          "BR644": 1,
+          "BR885": 1
+        },
+        "total_categories": 715,
+        "rare_categories": 278
+      },
+      "timestamp": "2026-09-16T12:46:43.569388"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "last_activity_date",
+      "description": "Rare categorical values in 'last_activity_date': 776 rare categories (776 records)",
+      "affected_rows": 776,
+      "details": {
+        "rare_values": {
+          "2018-04-02": 1,
+          "2021-09-06": 1,
+          "2025-04-01": 1,
+          "2024-01-07": 1,
+          "2022-03-06": 1,
+          "2021-08-24": 1,
+          "2021-02-05": 1,
+          "2021-11-02": 1,
+          "2021-08-21": 1,
+          "2022-11-16": 1
+        },
+        "total_categories": 1066,
+        "rare_categories": 776
+      },
+      "timestamp": "2026-09-16T12:46:43.570351"
+    }
+  ]
+}

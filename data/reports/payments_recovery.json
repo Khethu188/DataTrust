@@ -1,0 +1,115 @@
+{
+  "dataset": "payments",
+  "rows_before": 10120,
+  "rows_after": 9309,
+  "quarantined_rows": 811,
+  "recovery_rate": 92.0,
+  "total_actions": 10,
+  "total_rows_fixed": 1782,
+  "duration_seconds": 0.057873,
+  "actions": [
+    {
+      "action_type": "DEDUPLICATION",
+      "column": "[all]",
+      "description": "Removed 103 exact duplicate rows",
+      "rows_affected": 103,
+      "strategy": "keep_first",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.848307"
+    },
+    {
+      "action_type": "DEDUPLICATION",
+      "column": "payment_id",
+      "description": "Removed 17 duplicate 'payment_id' values",
+      "rows_affected": 17,
+      "strategy": "keep_first_by_key",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.852018"
+    },
+    {
+      "action_type": "NULL_IMPUTATION",
+      "column": "customer_id",
+      "description": "Filled 253 nulls in 'customer_id'",
+      "rows_affected": 253,
+      "strategy": "UNKNOWN",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.855452"
+    },
+    {
+      "action_type": "NULL_IMPUTATION",
+      "column": "amount",
+      "description": "Filled 250 nulls in 'amount'",
+      "rows_affected": 250,
+      "strategy": "median (1102.76)",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.857344"
+    },
+    {
+      "action_type": "NULL_IMPUTATION",
+      "column": "currency",
+      "description": "Filled 24 nulls in 'currency'",
+      "rows_affected": 24,
+      "strategy": "mode (ZAR)",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.859346"
+    },
+    {
+      "action_type": "INVALID_CATEGORY_FIX",
+      "column": "currency",
+      "description": "Fixed 54 invalid values in 'currency'",
+      "rows_affected": 54,
+      "strategy": "replace_with_mode (ZAR)",
+      "details": {
+        "sample_invalid": [
+          "ZZZ",
+          "EUR",
+          "USD",
+          "GBP",
+          "XXX"
+        ]
+      },
+      "timestamp": "2026-09-16T12:46:41.864701"
+    },
+    {
+      "action_type": "OUTLIER_CAPPING",
+      "column": "amount",
+      "description": "Capped 390 outliers in 'amount' to [0.01, 6,939.57]",
+      "rows_affected": 390,
+      "strategy": "iqr_winsorization",
+      "details": {
+        "lower_bound": 0.01,
+        "upper_bound": 6939.57,
+        "capped_below": 0,
+        "capped_above": 390
+      },
+      "timestamp": "2026-09-16T12:46:41.869405"
+    },
+    {
+      "action_type": "FOREIGN_KEY_QUARANTINE",
+      "column": "customer_id",
+      "description": "Quarantined 253 records with broken FK 'customer_id' -> 'customers.customer_id'",
+      "rows_affected": 253,
+      "strategy": "quarantine_orphans",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.877585"
+    },
+    {
+      "action_type": "FOREIGN_KEY_QUARANTINE",
+      "column": "account_id",
+      "description": "Quarantined 321 records with broken FK 'account_id' -> 'accounts.account_id'",
+      "rows_affected": 321,
+      "strategy": "quarantine_orphans",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.884504"
+    },
+    {
+      "action_type": "FOREIGN_KEY_QUARANTINE",
+      "column": "policy_id",
+      "description": "Quarantined 117 records with broken FK 'policy_id' -> 'policies.policy_id'",
+      "rows_affected": 117,
+      "strategy": "quarantine_orphans",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.889723"
+    }
+  ]
+}

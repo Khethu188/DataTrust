@@ -1,0 +1,44 @@
+{
+  "dataset": "accounts",
+  "rows_before": 1500,
+  "rows_after": 1448,
+  "quarantined_rows": 52,
+  "recovery_rate": 96.5,
+  "total_actions": 3,
+  "total_rows_fixed": 161,
+  "duration_seconds": 0.046128,
+  "actions": [
+    {
+      "action_type": "NULL_IMPUTATION",
+      "column": "customer_id",
+      "description": "Filled 22 nulls in 'customer_id'",
+      "rows_affected": 22,
+      "strategy": "UNKNOWN",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.393722"
+    },
+    {
+      "action_type": "OUTLIER_CAPPING",
+      "column": "balance",
+      "description": "Capped 87 outliers in 'balance' to [-200,000.00, 3,817,907.96]",
+      "rows_affected": 87,
+      "strategy": "iqr_winsorization",
+      "details": {
+        "lower_bound": -200000.0,
+        "upper_bound": 3817907.96,
+        "capped_below": 0,
+        "capped_above": 87
+      },
+      "timestamp": "2026-09-16T12:46:41.416880"
+    },
+    {
+      "action_type": "FOREIGN_KEY_QUARANTINE",
+      "column": "customer_id",
+      "description": "Quarantined 52 records with broken FK 'customer_id' -> 'customers.customer_id'",
+      "rows_affected": 52,
+      "strategy": "quarantine_orphans",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.434705"
+    }
+  ]
+}

@@ -1,0 +1,1001 @@
+customer_id,first_name,last_name,id_number,date_of_birth,gender,email,phone,province,city,registration_date,customer_segment,kyc_status,risk_rating,is_active
+C0001,Naledi,Nkosi,6611248935089.0,1987-11-08,M,naledi.nkosi224@gmail.com,27679478454.0,Free State,Bloemfontein,2015-08-06,PREMIUM,VERIFIED,MEDIUM,True
+C0002,Dumisani,Jacobs,512145574182.0,1969-04-26,F,dumisani.jacobs390@gmail.com,27637022674.0,Free State,Bloemfontein,2022-09-18,PREMIUM,VERIFIED,MEDIUM,True
+C0003,Lwazi,Zulu,1906193150080.0,1970-06-12,F,lwazi.zulu888@gmail.com,27637377459.0,Northern Cape,Upington,2021-03-27,RETAIL,VERIFIED,LOW,True
+C0004,Busisiwe,Mahlangu,703156216188.0,1969-09-14,F,busisiwe.mahlangu842@gmail.com,27616292423.0,Western Cape,Stellenbosch,2023-12-31,RETAIL,VERIFIED,HIGH,True
+C0005,Khethukuthula,Molefe,2008054339083.0,2000-05-12,F,khethukuthula_molefe920@hotmail.com,27827700828.0,North West,Mahikeng,2023-02-13,RETAIL,EXPIRED,LOW,True
+C0006,Lerato,Cele,2511149771086.0,1984-03-27,F,lerato_cele995@hotmail.com,27811192619.0,Western Cape,Stellenbosch,2017-07-27,PREMIUM,VERIFIED,LOW,True
+C0007,Naledi,Ngcobo,2312098201088.0,1959-07-19,F,naledingcobo204@hotmail.com,27647273233.0,Mpumalanga,Nelspruit,2018-08-16,PREMIUM,VERIFIED,LOW,True
+C0008,Khethukuthula,Botha,2605080949089.0,1957-01-24,M,khethukuthula.botha779@icloud.com,27813109911.0,Gauteng,Johannesburg,2017-11-17,PREMIUM,PENDING,LOW,True
+C0009,Nonhlanhla,Molefe,1211216118188.0,1990-07-04,M,nonhlanhla.molefe66@yahoo.com,27711352896.0,Northern Cape,Kimberley,2020-02-29,PREMIUM,VERIFIED,MEDIUM,True
+C0010,Bongani,Zwane,7505227953088.0,1961-11-14,F,bongani_zwane827@yahoo.com,27744194548.0,Gauteng,Sandton,2017-02-11,RETAIL,VERIFIED,LOW,True
+C0011,Lerato,Petersen,1002083139088.0,1990-04-01,M,lerato.petersen286@icloud.com,27765191056.0,Western Cape,Cape Town,2016-09-09,RETAIL,PENDING,LOW,True
+C0012,Anele,Radebe,703147956183.0,1985-12-24,M,anele_radebe3@yahoo.com,27735449368.0,Gauteng,Johannesburg,2025-03-16,RETAIL,VERIFIED,MEDIUM,True
+C0013,Mthunzi,Mkhize,6310248883085.0,1955-02-17,M,mthunzi_mkhize515@hotmail.com,27793641282.0,Eastern Cape,East London,2016-04-10,CORPORATE,VERIFIED,LOW,True
+C0014,Nokuthula,Naidoo,110036868184.0,1968-04-29,F,nokuthula_naidoo406@yahoo.com,27646033115.0,Western Cape,Stellenbosch,2025-04-03,RETAIL,VERIFIED,LOW,True
+C0015,Sandile,Ndlovu,UNKNOWN,1964-02-26,F,sandilendlovu310@hotmail.com,27839874152.0,Western Cape,Stellenbosch,2015-03-06,PREMIUM,VERIFIED,HIGH,True
+C0016,Kagiso,Sithole,405109909085.0,1968-04-07,F,kagiso_sithole258@hotmail.com,27612548511.0,Western Cape,Cape Town,2024-07-01,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0017,Themba,Mokoena,302232442085.0,2002-04-05,M,themba.mokoena43@icloud.com,27697117837.0,North West,Mahikeng,2015-11-23,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0018,Nokukhanya,Zwane,703262900180.0,1966-02-03,F,nokukhanyazwane885@icloud.com,27675476257.0,Mpumalanga,Nelspruit,2018-07-28,PREMIUM,VERIFIED,MEDIUM,True
+C0019,Mpho,Molefe,2504080387086.0,1979-06-14,F,mpho_molefe360@gmail.com,27849546409.0,North West,Mahikeng,2023-12-19,PREMIUM,VERIFIED,LOW,True
+C0020,Themba,Mokoena,8706245139189.0,1995-11-19,M,thembamokoena195@icloud.com,27681744682.0,Free State,Bloemfontein,2024-10-12,RETAIL,PENDING,LOW,True
+C0021,Sibusiso,Govender,1010112041188.0,1977-09-30,F,sibusiso_govender714@outlook.com,27693135534.0,Mpumalanga,Nelspruit,2019-04-21,RETAIL,PENDING,MEDIUM,False
+C0022,Sandile,Ngcobo,607269502187.0,1989-08-20,F,sandilengcobo485@yahoo.com,27652422633.0,Mpumalanga,Nelspruit,2021-05-13,PREMIUM,VERIFIED,LOW,True
+C0023,Nokuthula,Petersen,401024011189.0,1956-07-14,F,nokuthulapetersen590@icloud.com,27667442089.0,Free State,Bloemfontein,2026-02-01,RETAIL,VERIFIED,MEDIUM,True
+C0024,Mandla,Chauke,9308029132081.0,1990-12-14,M,mandlachauke544@icloud.com,27816323376.0,Mpumalanga,Nelspruit,2024-12-04,PREMIUM,VERIFIED,LOW,True
+C0025,Nokukhanya,Van der Merwe,2404274543183.0,1974-08-21,F,nokukhanyavandermerwe293@gmail.com,27675558623.0,KwaZulu-Natal,Ballito,2022-07-14,RETAIL,VERIFIED,LOW,True
+C0026,Palesa,Mahlangu,1009156812083.0,1987-09-11,F,palesamahlangu21@hotmail.com,27827381734.0,Eastern Cape,Port Elizabeth,2025-09-12,RETAIL,VERIFIED,MEDIUM,True
+C0027,Vusi,Pretorius,807160475185.0,1986-04-10,M,vusi.pretorius638@icloud.com,27811452421.0,Northern Cape,Kimberley,2023-11-02,PREMIUM,VERIFIED,LOW,True
+C0028,Precious,Mokoena,608115529184.0,1987-10-27,F,UNKNOWN,27811873851.0,Gauteng,Sandton,2022-11-06,RETAIL,VERIFIED,HIGH,True
+C0029,Sipho,Khumalo,703161874087.0,1972-12-27,F,siphokhumalo622@yahoo.com,27633747534.0,Eastern Cape,Port Elizabeth,2021-12-23,RETAIL,VERIFIED,LOW,True
+C0030,Lwazi,Naidoo,2611081669189.0,1960-11-10,M,lwazinaidoo439@outlook.com,27722156902.0,Eastern Cape,Port Elizabeth,2026-05-07,PREMIUM,VERIFIED,LOW,True
+C0031,Nonhlanhla,Govender,2309214425187.0,1989-01-28,F,nonhlanhla.govender851@outlook.com,27625679639.0,North West,Rustenburg,2025-02-09,RETAIL,VERIFIED,MEDIUM,True
+C0032,Sipho,Botha,1105114581188.0,1950-11-29,M,sipho.botha738@gmail.com,27749196976.0,Limpopo,Polokwane,2020-05-22,PREMIUM,VERIFIED,LOW,True
+C0033,Zanele,Ngcobo,911196046188.0,1997-08-19,F,zanelengcobo564@icloud.com,27716902401.0,Eastern Cape,East London,2025-03-06,RETAIL,VERIFIED,LOW,True
+C0034,Naledi,Maseko,9005249659181.0,1967-06-01,F,naledi_maseko184@yahoo.com,27691237370.0,Northern Cape,Kimberley,2017-11-02,RETAIL,EXPIRED,LOW,True
+C0035,Kagiso,Abrahams,1805167843185.0,1966-07-17,M,kagiso_abrahams117@outlook.com,27627722755.0,North West,Rustenburg,2026-01-11,RETAIL,VERIFIED,LOW,True
+C0036,Sandile,Ngcobo,8610203697187.0,1989-09-20,F,sandile_ngcobo313@hotmail.com,27822010496.0,Western Cape,Stellenbosch,2017-03-23,CORPORATE,VERIFIED,LOW,True
+C0037,Tshepo,Khumalo,8608239729184.0,1952-12-05,M,tshepokhumalo290@outlook.com,27762194198.0,KwaZulu-Natal,Durban,2020-03-27,CORPORATE,VERIFIED,MEDIUM,True
+C0038,Sibusiso,Maharaj,803030977084.0,2003-05-21,F,sibusiso.maharaj480@icloud.com,27697752972.0,Western Cape,Stellenbosch,2021-02-08,PREMIUM,VERIFIED,LOW,True
+C0039,Nonhlanhla,Maseko,7411279424084.0,2001-09-12,M,nonhlanhla_maseko532@yahoo.com,27848419378.0,Limpopo,Tzaneen,2021-03-28,RETAIL,VERIFIED,MEDIUM,True
+C0040,Zanele,Botha,2102282634186.0,1994-06-14,F,zanelebotha38@icloud.com,27762477398.0,Limpopo,Tzaneen,2022-01-20,RETAIL,VERIFIED,MEDIUM,True
+C0041,Thabo,Petersen,609128167180.0,1968-04-06,F,thabo.petersen950@hotmail.com,27698350368.0,Northern Cape,Upington,2025-11-14,RETAIL,EXPIRED,MEDIUM,True
+C0042,Tshepo,Ngcobo,204271858181.0,1963-10-25,F,tshepongcobo723@outlook.com,27687970771.0,Northern Cape,Kimberley,2025-10-27,CORPORATE,VERIFIED,LOW,True
+C0043,Nosipho,Maseko,8606268318180.0,1975-05-18,F,nosiphomaseko676@hotmail.com,27783493017.0,KwaZulu-Natal,Durban,2025-01-06,PREMIUM,VERIFIED,LOW,True
+C0044,Precious,Shabalala,710133826180.0,1978-07-19,F,precious_shabalala680@icloud.com,27843551903.0,Limpopo,Polokwane,2026-02-09,CORPORATE,VERIFIED,HIGH,True
+C0045,Mandla,Cele,1401242361182.0,1956-09-17,F,mandla_cele639@outlook.com,27732347467.0,North West,Rustenburg,2022-05-15,PRIVATE_WEALTH,PENDING,LOW,True
+C0046,Mthunzi,Cele,711224708081.0,1988-12-07,M,mthunzi_cele171@gmail.com,27691485654.0,Northern Cape,Kimberley,2016-01-12,RETAIL,VERIFIED,LOW,True
+C0047,Nokuthula,Du Plessis,6510286267087.0,2002-04-26,M,nokuthula_duplessis654@yahoo.com,UNKNOWN,Mpumalanga,Nelspruit,2020-09-22,PREMIUM,PENDING,LOW,True
+C0048,Anele,Mokoena,1805216951187.0,1977-02-07,M,anele_mokoena110@icloud.com,27677398231.0,Western Cape,George,2023-01-19,PREMIUM,EXPIRED,LOW,False
+C0049,Thandiwe,Sithole,2412029935184.0,1970-08-24,F,thandiwesithole195@yahoo.com,27835204819.0,Gauteng,Midrand,2018-01-25,PREMIUM,PENDING,MEDIUM,True
+C0050,Dumisani,Dlamini,7806246807083.0,1961-11-09,F,dumisanidlamini936@hotmail.com,27683760597.0,Limpopo,Polokwane,2020-10-06,CORPORATE,PENDING,HIGH,True
+C0051,Andile,Mabaso,404286511181.0,1985-05-26,M,andilemabaso127@outlook.com,27767183841.0,Western Cape,George,2020-11-17,PREMIUM,VERIFIED,HIGH,True
+C0052,Mpho,Botha,1706203626087.0,1977-02-10,F,mpho.botha47@gmail.com,27616106390.0,Gauteng,Midrand,2026-01-18,RETAIL,VERIFIED,LOW,True
+C0053,Zinhle,Petersen,2303141622189.0,1986-08-13,F,zinhlepetersen380@gmail.com,27668438733.0,Northern Cape,Upington,2024-12-21,CORPORATE,PENDING,LOW,True
+C0054,Anele,Zwane,602287450083.0,2003-07-29,M,anele_zwane250@gmail.com,27644442778.0,Limpopo,Polokwane,2016-07-16,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0055,Mpho,Pillay,6903184106081.0,1952-04-24,M,mpho_pillay809@gmail.com,27676431983.0,KwaZulu-Natal,Durban,2015-05-10,RETAIL,VERIFIED,MEDIUM,True
+C0056,Bongani,Botha,308173629088.0,1977-01-22,F,bongani.botha491@gmail.com,27738151684.0,North West,Mahikeng,2017-06-03,RETAIL,PENDING,LOW,True
+C0057,Palesa,Zulu,1809235327189.0,1997-08-07,F,palesazulu620@icloud.com,27742663938.0,KwaZulu-Natal,Umhlanga,2017-07-26,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0058,Ayanda,Maharaj,2608136815085.0,1988-04-15,F,ayanda_maharaj977@outlook.com,27648956894.0,North West,Rustenburg,2016-07-03,RETAIL,VERIFIED,LOW,True
+C0059,Zinhle,Mabaso,1709112002185.0,1987-12-11,M,zinhlemabaso320@outlook.com,27722738129.0,KwaZulu-Natal,Durban,2026-05-19,RETAIL,VERIFIED,LOW,True
+C0060,Nokukhanya,Govender,2507289190089.0,1973-12-29,M,nokukhanya_govender720@yahoo.com,27696701311.0,Western Cape,Paarl,2022-11-15,RETAIL,PENDING,LOW,True
+C0061,Palesa,Maseko,607147432182.0,1983-03-14,F,palesamaseko611@outlook.com,27621882629.0,Gauteng,Johannesburg,2018-06-28,RETAIL,VERIFIED,MEDIUM,True
+C0062,Nonhlanhla,Botha,9202127043084.0,2003-03-19,F,nonhlanhlabotha316@hotmail.com,27614699685.0,North West,Mahikeng,2023-11-12,CORPORATE,VERIFIED,LOW,False
+C0063,Kagiso,Chauke,8247055082.0,1984-02-10,M,kagisochauke854@hotmail.com,27722209226.0,Free State,Welkom,2023-11-27,PRIVATE_WEALTH,VERIFIED,LOW,False
+C0064,Khethukuthula,Jacobs,UNKNOWN,1965-06-02,F,khethukuthula.jacobs448@outlook.com,27635082173.0,Mpumalanga,Witbank,2024-10-09,PREMIUM,VERIFIED,LOW,True
+C0065,Andile,Khumalo,6709173176185.0,1963-04-02,M,andile.khumalo263@gmail.com,27663910830.0,Limpopo,Polokwane,2018-06-06,PREMIUM,VERIFIED,LOW,True
+C0066,Mthunzi,Van der Merwe,2006057205087.0,1989-09-03,F,mthunzivandermerwe58@outlook.com,27729511700.0,North West,Mahikeng,2016-08-30,RETAIL,VERIFIED,LOW,True
+C0067,Bongani,Abrahams,1712027368085.0,2004-04-11,F,bongani.abrahams981@hotmail.com,27618558523.0,Western Cape,George,2017-04-27,PRIVATE_WEALTH,VERIFIED,HIGH,True
+C0068,Lindiwe,Dlamini,1409179991085.0,1983-06-14,F,lindiwe_dlamini794@icloud.com,27711878547.0,Eastern Cape,Makhanda,2022-07-04,RETAIL,VERIFIED,MEDIUM,True
+C0069,Palesa,Pillay,911236421089.0,1957-08-08,F,palesa_pillay659@hotmail.com,27713144023.0,Western Cape,Stellenbosch,2017-02-04,PREMIUM,VERIFIED,LOW,True
+C0070,Lindiwe,Molefe,6803034846088.0,1998-06-05,M,lindiwemolefe135@outlook.com,27837320310.0,Limpopo,Tzaneen,2018-06-17,RETAIL,VERIFIED,MEDIUM,True
+C0071,Tshepo,Maseko,2112087277187.0,1970-12-29,M,tshepo_maseko926@outlook.com,27667171347.0,North West,Rustenburg,2024-11-18,RETAIL,VERIFIED,LOW,True
+C0072,Tshepo,Radebe,7601217873188.0,1959-03-16,M,tshepo.radebe782@outlook.com,27655576678.0,Eastern Cape,Makhanda,2025-01-28,CORPORATE,VERIFIED,LOW,False
+C0073,Mpho,Radebe,1301138224183.0,1984-08-23,M,mpho.radebe29@outlook.com,27712662338.0,North West,Mahikeng,2022-07-09,PREMIUM,VERIFIED,LOW,True
+C0074,Kagiso,Chauke,201093533088.0,2004-08-16,F,kagiso_chauke244@gmail.com,27693044276.0,North West,Mahikeng,2016-01-27,RETAIL,VERIFIED,MEDIUM,True
+C0075,Mthunzi,Williams,1804232352186.0,1950-02-21,F,mthunziwilliams427@yahoo.com,27652436363.0,Northern Cape,Kimberley,2023-02-02,RETAIL,VERIFIED,LOW,False
+C0076,Nokukhanya,Nkosi,8406090266181.0,1980-12-07,M,nokukhanyankosi753@gmail.com,27713238241.0,Mpumalanga,Witbank,2015-12-30,RETAIL,VERIFIED,MEDIUM,True
+C0077,Precious,Mahlangu,212257498084.0,1968-02-01,M,precious.mahlangu324@yahoo.com,27699646701.0,North West,Rustenburg,2023-12-07,CORPORATE,VERIFIED,LOW,True
+C0078,Sibusiso,Ngcobo,1005046029186.0,1989-06-14,F,sibusiso.ngcobo509@outlook.com,27787163058.0,Limpopo,Polokwane,2026-08-24,RETAIL,VERIFIED,LOW,True
+C0079,Lindiwe,Pretorius,8011105021189.0,1988-03-24,M,lindiwe_pretorius458@icloud.com,27616914963.0,Free State,Welkom,2024-10-03,RETAIL,EXPIRED,HIGH,True
+C0080,Thandiwe,Govender,410227179082.0,1956-01-13,M,thandiwe_govender393@outlook.com,27821543335.0,Northern Cape,Kimberley,2018-06-10,PREMIUM,PENDING,LOW,True
+C0081,Sandile,Mkhize,2005081858082.0,1994-10-09,F,sandile.mkhize269@hotmail.com,27688487220.0,Northern Cape,Upington,2019-10-24,CORPORATE,VERIFIED,HIGH,True
+C0082,Naledi,Mkhize,8802265236181.0,1999-05-06,F,naledi.mkhize729@outlook.com,27843920762.0,Western Cape,George,2023-02-09,PREMIUM,VERIFIED,LOW,True
+C0083,Mthunzi,Nkosi,1703201412084.0,1985-09-20,F,mthunzi_nkosi788@hotmail.com,27742237331.0,Limpopo,Tzaneen,2017-10-23,CORPORATE,VERIFIED,LOW,True
+C0084,Nhlanhla,Mkhize,407170907088.0,1963-09-24,F,nhlanhla.mkhize331@yahoo.com,27676805303.0,Northern Cape,Kimberley,2026-08-21,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0085,Nokukhanya,Sithole,209212762082.0,2004-04-16,F,nokukhanya.sithole846@hotmail.com,27602362693.0,KwaZulu-Natal,Umhlanga,2016-01-08,CORPORATE,VERIFIED,LOW,True
+C0086,Sandile,Maharaj,1705214949183.0,1986-06-07,F,sandile.maharaj706@icloud.com,27613652149.0,Gauteng,Centurion,2024-11-10,RETAIL,VERIFIED,LOW,True
+C0087,Khethukuthula,Maseko,8309181739183.0,1991-11-07,M,khethukuthula_maseko254@outlook.com,27642624230.0,Limpopo,Tzaneen,2016-02-19,RETAIL,VERIFIED,MEDIUM,True
+C0088,Tshepo,Radebe,7008177648184.0,1994-08-15,M,tshepo_radebe518@gmail.com,27765038756.0,Limpopo,Tzaneen,2019-10-29,PREMIUM,VERIFIED,LOW,True
+C0089,Thandeka,Ngcobo,1303095992185.0,1954-01-22,F,thandekangcobo576@gmail.com,27667082139.0,Northern Cape,Kimberley,2021-06-22,RETAIL,VERIFIED,MEDIUM,True
+C0090,Naledi,Mkhize,1009122363089.0,1995-09-04,F,naledi.mkhize47@hotmail.com,27613299088.0,Western Cape,George,2022-06-21,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0091,Kagiso,Pillay,1912274902188.0,1995-09-24,F,kagiso_pillay487@hotmail.com,27607180018.0,Limpopo,Polokwane,2022-06-06,PREMIUM,EXPIRED,LOW,True
+C0092,Sipho,Williams,2510193728089.0,1993-02-07,M,siphowilliams739@hotmail.com,27837378535.0,North West,Mahikeng,2018-04-25,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0093,Sibusiso,Nkosi,1312076723180.0,1962-05-22,M,sibusiso_nkosi679@hotmail.com,27789816043.0,North West,Mahikeng,2023-06-14,RETAIL,VERIFIED,HIGH,True
+C0094,Nhlanhla,Petersen,7505184890084.0,1975-12-06,M,nhlanhla_petersen492@icloud.com,27725587856.0,Free State,Welkom,2021-06-15,RETAIL,VERIFIED,LOW,False
+C0095,Nhlanhla,Chauke,6506154201183.0,1968-02-17,F,nhlanhlachauke279@hotmail.com,27642832517.0,KwaZulu-Natal,Umhlanga,2020-05-14,RETAIL,VERIFIED,LOW,True
+C0096,Lerato,Ndlovu,311252252088.0,1964-03-03,F,lerato_ndlovu667@icloud.com,27665819172.0,Mpumalanga,Witbank,2022-03-16,RETAIL,VERIFIED,MEDIUM,True
+C0097,Mpho,Pretorius,2603026504182.0,1975-12-21,M,mpho_pretorius582@gmail.com,27832800206.0,Gauteng,Pretoria,2022-07-07,RETAIL,EXPIRED,LOW,True
+C0098,Kagiso,Cele,6706067518182.0,1951-04-07,F,kagisocele691@outlook.com,27663944316.0,Northern Cape,Upington,2024-02-04,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0099,Lindiwe,Mkhize,5133858184.0,1979-07-29,F,lindiwemkhize587@hotmail.com,27605388133.0,North West,Mahikeng,2023-01-24,PREMIUM,VERIFIED,LOW,True
+C0100,Thandiwe,Petersen,2005123618082.0,1992-11-25,M,thandiwepetersen621@icloud.com,27727976731.0,Northern Cape,Upington,2025-07-24,PREMIUM,VERIFIED,MEDIUM,True
+C0101,Zanele,Du Plessis,9602028972089.0,1998-02-23,M,zanele_duplessis875@yahoo.com,27798412854.0,North West,Mahikeng,2017-08-10,PREMIUM,VERIFIED,LOW,True
+C0102,Dumisani,Mabaso,8608190945184.0,1951-12-15,F,dumisani.mabaso764@outlook.com,27662225232.0,Gauteng,Centurion,2016-01-07,RETAIL,VERIFIED,LOW,True
+C0103,Bongani,Shabalala,7103256887186.0,1990-03-29,F,bongani.shabalala700@icloud.com,UNKNOWN,North West,Rustenburg,2022-10-19,RETAIL,EXPIRED,LOW,True
+C0104,Mpho,Radebe,1411248920188.0,1984-01-11,M,mpho_radebe355@yahoo.com,27645624635.0,Gauteng,Johannesburg,2019-03-25,CORPORATE,VERIFIED,LOW,True
+C0105,Vusi,Williams,6610027314083.0,1953-12-20,F,vusi.williams553@icloud.com,27661946973.0,Gauteng,Pretoria,2018-02-21,PREMIUM,VERIFIED,MEDIUM,True
+C0106,Khethukuthula,Jacobs,411173621184.0,1974-09-08,M,khethukuthulajacobs901@hotmail.com,27658167236.0,Limpopo,Polokwane,2026-02-12,RETAIL,VERIFIED,MEDIUM,True
+C0107,Bheki,Pillay,8403258813183.0,1970-03-21,F,bheki_pillay937@yahoo.com,27617923579.0,Mpumalanga,Witbank,2024-05-05,PREMIUM,VERIFIED,LOW,True
+C0108,Zanele,Shabalala,7201096179081.0,1966-11-18,M,zanele.shabalala891@icloud.com,27716086650.0,North West,Mahikeng,2015-05-06,RETAIL,VERIFIED,MEDIUM,True
+C0109,Thandeka,Shabalala,607089045184.0,1984-02-25,F,thandekashabalala368@hotmail.com,27695388275.0,Eastern Cape,Makhanda,2023-01-25,PREMIUM,VERIFIED,LOW,False
+C0110,Thandeka,Chauke,1301193625080.0,1973-05-25,F,thandeka.chauke201@outlook.com,27714859072.0,Limpopo,Polokwane,2023-07-09,PREMIUM,VERIFIED,LOW,False
+C0111,Andile,Sithole,2306062293182.0,1998-08-21,M,andile.sithole860@hotmail.com,27621813936.0,North West,Mahikeng,2015-02-22,RETAIL,VERIFIED,LOW,True
+C0112,Thabo,Molefe,1911227916180.0,1950-08-05,F,thabo.molefe543@gmail.com,27689988193.0,Northern Cape,Upington,2021-06-06,RETAIL,VERIFIED,MEDIUM,True
+C0113,Lindiwe,Ndlovu,9909095807186.0,1957-02-02,F,lindiwe_ndlovu579@icloud.com,27674789255.0,Western Cape,Stellenbosch,2021-09-23,PREMIUM,VERIFIED,MEDIUM,True
+C0114,Nomsa,Zulu,1501210154081.0,1994-11-05,F,nomsazulu879@outlook.com,27639861040.0,Mpumalanga,Witbank,2015-12-15,RETAIL,PENDING,MEDIUM,True
+C0115,Busisiwe,Dlamini,1811022938180.0,1968-08-02,M,busisiwe.dlamini307@icloud.com,27655034453.0,Western Cape,Paarl,2023-09-23,PREMIUM,VERIFIED,LOW,True
+C0116,Zanele,Du Plessis,7402119915185.0,1952-08-28,F,zanele_duplessis234@icloud.com,27727298619.0,Limpopo,Polokwane,2024-09-07,RETAIL,VERIFIED,LOW,True
+C0117,Siyabonga,Mabaso,7703132527185.0,1982-05-12,M,siyabonga.mabaso966@gmail.com,27698461429.0,Eastern Cape,Makhanda,2023-01-27,PREMIUM,VERIFIED,LOW,True
+C0118,Nokukhanya,Pretorius,6506181524186.0,1951-02-09,F,nokukhanya_pretorius798@icloud.com,27625072543.0,Northern Cape,Upington,2026-09-08,RETAIL,VERIFIED,LOW,True
+C0119,Mthunzi,Mkhize,1305161260184.0,1972-02-15,F,mthunzimkhize201@hotmail.com,27762794698.0,Western Cape,Stellenbosch,2018-01-14,RETAIL,PENDING,LOW,True
+C0120,Andile,Van der Merwe,2010054922189.0,1968-01-08,F,andile.vandermerwe988@outlook.com,27736354241.0,Limpopo,Tzaneen,2021-07-15,PREMIUM,VERIFIED,HIGH,True
+C0121,Khethukuthula,Naidoo,1804198939088.0,1952-05-31,F,khethukuthula_naidoo817@yahoo.com,27692160289.0,Free State,Welkom,2024-03-05,PREMIUM,VERIFIED,LOW,True
+C0122,Palesa,Mahlangu,9808196566188.0,1953-04-19,F,palesamahlangu654@hotmail.com,27622834914.0,Mpumalanga,Witbank,2020-07-26,PREMIUM,VERIFIED,MEDIUM,True
+C0123,Thandiwe,Chauke,6605088366087.0,1983-07-26,F,thandiwechauke603@icloud.com,27793529080.0,Limpopo,Tzaneen,2022-09-26,CORPORATE,VERIFIED,LOW,False
+C0124,Zanele,Ndlovu,1404177912187.0,1958-10-04,F,zanele_ndlovu69@icloud.com,27691749657.0,KwaZulu-Natal,Umhlanga,2017-07-31,RETAIL,VERIFIED,LOW,True
+C0125,Nokuthula,Du Plessis,1308086636082.0,1988-10-08,F,nokuthuladuplessis629@gmail.com,27668542617.0,KwaZulu-Natal,Pietermaritzburg,2024-08-19,RETAIL,VERIFIED,LOW,True
+C0126,Bongani,Jacobs,608044298188.0,1978-02-12,F,bongani_jacobs602@hotmail.com,27636837206.0,Western Cape,Stellenbosch,2022-11-23,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0127,Nompumelelo,Shabalala,UNKNOWN,1995-10-30,F,nompumeleloshabalala142@icloud.com,27827437584.0,Western Cape,Stellenbosch,2024-06-27,RETAIL,VERIFIED,MEDIUM,True
+C0128,Lindiwe,Pretorius,7106277389085.0,1950-11-11,F,lindiwe.pretorius835@yahoo.com,27739479842.0,KwaZulu-Natal,Ballito,2026-02-06,RETAIL,VERIFIED,MEDIUM,True
+C0129,Tshepo,Zulu,7704184729087.0,2000-09-30,F,tshepozulu116@hotmail.com,27822916069.0,Gauteng,Pretoria,2021-01-03,PREMIUM,VERIFIED,LOW,True
+C0130,Nomsa,Chauke,312274055180.0,1990-05-07,F,nomsa.chauke450@outlook.com,27634975295.0,North West,Rustenburg,2019-09-16,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0131,Nonhlanhla,Mokoena,2501195747189.0,1998-05-03,M,nonhlanhlamokoena300@outlook.com,27695485272.0,KwaZulu-Natal,Pietermaritzburg,2026-07-16,CORPORATE,VERIFIED,LOW,False
+C0132,Vusi,Shabalala,412282174082.0,1978-11-24,M,vusi_shabalala146@icloud.com,27825508325.0,Gauteng,Sandton,2024-04-16,RETAIL,VERIFIED,MEDIUM,True
+C0133,Thandiwe,Du Plessis,1506190040087.0,1982-02-20,M,thandiwe_duplessis224@hotmail.com,27744554277.0,Free State,Welkom,2026-02-04,RETAIL,VERIFIED,LOW,True
+C0134,Sandile,Cele,2401021631180.0,1961-02-23,M,sandile_cele1@icloud.com,27744394336.0,North West,Mahikeng,2017-12-16,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0135,Zanele,Abrahams,7001135005086.0,1958-03-08,M,zanele.abrahams489@gmail.com,27623226333.0,Limpopo,Tzaneen,2020-01-27,PREMIUM,VERIFIED,LOW,True
+C0136,Naledi,Cele,707031678085.0,1982-12-23,F,naledi_cele793@yahoo.com,27643396676.0,Mpumalanga,Nelspruit,2016-07-14,PREMIUM,VERIFIED,MEDIUM,True
+C0137,Ayanda,Abrahams,1404031646081.0,2002-11-23,F,ayanda_abrahams323@outlook.com,27645157165.0,KwaZulu-Natal,Ballito,2021-03-18,PREMIUM,VERIFIED,MEDIUM,True
+C0138,Siyabonga,Chauke,9809076418180.0,1971-06-22,F,siyabonga.chauke247@icloud.com,27782191383.0,Gauteng,Sandton,2015-04-09,CORPORATE,PENDING,LOW,True
+C0139,Sandile,Maharaj,2402019623080.0,1973-07-10,M,UNKNOWN,27739499515.0,Limpopo,Polokwane,2021-06-04,PREMIUM,VERIFIED,LOW,True
+C0140,Zanele,Abrahams,7902173329088.0,1979-04-25,F,zaneleabrahams782@hotmail.com,27842109227.0,Northern Cape,Kimberley,2021-12-15,PREMIUM,VERIFIED,MEDIUM,True
+C0141,Zanele,Shabalala,1901102877080.0,1962-04-24,M,zanele_shabalala976@yahoo.com,27729774573.0,Mpumalanga,Nelspruit,2026-08-08,PREMIUM,VERIFIED,LOW,True
+C0142,Busisiwe,Maseko,1305171046189.0,1956-11-30,F,busisiwemaseko369@icloud.com,27619382064.0,Western Cape,Cape Town,2018-09-29,RETAIL,VERIFIED,LOW,True
+C0143,Naledi,Khumalo,6004027729186.0,1963-06-19,M,naledikhumalo823@gmail.com,27848035849.0,Northern Cape,Kimberley,2020-01-14,RETAIL,VERIFIED,MEDIUM,True
+C0144,Bongani,Jacobs,103088450086.0,1956-03-08,F,bongani_jacobs336@outlook.com,27628662929.0,Limpopo,Polokwane,2015-03-07,RETAIL,VERIFIED,MEDIUM,True
+C0145,Nokuthula,Van der Merwe,2404248954082.0,1950-07-28,F,nokuthula.vandermerwe555@gmail.com,27721160974.0,Limpopo,Tzaneen,2022-07-07,RETAIL,VERIFIED,MEDIUM,True
+C0146,Mandla,Molefe,103234584080.0,1970-10-07,F,mandla_molefe998@outlook.com,27622603516.0,Northern Cape,Kimberley,2026-05-03,RETAIL,VERIFIED,LOW,True
+C0147,Nonhlanhla,Petersen,8007235345187.0,1974-05-26,M,nonhlanhla.petersen140@gmail.com,27822828260.0,KwaZulu-Natal,Pietermaritzburg,2018-06-27,RETAIL,VERIFIED,LOW,True
+C0148,Nhlanhla,Chauke,802032582189.0,1953-08-14,M,nhlanhla.chauke94@outlook.com,27676968373.0,Eastern Cape,East London,2023-11-21,PREMIUM,VERIFIED,LOW,False
+C0149,Sipho,Naidoo,6603040195083.0,1961-09-23,M,sipho_naidoo703@icloud.com,27842409947.0,North West,Rustenburg,2020-10-21,CORPORATE,VERIFIED,HIGH,True
+C0150,Dumisani,Mabaso,2606040699180.0,1965-01-26,F,dumisani_mabaso31@icloud.com,27738158234.0,KwaZulu-Natal,Durban,2018-11-16,RETAIL,PENDING,LOW,True
+C0151,Palesa,Dlamini,8609160999084.0,1984-05-12,M,palesa.dlamini659@icloud.com,27795180005.0,Eastern Cape,Makhanda,2015-06-09,CORPORATE,VERIFIED,LOW,True
+C0152,Mthunzi,Govender,501119783080.0,1975-03-16,M,mthunzigovender367@icloud.com,27824905100.0,Northern Cape,Upington,2018-07-31,RETAIL,VERIFIED,LOW,True
+C0153,Lerato,Chauke,2507122846083.0,2003-02-27,F,leratochauke29@outlook.com,27723384080.0,Eastern Cape,Makhanda,2019-03-23,PRIVATE_WEALTH,VERIFIED,HIGH,True
+C0154,Lindiwe,Botha,9804018625180.0,1979-10-06,M,lindiwe_botha735@yahoo.com,27656428919.0,Gauteng,Johannesburg,2016-05-02,RETAIL,VERIFIED,HIGH,True
+C0155,Bheki,Cele,2107191655184.0,1978-12-11,M,bhekicele972@yahoo.com,27749173859.0,Limpopo,Polokwane,2022-02-12,RETAIL,EXPIRED,MEDIUM,False
+C0156,Nhlanhla,Khumalo,2205052911089.0,1985-02-17,M,nhlanhlakhumalo326@yahoo.com,27834706007.0,KwaZulu-Natal,Ballito,2017-05-02,CORPORATE,VERIFIED,MEDIUM,True
+C0157,Khethukuthula,Mokoena,804081110184.0,1959-09-11,M,khethukuthula_mokoena449@gmail.com,27743790695.0,Western Cape,Paarl,2024-04-14,RETAIL,VERIFIED,LOW,True
+C0158,Thandeka,Mabaso,2501100328184.0,1959-05-25,M,thandeka.mabaso910@outlook.com,27733699529.0,Eastern Cape,Port Elizabeth,2016-09-06,PREMIUM,PENDING,LOW,True
+C0159,Thandeka,Mahlangu,510142573081.0,1979-09-15,M,thandeka_mahlangu714@yahoo.com,27815450404.0,Gauteng,Centurion,2021-04-25,RETAIL,VERIFIED,LOW,True
+C0160,Mthunzi,Mkhize,UNKNOWN,1958-09-14,M,mthunzi.mkhize654@yahoo.com,27692374659.0,Gauteng,Sandton,2025-08-15,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0161,Themba,Zulu,8406067303084.0,1989-06-14,F,themba.zulu858@outlook.com,27682034137.0,Northern Cape,Upington,2018-05-23,PREMIUM,VERIFIED,LOW,True
+C0162,Anele,Maharaj,8409148773189.0,1971-02-21,F,anele.maharaj405@outlook.com,27619423864.0,Eastern Cape,Makhanda,2026-08-04,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0163,Dumisani,Mokoena,401141283183.0,1963-04-08,F,dumisanimokoena937@outlook.com,27622460078.0,KwaZulu-Natal,Pietermaritzburg,2023-09-15,PREMIUM,VERIFIED,MEDIUM,True
+C0164,Thabo,Mabaso,6903199632081.0,2000-06-25,M,thabomabaso902@outlook.com,27727893590.0,Northern Cape,Upington,2020-12-03,RETAIL,VERIFIED,MEDIUM,True
+C0165,Busisiwe,Naidoo,8112080807184.0,1983-06-01,M,busisiwe_naidoo319@outlook.com,27689248001.0,KwaZulu-Natal,Ballito,2017-03-15,CORPORATE,VERIFIED,LOW,True
+C0166,Khethukuthula,Sithole,7307247937180.0,1996-03-24,M,khethukuthula_sithole727@gmail.com,UNKNOWN,Mpumalanga,Nelspruit,2018-01-16,PREMIUM,VERIFIED,LOW,True
+C0167,Sibusiso,Radebe,6306233262185.0,1991-08-25,F,sibusisoradebe32@gmail.com,27677248955.0,Gauteng,Pretoria,2025-12-18,PREMIUM,VERIFIED,MEDIUM,True
+C0168,Nhlanhla,Govender,2202100449180.0,1964-08-13,M,nhlanhlagovender231@yahoo.com,27665514473.0,KwaZulu-Natal,Umhlanga,2024-03-08,PREMIUM,PENDING,HIGH,True
+C0169,Thandeka,Shabalala,4099967184.0,1988-01-09,F,thandeka_shabalala259@outlook.com,27668829893.0,KwaZulu-Natal,Pietermaritzburg,2021-10-11,PREMIUM,VERIFIED,LOW,True
+C0170,Nosipho,Petersen,6608035509185.0,1974-11-03,F,nosipho.petersen154@outlook.com,27795031599.0,Limpopo,Tzaneen,2016-04-10,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0171,Kagiso,Maseko,807136361089.0,2001-04-27,M,kagisomaseko731@outlook.com,27679969688.0,Gauteng,Centurion,2025-09-02,CORPORATE,VERIFIED,LOW,True
+C0172,Nokukhanya,Mokoena,2305249159085.0,1958-01-05,M,nokukhanya.mokoena763@outlook.com,27698054359.0,Free State,Bloemfontein,2022-06-07,RETAIL,VERIFIED,LOW,True
+C0173,Lerato,Cele,1602286253186.0,1954-11-07,M,lerato.cele351@yahoo.com,27748676774.0,Western Cape,George,2018-03-19,RETAIL,VERIFIED,MEDIUM,True
+C0174,Lindiwe,Pillay,603192595181.0,1961-08-11,F,lindiwe_pillay440@icloud.com,27787430982.0,Gauteng,Johannesburg,2015-02-08,RETAIL,VERIFIED,LOW,True
+C0175,Khethukuthula,Chauke,6011244076085.0,1977-12-31,M,khethukuthula_chauke516@gmail.com,27826135759.0,Northern Cape,Kimberley,2018-09-30,RETAIL,VERIFIED,HIGH,True
+C0176,Bheki,Williams,2103118031183.0,1964-10-16,F,UNKNOWN,27644543184.0,Northern Cape,Upington,2015-06-29,PREMIUM,VERIFIED,LOW,True
+C0177,Nomsa,Naidoo,111040323081.0,1987-05-23,F,nomsa.naidoo561@icloud.com,27688959049.0,Free State,Bloemfontein,2018-06-08,RETAIL,VERIFIED,LOW,True
+C0178,Mandla,Petersen,2203141718084.0,1960-03-24,M,mandla.petersen624@icloud.com,27665412305.0,Northern Cape,Upington,2019-07-11,RETAIL,VERIFIED,LOW,True
+C0179,Ayanda,Mahlangu,6011031809182.0,1958-01-30,M,ayanda_mahlangu660@gmail.com,27678663014.0,North West,Mahikeng,2021-08-22,RETAIL,VERIFIED,MEDIUM,True
+C0180,Siyabonga,Govender,301012267085.0,1982-01-28,F,siyabonga_govender900@hotmail.com,27627251562.0,Limpopo,Tzaneen,2022-09-08,RETAIL,VERIFIED,HIGH,True
+C0181,Lwazi,Mahlangu,2503042171082.0,1959-04-22,F,lwazi_mahlangu822@hotmail.com,27828351152.0,North West,Mahikeng,2019-01-24,PREMIUM,VERIFIED,MEDIUM,True
+C0182,Kagiso,Botha,1401034286180.0,1997-01-31,M,kagisobotha536@outlook.com,27832597897.0,North West,Rustenburg,2024-09-15,PREMIUM,VERIFIED,LOW,True
+C0183,Lwazi,Mkhize,7009287688182.0,1956-09-19,F,lwazi.mkhize339@outlook.com,27681844744.0,Northern Cape,Kimberley,2026-05-15,RETAIL,VERIFIED,LOW,True
+C0184,Precious,Van der Merwe,UNKNOWN,1986-03-12,F,preciousvandermerwe563@gmail.com,27602524974.0,North West,Rustenburg,2021-10-31,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0185,Andile,Govender,1009259829185.0,1990-08-07,M,andilegovender228@gmail.com,27606727022.0,Gauteng,Pretoria,2022-12-19,PRIVATE_WEALTH,EXPIRED,LOW,True
+C0186,Mandla,Dlamini,8602093209081.0,1985-04-01,M,mandla.dlamini734@icloud.com,27712808009.0,KwaZulu-Natal,Ballito,2024-04-18,RETAIL,VERIFIED,MEDIUM,True
+C0187,Dumisani,Van der Merwe,9240795189.0,1993-04-29,M,dumisani.vandermerwe749@hotmail.com,27642737347.0,Northern Cape,Kimberley,2023-09-09,PREMIUM,VERIFIED,LOW,True
+C0188,Vusi,Williams,1005152185086.0,2004-01-21,F,vusi_williams729@hotmail.com,27814646403.0,Eastern Cape,East London,2019-07-04,RETAIL,VERIFIED,MEDIUM,False
+C0189,Kagiso,Mahlangu,2406187870188.0,1975-08-27,F,UNKNOWN,27607389943.0,KwaZulu-Natal,Umhlanga,2018-04-05,RETAIL,VERIFIED,LOW,True
+C0190,Siyabonga,Petersen,2205078866085.0,1990-08-09,M,siyabongapetersen758@hotmail.com,27814763253.0,Free State,Bloemfontein,2023-09-21,RETAIL,VERIFIED,MEDIUM,True
+C0191,Lerato,Shabalala,2511119046080.0,1972-07-19,M,lerato_shabalala850@hotmail.com,27677169672.0,Mpumalanga,Witbank,2019-05-29,PREMIUM,EXPIRED,LOW,True
+C0192,Bongani,Mokoena,1305184329082.0,2002-05-24,F,bongani_mokoena478@gmail.com,27641670091.0,KwaZulu-Natal,Durban,2018-06-13,CORPORATE,VERIFIED,MEDIUM,True
+C0193,Nompumelelo,Botha,8009083012088.0,1964-04-19,F,nompumelelobotha414@hotmail.com,27626862008.0,Northern Cape,Upington,2019-12-18,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0194,Bheki,Botha,8208083994085.0,1984-03-19,M,bheki_botha554@icloud.com,27691414493.0,Northern Cape,Kimberley,2026-08-05,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0195,Nomsa,Ngcobo,303258814081.0,1968-11-28,M,nomsa.ngcobo211@icloud.com,27818302077.0,Eastern Cape,East London,2016-08-13,PREMIUM,VERIFIED,LOW,True
+C0196,Zanele,Zulu,1702193729186.0,1984-10-24,F,zanele_zulu324@icloud.com,27607534756.0,Gauteng,Pretoria,2017-08-27,PREMIUM,VERIFIED,MEDIUM,True
+C0197,Mbali,Dlamini,305264937084.0,1989-04-07,F,mbalidlamini32@icloud.com,27783622672.0,Western Cape,Paarl,2019-12-07,RETAIL,VERIFIED,MEDIUM,True
+C0198,Palesa,Ngcobo,1703040684089.0,2003-07-13,F,palesangcobo970@hotmail.com,27626111869.0,Limpopo,Polokwane,2019-09-17,PREMIUM,PENDING,LOW,True
+C0199,Nosipho,Mkhize,7604042971088.0,1991-05-20,M,nosiphomkhize69@outlook.com,27682647562.0,KwaZulu-Natal,Pietermaritzburg,2019-06-06,PREMIUM,VERIFIED,LOW,True
+C0200,Nokuthula,Ndlovu,1008155379189.0,1963-09-03,F,nokuthula_ndlovu173@outlook.com,27606254872.0,Free State,Bloemfontein,2020-07-09,PREMIUM,VERIFIED,MEDIUM,True
+C0201,Zinhle,Mkhize,1105169038082.0,2004-06-03,M,zinhle.mkhize913@outlook.com,27814295580.0,Limpopo,Tzaneen,2020-11-26,PREMIUM,VERIFIED,MEDIUM,True
+C0202,Nosipho,Abrahams,2410070600188.0,1998-06-02,F,nosipho_abrahams402@yahoo.com,27675882155.0,Gauteng,Midrand,2018-01-01,RETAIL,VERIFIED,LOW,True
+C0203,Nokuthula,Cele,510192395185.0,1953-08-17,M,nokuthula.cele65@icloud.com,27687198093.0,KwaZulu-Natal,Pietermaritzburg,2020-04-01,RETAIL,VERIFIED,HIGH,True
+C0204,Thandeka,Shabalala,8002238542184.0,2001-11-29,M,thandekashabalala388@icloud.com,27722305896.0,North West,Rustenburg,2026-08-03,RETAIL,EXPIRED,LOW,True
+C0205,Nhlanhla,Botha,408063768088.0,1975-03-12,M,nhlanhla.botha162@yahoo.com,27722985251.0,North West,Rustenburg,2020-03-01,RETAIL,VERIFIED,LOW,True
+C0206,Thandeka,Molefe,6203199705082.0,1995-12-29,M,thandeka.molefe58@hotmail.com,27655332877.0,KwaZulu-Natal,Ballito,2019-01-14,PREMIUM,VERIFIED,HIGH,True
+C0207,Siyabonga,Zulu,1508063594189.0,1962-10-21,M,siyabongazulu524@hotmail.com,27683813903.0,Eastern Cape,East London,2022-09-08,CORPORATE,VERIFIED,LOW,True
+C0208,Kagiso,Ndlovu,1611142450082.0,1992-09-10,M,kagisondlovu771@hotmail.com,27632563468.0,Gauteng,Pretoria,2025-10-25,PREMIUM,PENDING,LOW,True
+C0209,Nonhlanhla,Du Plessis,2209143759186.0,1981-06-12,M,nonhlanhla.duplessis261@icloud.com,27784900918.0,Mpumalanga,Witbank,2016-11-17,RETAIL,PENDING,LOW,True
+C0210,Thabo,Jacobs,1211075175185.0,1959-07-25,M,thabojacobs600@icloud.com,27685383935.0,Northern Cape,Kimberley,2024-07-01,PREMIUM,VERIFIED,HIGH,True
+C0211,Ayanda,Maharaj,9509164157189.0,1980-11-22,F,ayandamaharaj122@yahoo.com,27678492618.0,Northern Cape,Upington,2018-08-18,RETAIL,VERIFIED,MEDIUM,True
+C0212,Lerato,Mokoena,2603169834181.0,1955-10-01,F,lerato_mokoena82@yahoo.com,27831633429.0,Mpumalanga,Nelspruit,2023-08-15,CORPORATE,VERIFIED,MEDIUM,True
+C0213,Lerato,Chauke,611268489183.0,1953-01-06,M,lerato.chauke691@hotmail.com,27617035435.0,KwaZulu-Natal,Ballito,2020-05-13,PREMIUM,EXPIRED,LOW,True
+C0214,Thandiwe,Govender,1601241124088.0,1975-07-11,F,thandiwe_govender232@outlook.com,27834263591.0,Mpumalanga,Witbank,2025-03-14,CORPORATE,VERIFIED,LOW,True
+C0215,Mandla,Pretorius,309098813187.0,1983-10-31,F,mandla_pretorius985@yahoo.com,27768729606.0,Western Cape,Paarl,2015-08-13,RETAIL,VERIFIED,LOW,True
+C0216,Mpho,Petersen,1109180159183.0,1975-10-10,M,mphopetersen767@icloud.com,27712275551.0,Eastern Cape,East London,2019-01-02,RETAIL,VERIFIED,MEDIUM,True
+C0217,Sibusiso,Botha,804083322089.0,1981-12-10,M,sibusiso.botha943@gmail.com,27629265544.0,Eastern Cape,Port Elizabeth,2015-02-24,PREMIUM,VERIFIED,LOW,True
+C0218,Khethukuthula,Botha,UNKNOWN,1997-03-02,F,khethukuthulabotha34@icloud.com,27796826541.0,Free State,Welkom,2023-10-31,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0219,Bheki,Van der Merwe,7307191650185.0,2004-12-22,F,bhekivandermerwe270@yahoo.com,27675519920.0,Limpopo,Polokwane,2025-07-28,CORPORATE,VERIFIED,LOW,True
+C0220,Vusi,Mahlangu,808069361089.0,1970-07-04,M,vusi.mahlangu569@outlook.com,27747390162.0,Limpopo,Tzaneen,2019-05-26,RETAIL,EXPIRED,LOW,True
+C0221,Lindiwe,Maharaj,2009185172184.0,1972-07-07,M,lindiwe.maharaj708@icloud.com,27652007243.0,North West,Rustenburg,2019-11-01,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0222,Andile,Sithole,2505120324181.0,1981-07-01,M,andilesithole666@hotmail.com,27843928275.0,Limpopo,Tzaneen,2021-05-20,RETAIL,VERIFIED,LOW,True
+C0223,Zanele,Naidoo,403215527189.0,2001-04-14,F,zanele.naidoo166@gmail.com,27714828861.0,Free State,Welkom,2022-01-12,RETAIL,VERIFIED,LOW,True
+C0224,Busisiwe,Zwane,1608142741080.0,1961-03-21,M,busisiwezwane718@outlook.com,27624532803.0,North West,Mahikeng,2018-09-29,RETAIL,VERIFIED,HIGH,True
+C0225,Lerato,Nkosi,9903036387183.0,1972-03-12,F,leratonkosi130@icloud.com,27649837269.0,Mpumalanga,Nelspruit,2018-10-29,RETAIL,VERIFIED,MEDIUM,True
+C0226,Thandeka,Van der Merwe,412182900189.0,1989-01-09,F,thandeka_vandermerwe553@outlook.com,27672502467.0,Northern Cape,Upington,2024-11-28,RETAIL,VERIFIED,LOW,True
+C0227,Bheki,Radebe,9401238059184.0,1950-10-27,F,UNKNOWN,27607268704.0,KwaZulu-Natal,Umhlanga,2019-03-25,RETAIL,VERIFIED,LOW,True
+C0228,Lwazi,Radebe,8711088464184.0,1997-09-21,F,lwazi.radebe874@icloud.com,27624060284.0,Mpumalanga,Nelspruit,2018-01-24,RETAIL,VERIFIED,MEDIUM,True
+C0229,Mthunzi,Molefe,9401061675184.0,1961-03-21,F,mthunzi.molefe93@gmail.com,27641247041.0,Limpopo,Polokwane,2026-01-26,RETAIL,VERIFIED,MEDIUM,True
+C0230,Zinhle,Van der Merwe,6901096429088.0,1992-03-06,M,zinhle_vandermerwe837@yahoo.com,27731211652.0,Gauteng,Sandton,2017-09-26,CORPORATE,VERIFIED,LOW,False
+C0231,Nokuthula,Maseko,2402173415186.0,1978-01-01,F,nokuthulamaseko746@yahoo.com,27619739692.0,Gauteng,Pretoria,2017-09-27,RETAIL,VERIFIED,LOW,True
+C0232,Ayanda,Ndlovu,3264523086.0,1971-10-23,M,ayandandlovu803@gmail.com,27783600333.0,Eastern Cape,Makhanda,2023-05-01,PREMIUM,VERIFIED,LOW,True
+C0233,Andile,Shabalala,412181759087.0,1970-11-16,F,andileshabalala775@hotmail.com,27728360481.0,Gauteng,Johannesburg,2019-04-30,RETAIL,VERIFIED,MEDIUM,True
+C0234,Nomsa,Botha,1504193057185.0,1992-01-09,F,nomsabotha165@hotmail.com,27629911007.0,North West,Mahikeng,2018-06-23,RETAIL,VERIFIED,LOW,True
+C0235,Nosipho,Naidoo,1110085254088.0,1984-10-06,M,nosiphonaidoo510@hotmail.com,27813585897.0,KwaZulu-Natal,Durban,2021-05-08,RETAIL,VERIFIED,LOW,True
+C0236,Bongani,Dlamini,602163139080.0,2001-03-24,F,bonganidlamini639@icloud.com,27825293936.0,KwaZulu-Natal,Pietermaritzburg,2016-02-07,RETAIL,VERIFIED,LOW,False
+C0237,Ayanda,Abrahams,2001129142185.0,1955-03-26,F,ayanda.abrahams752@hotmail.com,27626098672.0,North West,Rustenburg,2016-09-30,CORPORATE,EXPIRED,LOW,True
+C0238,Anele,Naidoo,710212931181.0,2001-09-22,F,anelenaidoo682@icloud.com,27742746548.0,Eastern Cape,Port Elizabeth,2018-09-28,PREMIUM,VERIFIED,LOW,True
+C0239,Anele,Williams,1706286090186.0,1979-01-07,M,anelewilliams220@hotmail.com,27735262908.0,North West,Mahikeng,2023-01-28,CORPORATE,VERIFIED,LOW,True
+C0240,Siyabonga,Williams,7901103635085.0,1951-12-13,F,siyabongawilliams570@hotmail.com,27823595683.0,Gauteng,Midrand,2017-02-11,RETAIL,VERIFIED,LOW,True
+C0241,Mbali,Khumalo,210139323081.0,1979-02-17,F,mbali_khumalo846@yahoo.com,27822599943.0,Eastern Cape,East London,2021-09-26,RETAIL,VERIFIED,LOW,True
+C0242,Andile,Govender,304249868086.0,1954-11-09,F,andile.govender327@hotmail.com,27813509536.0,Mpumalanga,Witbank,2022-05-01,PREMIUM,VERIFIED,LOW,True
+C0243,Thandiwe,Van der Merwe,7807052165181.0,1992-09-09,M,thandiwe_vandermerwe269@hotmail.com,27627686174.0,Northern Cape,Kimberley,2026-04-03,RETAIL,VERIFIED,MEDIUM,True
+C0244,Sibusiso,Botha,2309083970084.0,1988-08-01,F,sibusiso.botha116@hotmail.com,27748105832.0,Mpumalanga,Nelspruit,2023-03-12,RETAIL,VERIFIED,LOW,True
+C0245,Nompumelelo,Mokoena,1401273825085.0,1963-12-30,M,nompumelelomokoena56@gmail.com,27673477610.0,Limpopo,Tzaneen,2021-06-14,RETAIL,VERIFIED,LOW,True
+C0246,Sipho,Pillay,609174237189.0,1962-09-06,M,siphopillay928@icloud.com,27791729507.0,Eastern Cape,Makhanda,2020-09-23,RETAIL,VERIFIED,MEDIUM,True
+C0247,Lerato,Van der Merwe,811285901080.0,1976-03-29,F,lerato_vandermerwe521@yahoo.com,27636292472.0,Gauteng,Johannesburg,2025-11-14,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0248,Precious,Pretorius,9305118027182.0,1951-08-26,F,precious_pretorius641@outlook.com,27694962858.0,Gauteng,Johannesburg,2026-03-30,RETAIL,VERIFIED,LOW,True
+C0249,Sipho,Pretorius,8511051438188.0,2004-12-11,M,sipho.pretorius587@icloud.com,27648154895.0,Free State,Bloemfontein,2022-01-03,CORPORATE,VERIFIED,LOW,True
+C0250,Kagiso,Jacobs,912238582086.0,1963-01-09,M,kagiso.jacobs571@outlook.com,27812986209.0,Northern Cape,Kimberley,2019-02-17,RETAIL,PENDING,MEDIUM,True
+C0251,Vusi,Maharaj,2611244485083.0,1959-07-31,M,vusi.maharaj781@yahoo.com,27835477211.0,Free State,Welkom,2020-03-06,PREMIUM,VERIFIED,LOW,True
+C0252,Thandeka,Mkhize,1103286348187.0,1962-05-04,M,thandeka.mkhize34@yahoo.com,27741251897.0,Northern Cape,Upington,2021-01-19,CORPORATE,VERIFIED,MEDIUM,True
+C0253,Ayanda,Zulu,1512117496086.0,1986-04-28,M,ayandazulu845@hotmail.com,27736249548.0,KwaZulu-Natal,Ballito,2023-11-03,PREMIUM,VERIFIED,LOW,True
+C0254,Nomsa,Du Plessis,104178812180.0,2000-01-13,F,nomsaduplessis986@hotmail.com,27614185160.0,Western Cape,George,2021-07-13,RETAIL,PENDING,MEDIUM,True
+C0255,Tshepo,Maharaj,408277400088.0,1960-02-26,M,tshepomaharaj560@hotmail.com,27647594565.0,Free State,Bloemfontein,2024-04-10,RETAIL,VERIFIED,LOW,True
+C0256,Sibusiso,Zwane,7012242024081.0,1990-04-26,F,sibusisozwane725@gmail.com,27739584338.0,North West,Rustenburg,2018-08-02,RETAIL,VERIFIED,MEDIUM,False
+C0257,Sandile,Cele,512026874184.0,1990-01-13,F,sandile.cele921@yahoo.com,27644403286.0,KwaZulu-Natal,Pietermaritzburg,2015-01-29,PREMIUM,VERIFIED,LOW,True
+C0258,Anele,Mabaso,704197794186.0,1989-08-23,M,anelemabaso7@hotmail.com,27675665960.0,Gauteng,Midrand,2019-08-28,RETAIL,VERIFIED,MEDIUM,True
+C0259,Nomsa,Petersen,102142920084.0,2004-10-28,M,nomsapetersen593@icloud.com,27721601296.0,Free State,Welkom,2017-02-01,PREMIUM,VERIFIED,MEDIUM,True
+C0260,Nonhlanhla,Radebe,6802234496188.0,1987-02-14,M,nonhlanhlaradebe60@yahoo.com,27639874251.0,Northern Cape,Kimberley,2016-12-19,RETAIL,VERIFIED,HIGH,False
+C0261,Siyabonga,Maharaj,1906059218188.0,1994-08-27,F,siyabongamaharaj239@yahoo.com,27694247321.0,Limpopo,Tzaneen,2015-01-13,RETAIL,VERIFIED,MEDIUM,True
+C0262,Ayanda,Mabaso,8209263478083.0,1975-04-08,F,ayanda_mabaso308@gmail.com,27796434540.0,Mpumalanga,Witbank,2015-02-20,RETAIL,VERIFIED,LOW,True
+C0263,Sipho,Radebe,1011167774082.0,1993-03-13,M,siphoradebe918@icloud.com,27718758960.0,KwaZulu-Natal,Pietermaritzburg,2024-04-14,CORPORATE,VERIFIED,LOW,True
+C0264,Khethukuthula,Pretorius,8106032446180.0,1980-06-05,F,khethukuthula.pretorius585@hotmail.com,27837535837.0,Northern Cape,Kimberley,2019-03-16,PREMIUM,PENDING,MEDIUM,True
+C0265,Khethukuthula,Mahlangu,1504127404183.0,1997-02-09,F,khethukuthula.mahlangu384@yahoo.com,27614390648.0,Gauteng,Sandton,2017-01-28,RETAIL,VERIFIED,LOW,True
+C0266,Sibusiso,Pillay,402278456083.0,1953-04-12,F,sibusisopillay886@icloud.com,27792943405.0,North West,Mahikeng,2015-02-03,RETAIL,VERIFIED,MEDIUM,True
+C0267,Andile,Van der Merwe,2112100368183.0,1978-10-15,M,andile_vandermerwe284@yahoo.com,27816354444.0,Gauteng,Johannesburg,2024-11-22,PREMIUM,VERIFIED,LOW,True
+C0268,Nokukhanya,Du Plessis,1706092319189.0,1971-12-19,M,nokukhanya_duplessis628@gmail.com,27718443172.0,Western Cape,Stellenbosch,2016-02-20,RETAIL,VERIFIED,MEDIUM,True
+C0269,Lerato,Zulu,9810217304184.0,1979-10-25,M,lerato.zulu998@hotmail.com,27763211157.0,Mpumalanga,Witbank,2017-01-31,PRIVATE_WEALTH,PENDING,LOW,True
+C0270,Precious,Botha,9905126423085.0,1979-02-19,F,precious.botha67@icloud.com,27782893930.0,Eastern Cape,Port Elizabeth,2022-11-19,RETAIL,VERIFIED,LOW,True
+C0271,Sandile,Mkhize,2202119111084.0,1997-10-18,F,sandilemkhize424@icloud.com,27675088457.0,Northern Cape,Kimberley,2018-07-26,CORPORATE,VERIFIED,LOW,True
+C0272,Mbali,Maharaj,703221276181.0,2003-02-16,F,mbalimaharaj100@outlook.com,27763955709.0,Mpumalanga,Witbank,2021-11-28,CORPORATE,VERIFIED,LOW,True
+C0273,Lwazi,Pillay,6810250003082.0,1990-08-22,F,lwazipillay592@icloud.com,27764282741.0,North West,Rustenburg,2019-08-12,PREMIUM,VERIFIED,LOW,False
+C0274,Nompumelelo,Shabalala,1801208362182.0,1976-05-23,M,nompumeleloshabalala992@outlook.com,27611014148.0,Mpumalanga,Witbank,2023-01-21,RETAIL,VERIFIED,LOW,True
+C0275,Mbali,Naidoo,1309072841182.0,1966-11-20,F,mbali_naidoo158@outlook.com,27693106365.0,Limpopo,Tzaneen,2018-01-05,RETAIL,VERIFIED,LOW,True
+C0276,Nonhlanhla,Mkhize,1308269902189.0,1966-02-17,F,nonhlanhla_mkhize566@hotmail.com,27767454441.0,Western Cape,Stellenbosch,2022-12-20,RETAIL,VERIFIED,LOW,True
+C0277,Nokuthula,Mahlangu,1710120548089.0,1993-05-10,F,nokuthulamahlangu494@gmail.com,27623383832.0,Northern Cape,Upington,2021-04-08,RETAIL,VERIFIED,MEDIUM,True
+C0278,Thandeka,Abrahams,1009250176187.0,1995-12-29,F,thandekaabrahams340@hotmail.com,27746920923.0,Western Cape,Paarl,2021-08-10,RETAIL,VERIFIED,HIGH,True
+C0279,Sandile,Sithole,1801224780084.0,1993-06-28,M,sandilesithole79@yahoo.com,27685228713.0,Gauteng,Centurion,2017-12-21,PREMIUM,VERIFIED,LOW,True
+C0280,Lindiwe,Shabalala,505263869182.0,1997-04-25,M,lindiwe.shabalala991@outlook.com,27643586212.0,KwaZulu-Natal,Ballito,2026-02-14,PREMIUM,VERIFIED,LOW,True
+C0281,Tshepo,Molefe,2402022745186.0,1992-09-22,F,tshepomolefe972@icloud.com,27814920186.0,Limpopo,Polokwane,2023-07-09,PREMIUM,VERIFIED,LOW,True
+C0282,Nonhlanhla,Nkosi,1009220672088.0,1981-09-29,F,nonhlanhlankosi879@hotmail.com,27686619820.0,Free State,Welkom,2021-01-23,RETAIL,VERIFIED,MEDIUM,True
+C0283,Nokuthula,Maseko,2203118972080.0,1956-02-05,M,nokuthula.maseko538@icloud.com,27638481668.0,Eastern Cape,Makhanda,2022-11-19,RETAIL,VERIFIED,LOW,True
+C0284,Zanele,Dlamini,UNKNOWN,2000-10-13,M,zaneledlamini189@gmail.com,27685942041.0,Eastern Cape,Makhanda,2025-06-22,PREMIUM,VERIFIED,LOW,False
+C0285,Nonhlanhla,Mahlangu,6405251022186.0,1979-11-05,M,nonhlanhla_mahlangu183@outlook.com,27762164313.0,Limpopo,Tzaneen,2026-01-11,CORPORATE,VERIFIED,LOW,True
+C0286,Mandla,Mkhize,6608234243080.0,1956-07-17,M,mandlamkhize257@hotmail.com,27761314820.0,Northern Cape,Upington,2026-03-01,RETAIL,VERIFIED,HIGH,True
+C0287,Busisiwe,Mkhize,1612258039186.0,1986-03-28,M,busisiwe.mkhize4@hotmail.com,27739087731.0,Limpopo,Tzaneen,2017-09-19,PREMIUM,PENDING,LOW,True
+C0288,Thandiwe,Dlamini,1002277530183.0,1965-11-05,M,thandiwedlamini196@icloud.com,27697544871.0,Western Cape,Paarl,2017-05-24,PREMIUM,VERIFIED,LOW,True
+C0289,Sibusiso,Mkhize,9704166369088.0,1977-08-10,F,sibusiso_mkhize990@hotmail.com,27601621473.0,Gauteng,Pretoria,2022-08-11,RETAIL,VERIFIED,LOW,True
+C0290,Bheki,Van der Merwe,702022319180.0,1992-04-10,M,bhekivandermerwe665@yahoo.com,27641241008.0,Northern Cape,Kimberley,2018-11-12,PREMIUM,PENDING,MEDIUM,True
+C0291,Tshepo,Radebe,9810081033086.0,1980-04-07,F,tshepo.radebe701@outlook.com,27823304005.0,Western Cape,Cape Town,2022-03-19,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0292,Andile,Zulu,8603236060087.0,1971-11-10,M,andile.zulu811@yahoo.com,27847310431.0,Western Cape,Paarl,2018-07-16,RETAIL,VERIFIED,LOW,True
+C0293,Zanele,Mahlangu,2508232079082.0,1974-04-23,F,zanele.mahlangu961@icloud.com,27651631179.0,Free State,Welkom,2019-01-14,PREMIUM,VERIFIED,LOW,True
+C0294,Nompumelelo,Govender,602171567188.0,1995-07-15,M,nompumelelogovender676@icloud.com,27665637668.0,Mpumalanga,Nelspruit,2016-03-10,RETAIL,VERIFIED,MEDIUM,False
+C0295,Thandeka,Botha,101215966183.0,1988-12-30,F,thandekabotha825@outlook.com,27761726746.0,KwaZulu-Natal,Pietermaritzburg,2017-05-05,PREMIUM,PENDING,LOW,True
+C0296,Mthunzi,Du Plessis,2308199498186.0,1967-10-31,F,mthunzi.duplessis334@yahoo.com,27672645243.0,Western Cape,Cape Town,2020-04-26,PREMIUM,PENDING,LOW,True
+C0297,Thandeka,Jacobs,404207454086.0,1983-07-05,M,thandekajacobs199@icloud.com,27847016144.0,North West,Rustenburg,2021-01-18,RETAIL,VERIFIED,MEDIUM,True
+C0298,Kagiso,Ndlovu,2406084835089.0,1965-03-31,M,kagiso_ndlovu878@gmail.com,27799207638.0,North West,Mahikeng,2019-11-09,PREMIUM,VERIFIED,LOW,True
+C0299,Nokuthula,Khumalo,1803190083180.0,1953-08-05,F,nokuthula.khumalo436@hotmail.com,27797615594.0,Limpopo,Tzaneen,2025-10-01,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0300,Zanele,Pretorius,406103916080.0,1993-01-16,F,zanelepretorius471@yahoo.com,27821409590.0,Gauteng,Centurion,2025-03-15,RETAIL,VERIFIED,MEDIUM,True
+C0301,Zinhle,Abrahams,207235454084.0,1988-03-17,F,zinhleabrahams590@hotmail.com,27662358267.0,North West,Rustenburg,2022-07-13,PREMIUM,VERIFIED,HIGH,True
+C0302,Lerato,Ndlovu,106122871088.0,1968-05-14,M,lerato.ndlovu553@outlook.com,27639027788.0,Mpumalanga,Witbank,2019-09-15,PREMIUM,VERIFIED,LOW,True
+C0303,Nosipho,Petersen,8306157966087.0,1997-09-20,F,nosiphopetersen377@icloud.com,27624160048.0,Mpumalanga,Witbank,2025-04-08,RETAIL,VERIFIED,LOW,False
+C0304,Bongani,Ndlovu,6908053346084.0,1987-05-16,M,bongani_ndlovu431@icloud.com,27761360413.0,KwaZulu-Natal,Umhlanga,2021-07-16,RETAIL,VERIFIED,MEDIUM,True
+C0305,Bheki,Abrahams,2011265346189.0,1997-07-25,F,bheki_abrahams581@icloud.com,27646142132.0,Limpopo,Tzaneen,2018-11-07,PREMIUM,VERIFIED,LOW,True
+C0306,Lerato,Mkhize,510068770182.0,1965-09-25,M,lerato.mkhize120@yahoo.com,27616312100.0,Limpopo,Tzaneen,2017-11-02,RETAIL,VERIFIED,LOW,True
+C0307,Khethukuthula,Govender,509101990086.0,1994-10-21,M,khethukuthula_govender160@icloud.com,27609512910.0,KwaZulu-Natal,Umhlanga,2022-06-06,PREMIUM,VERIFIED,MEDIUM,False
+C0308,Sandile,Petersen,312160656088.0,1960-06-26,F,sandile_petersen633@gmail.com,27678482180.0,KwaZulu-Natal,Ballito,2023-01-06,RETAIL,VERIFIED,MEDIUM,True
+C0309,Mpho,Mabaso,9408221431183.0,1994-01-01,F,mphomabaso524@hotmail.com,27617057663.0,Free State,Bloemfontein,2023-12-01,RETAIL,PENDING,LOW,True
+C0310,Siyabonga,Govender,1702077278187.0,1975-11-23,M,siyabongagovender918@icloud.com,27743341557.0,Limpopo,Tzaneen,2016-12-06,RETAIL,VERIFIED,HIGH,True
+C0311,Andile,Zulu,7707069106189.0,1962-04-14,M,UNKNOWN,27819230660.0,Mpumalanga,Nelspruit,2015-12-12,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0312,Precious,Khumalo,7911277742084.0,1987-06-05,M,preciouskhumalo661@icloud.com,27671477187.0,Gauteng,Johannesburg,2017-09-04,PREMIUM,VERIFIED,HIGH,True
+C0313,Zinhle,Jacobs,2011161959188.0,2001-08-11,M,zinhle.jacobs596@outlook.com,27613451774.0,North West,Mahikeng,2022-03-03,RETAIL,VERIFIED,LOW,True
+C0314,Zinhle,Maharaj,9311038419082.0,1958-06-24,M,zinhle_maharaj894@hotmail.com,27716051155.0,Limpopo,Polokwane,2021-02-01,PREMIUM,VERIFIED,LOW,True
+C0315,Palesa,Nkosi,1507112671083.0,1963-11-13,M,palesankosi629@yahoo.com,27799927083.0,KwaZulu-Natal,Umhlanga,2017-07-22,RETAIL,PENDING,LOW,True
+C0316,Sipho,Botha,408208570182.0,1977-05-02,M,sipho.botha132@gmail.com,27644801288.0,Limpopo,Tzaneen,2021-11-23,RETAIL,VERIFIED,LOW,True
+C0317,Naledi,Zulu,104040537087.0,1960-09-01,F,naledi.zulu309@gmail.com,27602619061.0,Gauteng,Centurion,2017-10-11,CORPORATE,VERIFIED,HIGH,True
+C0318,Nhlanhla,Nkosi,810125770088.0,2004-12-28,M,nhlanhlankosi70@hotmail.com,27631234617.0,Western Cape,Stellenbosch,2019-11-13,PREMIUM,EXPIRED,LOW,True
+C0319,Thabo,Maseko,2208129656087.0,1959-08-18,M,thabo_maseko435@outlook.com,27669627700.0,Western Cape,Stellenbosch,2020-02-08,RETAIL,VERIFIED,LOW,True
+C0320,Bheki,Mkhize,1712021347187.0,1960-05-19,F,bheki_mkhize615@outlook.com,27698448343.0,North West,Mahikeng,2020-01-25,PREMIUM,VERIFIED,MEDIUM,True
+C0321,Bongani,Zwane,9111046494188.0,1957-08-17,M,bongani_zwane411@yahoo.com,27822706614.0,North West,Mahikeng,2018-10-14,RETAIL,EXPIRED,LOW,True
+C0322,Thandiwe,Ndlovu,812259534186.0,1981-12-12,F,thandiwe_ndlovu497@hotmail.com,27795679008.0,Eastern Cape,East London,2018-04-22,PREMIUM,VERIFIED,LOW,True
+C0323,Kagiso,Nkosi,1511012934189.0,1979-05-02,M,kagisonkosi639@outlook.com,27632283746.0,Western Cape,Cape Town,2026-08-30,PREMIUM,VERIFIED,LOW,True
+C0324,Mthunzi,Du Plessis,1709010517181.0,1984-06-01,F,mthunzi_duplessis454@outlook.com,27761603663.0,Free State,Welkom,2015-09-27,RETAIL,VERIFIED,MEDIUM,True
+C0325,Tshepo,Botha,1208251792188.0,1998-05-23,F,tshepobotha875@icloud.com,27659500764.0,Mpumalanga,Nelspruit,2016-04-01,RETAIL,VERIFIED,HIGH,True
+C0326,Nhlanhla,Chauke,9701056003189.0,1952-05-31,F,nhlanhla.chauke439@icloud.com,27726995607.0,Free State,Welkom,2024-03-28,RETAIL,VERIFIED,LOW,True
+C0327,Mbali,Zulu,7001185343087.0,1987-11-26,F,mbali.zulu713@outlook.com,27781373065.0,Western Cape,Paarl,2022-02-05,RETAIL,VERIFIED,LOW,True
+C0328,Mandla,Mahlangu,2511112730185.0,1989-02-11,M,mandlamahlangu868@icloud.com,27629989803.0,Eastern Cape,East London,2019-10-20,RETAIL,VERIFIED,HIGH,True
+C0329,Mpho,Williams,802198700186.0,1968-10-25,F,UNKNOWN,27699466446.0,Western Cape,Cape Town,2021-09-22,RETAIL,VERIFIED,LOW,True
+C0330,Nosipho,Van der Merwe,2012173056183.0,1991-12-04,F,nosiphovandermerwe874@hotmail.com,27742004647.0,Northern Cape,Kimberley,2019-07-02,RETAIL,VERIFIED,LOW,True
+C0331,Nompumelelo,Cele,2602213335184.0,1975-10-02,M,nompumelelocele616@outlook.com,27677809300.0,Mpumalanga,Witbank,2020-05-07,RETAIL,VERIFIED,LOW,True
+C0332,Precious,Botha,104064468080.0,1973-03-08,F,precious.botha660@hotmail.com,27619151075.0,Northern Cape,Upington,2015-06-13,RETAIL,PENDING,LOW,True
+C0333,Bongani,Zwane,207272302081.0,2001-03-23,M,bonganizwane849@hotmail.com,27829812402.0,Mpumalanga,Witbank,2020-08-24,RETAIL,VERIFIED,LOW,True
+C0334,Khethukuthula,Pillay,603042869084.0,1989-06-05,F,khethukuthulapillay58@outlook.com,27789950140.0,Mpumalanga,Nelspruit,2023-05-28,PREMIUM,VERIFIED,LOW,True
+C0335,Nokuthula,Sithole,1105019925080.0,1971-07-03,F,nokuthula_sithole317@hotmail.com,27847087698.0,KwaZulu-Natal,Umhlanga,2017-09-26,PREMIUM,VERIFIED,LOW,True
+C0336,Thandiwe,Shabalala,7505072625185.0,1986-06-14,M,thandiwe.shabalala843@outlook.com,27788903600.0,Free State,Welkom,2024-04-05,CORPORATE,VERIFIED,LOW,False
+C0337,Mandla,Radebe,1107208973187.0,1952-06-15,M,mandlaradebe455@yahoo.com,27843283248.0,KwaZulu-Natal,Umhlanga,2015-01-26,RETAIL,VERIFIED,LOW,True
+C0338,Tshepo,Khumalo,2107265233187.0,1961-12-23,F,tshepokhumalo608@yahoo.com,27715727774.0,Northern Cape,Kimberley,2019-06-16,RETAIL,VERIFIED,LOW,True
+C0339,Sandile,Khumalo,2010213747087.0,1967-10-15,F,sandile.khumalo411@yahoo.com,27838195804.0,Gauteng,Johannesburg,2020-11-01,RETAIL,EXPIRED,LOW,True
+C0340,Thabo,Mahlangu,1411161941083.0,1967-02-04,F,thabomahlangu507@outlook.com,27733184382.0,Northern Cape,Upington,2024-09-03,PRIVATE_WEALTH,VERIFIED,HIGH,True
+C0341,Sibusiso,Maharaj,5093858183.0,1983-03-01,F,sibusiso.maharaj481@gmail.com,27646423167.0,KwaZulu-Natal,Ballito,2023-12-01,PREMIUM,VERIFIED,MEDIUM,True
+C0342,Themba,Zulu,7508129934080.0,1972-10-03,F,themba_zulu688@outlook.com,27723218589.0,Western Cape,Cape Town,2015-12-03,PREMIUM,VERIFIED,LOW,False
+C0343,Precious,Mkhize,1303091914180.0,1961-06-22,F,preciousmkhize370@outlook.com,27745746702.0,Western Cape,Paarl,2020-11-26,PREMIUM,VERIFIED,LOW,True
+C0344,Tshepo,Pillay,2111267208083.0,1963-05-03,M,tshepo.pillay37@yahoo.com,27785365833.0,North West,Rustenburg,2018-09-01,PREMIUM,VERIFIED,HIGH,False
+C0345,Nomsa,Van der Merwe,312282425085.0,1958-05-25,M,nomsa.vandermerwe855@outlook.com,27659535203.0,Limpopo,Tzaneen,2021-02-12,PREMIUM,VERIFIED,LOW,False
+C0346,Thabo,Du Plessis,708221545180.0,1975-07-04,M,thabo_duplessis605@icloud.com,27636428072.0,KwaZulu-Natal,Ballito,2018-06-13,RETAIL,VERIFIED,MEDIUM,True
+C0347,Busisiwe,Williams,2010155323083.0,1954-05-15,F,busisiwe.williams762@outlook.com,27627398678.0,Gauteng,Sandton,2017-01-28,RETAIL,VERIFIED,HIGH,True
+C0348,Zanele,Nkosi,1205212525084.0,1994-01-14,F,zanelenkosi618@outlook.com,27647023763.0,Eastern Cape,Port Elizabeth,2017-02-26,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0349,Thandeka,Sithole,2506203053186.0,1958-05-04,M,thandeka_sithole997@hotmail.com,27764761958.0,Mpumalanga,Nelspruit,2018-06-24,CORPORATE,VERIFIED,MEDIUM,True
+C0350,Precious,Maharaj,411104073184.0,2001-01-02,M,precious.maharaj940@hotmail.com,27619613666.0,Western Cape,George,2017-05-31,PREMIUM,VERIFIED,LOW,True
+C0351,Themba,Govender,2247583082.0,1985-04-03,M,themba_govender898@gmail.com,27696267145.0,Free State,Bloemfontein,2025-03-16,PREMIUM,VERIFIED,MEDIUM,True
+C0352,Lindiwe,Molefe,1905281742188.0,1951-08-11,M,lindiwe.molefe14@icloud.com,27659004743.0,KwaZulu-Natal,Durban,2025-04-27,PREMIUM,PENDING,HIGH,True
+C0353,Mthunzi,Ngcobo,203050227081.0,1951-06-05,M,mthunzi.ngcobo493@gmail.com,27843435283.0,Limpopo,Tzaneen,2020-06-03,RETAIL,VERIFIED,MEDIUM,True
+C0354,Nompumelelo,Chauke,2062497187.0,1992-04-19,M,nompumelelochauke249@icloud.com,27665946450.0,North West,Rustenburg,2023-10-15,RETAIL,VERIFIED,MEDIUM,True
+C0355,Vusi,Cele,8508179683183.0,1955-06-13,M,vusicele324@icloud.com,27812065530.0,North West,Mahikeng,2021-01-03,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0356,Nhlanhla,Van der Merwe,7208127178088.0,1969-09-17,F,nhlanhlavandermerwe673@hotmail.com,27763200475.0,Mpumalanga,Nelspruit,2021-07-31,PREMIUM,VERIFIED,LOW,False
+C0357,Zinhle,Mabaso,912241412182.0,1965-07-19,M,zinhlemabaso504@yahoo.com,27637979059.0,North West,Rustenburg,2026-01-27,RETAIL,VERIFIED,LOW,True
+C0358,Themba,Govender,1601261043186.0,1960-03-23,M,thembagovender230@gmail.com,27785325537.0,KwaZulu-Natal,Pietermaritzburg,2022-08-19,PREMIUM,VERIFIED,MEDIUM,True
+C0359,Palesa,Cele,1408271817089.0,2004-09-11,M,palesa.cele520@hotmail.com,27633802571.0,Northern Cape,Kimberley,2017-08-25,PRIVATE_WEALTH,PENDING,LOW,True
+C0360,Dumisani,Chauke,303215959182.0,1961-01-12,M,dumisani_chauke788@icloud.com,27605115720.0,Northern Cape,Upington,2025-08-16,RETAIL,VERIFIED,LOW,True
+C0361,Vusi,Govender,1607263738086.0,1987-02-02,F,vusigovender814@icloud.com,27721499339.0,Eastern Cape,Port Elizabeth,2024-12-04,RETAIL,VERIFIED,MEDIUM,False
+C0362,Zanele,Pillay,507026443082.0,2001-07-19,M,zanele_pillay430@hotmail.com,27736105693.0,Limpopo,Tzaneen,2022-01-13,CORPORATE,VERIFIED,LOW,True
+C0363,Palesa,Mahlangu,1710267244186.0,1967-09-13,F,palesa.mahlangu551@gmail.com,27717543005.0,Mpumalanga,Witbank,2017-10-29,PREMIUM,VERIFIED,LOW,True
+C0364,Nompumelelo,Du Plessis,9410093954186.0,1995-05-01,M,nompumelelo_duplessis266@gmail.com,27849514426.0,Limpopo,Polokwane,2022-12-13,RETAIL,VERIFIED,HIGH,True
+C0365,Sandile,Maseko,712199266085.0,1976-11-04,F,sandilemaseko144@hotmail.com,UNKNOWN,Gauteng,Centurion,2020-07-21,RETAIL,VERIFIED,LOW,True
+C0366,Precious,Ndlovu,202026961087.0,1969-04-09,F,precious_ndlovu694@gmail.com,27797757085.0,KwaZulu-Natal,Ballito,2026-08-22,PREMIUM,PENDING,LOW,True
+C0367,Dumisani,Mahlangu,409057942182.0,1996-01-16,M,dumisani_mahlangu485@yahoo.com,27613631333.0,North West,Mahikeng,2023-04-14,CORPORATE,VERIFIED,MEDIUM,True
+C0368,Zinhle,Jacobs,306106135184.0,1993-08-05,M,zinhle.jacobs803@yahoo.com,27828075907.0,Free State,Bloemfontein,2016-02-03,CORPORATE,VERIFIED,LOW,True
+C0369,Mthunzi,Nkosi,6207169389189.0,1990-08-02,F,mthunzi_nkosi855@icloud.com,27833228175.0,Western Cape,Paarl,2018-02-08,PREMIUM,VERIFIED,LOW,True
+C0370,Khethukuthula,Zulu,8506180750184.0,1957-12-10,M,khethukuthulazulu646@gmail.com,27693076710.0,Mpumalanga,Witbank,2016-11-28,RETAIL,VERIFIED,LOW,True
+C0371,Sandile,Du Plessis,2228713080.0,1974-09-01,M,sandileduplessis860@yahoo.com,27828452933.0,Eastern Cape,East London,2016-11-24,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0372,Sipho,Pillay,1606134213081.0,1958-11-29,M,sipho.pillay188@outlook.com,27682503717.0,Mpumalanga,Nelspruit,2018-06-17,RETAIL,VERIFIED,LOW,True
+C0373,Khethukuthula,Mokoena,6606056763184.0,1983-09-09,M,khethukuthula.mokoena246@gmail.com,27834967662.0,Gauteng,Johannesburg,2026-01-21,PREMIUM,VERIFIED,HIGH,True
+C0374,Khethukuthula,Van der Merwe,6107213829084.0,1999-09-16,M,khethukuthulavandermerwe668@yahoo.com,27646110555.0,Northern Cape,Upington,2024-02-15,RETAIL,VERIFIED,LOW,True
+C0375,Palesa,Govender,1707187401080.0,1991-09-08,F,palesa.govender62@yahoo.com,27785585262.0,Northern Cape,Kimberley,2020-08-17,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0376,Mbali,Radebe,9410034925086.0,1961-01-12,M,mbali_radebe900@hotmail.com,27744537478.0,Northern Cape,Upington,2026-04-28,CORPORATE,VERIFIED,MEDIUM,True
+C0377,Themba,Chauke,8006077533180.0,1961-12-30,M,themba_chauke5@hotmail.com,27603911451.0,North West,Mahikeng,2024-04-07,PREMIUM,VERIFIED,LOW,True
+C0378,Zanele,Mabaso,2611152022186.0,2003-12-12,F,zanele.mabaso860@icloud.com,27603093190.0,Western Cape,Cape Town,2025-05-18,RETAIL,VERIFIED,LOW,True
+C0379,Busisiwe,Petersen,9911103623087.0,1982-07-26,M,busisiwe_petersen927@outlook.com,27834507886.0,Limpopo,Polokwane,2015-02-28,RETAIL,VERIFIED,LOW,True
+C0380,Sandile,Du Plessis,2112199879081.0,2002-10-07,M,sandile.duplessis266@gmail.com,27824824620.0,North West,Rustenburg,2021-02-25,RETAIL,VERIFIED,HIGH,True
+C0381,Anele,Williams,8711220849186.0,1986-07-03,F,anelewilliams531@gmail.com,27769314364.0,Free State,Welkom,2023-02-09,PREMIUM,VERIFIED,MEDIUM,True
+C0382,Vusi,Pretorius,7206039368083.0,1988-01-09,M,vusi.pretorius169@yahoo.com,27716214457.0,North West,Mahikeng,2016-05-29,PREMIUM,VERIFIED,LOW,True
+C0383,Mbali,Mabaso,9004110891188.0,1971-03-29,M,mbalimabaso450@hotmail.com,27638490291.0,Limpopo,Tzaneen,2017-10-19,RETAIL,VERIFIED,LOW,True
+C0384,Bongani,Mabaso,1401107075081.0,1955-01-03,M,bongani_mabaso412@outlook.com,27637897247.0,KwaZulu-Natal,Durban,2020-03-24,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0385,Precious,Mabaso,2101158474189.0,1967-04-09,M,precious.mabaso610@gmail.com,27624248312.0,Mpumalanga,Nelspruit,2017-10-29,PREMIUM,VERIFIED,LOW,True
+C0386,Dumisani,Mokoena,103109576188.0,1982-02-04,F,dumisanimokoena795@hotmail.com,27643473113.0,Eastern Cape,Port Elizabeth,2025-07-13,RETAIL,VERIFIED,LOW,True
+C0387,Mbali,Petersen,9501145633083.0,1968-01-21,M,mbali.petersen684@outlook.com,27788841710.0,KwaZulu-Natal,Durban,2022-06-05,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0388,Andile,Mokoena,108080060083.0,1991-11-09,M,andile_mokoena753@yahoo.com,27717306753.0,Western Cape,George,2019-08-09,RETAIL,VERIFIED,LOW,True
+C0389,Nhlanhla,Nkosi,8804219595180.0,1952-08-30,M,nhlanhla_nkosi179@yahoo.com,27675395611.0,Northern Cape,Kimberley,2018-11-28,RETAIL,VERIFIED,LOW,True
+C0390,Themba,Shabalala,407211818183.0,1977-05-15,F,themba_shabalala829@yahoo.com,27723874940.0,Western Cape,Cape Town,2024-09-23,PRIVATE_WEALTH,VERIFIED,LOW,False
+C0391,Sibusiso,Molefe,1010144006089.0,2002-09-10,M,sibusiso_molefe809@hotmail.com,27646497568.0,Northern Cape,Upington,2020-07-17,RETAIL,VERIFIED,MEDIUM,True
+C0392,Mbali,Zwane,2508261062088.0,1984-10-26,F,mbalizwane476@icloud.com,27656399296.0,North West,Rustenburg,2023-05-21,PREMIUM,VERIFIED,HIGH,True
+C0393,Mbali,Naidoo,7208283840183.0,1977-06-14,F,mbalinaidoo161@icloud.com,27725270292.0,Gauteng,Pretoria,2016-11-25,RETAIL,VERIFIED,LOW,True
+C0394,Mbali,Dlamini,1407146021185.0,1974-06-30,F,mbali.dlamini453@gmail.com,27675456445.0,North West,Mahikeng,2016-09-13,RETAIL,VERIFIED,MEDIUM,True
+C0395,Zanele,Mabaso,6406028946085.0,1967-08-23,F,zanele_mabaso764@outlook.com,27684198449.0,Free State,Bloemfontein,2018-02-03,CORPORATE,VERIFIED,MEDIUM,False
+C0396,Thabo,Chauke,2507139501087.0,1995-12-29,M,thabo.chauke233@icloud.com,27668959753.0,Free State,Welkom,2020-03-29,PREMIUM,VERIFIED,MEDIUM,True
+C0397,Precious,Pillay,1312143433187.0,2000-02-07,M,UNKNOWN,27646126646.0,Western Cape,Paarl,2015-03-21,RETAIL,VERIFIED,LOW,True
+C0398,Nonhlanhla,Petersen,10260527082.0,1979-08-18,F,nonhlanhla.petersen972@icloud.com,27732068863.0,Mpumalanga,Witbank,2023-09-01,RETAIL,VERIFIED,LOW,True
+C0399,Nompumelelo,Zulu,501279885180.0,1966-10-01,M,nompumelelo_zulu291@gmail.com,27664909752.0,KwaZulu-Natal,Durban,2021-07-12,PREMIUM,VERIFIED,LOW,True
+C0400,Tshepo,Pillay,6703186855181.0,1984-11-24,M,tshepo.pillay318@yahoo.com,27748965487.0,Mpumalanga,Witbank,2018-07-24,PREMIUM,PENDING,LOW,True
+C0401,Precious,Sithole,1402276541088.0,1979-07-05,F,precious_sithole590@icloud.com,27612528449.0,Eastern Cape,Port Elizabeth,2021-06-16,PREMIUM,PENDING,LOW,True
+C0402,Nompumelelo,Naidoo,9912147501182.0,2001-01-05,M,nompumelelonaidoo969@icloud.com,27615021419.0,KwaZulu-Natal,Ballito,2018-07-17,RETAIL,VERIFIED,LOW,False
+C0403,Ayanda,Shabalala,1702121253088.0,1979-04-01,F,ayanda.shabalala259@icloud.com,27669490354.0,North West,Mahikeng,2016-01-01,RETAIL,VERIFIED,MEDIUM,True
+C0404,Lwazi,Pillay,5042236187.0,1993-06-28,F,lwazi.pillay562@gmail.com,27678343784.0,Mpumalanga,Nelspruit,2018-02-22,RETAIL,VERIFIED,LOW,True
+C0405,Mandla,Mokoena,1203030183182.0,1989-07-14,F,mandla.mokoena732@yahoo.com,27619930492.0,Free State,Bloemfontein,2019-11-06,RETAIL,VERIFIED,MEDIUM,True
+C0406,Mandla,Naidoo,6001256183083.0,1983-08-12,M,mandla.naidoo17@yahoo.com,27741468825.0,Free State,Welkom,2015-04-30,RETAIL,VERIFIED,MEDIUM,True
+C0407,Mandla,Mabaso,9202275359188.0,1967-01-03,M,mandla_mabaso962@hotmail.com,27743026754.0,KwaZulu-Natal,Pietermaritzburg,2020-03-18,RETAIL,VERIFIED,LOW,True
+C0408,Khethukuthula,Nkosi,211274562180.0,1956-01-16,M,khethukuthula_nkosi786@icloud.com,27839381494.0,Mpumalanga,Nelspruit,2017-04-14,PREMIUM,VERIFIED,HIGH,True
+C0409,Themba,Ndlovu,2412055440085.0,1993-04-03,M,themba.ndlovu624@outlook.com,27828531486.0,Limpopo,Tzaneen,2023-07-30,PREMIUM,VERIFIED,LOW,True
+C0410,Thabo,Khumalo,305087020089.0,1957-02-14,M,thabo_khumalo511@yahoo.com,27694389195.0,Gauteng,Midrand,2018-05-27,RETAIL,VERIFIED,LOW,True
+C0411,Dumisani,Maseko,6209266797180.0,1970-07-19,F,dumisani.maseko211@outlook.com,27811907210.0,Limpopo,Polokwane,2020-07-27,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0412,Bheki,Pillay,208033153082.0,1968-04-27,M,bheki.pillay607@gmail.com,27814428815.0,KwaZulu-Natal,Ballito,2020-04-19,PREMIUM,VERIFIED,LOW,True
+C0413,Sibusiso,Khumalo,905197344084.0,1993-03-03,M,sibusiso_khumalo387@outlook.com,27658897261.0,Mpumalanga,Nelspruit,2024-11-24,RETAIL,VERIFIED,LOW,True
+C0414,Thandeka,Nkosi,2405208801088.0,1965-10-06,F,thandeka_nkosi314@icloud.com,27765751739.0,Mpumalanga,Witbank,2023-06-01,PREMIUM,VERIFIED,LOW,True
+C0415,Sibusiso,Mkhize,9212246131186.0,1987-04-22,F,sibusiso_mkhize502@outlook.com,27692195114.0,Eastern Cape,Port Elizabeth,2024-03-02,PRIVATE_WEALTH,EXPIRED,LOW,False
+C0416,Tshepo,Molefe,2412128349185.0,1955-03-06,F,tshepomolefe253@icloud.com,27679014904.0,Mpumalanga,Witbank,2015-10-10,CORPORATE,VERIFIED,MEDIUM,True
+C0417,Palesa,Sithole,9810222644081.0,1958-04-13,F,palesasithole601@icloud.com,27629699607.0,North West,Rustenburg,2019-03-27,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0418,Nosipho,Pretorius,2412281456089.0,1980-11-24,M,nosiphopretorius215@outlook.com,27736169066.0,Mpumalanga,Witbank,2015-02-22,CORPORATE,VERIFIED,LOW,True
+C0419,Vusi,Du Plessis,503123053083.0,1993-08-23,M,vusi.duplessis462@hotmail.com,27824566389.0,Mpumalanga,Witbank,2019-03-01,RETAIL,VERIFIED,MEDIUM,True
+C0420,Vusi,Van der Merwe,6507044534085.0,1952-08-30,M,vusi_vandermerwe689@icloud.com,27631159493.0,Western Cape,Stellenbosch,2016-05-15,RETAIL,EXPIRED,MEDIUM,True
+C0421,Nomsa,Ndlovu,1210174355187.0,1980-03-27,F,nomsa_ndlovu699@outlook.com,27716288577.0,Eastern Cape,Makhanda,2020-05-16,CORPORATE,VERIFIED,LOW,True
+C0422,Nhlanhla,Cele,8512272275089.0,1961-01-10,F,nhlanhla_cele463@yahoo.com,27838972523.0,Limpopo,Polokwane,2026-07-20,RETAIL,VERIFIED,HIGH,False
+C0423,Khethukuthula,Nkosi,2306227279089.0,1993-06-21,F,khethukuthula.nkosi357@hotmail.com,27748988000.0,Limpopo,Polokwane,2017-04-02,PREMIUM,VERIFIED,LOW,True
+C0424,Bheki,Zwane,6505278990182.0,1990-01-14,M,bhekizwane554@icloud.com,27675082836.0,Northern Cape,Kimberley,2019-09-30,RETAIL,PENDING,MEDIUM,True
+C0425,Sipho,Mokoena,712097803082.0,1997-12-15,F,siphomokoena341@gmail.com,27672084932.0,Limpopo,Tzaneen,2022-09-12,RETAIL,VERIFIED,MEDIUM,True
+C0426,Nokukhanya,Cele,6705031824085.0,2003-02-17,M,nokukhanyacele377@gmail.com,27646257514.0,Mpumalanga,Nelspruit,2023-07-12,PREMIUM,VERIFIED,LOW,True
+C0427,Lwazi,Maharaj,2503179856081.0,1985-06-19,M,lwazi_maharaj324@hotmail.com,27645979872.0,Limpopo,Tzaneen,2019-11-29,RETAIL,VERIFIED,MEDIUM,True
+C0428,Nomsa,Williams,2202099403183.0,1994-05-30,F,nomsa.williams830@icloud.com,27713561918.0,Limpopo,Tzaneen,2019-09-22,PRIVATE_WEALTH,PENDING,LOW,True
+C0429,Lindiwe,Cele,7001186427186.0,1992-06-22,F,lindiwe_cele74@icloud.com,27795748621.0,North West,Mahikeng,2021-05-02,PREMIUM,VERIFIED,MEDIUM,True
+C0430,Kagiso,Pillay,510057239184.0,1962-12-29,M,kagisopillay201@yahoo.com,27841153218.0,Gauteng,Sandton,2023-02-15,PREMIUM,VERIFIED,MEDIUM,False
+C0431,Palesa,Naidoo,306162943081.0,1996-03-29,F,palesa_naidoo994@hotmail.com,27647777894.0,Mpumalanga,Nelspruit,2020-06-30,RETAIL,VERIFIED,LOW,True
+C0432,Lindiwe,Abrahams,2611134509185.0,1951-01-16,M,lindiwe.abrahams125@gmail.com,27789552160.0,Mpumalanga,Nelspruit,2020-01-17,RETAIL,VERIFIED,LOW,True
+C0433,Mandla,Mabaso,2012144888081.0,1979-03-07,M,mandla.mabaso416@hotmail.com,27607606809.0,KwaZulu-Natal,Ballito,2025-12-16,RETAIL,VERIFIED,LOW,True
+C0434,Naledi,Chauke,510232948088.0,1990-02-14,F,naledi.chauke132@gmail.com,27824459963.0,Eastern Cape,Makhanda,2018-08-13,RETAIL,VERIFIED,MEDIUM,True
+C0435,Naledi,Du Plessis,UNKNOWN,1954-02-21,F,naledi_duplessis144@hotmail.com,27829228265.0,Free State,Welkom,2022-01-07,PREMIUM,EXPIRED,LOW,True
+C0436,Ayanda,Mahlangu,7203103526089.0,1999-07-13,M,ayanda_mahlangu285@hotmail.com,27648080237.0,Western Cape,Cape Town,2016-09-01,PREMIUM,VERIFIED,MEDIUM,True
+C0437,Precious,Zulu,409071156183.0,1983-05-22,M,precious.zulu324@icloud.com,27747357590.0,Free State,Welkom,2015-08-01,CORPORATE,VERIFIED,LOW,True
+C0438,Nokukhanya,Maharaj,1106254476083.0,1974-07-20,M,nokukhanya_maharaj993@gmail.com,27677352396.0,Western Cape,Paarl,2017-05-10,PREMIUM,VERIFIED,LOW,True
+C0439,Mbali,Radebe,2210284620189.0,1958-11-21,M,mbali_radebe970@yahoo.com,27734031181.0,North West,Rustenburg,2022-09-28,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0440,Thandiwe,Botha,9212052070086.0,2000-12-01,F,thandiwebotha655@gmail.com,UNKNOWN,KwaZulu-Natal,Umhlanga,2024-05-19,PREMIUM,VERIFIED,HIGH,True
+C0441,Nosipho,Ngcobo,2204101424186.0,1978-01-21,M,nosipho.ngcobo748@gmail.com,27672570911.0,Free State,Welkom,2018-09-14,PREMIUM,VERIFIED,LOW,False
+C0442,Thabo,Maharaj,1611228722086.0,1951-04-01,M,thabomaharaj436@gmail.com,27816789156.0,Northern Cape,Kimberley,2020-06-23,CORPORATE,VERIFIED,HIGH,False
+C0443,Bheki,Petersen,511258577082.0,1956-09-27,F,bhekipetersen362@yahoo.com,27618092102.0,Gauteng,Midrand,2026-02-11,RETAIL,VERIFIED,LOW,False
+C0444,Nokuthula,Radebe,9005093490089.0,1985-04-25,M,nokuthularadebe528@outlook.com,27618768806.0,Northern Cape,Kimberley,2025-12-13,RETAIL,VERIFIED,LOW,True
+C0445,Mandla,Nkosi,2148061081.0,1997-06-20,M,mandla.nkosi936@icloud.com,27781115938.0,Limpopo,Polokwane,2018-06-28,PREMIUM,VERIFIED,LOW,True
+C0446,Zinhle,Maharaj,8811277198082.0,1981-09-26,F,zinhle_maharaj905@gmail.com,27662856661.0,KwaZulu-Natal,Umhlanga,2019-04-02,RETAIL,VERIFIED,LOW,True
+C0447,Nomsa,Mokoena,802148012182.0,1979-02-23,F,UNKNOWN,27733204822.0,Eastern Cape,East London,2017-06-17,CORPORATE,VERIFIED,LOW,True
+C0448,Thabo,Chauke,1007200131187.0,1975-12-21,F,thabo.chauke780@icloud.com,27745156509.0,Eastern Cape,Port Elizabeth,2018-06-03,PREMIUM,VERIFIED,LOW,True
+C0449,Themba,Mahlangu,UNKNOWN,2003-01-15,M,themba.mahlangu136@yahoo.com,27731643681.0,Eastern Cape,Makhanda,2021-02-21,CORPORATE,PENDING,LOW,True
+C0450,Zanele,Cele,912213791085.0,1988-03-23,F,zanelecele438@gmail.com,27841866635.0,Gauteng,Centurion,2021-10-28,RETAIL,VERIFIED,HIGH,True
+C0451,Nokuthula,Pillay,UNKNOWN,1992-05-08,F,nokuthula.pillay442@hotmail.com,27655232271.0,Gauteng,Pretoria,2026-01-07,RETAIL,VERIFIED,LOW,True
+C0452,Nokukhanya,Chauke,2506249648183.0,1974-10-04,M,nokukhanya_chauke90@hotmail.com,27633189181.0,KwaZulu-Natal,Umhlanga,2017-09-12,RETAIL,EXPIRED,MEDIUM,True
+C0453,Sibusiso,Mahlangu,9410114939183.0,1997-11-13,M,sibusiso.mahlangu197@gmail.com,27745236674.0,North West,Rustenburg,2022-10-16,PRIVATE_WEALTH,VERIFIED,MEDIUM,False
+C0454,Bongani,Botha,7712054745089.0,1955-06-16,M,bongani_botha702@icloud.com,27819614893.0,Mpumalanga,Nelspruit,2016-09-06,RETAIL,VERIFIED,LOW,True
+C0455,Thandiwe,Williams,UNKNOWN,1990-11-10,F,thandiwe.williams304@outlook.com,27682998223.0,Free State,Bloemfontein,2018-11-02,RETAIL,VERIFIED,LOW,True
+C0456,Busisiwe,Shabalala,111083440080.0,1981-03-04,F,busisiwe.shabalala970@outlook.com,27815429825.0,KwaZulu-Natal,Umhlanga,2017-12-30,RETAIL,VERIFIED,LOW,True
+C0457,Thabo,Radebe,803090256086.0,1973-02-01,M,thabo.radebe333@icloud.com,27684421186.0,Limpopo,Polokwane,2023-11-14,RETAIL,VERIFIED,MEDIUM,True
+C0458,Thandeka,Zulu,2603079333182.0,1975-04-22,M,thandeka.zulu907@outlook.com,27657613533.0,North West,Rustenburg,2019-03-19,RETAIL,VERIFIED,LOW,False
+C0459,Thandiwe,Ndlovu,2501201633186.0,1951-11-10,M,thandiwendlovu958@gmail.com,27613217596.0,Northern Cape,Kimberley,2020-07-27,PREMIUM,VERIFIED,HIGH,True
+C0460,Thabo,Mabaso,204057871182.0,1977-07-30,F,thabo.mabaso250@icloud.com,27615487177.0,Western Cape,Paarl,2017-10-05,RETAIL,VERIFIED,LOW,True
+C0461,Vusi,Mkhize,8707055788183.0,1984-07-08,M,vusi.mkhize113@icloud.com,27672706851.0,Gauteng,Pretoria,2021-04-27,RETAIL,VERIFIED,LOW,False
+C0462,Zanele,Zwane,8709119824086.0,1963-06-24,F,zanele_zwane357@hotmail.com,27635548190.0,Gauteng,Midrand,2026-03-13,PREMIUM,PENDING,MEDIUM,True
+C0463,Bongani,Mabaso,406056399187.0,1956-01-15,M,bongani_mabaso983@hotmail.com,27683427123.0,Gauteng,Pretoria,2017-01-10,RETAIL,VERIFIED,MEDIUM,True
+C0464,Mthunzi,Maharaj,2006054028186.0,1999-04-14,F,mthunzimaharaj505@hotmail.com,27819996153.0,North West,Mahikeng,2020-02-29,RETAIL,VERIFIED,LOW,True
+C0465,Mpho,Mahlangu,601129148182.0,1959-11-19,M,mpho_mahlangu870@outlook.com,27645944200.0,Western Cape,Stellenbosch,2025-04-29,RETAIL,PENDING,HIGH,False
+C0466,Nokuthula,Molefe,312232344180.0,1988-02-07,F,nokuthulamolefe109@gmail.com,27822237660.0,Eastern Cape,Port Elizabeth,2025-09-11,PRIVATE_WEALTH,PENDING,LOW,True
+C0467,Zanele,Khumalo,2607052988182.0,1997-04-27,F,zanele_khumalo740@icloud.com,27718448641.0,Western Cape,Cape Town,2015-04-19,RETAIL,VERIFIED,MEDIUM,True
+C0468,Lindiwe,Du Plessis,1311159079189.0,1995-01-10,F,lindiwe_duplessis954@yahoo.com,27655560510.0,KwaZulu-Natal,Durban,2017-01-23,PREMIUM,EXPIRED,LOW,True
+C0469,Lerato,Khumalo,1710271264187.0,1978-02-05,F,lerato.khumalo56@icloud.com,27728117262.0,Mpumalanga,Nelspruit,2019-05-15,RETAIL,VERIFIED,LOW,True
+C0470,Andile,Nkosi,6602079783084.0,1966-11-04,M,andile.nkosi276@gmail.com,27621752869.0,Eastern Cape,East London,2025-11-07,RETAIL,VERIFIED,HIGH,True
+C0471,Nhlanhla,Chauke,1007245830081.0,1979-09-22,F,nhlanhla.chauke515@hotmail.com,27641397373.0,Free State,Welkom,2023-07-28,RETAIL,PENDING,LOW,True
+C0472,Precious,Zulu,2511212307088.0,1996-04-27,F,precious.zulu348@icloud.com,27697045105.0,Western Cape,Stellenbosch,2024-08-30,RETAIL,VERIFIED,MEDIUM,True
+C0473,Bongani,Mkhize,405181428181.0,1990-10-21,F,bongani_mkhize166@yahoo.com,27625699588.0,North West,Rustenburg,2023-02-24,RETAIL,VERIFIED,MEDIUM,True
+C0474,Thandeka,Sithole,1808025955186.0,1986-09-12,M,thandeka_sithole525@icloud.com,27836262096.0,North West,Rustenburg,2023-05-20,RETAIL,VERIFIED,LOW,True
+C0475,Nomsa,Williams,1701051725186.0,1964-03-12,F,nomsa.williams398@gmail.com,27762568722.0,Gauteng,Pretoria,2022-10-29,RETAIL,VERIFIED,HIGH,True
+C0476,Zanele,Mokoena,607111056185.0,2004-03-21,F,zanelemokoena760@yahoo.com,27782918079.0,Western Cape,George,2021-03-30,RETAIL,VERIFIED,HIGH,True
+C0477,Ayanda,Pillay,106267046183.0,1954-11-08,M,ayandapillay434@gmail.com,27685229054.0,Gauteng,Midrand,2018-12-13,RETAIL,VERIFIED,LOW,True
+C0478,Dumisani,Cele,803270880086.0,1980-09-07,F,dumisani.cele358@yahoo.com,27749080330.0,Mpumalanga,Nelspruit,2025-08-31,PREMIUM,VERIFIED,HIGH,True
+C0479,Sandile,Naidoo,1904039477085.0,1978-05-25,M,sandile_naidoo957@yahoo.com,27649379307.0,Gauteng,Midrand,2022-02-05,RETAIL,EXPIRED,LOW,True
+C0480,Thabo,Van der Merwe,1802023581086.0,1998-12-29,M,thabo_vandermerwe222@hotmail.com,27724519240.0,KwaZulu-Natal,Ballito,2019-04-15,CORPORATE,VERIFIED,LOW,True
+C0481,Sipho,Ngcobo,2008146723185.0,1998-09-01,F,sipho_ngcobo117@hotmail.com,27658697782.0,Free State,Bloemfontein,2024-08-10,RETAIL,VERIFIED,LOW,True
+C0482,Siyabonga,Cele,302261700080.0,1986-11-24,M,siyabongacele770@icloud.com,27832672723.0,Mpumalanga,Witbank,2024-12-17,PREMIUM,VERIFIED,MEDIUM,True
+C0483,Ayanda,Khumalo,9002127601186.0,1950-09-07,F,ayandakhumalo291@yahoo.com,27685437558.0,North West,Mahikeng,2021-11-23,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0484,Vusi,Dlamini,8309279829185.0,1965-04-16,F,vusidlamini997@yahoo.com,27734232305.0,Gauteng,Johannesburg,2023-10-28,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0485,Lwazi,Maseko,1603143784082.0,1995-03-29,M,lwazi_maseko864@hotmail.com,27845365936.0,KwaZulu-Natal,Ballito,2018-07-26,CORPORATE,VERIFIED,LOW,True
+C0486,Mbali,Mkhize,210130414087.0,1982-02-16,M,mbalimkhize920@yahoo.com,27675981533.0,Gauteng,Midrand,2019-05-07,PREMIUM,VERIFIED,MEDIUM,True
+C0487,Themba,Petersen,6911019492081.0,1991-03-11,M,themba.petersen290@gmail.com,27684030429.0,Gauteng,Sandton,2017-01-30,RETAIL,VERIFIED,HIGH,True
+C0488,Mandla,Botha,6404226879185.0,1990-06-14,M,mandla_botha11@yahoo.com,27651527651.0,Gauteng,Centurion,2017-08-18,CORPORATE,EXPIRED,LOW,True
+C0489,Anele,Nkosi,610018781088.0,1995-11-29,M,anele_nkosi118@yahoo.com,27661494887.0,KwaZulu-Natal,Umhlanga,2022-05-07,RETAIL,VERIFIED,MEDIUM,True
+C0490,Busisiwe,Botha,1711107652186.0,1995-12-29,F,busisiwe_botha178@yahoo.com,27665715786.0,Eastern Cape,Port Elizabeth,2023-10-24,RETAIL,VERIFIED,LOW,True
+C0491,Ayanda,Maseko,1310244451189.0,1959-08-26,F,ayanda.maseko581@icloud.com,27727274015.0,North West,Mahikeng,2016-06-10,RETAIL,PENDING,HIGH,True
+C0492,Vusi,Ngcobo,303265286182.0,1982-02-04,M,vusi.ngcobo673@gmail.com,27727240525.0,Northern Cape,Upington,2018-04-03,PREMIUM,VERIFIED,LOW,True
+C0493,Andile,Molefe,1702134646088.0,1969-07-05,M,andile_molefe734@hotmail.com,27832255341.0,North West,Mahikeng,2024-06-16,PREMIUM,VERIFIED,MEDIUM,True
+C0494,Lerato,Mabaso,7707042033182.0,2003-12-16,F,lerato_mabaso243@hotmail.com,27821356829.0,North West,Mahikeng,2021-05-24,RETAIL,VERIFIED,LOW,True
+C0495,Precious,Ngcobo,9409025527081.0,1992-02-27,M,preciousngcobo309@icloud.com,27686321559.0,KwaZulu-Natal,Ballito,2022-10-03,RETAIL,VERIFIED,LOW,True
+C0496,Thandiwe,Ngcobo,306201683083.0,1954-04-17,M,thandiwe.ngcobo331@yahoo.com,27744797376.0,North West,Mahikeng,2018-10-26,RETAIL,VERIFIED,MEDIUM,True
+C0497,Anele,Nkosi,102024985084.0,1979-07-19,F,anelenkosi175@outlook.com,27648729158.0,Gauteng,Sandton,2017-09-09,RETAIL,PENDING,MEDIUM,True
+C0498,Vusi,Abrahams,710168029185.0,1993-04-22,M,vusi_abrahams785@gmail.com,27692389057.0,North West,Rustenburg,2022-12-01,PREMIUM,PENDING,MEDIUM,True
+C0499,Ayanda,Mahlangu,104013541186.0,1966-11-10,F,ayanda_mahlangu214@gmail.com,27829852408.0,Western Cape,Cape Town,2026-07-12,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0500,Palesa,Cele,706137412086.0,1966-11-11,M,palesa_cele169@outlook.com,27692712355.0,Northern Cape,Kimberley,2018-04-21,RETAIL,VERIFIED,LOW,True
+C0501,Precious,Mokoena,1608124351088.0,1957-07-17,F,UNKNOWN,27739425356.0,Free State,Bloemfontein,2024-08-30,PREMIUM,VERIFIED,LOW,True
+C0502,Lwazi,Maseko,8503204520188.0,1988-11-24,M,lwazimaseko255@gmail.com,27634683937.0,Mpumalanga,Nelspruit,2017-08-01,RETAIL,VERIFIED,LOW,True
+C0503,Mandla,Sithole,1207131659084.0,1994-06-04,M,mandla.sithole356@yahoo.com,27845831713.0,Eastern Cape,Makhanda,2021-06-17,PREMIUM,VERIFIED,LOW,True
+C0504,Thandeka,Maseko,6403065442182.0,1951-02-22,F,thandeka_maseko22@icloud.com,27655426369.0,Free State,Bloemfontein,2016-09-22,RETAIL,VERIFIED,LOW,True
+C0505,Thandeka,Jacobs,1502020284183.0,1997-02-15,M,thandeka.jacobs103@yahoo.com,27696631731.0,Gauteng,Centurion,2025-02-24,RETAIL,VERIFIED,LOW,True
+C0506,Themba,Govender,912118484181.0,1974-03-21,M,themba_govender877@yahoo.com,27673376209.0,North West,Rustenburg,2023-01-05,RETAIL,VERIFIED,MEDIUM,False
+C0507,Zinhle,Molefe,1211044487188.0,1965-09-11,F,zinhle_molefe401@outlook.com,27828001036.0,Western Cape,Stellenbosch,2021-03-13,RETAIL,VERIFIED,LOW,True
+C0508,Naledi,Maharaj,6008222410182.0,1996-12-08,F,naledimaharaj681@hotmail.com,27656094327.0,North West,Mahikeng,2025-12-02,RETAIL,VERIFIED,LOW,True
+C0509,Siyabonga,Radebe,7120010084.0,1962-05-10,F,siyabongaradebe682@outlook.com,27813601089.0,Western Cape,Cape Town,2016-12-05,PREMIUM,VERIFIED,MEDIUM,True
+C0510,Zanele,Ngcobo,1104266328186.0,1958-10-21,F,zanelengcobo319@outlook.com,27658311783.0,Eastern Cape,Port Elizabeth,2022-03-26,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0511,Vusi,Pretorius,910217555086.0,1989-03-13,M,vusipretorius453@yahoo.com,27719452615.0,Eastern Cape,East London,2023-01-08,RETAIL,VERIFIED,LOW,True
+C0512,Sipho,Shabalala,1302252303183.0,2002-01-24,F,siphoshabalala557@yahoo.com,27825921482.0,Northern Cape,Kimberley,2016-03-14,PREMIUM,VERIFIED,LOW,True
+C0513,Bheki,Van der Merwe,6606201595189.0,1993-03-12,F,bheki.vandermerwe759@gmail.com,27829570152.0,Gauteng,Johannesburg,2016-03-10,PREMIUM,VERIFIED,LOW,False
+C0514,Kagiso,Khumalo,2301267945081.0,1956-01-10,M,kagisokhumalo902@yahoo.com,27639721175.0,KwaZulu-Natal,Umhlanga,2017-03-04,RETAIL,VERIFIED,LOW,True
+C0515,Thandiwe,Dlamini,504278957189.0,1989-05-25,M,thandiwe.dlamini652@icloud.com,27604100561.0,Western Cape,Paarl,2018-03-06,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0516,Anele,Molefe,6610166018186.0,1984-08-12,M,anele_molefe834@icloud.com,27743485821.0,North West,Mahikeng,2015-08-18,RETAIL,VERIFIED,LOW,True
+C0517,Nomsa,Abrahams,1103157509180.0,1964-03-15,F,nomsaabrahams216@hotmail.com,27729808972.0,North West,Rustenburg,2023-10-05,PREMIUM,VERIFIED,LOW,True
+C0518,Sandile,Pillay,7907037925187.0,2004-05-09,M,sandilepillay950@hotmail.com,UNKNOWN,North West,Rustenburg,2020-10-24,RETAIL,VERIFIED,HIGH,True
+C0519,Thandiwe,Zulu,504041740187.0,1979-01-14,M,thandiwe.zulu922@yahoo.com,27657443851.0,Gauteng,Johannesburg,2024-06-03,CORPORATE,VERIFIED,LOW,True
+C0520,Bongani,Van der Merwe,1002237364182.0,2001-06-23,M,bongani_vandermerwe503@yahoo.com,27765799782.0,Limpopo,Polokwane,2020-01-22,RETAIL,VERIFIED,MEDIUM,True
+C0521,Sibusiso,Zulu,6801126685085.0,1966-08-17,F,sibusiso.zulu585@yahoo.com,27789402873.0,Gauteng,Johannesburg,2022-11-24,RETAIL,PENDING,MEDIUM,True
+C0522,Dumisani,Maharaj,409101653087.0,1970-09-08,M,dumisanimaharaj339@hotmail.com,27604758452.0,Mpumalanga,Nelspruit,2021-07-02,CORPORATE,VERIFIED,MEDIUM,True
+C0523,Tshepo,Ngcobo,1909106540088.0,1959-12-13,F,tshepongcobo31@outlook.com,27616671458.0,Western Cape,Stellenbosch,2024-06-14,RETAIL,VERIFIED,MEDIUM,True
+C0524,Nokukhanya,Radebe,6410200579181.0,1987-05-06,M,nokukhanya_radebe970@hotmail.com,UNKNOWN,Limpopo,Polokwane,2015-12-08,RETAIL,VERIFIED,LOW,True
+C0525,Thandeka,Ngcobo,4189963180.0,1999-07-27,F,thandeka_ngcobo785@gmail.com,27733101134.0,Eastern Cape,Port Elizabeth,2024-08-21,PREMIUM,VERIFIED,LOW,True
+C0526,Zinhle,Govender,104081507083.0,1987-01-22,M,zinhlegovender256@gmail.com,UNKNOWN,Eastern Cape,East London,2016-04-09,RETAIL,VERIFIED,LOW,True
+C0527,Nokuthula,Ngcobo,311031251188.0,1968-06-20,F,nokuthula.ngcobo455@outlook.com,27697156124.0,KwaZulu-Natal,Ballito,2021-07-25,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0528,Anele,Du Plessis,1312207966181.0,1968-04-06,M,anele.duplessis313@hotmail.com,27814536127.0,Western Cape,Cape Town,2017-10-02,RETAIL,VERIFIED,LOW,False
+C0529,Dumisani,Abrahams,6205099637184.0,1957-07-31,M,dumisaniabrahams394@outlook.com,27781316224.0,North West,Rustenburg,2023-08-01,RETAIL,VERIFIED,LOW,True
+C0530,Nonhlanhla,Pretorius,8201205508189.0,1969-06-05,M,nonhlanhlapretorius850@outlook.com,27838282586.0,Gauteng,Sandton,2024-08-03,PREMIUM,PENDING,MEDIUM,True
+C0531,Nokukhanya,Naidoo,2310258501182.0,1984-03-17,F,nokukhanya.naidoo930@yahoo.com,27605709366.0,Free State,Welkom,2021-02-25,RETAIL,VERIFIED,LOW,True
+C0532,Thandiwe,Dlamini,7611269961081.0,1977-07-14,F,thandiwe.dlamini455@outlook.com,27761289686.0,Free State,Welkom,2024-11-12,RETAIL,VERIFIED,LOW,True
+C0533,Nokukhanya,Molefe,205209034181.0,1989-07-07,M,nokukhanya_molefe266@outlook.com,27783134439.0,Mpumalanga,Nelspruit,2020-02-07,PREMIUM,VERIFIED,MEDIUM,True
+C0534,Naledi,Abrahams,1410110687080.0,1973-03-29,F,nalediabrahams866@gmail.com,27721750496.0,Gauteng,Pretoria,2020-04-06,RETAIL,VERIFIED,LOW,True
+C0535,Nokuthula,Molefe,2107036987182.0,1952-03-20,F,nokuthula_molefe344@hotmail.com,27747286684.0,Limpopo,Tzaneen,2025-07-22,CORPORATE,VERIFIED,LOW,True
+C0536,Siyabonga,Shabalala,7306178326183.0,1983-12-27,M,siyabonga_shabalala781@yahoo.com,27842316088.0,KwaZulu-Natal,Durban,2016-09-25,CORPORATE,EXPIRED,LOW,False
+C0537,Nokukhanya,Maseko,1601207738185.0,1974-02-24,M,nokukhanya_maseko933@hotmail.com,27676514410.0,Mpumalanga,Nelspruit,2020-06-14,PREMIUM,EXPIRED,LOW,True
+C0538,Naledi,Mahlangu,1306035766085.0,1993-06-08,M,naledi_mahlangu236@icloud.com,27823101870.0,Eastern Cape,East London,2020-06-29,PREMIUM,VERIFIED,LOW,True
+C0539,Themba,Mabaso,207148274089.0,1994-05-03,M,themba_mabaso16@yahoo.com,27653026500.0,Free State,Welkom,2024-05-22,RETAIL,VERIFIED,HIGH,True
+C0540,Kagiso,Cele,7002058436186.0,1981-10-16,M,kagisocele571@icloud.com,27675922299.0,Gauteng,Centurion,2017-09-02,RETAIL,VERIFIED,LOW,True
+C0541,Mandla,Maseko,1108147368184.0,1992-10-20,M,mandlamaseko785@yahoo.com,27829545877.0,Gauteng,Johannesburg,2016-11-17,RETAIL,VERIFIED,LOW,True
+C0542,Precious,Naidoo,9705251587084.0,1994-04-04,F,preciousnaidoo531@gmail.com,27799526649.0,Limpopo,Tzaneen,2024-07-27,RETAIL,VERIFIED,MEDIUM,False
+C0543,Nomsa,Radebe,1810111629184.0,1964-11-09,M,nomsa_radebe499@outlook.com,27764751945.0,Eastern Cape,East London,2018-10-19,RETAIL,PENDING,HIGH,True
+C0544,Mpho,Petersen,9509252766089.0,1953-07-26,M,mpho_petersen853@gmail.com,27607199861.0,Free State,Bloemfontein,2019-07-23,RETAIL,PENDING,LOW,True
+C0545,Kagiso,Radebe,2212281965186.0,1994-04-02,F,kagiso.radebe286@gmail.com,27636934456.0,North West,Mahikeng,2016-10-09,PREMIUM,VERIFIED,LOW,True
+C0546,Andile,Sithole,1001141645183.0,2000-01-29,M,andile.sithole141@gmail.com,27827311740.0,North West,Rustenburg,2019-12-09,PREMIUM,VERIFIED,LOW,True
+C0547,Mthunzi,Ngcobo,209283509086.0,1956-01-14,F,mthunzingcobo214@hotmail.com,27651651169.0,KwaZulu-Natal,Pietermaritzburg,2024-05-18,PREMIUM,VERIFIED,MEDIUM,True
+C0548,Nhlanhla,Botha,2604107947186.0,2003-08-21,F,nhlanhla_botha303@hotmail.com,27634673044.0,Northern Cape,Kimberley,2017-07-09,CORPORATE,PENDING,MEDIUM,True
+C0549,Dumisani,Pillay,508111860186.0,1961-06-28,F,dumisanipillay422@icloud.com,27671485910.0,Eastern Cape,Makhanda,2021-07-11,RETAIL,VERIFIED,MEDIUM,True
+C0550,Nokukhanya,Chauke,1307267240186.0,1973-05-22,M,nokukhanya_chauke746@outlook.com,27676701595.0,Limpopo,Tzaneen,2016-01-09,RETAIL,VERIFIED,LOW,True
+C0551,Ayanda,Chauke,9401240345181.0,1979-11-26,F,ayanda.chauke671@hotmail.com,27619701486.0,Western Cape,Paarl,2019-09-21,RETAIL,VERIFIED,LOW,True
+C0552,Mpho,Ngcobo,609244074080.0,1951-10-19,M,mpho_ngcobo811@hotmail.com,27781709427.0,KwaZulu-Natal,Umhlanga,2018-07-09,RETAIL,VERIFIED,MEDIUM,True
+C0553,Nomsa,Sithole,412091391081.0,1995-04-06,F,nomsa.sithole761@gmail.com,27813547579.0,Western Cape,George,2017-02-21,PREMIUM,VERIFIED,LOW,True
+C0554,Nompumelelo,Mabaso,5097518081.0,1973-09-16,F,nompumelelo_mabaso440@icloud.com,27624728785.0,Limpopo,Tzaneen,2024-02-11,PREMIUM,VERIFIED,HIGH,True
+C0555,Nokuthula,Naidoo,1109231774183.0,2001-11-04,M,nokuthula.naidoo458@icloud.com,27728999482.0,Gauteng,Centurion,2017-06-11,PREMIUM,VERIFIED,MEDIUM,False
+C0556,Mandla,Pretorius,1510081374086.0,1992-06-25,M,mandla_pretorius259@gmail.com,27746225347.0,KwaZulu-Natal,Pietermaritzburg,2022-07-30,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0557,Thabo,Sithole,1708113862187.0,1993-05-01,M,thabo_sithole717@gmail.com,27627302966.0,Eastern Cape,Makhanda,2017-11-08,PREMIUM,VERIFIED,MEDIUM,True
+C0558,Dumisani,Cele,1503218594182.0,1999-01-30,F,dumisani.cele304@icloud.com,27638306131.0,Western Cape,Cape Town,2021-08-07,PREMIUM,PENDING,LOW,True
+C0559,Zinhle,Jacobs,7310236082187.0,1991-07-12,M,zinhlejacobs738@outlook.com,27643755459.0,KwaZulu-Natal,Pietermaritzburg,2025-08-17,RETAIL,VERIFIED,LOW,True
+C0560,Thabo,Ngcobo,1708111551089.0,1992-01-19,M,thabo_ngcobo652@gmail.com,27814792145.0,Eastern Cape,Port Elizabeth,2022-09-26,PREMIUM,PENDING,LOW,True
+C0561,Nonhlanhla,Jacobs,1205188864081.0,2003-03-03,M,nonhlanhlajacobs222@gmail.com,27683991801.0,Free State,Welkom,2020-11-23,PREMIUM,VERIFIED,LOW,True
+C0562,Lwazi,Pillay,UNKNOWN,1964-10-14,F,lwazi_pillay80@gmail.com,27613298057.0,Free State,Welkom,2026-06-23,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0563,Naledi,Khumalo,1212165816188.0,1978-06-09,M,naledi.khumalo979@hotmail.com,27655659649.0,Northern Cape,Upington,2018-03-16,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0564,Naledi,Pretorius,8308255668183.0,2000-03-22,M,naledi_pretorius184@icloud.com,27604285584.0,Mpumalanga,Witbank,2024-11-30,RETAIL,VERIFIED,LOW,True
+C0565,Zinhle,Shabalala,111097843180.0,1972-09-13,F,zinhleshabalala844@gmail.com,27608898869.0,Free State,Bloemfontein,2025-03-12,RETAIL,VERIFIED,MEDIUM,True
+C0566,Mandla,Dlamini,2203232898081.0,1987-08-23,M,mandla_dlamini653@gmail.com,27616272014.0,Limpopo,Polokwane,2017-03-09,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0567,Sipho,Pillay,1812128459086.0,1987-05-10,M,sipho.pillay845@gmail.com,27793474873.0,Limpopo,Polokwane,2020-12-24,RETAIL,VERIFIED,LOW,True
+C0568,Nosipho,Maharaj,1706045594189.0,1957-09-22,F,nosipho.maharaj941@gmail.com,27624061858.0,KwaZulu-Natal,Durban,2016-12-08,RETAIL,VERIFIED,HIGH,True
+C0569,Thabo,Molefe,7505273130084.0,1954-10-14,F,thabo.molefe286@outlook.com,27646293899.0,Limpopo,Tzaneen,2024-04-14,RETAIL,VERIFIED,MEDIUM,True
+C0570,Siyabonga,Sithole,8210125715182.0,1953-04-18,F,siyabongasithole583@yahoo.com,27668278852.0,North West,Mahikeng,2022-10-12,PREMIUM,VERIFIED,LOW,True
+C0571,Nosipho,Pretorius,605077662180.0,1960-05-06,M,nosipho.pretorius479@icloud.com,27826418889.0,Free State,Bloemfontein,2023-05-08,PREMIUM,VERIFIED,HIGH,True
+C0572,Mandla,Abrahams,9006111641085.0,1977-06-24,M,UNKNOWN,27608365343.0,Limpopo,Polokwane,2025-03-28,PREMIUM,VERIFIED,MEDIUM,True
+C0573,Nokuthula,Sithole,1205023838086.0,1988-03-17,F,nokuthula_sithole608@hotmail.com,27603751899.0,Limpopo,Tzaneen,2026-06-27,RETAIL,VERIFIED,LOW,True
+C0574,Bheki,Molefe,2501035067085.0,1991-02-26,F,bheki_molefe1@yahoo.com,27644362263.0,KwaZulu-Natal,Pietermaritzburg,2018-11-10,RETAIL,VERIFIED,LOW,True
+C0575,Zanele,Maseko,2406017820085.0,1958-12-18,F,zanelemaseko404@hotmail.com,27668923978.0,Eastern Cape,Port Elizabeth,2023-06-10,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0576,Kagiso,Pillay,UNKNOWN,1956-06-06,F,kagisopillay759@icloud.com,27821451244.0,KwaZulu-Natal,Ballito,2019-12-22,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0577,Nosipho,Radebe,1202213769087.0,1966-11-12,M,nosipho_radebe446@yahoo.com,27626697318.0,Gauteng,Midrand,2023-08-13,PREMIUM,VERIFIED,LOW,True
+C0578,Thandeka,Dlamini,8511171743181.0,1981-01-25,M,thandeka.dlamini165@icloud.com,27713159890.0,Free State,Welkom,2026-05-16,RETAIL,VERIFIED,LOW,False
+C0579,Thandiwe,Maharaj,2311049889188.0,1983-06-13,F,thandiwemaharaj996@outlook.com,27722873547.0,Gauteng,Sandton,2019-01-05,CORPORATE,VERIFIED,LOW,True
+C0580,Palesa,Nkosi,9912287454180.0,1991-09-12,F,palesa.nkosi889@gmail.com,27788721725.0,Limpopo,Tzaneen,2023-03-27,RETAIL,VERIFIED,LOW,True
+C0581,Siyabonga,Chauke,7806140287185.0,1976-09-15,M,siyabonga.chauke366@hotmail.com,27619913206.0,Gauteng,Midrand,2023-11-20,RETAIL,VERIFIED,LOW,True
+C0582,Mthunzi,Maharaj,2210088577180.0,1956-11-12,F,mthunzi.maharaj151@outlook.com,27832696557.0,Free State,Welkom,2023-07-26,PREMIUM,VERIFIED,LOW,True
+C0583,Nompumelelo,Maharaj,7612211298181.0,1967-03-12,F,nompumelelomaharaj527@outlook.com,27815089486.0,Mpumalanga,Nelspruit,2016-02-05,RETAIL,VERIFIED,MEDIUM,True
+C0584,Lindiwe,Sithole,511104467086.0,1968-08-01,M,lindiwesithole133@icloud.com,27685480410.0,Northern Cape,Kimberley,2025-05-16,PREMIUM,EXPIRED,LOW,True
+C0585,Sipho,Mahlangu,7812239983189.0,1987-10-01,F,sipho_mahlangu488@hotmail.com,27811210843.0,Limpopo,Polokwane,2022-09-10,RETAIL,VERIFIED,LOW,True
+C0586,Mthunzi,Molefe,807029360087.0,2000-05-11,F,mthunzi.molefe766@gmail.com,27797194004.0,Northern Cape,Kimberley,2021-10-26,RETAIL,VERIFIED,MEDIUM,True
+C0587,Mbali,Mokoena,2401254651183.0,1983-09-02,M,mbalimokoena972@icloud.com,27632627051.0,Limpopo,Tzaneen,2023-11-16,RETAIL,EXPIRED,LOW,True
+C0588,Tshepo,Chauke,607204569185.0,1959-06-24,F,tshepochauke546@hotmail.com,27734776538.0,Mpumalanga,Witbank,2024-01-23,RETAIL,VERIFIED,MEDIUM,True
+C0589,Lindiwe,Naidoo,1008212822086.0,2002-01-18,F,lindiwe_naidoo194@icloud.com,27841487227.0,Free State,Bloemfontein,2020-01-11,RETAIL,VERIFIED,HIGH,True
+C0590,Vusi,Nkosi,9011036066089.0,1984-12-05,M,vusi_nkosi378@yahoo.com,27673939552.0,Limpopo,Polokwane,2025-08-04,CORPORATE,PENDING,LOW,True
+C0591,Sipho,Molefe,9808082897188.0,1959-12-22,F,sipho.molefe474@yahoo.com,27621115482.0,North West,Mahikeng,2015-09-22,PREMIUM,VERIFIED,LOW,True
+C0592,Lwazi,Zulu,1702239944087.0,1993-02-19,M,lwazi_zulu849@outlook.com,27617096391.0,Mpumalanga,Witbank,2023-12-17,PREMIUM,VERIFIED,MEDIUM,True
+C0593,Naledi,Ndlovu,1802242768186.0,1980-06-27,M,naledi_ndlovu216@yahoo.com,27682629498.0,KwaZulu-Natal,Umhlanga,2022-05-27,PREMIUM,VERIFIED,MEDIUM,True
+C0594,Nokuthula,Chauke,8806267378189.0,1974-09-12,M,nokuthula.chauke535@yahoo.com,27691435209.0,Free State,Welkom,2019-12-16,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0595,Tshepo,Jacobs,2105052106089.0,1976-03-24,F,tshepojacobs234@outlook.com,27604551099.0,Free State,Welkom,2021-10-17,RETAIL,VERIFIED,LOW,True
+C0596,Bheki,Naidoo,2003198209188.0,1983-08-03,F,bhekinaidoo174@icloud.com,27799087498.0,North West,Rustenburg,2018-12-07,RETAIL,VERIFIED,MEDIUM,True
+C0597,Mpho,Ngcobo,9812261959085.0,1994-10-01,F,mphongcobo929@hotmail.com,27609793246.0,Eastern Cape,Port Elizabeth,2020-02-14,PREMIUM,VERIFIED,LOW,True
+C0598,Andile,Du Plessis,1712181301087.0,2000-11-03,M,andile_duplessis817@yahoo.com,27655111878.0,Western Cape,Paarl,2020-02-14,PREMIUM,VERIFIED,LOW,True
+C0599,Nokukhanya,Sithole,203174960083.0,1970-06-02,M,nokukhanyasithole489@hotmail.com,27762648700.0,Western Cape,Stellenbosch,2016-02-23,RETAIL,VERIFIED,LOW,True
+C0600,Zanele,Botha,610164914089.0,1988-07-22,M,zanelebotha200@icloud.com,27828654679.0,Eastern Cape,Port Elizabeth,2015-01-05,RETAIL,VERIFIED,LOW,True
+C0601,Andile,Du Plessis,905288719085.0,1974-09-12,F,andile.duplessis775@icloud.com,27659180242.0,North West,Mahikeng,2015-02-23,RETAIL,EXPIRED,LOW,True
+C0602,Bongani,Chauke,8806218824083.0,1959-10-03,M,bongani_chauke514@yahoo.com,27696368975.0,Mpumalanga,Witbank,2025-08-01,RETAIL,VERIFIED,MEDIUM,True
+C0603,Palesa,Pillay,2503282587085.0,1996-05-02,F,palesa_pillay799@hotmail.com,27684837345.0,KwaZulu-Natal,Pietermaritzburg,2020-11-23,RETAIL,PENDING,LOW,True
+C0604,Andile,Maseko,1310136834086.0,1954-12-18,F,UNKNOWN,27648665337.0,Limpopo,Tzaneen,2021-02-24,RETAIL,VERIFIED,LOW,True
+C0605,Siyabonga,Radebe,2507119143083.0,1995-02-14,F,siyabonga.radebe77@outlook.com,27673691366.0,Limpopo,Polokwane,2022-04-20,PREMIUM,PENDING,LOW,False
+C0606,Nomsa,Chauke,9810130971080.0,1980-09-29,F,UNKNOWN,27692862787.0,Mpumalanga,Witbank,2025-08-01,RETAIL,VERIFIED,LOW,True
+C0607,Vusi,Radebe,1804181441183.0,1979-05-31,F,vusiradebe837@hotmail.com,27691366612.0,KwaZulu-Natal,Pietermaritzburg,2018-02-24,PREMIUM,VERIFIED,MEDIUM,True
+C0608,Khethukuthula,Cele,603117673087.0,1982-06-30,F,khethukuthulacele995@yahoo.com,27685284192.0,Limpopo,Tzaneen,2015-07-09,RETAIL,VERIFIED,LOW,True
+C0609,Lerato,Radebe,1606019268180.0,1995-03-28,F,lerato_radebe290@hotmail.com,27826599438.0,Northern Cape,Kimberley,2016-07-03,PREMIUM,VERIFIED,HIGH,True
+C0610,Anele,Mokoena,1410213127086.0,1974-11-03,F,anelemokoena156@icloud.com,27846543686.0,Northern Cape,Kimberley,2016-08-21,RETAIL,VERIFIED,LOW,True
+C0611,Nonhlanhla,Zwane,10276388080.0,1970-03-17,F,nonhlanhla.zwane266@icloud.com,27676479762.0,Gauteng,Centurion,2025-04-07,PREMIUM,VERIFIED,MEDIUM,False
+C0612,Sandile,Mkhize,7102018739082.0,1998-06-15,F,sandile_mkhize892@gmail.com,27714860502.0,Eastern Cape,Port Elizabeth,2019-09-07,RETAIL,VERIFIED,HIGH,True
+C0613,Ayanda,Chauke,8802276145087.0,1968-09-17,F,ayanda_chauke450@gmail.com,27734332588.0,Limpopo,Polokwane,2019-08-12,PREMIUM,VERIFIED,LOW,False
+C0614,Nosipho,Shabalala,7302169909185.0,1987-03-30,M,nosipho.shabalala819@yahoo.com,27797037423.0,Northern Cape,Kimberley,2025-09-20,RETAIL,VERIFIED,LOW,True
+C0615,Vusi,Naidoo,902144926081.0,1984-12-17,F,vusi_naidoo748@gmail.com,27846423586.0,Western Cape,Paarl,2016-01-07,RETAIL,VERIFIED,LOW,True
+C0616,Palesa,Mkhize,7312224801189.0,1987-03-22,M,palesa.mkhize179@icloud.com,27793539743.0,North West,Rustenburg,2019-01-27,RETAIL,PENDING,MEDIUM,True
+C0617,Ayanda,Ngcobo,810110466085.0,1952-07-22,F,ayandangcobo893@gmail.com,27647839304.0,Mpumalanga,Witbank,2016-01-16,PREMIUM,VERIFIED,MEDIUM,True
+C0618,Mandla,Nkosi,6402167609188.0,1989-07-06,M,mandlankosi1@hotmail.com,27698990039.0,Limpopo,Polokwane,2025-07-13,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0619,Mandla,Botha,9203262336081.0,1958-07-04,F,mandlabotha108@outlook.com,27674795398.0,North West,Rustenburg,2020-08-15,RETAIL,VERIFIED,LOW,False
+C0620,Mbali,Du Plessis,406146140089.0,1953-01-26,F,mbali.duplessis187@gmail.com,27603398377.0,Northern Cape,Upington,2015-10-07,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0621,Thandeka,Botha,2610137407087.0,1973-07-30,F,thandekabotha287@gmail.com,27849631725.0,Limpopo,Polokwane,2022-07-26,RETAIL,PENDING,LOW,True
+C0622,Mthunzi,Chauke,2106258504181.0,1982-10-14,F,mthunzichauke130@gmail.com,27634810526.0,Northern Cape,Upington,2025-04-05,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0623,Nhlanhla,Ngcobo,209066513082.0,1969-11-26,M,nhlanhlangcobo763@yahoo.com,27729817680.0,North West,Mahikeng,2018-05-28,PREMIUM,VERIFIED,LOW,True
+C0624,Anele,Khumalo,311063707088.0,2004-09-11,F,anele_khumalo51@yahoo.com,27735974384.0,Northern Cape,Kimberley,2023-09-29,CORPORATE,EXPIRED,MEDIUM,True
+C0625,Kagiso,Maseko,9511103420080.0,1986-10-26,M,kagiso_maseko843@yahoo.com,27655067855.0,Free State,Bloemfontein,2023-10-11,PREMIUM,VERIFIED,LOW,True
+C0626,Nhlanhla,Zulu,8502249599083.0,1989-10-11,M,nhlanhla_zulu12@outlook.com,27842967833.0,Eastern Cape,East London,2026-09-04,RETAIL,VERIFIED,MEDIUM,True
+C0627,Dumisani,Ngcobo,8105026250181.0,1991-11-09,F,dumisani.ngcobo898@hotmail.com,27785883963.0,Western Cape,George,2020-01-15,PREMIUM,VERIFIED,MEDIUM,False
+C0628,Zinhle,Khumalo,2002284590184.0,1995-07-24,F,zinhlekhumalo857@icloud.com,27686983783.0,North West,Mahikeng,2016-11-11,RETAIL,VERIFIED,LOW,True
+C0629,Mpho,Jacobs,9109209267189.0,1996-07-23,F,mphojacobs111@gmail.com,27822653843.0,Mpumalanga,Witbank,2017-02-16,RETAIL,VERIFIED,LOW,True
+C0630,Vusi,Radebe,2508287548086.0,1988-09-27,M,vusiradebe186@yahoo.com,27606519070.0,Mpumalanga,Nelspruit,2017-03-20,RETAIL,VERIFIED,LOW,True
+C0631,Themba,Govender,705150783187.0,1973-08-11,M,thembagovender790@yahoo.com,27816400269.0,Limpopo,Tzaneen,2024-01-01,PREMIUM,VERIFIED,LOW,True
+C0632,Zanele,Pillay,902241481185.0,1994-08-10,M,zanele.pillay272@icloud.com,27786881989.0,Limpopo,Polokwane,2022-07-23,PRIVATE_WEALTH,PENDING,MEDIUM,False
+C0633,Khethukuthula,Nkosi,1612219182188.0,1998-04-16,M,khethukuthulankosi713@icloud.com,27624332284.0,Western Cape,Stellenbosch,2017-02-03,RETAIL,VERIFIED,MEDIUM,True
+C0634,Themba,Mkhize,1202284815085.0,1970-03-04,F,themba.mkhize562@gmail.com,27645593405.0,Limpopo,Tzaneen,2015-08-04,RETAIL,VERIFIED,HIGH,True
+C0635,Mpho,Van der Merwe,7501287917186.0,1999-11-29,M,mpho.vandermerwe869@icloud.com,27797704457.0,Eastern Cape,Port Elizabeth,2023-09-07,PREMIUM,VERIFIED,HIGH,True
+C0636,Themba,Maharaj,706185850082.0,1978-11-10,M,thembamaharaj132@hotmail.com,27639513662.0,Limpopo,Tzaneen,2025-09-02,PREMIUM,VERIFIED,MEDIUM,True
+C0637,Nhlanhla,Mahlangu,1801157174189.0,1989-02-17,M,nhlanhla.mahlangu574@yahoo.com,27761965457.0,Northern Cape,Kimberley,2022-10-18,RETAIL,VERIFIED,LOW,True
+C0638,Busisiwe,Jacobs,1507232184183.0,1990-07-24,F,busisiwejacobs691@hotmail.com,27696545427.0,Free State,Bloemfontein,2020-03-20,PREMIUM,PENDING,HIGH,True
+C0639,Anele,Petersen,112255871081.0,1955-09-16,F,anelepetersen200@yahoo.com,27674008839.0,Limpopo,Polokwane,2019-01-24,RETAIL,PENDING,MEDIUM,True
+C0640,Mandla,Naidoo,1503285624081.0,1977-12-02,F,mandlanaidoo441@yahoo.com,27689383269.0,Mpumalanga,Witbank,2017-01-13,RETAIL,VERIFIED,LOW,False
+C0641,Zanele,Pillay,10029127085.0,1958-07-27,M,zanelepillay13@gmail.com,27606483795.0,North West,Rustenburg,2023-08-18,RETAIL,VERIFIED,LOW,True
+C0642,Bongani,Mokoena,509075656082.0,2003-10-21,F,UNKNOWN,27763977821.0,Eastern Cape,Makhanda,2026-05-19,RETAIL,VERIFIED,LOW,True
+C0643,Anele,Zwane,306222955081.0,1994-08-25,M,anele.zwane628@hotmail.com,27718628047.0,Western Cape,Paarl,2023-09-21,PREMIUM,PENDING,MEDIUM,True
+C0644,Nokuthula,Govender,1504266623085.0,1955-04-05,F,nokuthula.govender869@hotmail.com,27792525946.0,KwaZulu-Natal,Pietermaritzburg,2022-03-10,CORPORATE,VERIFIED,MEDIUM,True
+C0645,Anele,Abrahams,1404106984186.0,1983-10-30,M,anele.abrahams504@icloud.com,27636394118.0,Eastern Cape,East London,2025-11-09,PREMIUM,VERIFIED,HIGH,True
+C0646,Lerato,Du Plessis,910249359085.0,1954-04-21,M,lerato_duplessis395@gmail.com,27666901647.0,Gauteng,Pretoria,2016-03-05,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0647,Lindiwe,Du Plessis,308063630181.0,1968-04-07,F,lindiweduplessis656@yahoo.com,27831261602.0,Limpopo,Polokwane,2016-01-06,CORPORATE,VERIFIED,MEDIUM,False
+C0648,Thabo,Zwane,2606066388085.0,1986-01-23,M,thabo.zwane614@yahoo.com,27675331630.0,Eastern Cape,Makhanda,2024-06-25,PREMIUM,VERIFIED,HIGH,True
+C0649,Busisiwe,Maharaj,1205273104184.0,2003-11-04,M,busisiwe.maharaj713@icloud.com,27763162385.0,Gauteng,Centurion,2020-01-01,RETAIL,VERIFIED,LOW,True
+C0650,Bongani,Mokoena,7611236524188.0,1975-09-13,F,bongani_mokoena112@hotmail.com,27637625427.0,Northern Cape,Upington,2019-07-14,CORPORATE,VERIFIED,LOW,True
+C0651,Nomsa,Botha,6207061369083.0,1989-02-10,F,nomsabotha147@icloud.com,27761688736.0,North West,Rustenburg,2026-04-18,PREMIUM,VERIFIED,LOW,True
+C0652,Sandile,Nkosi,803127569080.0,1985-02-08,F,sandile_nkosi518@yahoo.com,27624778826.0,KwaZulu-Natal,Umhlanga,2019-02-16,PREMIUM,VERIFIED,MEDIUM,True
+C0653,Dumisani,Zulu,1703058964180.0,1959-12-29,M,dumisanizulu548@icloud.com,27603850704.0,Eastern Cape,Makhanda,2022-03-20,RETAIL,VERIFIED,LOW,True
+C0654,Lwazi,Nkosi,304250576080.0,1992-09-28,F,lwazinkosi631@outlook.com,27738544230.0,Gauteng,Centurion,2020-04-30,PREMIUM,VERIFIED,LOW,False
+C0655,Precious,Botha,1104054699086.0,1973-01-28,M,preciousbotha22@outlook.com,27746030776.0,KwaZulu-Natal,Ballito,2018-03-25,RETAIL,VERIFIED,MEDIUM,True
+C0656,Thandiwe,Mkhize,1307157410186.0,1991-08-02,F,thandiwe_mkhize682@outlook.com,27733233293.0,Limpopo,Polokwane,2019-08-14,RETAIL,VERIFIED,LOW,False
+C0657,Zinhle,Zwane,904132315181.0,1998-09-13,F,zinhlezwane423@outlook.com,27614345540.0,North West,Mahikeng,2019-11-15,RETAIL,PENDING,MEDIUM,False
+C0658,Nonhlanhla,Mokoena,1210222823189.0,1963-12-26,F,nonhlanhla.mokoena155@hotmail.com,27746309832.0,North West,Rustenburg,2025-07-05,RETAIL,VERIFIED,MEDIUM,True
+C0659,Bheki,Maseko,201010864181.0,1978-02-09,F,bhekimaseko155@yahoo.com,27666160031.0,Gauteng,Johannesburg,2016-06-24,RETAIL,PENDING,LOW,True
+C0660,Thandeka,Pillay,2509062490086.0,1960-08-17,F,thandekapillay566@yahoo.com,27848878038.0,KwaZulu-Natal,Umhlanga,2021-04-22,PREMIUM,PENDING,HIGH,True
+C0661,Palesa,Shabalala,407166215182.0,1951-10-16,F,palesashabalala586@icloud.com,27658505009.0,North West,Rustenburg,2015-06-12,CORPORATE,PENDING,LOW,True
+C0662,Zanele,Zwane,9905226449081.0,1967-09-08,F,zanelezwane812@outlook.com,27626951077.0,Limpopo,Polokwane,2026-02-04,RETAIL,PENDING,LOW,True
+C0663,Themba,Molefe,8112734083.0,1977-07-05,F,themba_molefe346@icloud.com,27615577437.0,Northern Cape,Upington,2025-04-10,PREMIUM,VERIFIED,LOW,True
+C0664,Thabo,Maseko,1507130589186.0,1980-02-11,F,thabo_maseko417@hotmail.com,27713220298.0,Gauteng,Sandton,2022-10-07,PREMIUM,VERIFIED,LOW,True
+C0665,Dumisani,Shabalala,301262105083.0,1956-09-04,M,dumisani.shabalala158@outlook.com,27824975282.0,Western Cape,Paarl,2016-12-16,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0666,Bongani,Mkhize,310040920083.0,1957-04-13,M,bonganimkhize975@gmail.com,27621064443.0,North West,Mahikeng,2024-09-16,PREMIUM,VERIFIED,LOW,True
+C0667,Khethukuthula,Abrahams,612169919087.0,1975-11-05,M,khethukuthula.abrahams520@icloud.com,27602334766.0,Northern Cape,Kimberley,2018-12-11,CORPORATE,VERIFIED,MEDIUM,True
+C0668,Sibusiso,Mahlangu,8004066466189.0,1986-12-27,F,sibusiso_mahlangu257@yahoo.com,27725039461.0,Western Cape,Cape Town,2015-02-27,PREMIUM,EXPIRED,LOW,True
+C0669,Bongani,Dlamini,2301207046087.0,1951-01-29,M,bonganidlamini790@outlook.com,27722105263.0,Western Cape,George,2020-11-19,PREMIUM,VERIFIED,LOW,True
+C0670,Zinhle,Botha,2304089621080.0,1981-08-29,F,zinhle_botha333@icloud.com,27738778317.0,Free State,Welkom,2025-06-01,RETAIL,VERIFIED,MEDIUM,True
+C0671,Sipho,Cele,2003135991086.0,1965-07-02,M,sipho.cele223@hotmail.com,27631274967.0,KwaZulu-Natal,Umhlanga,2023-10-11,RETAIL,VERIFIED,LOW,True
+C0672,Tshepo,Ngcobo,UNKNOWN,1964-05-04,F,tshepo_ngcobo985@gmail.com,27632122497.0,Northern Cape,Upington,2022-04-02,PREMIUM,VERIFIED,LOW,True
+C0673,Mthunzi,Mabaso,911065547189.0,1988-06-27,M,mthunzi.mabaso543@hotmail.com,27696722662.0,Eastern Cape,East London,2023-05-17,PRIVATE_WEALTH,PENDING,LOW,False
+C0674,Bongani,Nkosi,606233824187.0,1975-03-03,F,bongani_nkosi716@hotmail.com,27663132935.0,North West,Mahikeng,2022-03-21,PREMIUM,VERIFIED,HIGH,True
+C0675,Nokuthula,Radebe,UNKNOWN,1978-11-09,M,nokuthula_radebe474@hotmail.com,27835462862.0,Eastern Cape,East London,2016-07-02,RETAIL,VERIFIED,MEDIUM,True
+C0676,Palesa,Govender,6006127906084.0,1978-09-17,F,palesagovender905@outlook.com,27814356421.0,Gauteng,Centurion,2019-03-22,CORPORATE,VERIFIED,LOW,True
+C0677,Sibusiso,Du Plessis,8407230178184.0,1968-04-28,M,sibusiso.duplessis30@outlook.com,27848070308.0,Northern Cape,Upington,2016-10-06,RETAIL,VERIFIED,HIGH,True
+C0678,Lwazi,Pretorius,305154521089.0,1990-09-02,F,lwazipretorius132@yahoo.com,27711284478.0,KwaZulu-Natal,Ballito,2017-10-12,RETAIL,VERIFIED,LOW,True
+C0679,Lwazi,Pretorius,1203110565185.0,2000-09-29,M,lwazi.pretorius741@hotmail.com,27649332850.0,Gauteng,Centurion,2016-06-07,CORPORATE,VERIFIED,LOW,True
+C0680,Nokuthula,Zulu,1306251139186.0,1998-11-27,M,nokuthula_zulu658@hotmail.com,27733600200.0,Limpopo,Tzaneen,2017-01-02,PRIVATE_WEALTH,VERIFIED,LOW,False
+C0681,Themba,Khumalo,1701023694180.0,1953-10-14,M,themba.khumalo978@yahoo.com,27649398403.0,Eastern Cape,Port Elizabeth,2022-03-02,RETAIL,VERIFIED,MEDIUM,True
+C0682,Siyabonga,Botha,104190589083.0,2002-04-13,F,siyabonga_botha719@gmail.com,27627175999.0,Gauteng,Centurion,2026-06-02,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0683,Siyabonga,Sithole,504259955185.0,1967-07-26,F,siyabonga_sithole123@outlook.com,27845787910.0,Northern Cape,Upington,2025-02-16,RETAIL,VERIFIED,MEDIUM,True
+C0684,Thandiwe,Molefe,6612283368089.0,1976-10-15,M,thandiwe_molefe370@hotmail.com,27761912136.0,KwaZulu-Natal,Durban,2020-02-26,PREMIUM,PENDING,LOW,True
+C0685,Nompumelelo,Nkosi,608246366187.0,1985-01-21,M,nompumelelo_nkosi575@icloud.com,27835787252.0,Eastern Cape,Port Elizabeth,2020-07-28,RETAIL,VERIFIED,LOW,True
+C0686,Lerato,Cele,908139307081.0,1954-10-21,F,leratocele196@yahoo.com,27747254897.0,Gauteng,Sandton,2016-09-15,RETAIL,VERIFIED,LOW,True
+C0687,Naledi,Ngcobo,2504040497182.0,1951-04-16,M,naledingcobo241@gmail.com,27765582437.0,KwaZulu-Natal,Umhlanga,2021-01-21,RETAIL,VERIFIED,LOW,True
+C0688,Ayanda,Zulu,9107277630182.0,1951-03-11,M,ayanda_zulu727@gmail.com,27699039158.0,Mpumalanga,Witbank,2019-07-19,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0689,Nokuthula,Mahlangu,110277132183.0,1954-03-30,F,nokuthula.mahlangu613@outlook.com,27728654730.0,North West,Rustenburg,2025-08-06,PREMIUM,VERIFIED,HIGH,True
+C0690,Anele,Mkhize,1807127659184.0,1963-03-31,F,anele_mkhize369@hotmail.com,27742450315.0,Limpopo,Tzaneen,2020-09-05,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0691,Anele,Cele,2003205597089.0,1962-07-08,M,anele.cele844@icloud.com,27742877034.0,KwaZulu-Natal,Durban,2026-03-31,PREMIUM,VERIFIED,LOW,True
+C0692,Nokukhanya,Petersen,2506161915185.0,1999-03-16,F,nokukhanyapetersen840@hotmail.com,27734675408.0,KwaZulu-Natal,Pietermaritzburg,2022-11-16,PREMIUM,VERIFIED,HIGH,True
+C0693,Precious,Mkhize,9202162365084.0,1971-09-12,F,precious.mkhize555@outlook.com,27842620464.0,Eastern Cape,Makhanda,2019-04-14,RETAIL,VERIFIED,LOW,True
+C0694,Bongani,Zulu,1306226602089.0,1976-12-07,F,bongani_zulu214@icloud.com,27698189437.0,Free State,Welkom,2025-09-24,PREMIUM,VERIFIED,MEDIUM,False
+C0695,Mthunzi,Pillay,9007258831086.0,2002-09-03,F,mthunzi.pillay390@icloud.com,27619178027.0,Limpopo,Polokwane,2016-12-12,RETAIL,VERIFIED,LOW,True
+C0696,Mandla,Van der Merwe,9001115075183.0,1986-11-02,M,mandlavandermerwe132@gmail.com,27821473717.0,Mpumalanga,Witbank,2026-05-10,RETAIL,VERIFIED,LOW,True
+C0697,Lwazi,Mabaso,6712178046087.0,1976-04-27,M,lwazi_mabaso616@gmail.com,27718159368.0,Northern Cape,Kimberley,2017-06-17,PREMIUM,EXPIRED,LOW,True
+C0698,Nokuthula,Nkosi,105063660189.0,1994-04-06,M,nokuthulankosi971@icloud.com,27632703520.0,Mpumalanga,Nelspruit,2018-09-09,RETAIL,VERIFIED,HIGH,True
+C0699,Dumisani,Botha,9312128904086.0,1992-06-29,M,dumisani_botha571@outlook.com,27742123042.0,Limpopo,Tzaneen,2016-06-17,RETAIL,PENDING,MEDIUM,True
+C0700,Nosipho,Shabalala,7002193060087.0,1998-12-23,F,nosipho_shabalala490@hotmail.com,27624112344.0,Eastern Cape,Port Elizabeth,2024-04-08,RETAIL,VERIFIED,LOW,True
+C0701,Thandiwe,Nkosi,2174356084.0,1962-04-19,F,thandiwe_nkosi821@yahoo.com,27664165307.0,Limpopo,Polokwane,2025-08-25,RETAIL,VERIFIED,LOW,True
+C0702,Anele,Cele,1603281114188.0,1956-07-06,M,anelecele772@yahoo.com,27747068696.0,Western Cape,Stellenbosch,2020-01-21,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0703,Khethukuthula,Chauke,8307159935082.0,1993-01-02,F,khethukuthula.chauke614@yahoo.com,27795825591.0,Mpumalanga,Nelspruit,2026-02-24,PREMIUM,VERIFIED,LOW,True
+C0704,Zanele,Mahlangu,1205155594188.0,2004-04-21,F,zanele_mahlangu524@outlook.com,27787477579.0,KwaZulu-Natal,Durban,2018-01-29,RETAIL,VERIFIED,LOW,True
+C0705,Bheki,Williams,805208413085.0,1979-01-31,M,bheki.williams357@hotmail.com,27694218650.0,Western Cape,Paarl,2022-07-07,PREMIUM,VERIFIED,LOW,True
+C0706,Sibusiso,Chauke,8312189058183.0,1991-07-06,M,sibusisochauke741@gmail.com,27695144427.0,KwaZulu-Natal,Umhlanga,2019-08-13,PREMIUM,VERIFIED,LOW,True
+C0707,Mthunzi,Govender,810158804182.0,1972-11-07,M,mthunzi.govender990@outlook.com,27737594804.0,Eastern Cape,East London,2015-01-27,RETAIL,VERIFIED,LOW,True
+C0708,Nokukhanya,Jacobs,6307218020087.0,1989-03-22,F,nokukhanya.jacobs144@outlook.com,27653062198.0,Free State,Welkom,2023-02-08,PREMIUM,EXPIRED,LOW,True
+C0709,Mandla,Pretorius,6612226934080.0,2000-10-30,M,mandla.pretorius346@gmail.com,27835650204.0,Northern Cape,Upington,2021-05-17,RETAIL,VERIFIED,MEDIUM,True
+C0710,Busisiwe,Shabalala,401189570183.0,1965-06-01,F,busisiweshabalala632@yahoo.com,27603690994.0,Northern Cape,Upington,2017-01-16,PREMIUM,VERIFIED,HIGH,True
+C0711,Naledi,Ndlovu,8910062843084.0,1959-08-20,M,naledindlovu316@yahoo.com,27747487804.0,Eastern Cape,East London,2025-01-02,RETAIL,VERIFIED,LOW,True
+C0712,Dumisani,Mkhize,7704228053188.0,1980-09-16,F,dumisani_mkhize520@gmail.com,27837507893.0,Mpumalanga,Witbank,2024-12-01,PREMIUM,VERIFIED,MEDIUM,True
+C0713,Lwazi,Mokoena,8207094075183.0,1984-01-16,F,lwazimokoena958@gmail.com,27825094863.0,Mpumalanga,Nelspruit,2016-06-13,RETAIL,VERIFIED,LOW,True
+C0714,Lwazi,Nkosi,1302144176183.0,1974-02-22,F,lwazi_nkosi162@outlook.com,27654676504.0,North West,Mahikeng,2026-08-07,PREMIUM,VERIFIED,MEDIUM,False
+C0715,Zinhle,Dlamini,UNKNOWN,1957-02-10,F,zinhle.dlamini301@icloud.com,27648313083.0,Eastern Cape,Port Elizabeth,2021-03-31,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0716,Bongani,Khumalo,2512064722186.0,1965-01-24,M,bongani.khumalo618@gmail.com,27622130484.0,Western Cape,Cape Town,2017-04-11,RETAIL,VERIFIED,LOW,True
+C0717,Nokukhanya,Chauke,7104260143182.0,1974-06-07,M,nokukhanyachauke917@hotmail.com,27617606962.0,Limpopo,Polokwane,2018-01-10,RETAIL,VERIFIED,MEDIUM,True
+C0718,Zinhle,Jacobs,7112044066089.0,1953-10-17,M,zinhle.jacobs1@icloud.com,27698730483.0,Free State,Welkom,2025-12-27,PREMIUM,VERIFIED,LOW,True
+C0719,Bheki,Van der Merwe,1812276638188.0,1986-07-29,M,bheki_vandermerwe130@hotmail.com,27614471088.0,Northern Cape,Upington,2016-08-24,PREMIUM,VERIFIED,LOW,True
+C0720,Vusi,Naidoo,1008070262086.0,1963-03-16,F,vusinaidoo144@hotmail.com,27846066251.0,Mpumalanga,Witbank,2023-11-21,RETAIL,VERIFIED,LOW,True
+C0721,Mthunzi,Naidoo,608056812083.0,1963-01-21,M,mthunzi_naidoo55@outlook.com,27728802905.0,North West,Mahikeng,2023-09-02,PRIVATE_WEALTH,PENDING,LOW,True
+C0722,Nosipho,Pretorius,1502125430084.0,1995-06-18,M,nosipho.pretorius150@gmail.com,27815523281.0,North West,Rustenburg,2016-05-05,RETAIL,VERIFIED,LOW,True
+C0723,Thandiwe,Pillay,906028470087.0,1993-09-26,F,thandiwe.pillay683@hotmail.com,27819488394.0,North West,Mahikeng,2016-07-05,CORPORATE,VERIFIED,MEDIUM,True
+C0724,Dumisani,Maseko,7202206289186.0,1969-10-04,M,dumisani_maseko13@gmail.com,27644263058.0,Free State,Bloemfontein,2024-05-20,PREMIUM,VERIFIED,MEDIUM,True
+C0725,Nokukhanya,Jacobs,6403280613187.0,1955-12-06,M,nokukhanya.jacobs948@icloud.com,27782916579.0,Free State,Bloemfontein,2016-10-17,PREMIUM,VERIFIED,LOW,True
+C0726,Zinhle,Cele,1712115349089.0,1996-08-27,F,zinhle.cele232@hotmail.com,27608279187.0,North West,Mahikeng,2025-11-03,RETAIL,PENDING,LOW,False
+C0727,Thandiwe,Dlamini,6909083587087.0,1963-10-01,M,thandiwedlamini372@hotmail.com,27747708381.0,Free State,Welkom,2024-05-27,PREMIUM,VERIFIED,LOW,True
+C0728,Bongani,Chauke,2607056786180.0,1979-12-12,F,bongani_chauke242@gmail.com,27789252054.0,Limpopo,Polokwane,2023-11-21,PREMIUM,VERIFIED,MEDIUM,True
+C0729,Tshepo,Pillay,UNKNOWN,1998-06-24,F,tshepo.pillay957@icloud.com,27843548252.0,KwaZulu-Natal,Umhlanga,2016-02-25,RETAIL,VERIFIED,LOW,False
+C0730,Zinhle,Petersen,7906040638080.0,1950-01-07,M,zinhle_petersen844@yahoo.com,27782804196.0,Limpopo,Polokwane,2020-12-29,PREMIUM,VERIFIED,LOW,True
+C0731,Siyabonga,Mkhize,803218435087.0,2004-05-30,M,siyabonga.mkhize403@outlook.com,27713731440.0,Western Cape,George,2025-08-08,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0732,Thandiwe,Maharaj,604152436080.0,1957-02-16,M,thandiwe.maharaj152@hotmail.com,27638531631.0,Eastern Cape,East London,2017-10-30,RETAIL,VERIFIED,MEDIUM,True
+C0733,Mbali,Khumalo,2011229045183.0,1992-06-15,M,mbali.khumalo401@outlook.com,27666789576.0,North West,Mahikeng,2016-06-25,RETAIL,VERIFIED,MEDIUM,True
+C0734,Mthunzi,Van der Merwe,2606246919189.0,1966-07-04,M,mthunzi_vandermerwe426@yahoo.com,27629168729.0,Mpumalanga,Witbank,2022-07-03,RETAIL,PENDING,LOW,True
+C0735,Busisiwe,Shabalala,6201215910189.0,1983-06-20,F,busisiwe.shabalala495@gmail.com,27794384186.0,Eastern Cape,Makhanda,2019-09-26,RETAIL,VERIFIED,MEDIUM,True
+C0736,Busisiwe,Du Plessis,2301159682188.0,1990-12-13,M,busisiwe_duplessis19@outlook.com,27742053583.0,Mpumalanga,Nelspruit,2025-08-23,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0737,Sandile,Khumalo,911280634089.0,1972-10-19,F,sandile.khumalo544@outlook.com,27671680217.0,Limpopo,Polokwane,2019-12-22,CORPORATE,VERIFIED,LOW,True
+C0738,Bongani,Mabaso,7910220838189.0,1969-02-23,F,bongani.mabaso948@gmail.com,27736512781.0,Free State,Welkom,2018-12-22,PREMIUM,VERIFIED,MEDIUM,True
+C0739,Nokuthula,Botha,7603224789186.0,1964-07-09,F,nokuthulabotha168@yahoo.com,27722637528.0,Gauteng,Johannesburg,2021-06-23,RETAIL,VERIFIED,LOW,True
+C0740,Palesa,Cele,205061857185.0,1960-11-23,F,palesa.cele493@hotmail.com,27835669108.0,Western Cape,Cape Town,2016-11-13,RETAIL,VERIFIED,LOW,True
+C0741,Anele,Sithole,2502032658085.0,1964-05-21,M,anelesithole360@icloud.com,27606707286.0,Gauteng,Midrand,2023-09-24,PREMIUM,VERIFIED,MEDIUM,True
+C0742,Thandiwe,Molefe,1510241096087.0,2000-01-05,F,thandiwe_molefe658@icloud.com,27724340563.0,KwaZulu-Natal,Pietermaritzburg,2015-12-10,RETAIL,VERIFIED,LOW,True
+C0743,Zinhle,Abrahams,6287593082.0,1958-08-11,M,zinhle.abrahams485@hotmail.com,27786716053.0,Limpopo,Tzaneen,2017-09-08,PREMIUM,VERIFIED,MEDIUM,True
+C0744,Nompumelelo,Pretorius,6601102243186.0,1963-09-24,F,nompumelelo_pretorius77@outlook.com,27797103303.0,Mpumalanga,Witbank,2016-09-07,RETAIL,VERIFIED,LOW,True
+C0745,Siyabonga,Pillay,1610201640181.0,1958-07-16,F,siyabonga_pillay910@outlook.com,27634063837.0,KwaZulu-Natal,Durban,2019-10-06,PREMIUM,VERIFIED,LOW,True
+C0746,Nokukhanya,Chauke,1710288946188.0,1976-09-10,M,nokukhanya.chauke320@icloud.com,27742559735.0,Northern Cape,Kimberley,2022-06-23,RETAIL,VERIFIED,LOW,False
+C0747,Mbali,Nkosi,8307181751182.0,2003-01-04,M,mbali_nkosi173@gmail.com,UNKNOWN,Western Cape,George,2015-05-18,RETAIL,VERIFIED,LOW,True
+C0748,Nosipho,Khumalo,810263072188.0,1971-05-06,M,nosipho.khumalo628@icloud.com,27734229140.0,Mpumalanga,Nelspruit,2021-07-25,RETAIL,VERIFIED,LOW,False
+C0749,Siyabonga,Sithole,312144177180.0,1960-04-13,F,siyabonga.sithole765@hotmail.com,27683150688.0,Eastern Cape,Makhanda,2019-02-19,PRIVATE_WEALTH,VERIFIED,HIGH,True
+C0750,Nomsa,Khumalo,6411132178084.0,1960-02-08,M,nomsakhumalo114@yahoo.com,27607934960.0,Eastern Cape,Makhanda,2017-05-26,RETAIL,VERIFIED,LOW,True
+C0751,Naledi,Cele,1211174506183.0,1963-02-03,M,naledi_cele193@icloud.com,27679219381.0,Limpopo,Tzaneen,2025-12-19,CORPORATE,VERIFIED,LOW,True
+C0752,Tshepo,Dlamini,607044705084.0,1975-01-23,M,tshepo.dlamini485@icloud.com,27792095468.0,Gauteng,Centurion,2025-03-11,RETAIL,VERIFIED,LOW,True
+C0753,Busisiwe,Radebe,9004152187083.0,1993-08-05,F,busisiweradebe522@yahoo.com,27843427531.0,North West,Mahikeng,2017-06-18,RETAIL,VERIFIED,LOW,True
+C0754,Bheki,Mabaso,9602084633183.0,1999-11-17,M,bhekimabaso4@icloud.com,27641328330.0,Free State,Welkom,2022-05-05,PREMIUM,VERIFIED,LOW,True
+C0755,Thandeka,Molefe,UNKNOWN,2003-12-21,F,thandeka_molefe484@gmail.com,27834292843.0,KwaZulu-Natal,Durban,2020-06-29,RETAIL,PENDING,LOW,True
+C0756,Anele,Pillay,1701231249089.0,1962-04-17,M,anele.pillay210@icloud.com,27767918250.0,North West,Rustenburg,2016-08-17,RETAIL,EXPIRED,LOW,True
+C0757,Mpho,Maseko,105019625181.0,1975-02-27,F,mpho.maseko349@yahoo.com,27672992782.0,Eastern Cape,Port Elizabeth,2017-02-05,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0758,Nokuthula,Dlamini,2112240104183.0,1986-12-12,F,nokuthula.dlamini516@gmail.com,27824847505.0,North West,Mahikeng,2021-03-24,RETAIL,VERIFIED,HIGH,True
+C0759,Nokukhanya,Mahlangu,2010014509082.0,1964-01-31,M,nokukhanyamahlangu184@gmail.com,27664507628.0,KwaZulu-Natal,Durban,2019-06-08,RETAIL,VERIFIED,MEDIUM,True
+C0760,Kagiso,Dlamini,2405277074081.0,1964-04-09,F,kagiso.dlamini176@icloud.com,27721589375.0,Western Cape,Stellenbosch,2018-12-05,PREMIUM,PENDING,LOW,True
+C0761,Ayanda,Zulu,7412272722188.0,1999-10-17,F,ayanda.zulu849@icloud.com,27839939702.0,KwaZulu-Natal,Ballito,2019-11-02,CORPORATE,VERIFIED,MEDIUM,True
+C0762,Busisiwe,Pillay,2501076648186.0,1998-01-14,F,busisiwepillay119@gmail.com,27641902483.0,Free State,Bloemfontein,2020-02-26,PREMIUM,VERIFIED,MEDIUM,True
+C0763,Thandiwe,Shabalala,1704262071080.0,1995-08-12,M,thandiweshabalala566@yahoo.com,UNKNOWN,KwaZulu-Natal,Durban,2017-02-05,RETAIL,VERIFIED,LOW,True
+C0764,Nonhlanhla,Botha,712211464089.0,1989-09-07,M,nonhlanhlabotha650@icloud.com,27812344809.0,Eastern Cape,Port Elizabeth,2022-03-21,RETAIL,VERIFIED,HIGH,True
+C0765,Nomsa,Chauke,2201280497085.0,1964-10-18,M,nomsachauke195@gmail.com,27782648539.0,Gauteng,Johannesburg,2024-11-05,PREMIUM,VERIFIED,LOW,True
+C0766,Sipho,Maseko,2102268257184.0,1973-05-26,M,siphomaseko833@gmail.com,27648999013.0,KwaZulu-Natal,Umhlanga,2021-06-10,RETAIL,PENDING,LOW,True
+C0767,Siyabonga,Du Plessis,109147656080.0,2003-10-04,M,siyabongaduplessis268@gmail.com,27677340038.0,Gauteng,Sandton,2022-09-30,PREMIUM,VERIFIED,MEDIUM,True
+C0768,Palesa,Naidoo,6905173733185.0,1954-05-25,F,palesa.naidoo804@outlook.com,27827296917.0,Mpumalanga,Nelspruit,2015-12-10,PREMIUM,VERIFIED,LOW,True
+C0769,Nokuthula,Maharaj,2501258615082.0,1955-10-16,M,nokuthula.maharaj951@outlook.com,27637571242.0,Northern Cape,Upington,2020-09-02,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0770,Thabo,Sithole,1508088448086.0,1966-11-03,M,thabo_sithole249@icloud.com,UNKNOWN,Free State,Bloemfontein,2018-03-05,PREMIUM,VERIFIED,LOW,True
+C0771,Sandile,Abrahams,6104142138188.0,1988-08-28,M,sandile_abrahams984@gmail.com,27682378554.0,Free State,Welkom,2025-05-12,PRIVATE_WEALTH,VERIFIED,LOW,False
+C0772,Lwazi,Mokoena,103133753185.0,1998-10-04,M,lwazi.mokoena983@outlook.com,27602419467.0,Limpopo,Tzaneen,2025-07-15,RETAIL,VERIFIED,LOW,True
+C0773,Sandile,Radebe,2302123955084.0,1979-09-30,M,sandileradebe852@icloud.com,27616703062.0,Northern Cape,Kimberley,2015-11-04,RETAIL,VERIFIED,HIGH,True
+C0774,Ayanda,Shabalala,2606078621189.0,1978-04-08,M,ayandashabalala228@icloud.com,27642714223.0,Eastern Cape,Port Elizabeth,2017-01-07,RETAIL,VERIFIED,LOW,True
+C0775,Naledi,Pretorius,710033243183.0,1962-02-01,F,naledi.pretorius41@outlook.com,27741583133.0,Gauteng,Midrand,2016-09-21,CORPORATE,PENDING,MEDIUM,True
+C0776,Khethukuthula,Naidoo,1309248592080.0,1966-08-01,M,khethukuthula.naidoo601@gmail.com,27636613463.0,Western Cape,George,2024-04-22,RETAIL,VERIFIED,LOW,False
+C0777,Nokuthula,Mahlangu,2208094647086.0,1950-04-11,M,nokuthula_mahlangu625@icloud.com,27723246910.0,Mpumalanga,Witbank,2016-04-19,RETAIL,VERIFIED,MEDIUM,True
+C0778,Sandile,Ngcobo,8509165618089.0,1962-07-01,F,sandile.ngcobo835@yahoo.com,UNKNOWN,Western Cape,Paarl,2026-05-06,RETAIL,VERIFIED,LOW,True
+C0779,Bongani,Zulu,2305058514180.0,1982-11-29,M,bongani.zulu505@outlook.com,27738191881.0,Free State,Bloemfontein,2024-10-06,CORPORATE,VERIFIED,LOW,True
+C0780,Kagiso,Maharaj,109075919186.0,2004-06-30,M,kagiso_maharaj158@gmail.com,27762219358.0,Gauteng,Johannesburg,2022-03-09,CORPORATE,VERIFIED,HIGH,True
+C0781,Themba,Zwane,8709183004189.0,1959-10-05,F,themba_zwane782@icloud.com,27813392360.0,Limpopo,Tzaneen,2019-09-24,CORPORATE,VERIFIED,LOW,False
+C0782,Naledi,Khumalo,1404114889087.0,1999-05-15,M,naledi.khumalo218@icloud.com,27677279755.0,Free State,Bloemfontein,2017-10-13,RETAIL,VERIFIED,LOW,True
+C0783,Lerato,Du Plessis,910060258184.0,2002-04-18,M,leratoduplessis724@icloud.com,27828058810.0,Limpopo,Polokwane,2023-06-07,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0784,Precious,Zulu,8310139318082.0,1979-08-22,M,precious.zulu791@outlook.com,UNKNOWN,Northern Cape,Upington,2019-05-12,CORPORATE,PENDING,LOW,True
+C0785,Mpho,Ngcobo,1701140376182.0,1985-09-15,M,mpho_ngcobo996@icloud.com,27608415350.0,KwaZulu-Natal,Ballito,2018-11-25,PREMIUM,VERIFIED,HIGH,True
+C0786,Bheki,Williams,1906213997088.0,1951-07-28,F,bheki_williams984@gmail.com,27742976444.0,Eastern Cape,East London,2018-03-13,CORPORATE,VERIFIED,LOW,True
+C0787,Palesa,Naidoo,802269021189.0,1983-12-10,F,palesanaidoo75@icloud.com,27661250535.0,Limpopo,Polokwane,2025-10-22,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0788,Sibusiso,Mabaso,2402093146186.0,1998-07-30,M,sibusisomabaso816@yahoo.com,27699540127.0,Northern Cape,Upington,2021-02-05,PREMIUM,VERIFIED,LOW,False
+C0789,Thandeka,Chauke,9207206400181.0,1954-12-13,M,thandekachauke207@icloud.com,27622362546.0,Eastern Cape,Port Elizabeth,2019-05-03,PRIVATE_WEALTH,VERIFIED,HIGH,True
+C0790,Lerato,Zulu,802109937085.0,1954-11-16,F,lerato.zulu884@icloud.com,27849754480.0,Mpumalanga,Nelspruit,2019-05-24,PRIVATE_WEALTH,PENDING,MEDIUM,True
+C0791,Lerato,Maseko,801167219189.0,1975-04-04,F,lerato.maseko732@yahoo.com,27763344288.0,Limpopo,Polokwane,2024-01-17,PREMIUM,VERIFIED,LOW,True
+C0792,Sipho,Pretorius,2608130781089.0,2003-12-28,M,sipho.pretorius407@outlook.com,27799951249.0,Western Cape,George,2020-11-22,RETAIL,VERIFIED,LOW,True
+C0793,Kagiso,Shabalala,504126575087.0,1998-11-13,M,kagiso.shabalala210@icloud.com,27652705514.0,Limpopo,Tzaneen,2016-10-05,PREMIUM,VERIFIED,LOW,True
+C0794,Nokuthula,Radebe,9109195651181.0,1967-01-30,M,nokuthula.radebe913@icloud.com,UNKNOWN,Northern Cape,Upington,2021-11-20,RETAIL,VERIFIED,HIGH,True
+C0795,Khethukuthula,Dlamini,6202144512180.0,1971-03-21,F,khethukuthuladlamini257@yahoo.com,27637683364.0,KwaZulu-Natal,Ballito,2025-07-20,PREMIUM,PENDING,HIGH,True
+C0796,Mthunzi,Petersen,201272645087.0,2002-11-04,M,mthunzipetersen199@gmail.com,27689714496.0,Northern Cape,Kimberley,2024-06-01,RETAIL,VERIFIED,MEDIUM,True
+C0797,Dumisani,Khumalo,1704048442088.0,1978-07-27,F,dumisani_khumalo235@gmail.com,27828543762.0,Mpumalanga,Nelspruit,2015-07-07,RETAIL,VERIFIED,LOW,True
+C0798,Thandiwe,Petersen,107288134086.0,1996-06-30,M,thandiwe_petersen783@gmail.com,27607310193.0,Western Cape,George,2018-03-22,RETAIL,VERIFIED,LOW,True
+C0799,Khethukuthula,Petersen,2111120243188.0,1990-02-16,M,khethukuthula_petersen584@outlook.com,27642222424.0,KwaZulu-Natal,Durban,2018-11-28,RETAIL,VERIFIED,LOW,True
+C0800,Precious,Chauke,2411093853189.0,2004-08-19,F,precious.chauke976@hotmail.com,27653128593.0,Gauteng,Midrand,2015-11-06,PRIVATE_WEALTH,VERIFIED,HIGH,True
+C0801,Mpho,Petersen,1912234108182.0,1976-09-30,F,mphopetersen567@hotmail.com,27842107585.0,Northern Cape,Upington,2016-11-19,RETAIL,VERIFIED,LOW,True
+C0802,Nomsa,Mahlangu,504186580186.0,1992-11-06,M,nomsamahlangu192@hotmail.com,27608583409.0,North West,Rustenburg,2021-03-01,RETAIL,VERIFIED,MEDIUM,True
+C0803,Precious,Botha,410197151182.0,1961-08-14,F,preciousbotha201@hotmail.com,27781640552.0,Northern Cape,Upington,2022-02-20,PREMIUM,VERIFIED,MEDIUM,True
+C0804,Nokuthula,Govender,2106256392189.0,1979-10-10,F,nokuthula.govender32@hotmail.com,27633817224.0,Gauteng,Sandton,2021-04-09,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0805,Busisiwe,Sithole,1204055783182.0,1972-02-16,M,busisiwesithole590@hotmail.com,27687566356.0,KwaZulu-Natal,Ballito,2019-12-26,PRIVATE_WEALTH,VERIFIED,HIGH,False
+C0806,Mandla,Pillay,8003185535182.0,1980-10-20,F,mandlapillay176@yahoo.com,27734718705.0,Mpumalanga,Nelspruit,2019-12-26,RETAIL,VERIFIED,MEDIUM,True
+C0807,Nosipho,Ndlovu,11168502186.0,2000-02-14,F,nosiphondlovu329@gmail.com,27785820173.0,Northern Cape,Upington,2020-11-13,RETAIL,VERIFIED,MEDIUM,True
+C0808,Nosipho,Radebe,1908060768088.0,1979-12-06,M,nosipho.radebe89@outlook.com,27724526333.0,Western Cape,Cape Town,2023-11-06,RETAIL,VERIFIED,LOW,True
+C0809,Khethukuthula,Molefe,1110076872188.0,1958-09-26,M,khethukuthula_molefe872@icloud.com,27711768265.0,Western Cape,Stellenbosch,2015-05-12,CORPORATE,VERIFIED,MEDIUM,True
+C0810,Mandla,Ngcobo,508138670089.0,1996-12-26,F,mandla.ngcobo620@hotmail.com,27649019741.0,Western Cape,Cape Town,2015-02-25,RETAIL,VERIFIED,MEDIUM,True
+C0811,Nhlanhla,Naidoo,1707140956189.0,1995-06-09,F,nhlanhlanaidoo453@icloud.com,27686010518.0,KwaZulu-Natal,Pietermaritzburg,2018-10-04,RETAIL,VERIFIED,LOW,False
+C0812,Busisiwe,Pretorius,2506264719088.0,1961-07-25,F,busisiwe.pretorius991@hotmail.com,27628182448.0,Limpopo,Tzaneen,2022-06-15,RETAIL,PENDING,LOW,True
+C0813,Palesa,Mabaso,1811081191082.0,1960-05-20,F,palesa.mabaso214@outlook.com,27606435425.0,Free State,Welkom,2022-08-16,RETAIL,VERIFIED,MEDIUM,True
+C0814,Lindiwe,Petersen,1609206276189.0,1994-01-06,M,lindiwepetersen960@icloud.com,27678097975.0,Western Cape,Paarl,2025-01-26,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0815,Vusi,Mkhize,1612232747184.0,1968-10-06,M,vusi.mkhize825@hotmail.com,27652776056.0,Gauteng,Pretoria,2017-12-31,RETAIL,VERIFIED,LOW,True
+C0816,Thabo,Abrahams,6002174009184.0,1993-12-02,M,thaboabrahams567@yahoo.com,27766788258.0,Free State,Bloemfontein,2015-07-18,PREMIUM,VERIFIED,LOW,True
+C0817,Precious,Mokoena,1005245950187.0,1962-03-04,F,preciousmokoena965@yahoo.com,27616459880.0,KwaZulu-Natal,Umhlanga,2018-03-12,PREMIUM,VERIFIED,MEDIUM,True
+C0818,Precious,Naidoo,1201182976181.0,1992-01-21,M,precious_naidoo704@gmail.com,27664327277.0,Northern Cape,Kimberley,2024-12-07,PREMIUM,VERIFIED,HIGH,True
+C0819,Lindiwe,Radebe,6910193507182.0,1959-01-17,F,lindiweradebe875@outlook.com,27822264379.0,Gauteng,Sandton,2021-10-19,RETAIL,VERIFIED,LOW,True
+C0820,Zinhle,Mahlangu,1704119108184.0,1987-06-28,M,zinhlemahlangu661@icloud.com,27769272875.0,Eastern Cape,Makhanda,2019-11-28,RETAIL,VERIFIED,LOW,True
+C0821,Andile,Sithole,2302067320180.0,1966-10-04,M,andile.sithole166@icloud.com,27616555099.0,Free State,Welkom,2020-07-12,PREMIUM,VERIFIED,MEDIUM,False
+C0822,Naledi,Molefe,9509082140080.0,1958-11-04,M,naledi_molefe747@outlook.com,UNKNOWN,North West,Mahikeng,2018-11-20,RETAIL,VERIFIED,MEDIUM,True
+C0823,Precious,Du Plessis,612246098182.0,1971-03-31,F,precious.duplessis207@gmail.com,27605666250.0,Northern Cape,Upington,2021-10-10,RETAIL,VERIFIED,LOW,True
+C0824,Sandile,Pillay,7004289347080.0,1963-05-22,M,sandilepillay357@hotmail.com,27602551474.0,Western Cape,George,2021-10-16,RETAIL,VERIFIED,MEDIUM,True
+C0825,Lerato,Williams,1502079723181.0,2004-08-10,M,lerato_williams50@yahoo.com,27843532214.0,Eastern Cape,Port Elizabeth,2018-05-28,RETAIL,VERIFIED,MEDIUM,False
+C0826,Precious,Maharaj,9812221462081.0,1984-04-28,F,precious.maharaj936@gmail.com,27651702145.0,North West,Rustenburg,2017-09-17,PREMIUM,VERIFIED,LOW,True
+C0827,Bheki,Chauke,9912243507084.0,2001-04-22,M,bheki_chauke346@icloud.com,27669995078.0,North West,Rustenburg,2015-04-20,PREMIUM,VERIFIED,MEDIUM,True
+C0828,Bheki,Ndlovu,6505019148188.0,1962-08-13,F,bhekindlovu681@gmail.com,27713258787.0,KwaZulu-Natal,Umhlanga,2018-05-14,PREMIUM,VERIFIED,LOW,True
+C0829,Sibusiso,Mahlangu,2602260020089.0,2003-06-28,F,sibusisomahlangu598@yahoo.com,27781286698.0,Limpopo,Tzaneen,2017-03-07,RETAIL,VERIFIED,LOW,True
+C0830,Nhlanhla,Pretorius,2403070443181.0,1964-01-05,M,nhlanhla_pretorius953@yahoo.com,27618087699.0,Limpopo,Tzaneen,2017-10-05,RETAIL,VERIFIED,LOW,True
+C0831,Lerato,Mokoena,207149679086.0,1970-06-22,M,lerato_mokoena544@yahoo.com,27842795827.0,Gauteng,Centurion,2022-09-05,RETAIL,EXPIRED,LOW,True
+C0832,Thabo,Khumalo,6701205950187.0,2000-08-21,F,thabo_khumalo915@outlook.com,27692088545.0,Free State,Bloemfontein,2023-04-27,RETAIL,VERIFIED,HIGH,True
+C0833,Nonhlanhla,Radebe,6603274114186.0,1950-03-31,M,nonhlanhlaradebe61@gmail.com,27639626559.0,KwaZulu-Natal,Pietermaritzburg,2017-10-01,RETAIL,VERIFIED,HIGH,True
+C0834,Nokukhanya,Khumalo,2402162652188.0,1953-10-28,M,nokukhanya.khumalo832@hotmail.com,27728512186.0,Western Cape,George,2017-05-29,RETAIL,VERIFIED,MEDIUM,False
+C0835,Lerato,Van der Merwe,1308044038087.0,1970-07-25,F,UNKNOWN,27697058607.0,Western Cape,Stellenbosch,2021-03-07,RETAIL,VERIFIED,LOW,True
+C0836,Sibusiso,Nkosi,1109288652187.0,1988-03-18,F,sibusiso_nkosi509@hotmail.com,27604431979.0,Gauteng,Midrand,2017-09-14,PREMIUM,VERIFIED,HIGH,True
+C0837,Sibusiso,Williams,1405277167186.0,1963-05-12,M,sibusisowilliams66@outlook.com,27795035722.0,Mpumalanga,Nelspruit,2018-02-06,PREMIUM,VERIFIED,LOW,False
+C0838,Thandiwe,Maharaj,1011190408081.0,1954-07-16,F,thandiwe_maharaj683@hotmail.com,27763085800.0,Mpumalanga,Nelspruit,2020-08-28,RETAIL,VERIFIED,LOW,True
+C0839,Nokukhanya,Zulu,2112035188080.0,1972-12-03,M,nokukhanya_zulu663@hotmail.com,27839336696.0,Free State,Bloemfontein,2023-11-10,PREMIUM,VERIFIED,LOW,True
+C0840,Bongani,Molefe,2607139879181.0,1986-11-11,F,bongani.molefe222@gmail.com,27785809273.0,North West,Mahikeng,2016-02-07,RETAIL,VERIFIED,LOW,True
+C0841,Khethukuthula,Maharaj,1611199750189.0,2000-12-31,M,khethukuthula_maharaj827@hotmail.com,27602123999.0,KwaZulu-Natal,Pietermaritzburg,2020-12-03,RETAIL,VERIFIED,HIGH,True
+C0842,Sipho,Molefe,2609282810081.0,1986-11-07,M,siphomolefe682@yahoo.com,27605353544.0,North West,Rustenburg,2017-02-17,PRIVATE_WEALTH,PENDING,LOW,False
+C0843,Zanele,Khumalo,302150367188.0,1952-09-27,M,zanele_khumalo916@hotmail.com,27686102187.0,Limpopo,Tzaneen,2018-02-06,RETAIL,VERIFIED,HIGH,True
+C0844,Bheki,Du Plessis,1606150188080.0,1952-04-21,F,bheki.duplessis429@hotmail.com,27786372033.0,Eastern Cape,Makhanda,2025-08-13,PREMIUM,VERIFIED,LOW,True
+C0845,Sandile,Zulu,6503178186182.0,2003-10-27,F,sandilezulu155@hotmail.com,27767578422.0,Free State,Welkom,2025-09-13,PREMIUM,VERIFIED,LOW,True
+C0846,Naledi,Sithole,8701169041082.0,1993-09-26,F,naledisithole230@hotmail.com,27717331500.0,Western Cape,George,2022-12-10,RETAIL,PENDING,LOW,True
+C0847,Thandiwe,Mokoena,1312214637186.0,1999-01-21,M,thandiwemokoena440@outlook.com,UNKNOWN,Free State,Bloemfontein,2025-02-28,PREMIUM,VERIFIED,LOW,True
+C0848,Andile,Ndlovu,8210253983184.0,1998-09-06,M,andilendlovu991@gmail.com,27824724585.0,Mpumalanga,Nelspruit,2020-12-18,PREMIUM,VERIFIED,LOW,True
+C0849,Nonhlanhla,Mkhize,2409159862086.0,1951-12-24,M,nonhlanhla_mkhize76@gmail.com,27662894922.0,Free State,Welkom,2020-07-26,RETAIL,VERIFIED,LOW,True
+C0850,Ayanda,Mahlangu,9012140006182.0,1972-04-21,M,ayanda_mahlangu570@outlook.com,27792583694.0,Mpumalanga,Nelspruit,2023-12-26,RETAIL,VERIFIED,LOW,True
+C0851,Busisiwe,Chauke,6710047027180.0,1967-05-04,F,busisiwe.chauke807@outlook.com,27827985879.0,Free State,Welkom,2024-01-07,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0852,Bongani,Chauke,1909198955088.0,1998-07-16,M,bongani_chauke854@icloud.com,27813440417.0,Northern Cape,Kimberley,2017-03-04,RETAIL,VERIFIED,LOW,True
+C0853,Mandla,Mabaso,1211134342189.0,1998-04-21,M,mandla_mabaso714@hotmail.com,27838387790.0,Eastern Cape,East London,2021-12-27,CORPORATE,VERIFIED,LOW,True
+C0854,Zanele,Pillay,2511021812089.0,1962-02-03,M,zanelepillay800@gmail.com,27787061877.0,Limpopo,Tzaneen,2020-07-11,PREMIUM,VERIFIED,MEDIUM,True
+C0855,Bongani,Botha,104279764183.0,1987-10-17,F,bongani_botha727@yahoo.com,27843109953.0,Western Cape,George,2017-03-30,PREMIUM,VERIFIED,LOW,True
+C0856,Mthunzi,Nkosi,2010102226188.0,2002-01-25,F,mthunzi.nkosi301@yahoo.com,27737292205.0,Gauteng,Johannesburg,2021-02-22,PREMIUM,VERIFIED,LOW,True
+C0857,Mthunzi,Maharaj,803015091186.0,1982-09-03,F,mthunzi_maharaj551@icloud.com,27608560170.0,Gauteng,Sandton,2021-12-02,PREMIUM,EXPIRED,LOW,True
+C0858,Sipho,Maharaj,1105266626182.0,1966-07-15,F,siphomaharaj297@outlook.com,27612818628.0,KwaZulu-Natal,Pietermaritzburg,2023-11-23,PREMIUM,VERIFIED,LOW,False
+C0859,Thabo,Mahlangu,303054818087.0,1988-05-31,F,thabo_mahlangu411@icloud.com,27646301688.0,Mpumalanga,Nelspruit,2016-07-05,RETAIL,VERIFIED,LOW,True
+C0860,Mandla,Zulu,1611130982088.0,1951-05-07,M,mandlazulu529@icloud.com,27739073202.0,Limpopo,Tzaneen,2026-02-03,CORPORATE,VERIFIED,MEDIUM,True
+C0861,Nhlanhla,Van der Merwe,2207264310086.0,1956-10-30,M,nhlanhla.vandermerwe55@gmail.com,27669871152.0,Gauteng,Sandton,2020-08-20,RETAIL,VERIFIED,LOW,True
+C0862,Nhlanhla,Mahlangu,1111066037188.0,1965-09-07,F,nhlanhla.mahlangu688@yahoo.com,27814901721.0,Mpumalanga,Nelspruit,2026-04-17,RETAIL,VERIFIED,MEDIUM,False
+C0863,Busisiwe,Dlamini,8305217654182.0,1967-08-29,M,busisiwe.dlamini968@gmail.com,27663586439.0,Gauteng,Centurion,2025-01-13,RETAIL,VERIFIED,MEDIUM,True
+C0864,Mthunzi,Petersen,2407253379084.0,1964-12-04,F,mthunzi.petersen197@yahoo.com,27817367070.0,Western Cape,George,2018-10-22,PRIVATE_WEALTH,PENDING,LOW,True
+C0865,Anele,Dlamini,2601095389080.0,1984-09-07,M,aneledlamini559@outlook.com,27793429782.0,Western Cape,George,2020-12-25,PREMIUM,VERIFIED,MEDIUM,True
+C0866,Thabo,Dlamini,1208168276188.0,1956-01-04,F,thabo.dlamini286@outlook.com,27685268011.0,Western Cape,Cape Town,2023-01-23,RETAIL,VERIFIED,MEDIUM,True
+C0867,Anele,Zwane,1904159051080.0,1978-10-03,M,anele.zwane151@hotmail.com,27818658687.0,Limpopo,Polokwane,2026-04-08,PREMIUM,VERIFIED,LOW,True
+C0868,Sandile,Jacobs,2412200998185.0,1993-03-05,M,sandile.jacobs281@icloud.com,27763307375.0,Mpumalanga,Nelspruit,2020-09-10,RETAIL,VERIFIED,LOW,True
+C0869,Anele,Maseko,6804279121089.0,1990-05-01,M,anele.maseko244@hotmail.com,27822731464.0,Mpumalanga,Witbank,2018-05-21,CORPORATE,EXPIRED,MEDIUM,True
+C0870,Thandiwe,Shabalala,1609029471082.0,1963-01-27,M,thandiwe.shabalala16@gmail.com,27654859085.0,KwaZulu-Natal,Pietermaritzburg,2018-12-10,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0871,Nonhlanhla,Naidoo,1611209144186.0,1960-12-01,M,nonhlanhla.naidoo838@hotmail.com,27694176779.0,Western Cape,Cape Town,2023-05-11,RETAIL,VERIFIED,LOW,True
+C0872,Nokukhanya,Ngcobo,210170776184.0,1987-10-13,M,nokukhanya_ngcobo317@yahoo.com,27746308180.0,Limpopo,Polokwane,2017-03-11,RETAIL,VERIFIED,MEDIUM,True
+C0873,Thandiwe,Shabalala,2605119639187.0,1956-09-08,F,thandiweshabalala48@gmail.com,27748262031.0,KwaZulu-Natal,Durban,2023-09-30,RETAIL,VERIFIED,LOW,True
+C0874,Zinhle,Ngcobo,705017323181.0,1985-10-12,F,zinhle_ngcobo43@hotmail.com,27791252403.0,Western Cape,Cape Town,2023-03-28,PREMIUM,VERIFIED,LOW,True
+C0875,Siyabonga,Pretorius,1810206639086.0,2004-06-13,F,siyabongapretorius240@gmail.com,27818272068.0,KwaZulu-Natal,Ballito,2026-08-31,PRIVATE_WEALTH,VERIFIED,LOW,False
+C0876,Mthunzi,Mabaso,9707065947181.0,2001-01-29,F,mthunzi.mabaso710@icloud.com,27834971964.0,Western Cape,Paarl,2017-11-02,RETAIL,VERIFIED,LOW,True
+C0877,Nhlanhla,Van der Merwe,902180095182.0,1956-07-14,F,nhlanhla_vandermerwe523@outlook.com,27712975996.0,Northern Cape,Kimberley,2025-04-30,RETAIL,VERIFIED,LOW,True
+C0878,Mthunzi,Ngcobo,309229034084.0,1958-03-31,F,mthunzi_ngcobo273@yahoo.com,27653729968.0,Mpumalanga,Nelspruit,2018-02-28,PREMIUM,VERIFIED,LOW,True
+C0879,Lerato,Mabaso,6802279069184.0,1983-06-14,F,lerato_mabaso446@gmail.com,27793120959.0,Free State,Welkom,2015-01-24,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0880,Thabo,Mahlangu,8504235606184.0,1954-09-28,F,thabo.mahlangu848@yahoo.com,27645671550.0,Gauteng,Johannesburg,2025-07-17,CORPORATE,VERIFIED,HIGH,True
+C0881,Busisiwe,Nkosi,2009062636187.0,1971-07-26,M,busisiwe_nkosi75@yahoo.com,UNKNOWN,Gauteng,Johannesburg,2015-02-21,RETAIL,VERIFIED,LOW,True
+C0882,Lerato,Zulu,1903287599081.0,1978-04-05,M,lerato.zulu766@icloud.com,27617085554.0,Western Cape,Paarl,2020-02-06,CORPORATE,PENDING,LOW,True
+C0883,Kagiso,Molefe,2507195143080.0,1993-05-30,F,kagisomolefe588@gmail.com,27696489988.0,Gauteng,Johannesburg,2021-07-28,RETAIL,VERIFIED,MEDIUM,True
+C0884,Vusi,Jacobs,1306059751184.0,1992-05-13,M,vusijacobs91@icloud.com,27839634736.0,Northern Cape,Kimberley,2018-03-03,CORPORATE,VERIFIED,LOW,True
+C0885,Ayanda,Zwane,6203129199183.0,1966-06-08,M,ayanda_zwane219@icloud.com,27728345910.0,Western Cape,Cape Town,2020-09-28,PREMIUM,PENDING,LOW,True
+C0886,Palesa,Maharaj,809140637187.0,1967-05-21,M,palesa_maharaj954@outlook.com,27819445312.0,Northern Cape,Kimberley,2019-05-19,PREMIUM,EXPIRED,LOW,True
+C0887,Nompumelelo,Naidoo,108277279180.0,1985-04-20,F,nompumelelonaidoo344@icloud.com,27722343211.0,KwaZulu-Natal,Durban,2023-03-03,CORPORATE,VERIFIED,LOW,True
+C0888,Thabo,Williams,2406040696184.0,1952-06-21,M,thabo.williams974@yahoo.com,27622679685.0,Gauteng,Midrand,2025-05-18,PREMIUM,PENDING,LOW,False
+C0889,Sipho,Mkhize,1411130884082.0,1952-02-19,F,sipho_mkhize942@hotmail.com,27676286954.0,Limpopo,Tzaneen,2021-01-04,PREMIUM,VERIFIED,LOW,True
+C0890,Zanele,Petersen,1010120975082.0,1987-06-22,M,zanele_petersen114@gmail.com,27714600370.0,KwaZulu-Natal,Pietermaritzburg,2019-02-08,CORPORATE,VERIFIED,MEDIUM,True
+C0891,Mbali,Sithole,7801278066087.0,1967-02-28,M,mbalisithole564@icloud.com,27616936879.0,North West,Mahikeng,2023-03-19,PREMIUM,PENDING,MEDIUM,True
+C0892,Lerato,Nkosi,1904100199089.0,1960-08-19,M,lerato_nkosi130@outlook.com,27614598930.0,Mpumalanga,Witbank,2024-08-10,RETAIL,VERIFIED,HIGH,True
+C0893,Bongani,Pretorius,2006202855185.0,1971-11-10,F,bongani_pretorius151@hotmail.com,27617062379.0,Free State,Bloemfontein,2023-09-13,RETAIL,VERIFIED,HIGH,True
+C0894,Sandile,Nkosi,2609021207187.0,1992-11-02,F,sandilenkosi917@gmail.com,27679035984.0,Gauteng,Centurion,2026-03-27,RETAIL,VERIFIED,MEDIUM,False
+C0895,Sibusiso,Jacobs,1104010045187.0,1991-02-18,F,sibusiso_jacobs336@yahoo.com,27604656866.0,Free State,Welkom,2018-08-09,PREMIUM,VERIFIED,LOW,True
+C0896,Lwazi,Pillay,505047526182.0,2002-03-23,M,UNKNOWN,27823507382.0,Free State,Bloemfontein,2019-11-28,PREMIUM,VERIFIED,MEDIUM,True
+C0897,Nomsa,Jacobs,106080092188.0,1972-09-21,M,nomsa.jacobs908@gmail.com,27632482875.0,Gauteng,Centurion,2023-08-12,RETAIL,VERIFIED,LOW,False
+C0898,Siyabonga,Zwane,1809268897185.0,2000-09-28,M,siyabonga.zwane608@gmail.com,27828105112.0,Limpopo,Tzaneen,2021-12-28,RETAIL,VERIFIED,HIGH,True
+C0899,Lindiwe,Mabaso,1109061273187.0,1991-07-28,M,lindiwe.mabaso2@hotmail.com,27762921569.0,Gauteng,Pretoria,2017-01-14,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0900,Thabo,Mokoena,502219961081.0,1981-08-19,M,thabomokoena932@hotmail.com,27781071738.0,Eastern Cape,East London,2023-03-18,PREMIUM,VERIFIED,MEDIUM,True
+C0901,Ayanda,Pretorius,212195127187.0,1965-01-09,M,ayandapretorius530@icloud.com,27611844630.0,Limpopo,Tzaneen,2022-08-14,CORPORATE,VERIFIED,MEDIUM,True
+C0902,Ayanda,Zulu,409197857088.0,1974-10-09,F,ayanda.zulu674@outlook.com,27639622040.0,Northern Cape,Upington,2018-02-05,RETAIL,VERIFIED,LOW,True
+C0903,Nokukhanya,Molefe,2604052547084.0,1957-12-15,F,nokukhanya_molefe286@outlook.com,27844547081.0,Free State,Bloemfontein,2017-12-14,CORPORATE,PENDING,MEDIUM,True
+C0904,Zinhle,Jacobs,6812210213080.0,1968-08-25,M,zinhlejacobs713@outlook.com,27644674504.0,Eastern Cape,Makhanda,2017-12-10,RETAIL,VERIFIED,LOW,False
+C0905,Mandla,Khumalo,6809036847180.0,1986-07-12,F,mandla.khumalo3@icloud.com,27616778649.0,Limpopo,Polokwane,2020-03-05,CORPORATE,VERIFIED,LOW,True
+C0906,Mbali,Ndlovu,6411012652086.0,1956-08-22,F,mbali_ndlovu886@outlook.com,UNKNOWN,Northern Cape,Kimberley,2018-07-27,PREMIUM,EXPIRED,LOW,False
+C0907,Sipho,Sithole,802206342182.0,1963-07-14,M,sipho.sithole430@yahoo.com,27781234748.0,Eastern Cape,Makhanda,2026-03-28,RETAIL,VERIFIED,MEDIUM,False
+C0908,Vusi,Radebe,107086455081.0,2001-03-02,F,vusi_radebe62@outlook.com,27695814049.0,Mpumalanga,Witbank,2020-09-17,RETAIL,VERIFIED,HIGH,True
+C0909,Sibusiso,Petersen,1807120139189.0,1983-10-26,M,sibusiso.petersen133@icloud.com,27657464938.0,Free State,Bloemfontein,2018-01-08,RETAIL,VERIFIED,LOW,False
+C0910,Themba,Molefe,2306219089184.0,1963-07-29,M,thembamolefe652@hotmail.com,27619955693.0,Mpumalanga,Nelspruit,2026-01-21,CORPORATE,VERIFIED,MEDIUM,True
+C0911,Vusi,Mkhize,2612039843184.0,1969-10-16,M,vusi_mkhize825@hotmail.com,27673247776.0,Eastern Cape,Makhanda,2021-04-26,CORPORATE,EXPIRED,LOW,True
+C0912,Lerato,Govender,7604270569081.0,1957-01-22,F,lerato_govender416@hotmail.com,27607272364.0,Northern Cape,Kimberley,2020-12-27,RETAIL,VERIFIED,MEDIUM,False
+C0913,Sandile,Petersen,1407194395183.0,1982-05-05,M,sandile_petersen578@icloud.com,27785544184.0,Free State,Welkom,2023-10-25,RETAIL,VERIFIED,MEDIUM,True
+C0914,Bongani,Maharaj,7106106061088.0,1950-09-17,F,bongani_maharaj521@hotmail.com,27626732615.0,Eastern Cape,East London,2019-02-27,PREMIUM,VERIFIED,LOW,False
+C0915,Sandile,Naidoo,502283924087.0,1974-10-11,M,sandile_naidoo796@yahoo.com,27822990842.0,Mpumalanga,Witbank,2020-12-16,RETAIL,VERIFIED,MEDIUM,True
+C0916,Themba,Abrahams,7007271906185.0,1977-09-19,M,themba_abrahams581@gmail.com,27744691167.0,Northern Cape,Kimberley,2025-04-09,RETAIL,EXPIRED,MEDIUM,True
+C0917,Anele,Abrahams,2606062327081.0,1983-01-18,F,aneleabrahams288@gmail.com,27713624265.0,Western Cape,George,2019-09-10,RETAIL,EXPIRED,LOW,True
+C0918,Nonhlanhla,Zwane,9101048146082.0,1952-04-09,F,nonhlanhlazwane841@outlook.com,27644734010.0,Northern Cape,Upington,2024-12-22,RETAIL,VERIFIED,LOW,True
+C0919,Vusi,Molefe,7701210764182.0,1989-05-31,M,vusi_molefe334@gmail.com,27849709790.0,Eastern Cape,East London,2016-01-09,RETAIL,PENDING,LOW,True
+C0920,Kagiso,Zulu,2104046970089.0,1977-01-06,M,kagisozulu811@hotmail.com,27634651002.0,Free State,Bloemfontein,2023-12-05,PREMIUM,VERIFIED,LOW,False
+C0921,Nomsa,Molefe,1106232525182.0,1952-05-27,M,nomsamolefe647@hotmail.com,27785129397.0,Western Cape,Stellenbosch,2022-09-18,RETAIL,VERIFIED,MEDIUM,True
+C0922,Ayanda,Shabalala,8804233114080.0,1975-10-12,F,ayandashabalala711@icloud.com,27676939785.0,Eastern Cape,Port Elizabeth,2020-01-22,RETAIL,VERIFIED,LOW,True
+C0923,Nomsa,Botha,1708028379086.0,2004-06-20,F,nomsabotha827@gmail.com,27654353820.0,Mpumalanga,Nelspruit,2023-07-20,RETAIL,VERIFIED,LOW,True
+C0924,Nhlanhla,Abrahams,1711182996087.0,1989-01-01,F,nhlanhla_abrahams799@hotmail.com,27739027501.0,Northern Cape,Kimberley,2019-06-29,RETAIL,VERIFIED,LOW,True
+C0925,Ayanda,Mahlangu,UNKNOWN,1963-10-25,F,ayandamahlangu879@hotmail.com,27823588439.0,KwaZulu-Natal,Pietermaritzburg,2019-02-17,RETAIL,EXPIRED,LOW,True
+C0926,Andile,Molefe,711267844081.0,1960-04-17,M,andile_molefe701@outlook.com,27785626815.0,Limpopo,Polokwane,2017-05-06,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0927,Nokukhanya,Ngcobo,6404256313086.0,1955-02-22,F,nokukhanya.ngcobo585@icloud.com,27787129975.0,Western Cape,Paarl,2023-08-30,RETAIL,VERIFIED,MEDIUM,True
+C0928,Khethukuthula,Sithole,2102121416184.0,1956-06-17,M,khethukuthulasithole351@hotmail.com,27718185097.0,Western Cape,Stellenbosch,2021-02-03,RETAIL,PENDING,LOW,True
+C0929,Mbali,Molefe,1103027817082.0,1951-08-19,F,mbali_molefe163@yahoo.com,27602193206.0,Limpopo,Tzaneen,2026-02-16,RETAIL,VERIFIED,LOW,True
+C0930,Sibusiso,Jacobs,1907158715186.0,1953-04-05,F,sibusiso.jacobs169@yahoo.com,27749230054.0,Eastern Cape,Makhanda,2025-11-07,RETAIL,VERIFIED,HIGH,True
+C0931,Dumisani,Abrahams,1012198690188.0,1987-09-18,F,dumisaniabrahams959@yahoo.com,27666180257.0,Mpumalanga,Nelspruit,2019-07-22,RETAIL,VERIFIED,MEDIUM,True
+C0932,Sibusiso,Nkosi,6703022597089.0,1956-03-19,F,sibusiso_nkosi498@gmail.com,27735568225.0,Northern Cape,Upington,2021-05-05,PREMIUM,VERIFIED,HIGH,True
+C0933,Lerato,Nkosi,1407105065187.0,1985-12-20,F,lerato_nkosi608@hotmail.com,27766192707.0,KwaZulu-Natal,Ballito,2016-12-30,RETAIL,VERIFIED,MEDIUM,True
+C0934,Nomsa,Sithole,7506113614183.0,1953-05-18,F,nomsasithole437@outlook.com,UNKNOWN,Limpopo,Polokwane,2025-06-01,RETAIL,VERIFIED,MEDIUM,True
+C0935,Kagiso,Jacobs,112129724180.0,1966-01-30,F,kagiso.jacobs166@outlook.com,27793702847.0,Mpumalanga,Nelspruit,2025-05-18,RETAIL,VERIFIED,LOW,False
+C0936,Khethukuthula,Williams,1105147120084.0,1979-08-23,F,khethukuthulawilliams227@outlook.com,27695318419.0,Free State,Welkom,2016-08-20,PREMIUM,VERIFIED,LOW,True
+C0937,Mbali,Khumalo,805197387183.0,2001-07-30,F,mbali_khumalo18@icloud.com,27793874563.0,Eastern Cape,Makhanda,2018-04-11,RETAIL,VERIFIED,LOW,True
+C0938,Thandeka,Maseko,1711258558181.0,1972-05-10,M,thandeka.maseko916@gmail.com,27828474972.0,Eastern Cape,Makhanda,2017-11-23,RETAIL,VERIFIED,MEDIUM,True
+C0939,Thandeka,Pillay,8606117743082.0,1953-05-06,M,thandeka.pillay310@gmail.com,27688261804.0,Free State,Welkom,2021-10-29,RETAIL,VERIFIED,MEDIUM,True
+C0940,Lerato,Radebe,UNKNOWN,1979-11-27,F,leratoradebe724@outlook.com,27837570063.0,Gauteng,Pretoria,2019-04-09,RETAIL,VERIFIED,MEDIUM,True
+C0941,Thabo,Pretorius,1904034277188.0,1976-10-07,M,thabopretorius336@outlook.com,27737507652.0,Mpumalanga,Nelspruit,2019-12-18,RETAIL,VERIFIED,LOW,True
+C0942,Ayanda,Ngcobo,511242223083.0,1967-06-27,F,ayanda_ngcobo188@icloud.com,27687821238.0,KwaZulu-Natal,Pietermaritzburg,2019-08-31,PREMIUM,VERIFIED,LOW,True
+C0943,Mbali,Maharaj,1701029046182.0,2001-01-20,F,mbalimaharaj983@icloud.com,27613566756.0,Northern Cape,Upington,2017-01-04,PREMIUM,EXPIRED,LOW,True
+C0944,Precious,Sithole,2606022542088.0,1982-11-22,M,precious.sithole835@yahoo.com,27815703172.0,Eastern Cape,Port Elizabeth,2024-06-20,RETAIL,VERIFIED,MEDIUM,True
+C0945,Tshepo,Molefe,410263830082.0,1951-06-17,M,tshepo_molefe588@outlook.com,27634615930.0,Eastern Cape,Port Elizabeth,2019-08-02,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0946,Precious,Van der Merwe,1308120175186.0,1962-09-27,F,preciousvandermerwe356@hotmail.com,27715179598.0,Western Cape,Cape Town,2016-04-09,RETAIL,VERIFIED,LOW,True
+C0947,Lindiwe,Shabalala,2405277989083.0,1952-08-09,M,lindiweshabalala940@outlook.com,27641782937.0,Eastern Cape,Makhanda,2017-11-06,PREMIUM,VERIFIED,HIGH,True
+C0948,Sipho,Zulu,2103100853180.0,1989-06-01,F,siphozulu905@outlook.com,27818760635.0,North West,Rustenburg,2017-04-12,PRIVATE_WEALTH,VERIFIED,MEDIUM,True
+C0949,Themba,Maharaj,107128873088.0,1989-07-16,M,thembamaharaj152@icloud.com,27719485735.0,Western Cape,Stellenbosch,2016-06-09,RETAIL,VERIFIED,LOW,False
+C0950,Andile,Naidoo,1612242415087.0,1972-05-07,M,andilenaidoo788@icloud.com,27624125710.0,Mpumalanga,Witbank,2017-03-27,RETAIL,VERIFIED,LOW,True
+C0951,Nosipho,Dlamini,2209140819087.0,1954-06-10,F,nosiphodlamini37@outlook.com,27844783854.0,Eastern Cape,Makhanda,2018-05-22,RETAIL,VERIFIED,MEDIUM,True
+C0952,Nhlanhla,Mokoena,503058064184.0,1972-05-29,M,nhlanhla_mokoena187@hotmail.com,27651360106.0,Limpopo,Polokwane,2023-02-02,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0953,Khethukuthula,Petersen,604240024083.0,1976-01-04,F,khethukuthula_petersen899@outlook.com,27606112575.0,Free State,Welkom,2026-04-07,PRIVATE_WEALTH,VERIFIED,LOW,False
+C0954,Thabo,Sithole,6206185181.0,2004-11-29,F,thabosithole459@yahoo.com,27785318097.0,North West,Rustenburg,2019-01-28,RETAIL,VERIFIED,LOW,False
+C0955,Khethukuthula,Maharaj,9108112793085.0,2000-11-21,M,khethukuthula_maharaj83@gmail.com,27736860108.0,Eastern Cape,East London,2016-11-16,RETAIL,VERIFIED,LOW,True
+C0956,Tshepo,Mkhize,8604022484185.0,2002-03-05,F,tshepo_mkhize251@yahoo.com,27763586532.0,Free State,Bloemfontein,2024-03-01,RETAIL,VERIFIED,LOW,True
+C0957,Lindiwe,Dlamini,7610170443181.0,1967-06-15,M,lindiwe.dlamini671@gmail.com,27811678596.0,Mpumalanga,Witbank,2015-12-24,RETAIL,VERIFIED,MEDIUM,True
+C0958,Tshepo,Zulu,303261249184.0,1995-11-17,M,tshepozulu158@outlook.com,27747998722.0,Western Cape,Stellenbosch,2026-03-15,CORPORATE,VERIFIED,LOW,True
+C0959,Naledi,Du Plessis,107105006080.0,1953-10-27,F,nalediduplessis951@yahoo.com,27799352168.0,Limpopo,Tzaneen,2024-12-01,PREMIUM,VERIFIED,MEDIUM,True
+C0960,Lwazi,Abrahams,1212101945182.0,1969-07-13,F,lwazi.abrahams626@yahoo.com,27648316857.0,Mpumalanga,Witbank,2018-04-01,RETAIL,VERIFIED,LOW,True
+C0961,Nomsa,Ngcobo,2502107956081.0,1992-04-05,F,nomsa_ngcobo603@yahoo.com,27835658782.0,KwaZulu-Natal,Umhlanga,2017-03-01,PREMIUM,VERIFIED,LOW,True
+C0962,Sipho,Dlamini,12232754080.0,1950-06-26,F,siphodlamini166@yahoo.com,27816648226.0,Eastern Cape,East London,2019-05-04,PREMIUM,VERIFIED,LOW,True
+C0963,Nomsa,Pillay,9304180031188.0,1964-07-09,F,nomsa.pillay676@hotmail.com,27822047699.0,KwaZulu-Natal,Umhlanga,2016-05-03,RETAIL,VERIFIED,LOW,True
+C0964,Nonhlanhla,Shabalala,9504288218183.0,1969-03-30,F,UNKNOWN,27796640877.0,Eastern Cape,Port Elizabeth,2017-07-23,PRIVATE_WEALTH,EXPIRED,HIGH,True
+C0965,Thandiwe,Mokoena,8709101780081.0,1967-01-13,M,thandiwe.mokoena206@hotmail.com,27673556085.0,Mpumalanga,Witbank,2017-03-23,PREMIUM,VERIFIED,MEDIUM,True
+C0966,Lindiwe,Van der Merwe,2412230324187.0,1994-03-25,F,lindiwevandermerwe45@gmail.com,27747211496.0,Western Cape,George,2018-09-30,RETAIL,PENDING,LOW,True
+C0967,Busisiwe,Khumalo,1407047547085.0,2003-03-29,F,busisiwekhumalo659@hotmail.com,27676014853.0,Western Cape,Stellenbosch,2022-11-06,PREMIUM,VERIFIED,MEDIUM,False
+C0968,Palesa,Mahlangu,2607186299089.0,1981-10-01,M,palesa_mahlangu459@yahoo.com,27666168186.0,Mpumalanga,Witbank,2026-05-18,PREMIUM,PENDING,LOW,True
+C0969,Busisiwe,Petersen,2305059491087.0,1974-01-20,F,busisiwepetersen422@yahoo.com,27746108877.0,Mpumalanga,Nelspruit,2016-05-30,PREMIUM,VERIFIED,LOW,True
+C0970,Thabo,Pretorius,1505185766186.0,1974-09-29,M,thabo.pretorius822@hotmail.com,27839456863.0,North West,Mahikeng,2021-10-12,RETAIL,VERIFIED,LOW,True
+C0971,Andile,Molefe,910180458184.0,1978-05-09,M,andile.molefe679@hotmail.com,27849636401.0,Mpumalanga,Nelspruit,2023-11-06,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0972,Nomsa,Mokoena,107134749080.0,1998-11-02,M,nomsamokoena854@outlook.com,27687015793.0,Mpumalanga,Nelspruit,2026-08-31,RETAIL,VERIFIED,LOW,True
+C0973,Nokukhanya,Molefe,2109183882184.0,1959-07-05,F,nokukhanya.molefe15@icloud.com,27648500727.0,Gauteng,Sandton,2023-04-24,CORPORATE,VERIFIED,LOW,True
+C0974,Lwazi,Chauke,2410123330085.0,1984-10-03,F,lwazichauke268@gmail.com,27824214210.0,Mpumalanga,Nelspruit,2024-10-30,CORPORATE,VERIFIED,MEDIUM,True
+C0975,Dumisani,Jacobs,2301211938182.0,1987-03-08,M,dumisani.jacobs647@gmail.com,27668176064.0,Gauteng,Midrand,2023-05-09,PRIVATE_WEALTH,VERIFIED,LOW,False
+C0976,Nompumelelo,Sithole,811116913185.0,1964-10-15,F,UNKNOWN,27642960067.0,KwaZulu-Natal,Durban,2022-04-04,CORPORATE,VERIFIED,LOW,True
+C0977,Khethukuthula,Shabalala,7102200129183.0,1969-05-01,F,khethukuthula.shabalala265@icloud.com,UNKNOWN,Mpumalanga,Nelspruit,2025-10-10,CORPORATE,VERIFIED,LOW,True
+C0978,Zinhle,Williams,502283797085.0,1950-07-20,F,UNKNOWN,27716833407.0,Eastern Cape,Makhanda,2019-11-23,RETAIL,VERIFIED,MEDIUM,True
+C0979,Thabo,Maseko,7102281113183.0,1962-11-05,F,thabo.maseko436@icloud.com,27689993790.0,Eastern Cape,East London,2020-07-11,PREMIUM,VERIFIED,MEDIUM,True
+C0980,Khethukuthula,Mokoena,8203235122086.0,1960-05-17,F,khethukuthula_mokoena630@icloud.com,27628526706.0,KwaZulu-Natal,Umhlanga,2016-06-29,RETAIL,PENDING,LOW,True
+C0981,Zinhle,Ngcobo,905163773183.0,1981-12-29,M,zinhle_ngcobo895@outlook.com,27795962643.0,Western Cape,Paarl,2017-07-07,PRIVATE_WEALTH,VERIFIED,LOW,True
+C0982,Sandile,Van der Merwe,9804025461087.0,1995-10-21,M,sandile.vandermerwe128@yahoo.com,27794653628.0,Eastern Cape,East London,2024-06-13,RETAIL,VERIFIED,MEDIUM,True
+C0983,Bheki,Shabalala,1608178764088.0,1956-02-17,F,bheki_shabalala557@yahoo.com,27784293355.0,KwaZulu-Natal,Ballito,2015-03-20,RETAIL,VERIFIED,LOW,True
+C0984,Khethukuthula,Mokoena,1306273484183.0,1993-04-19,M,khethukuthulamokoena579@gmail.com,27636976722.0,Western Cape,George,2024-07-12,PREMIUM,VERIFIED,LOW,True
+C0985,Zanele,Maseko,510266512084.0,1970-02-20,M,zanele.maseko602@icloud.com,27835310948.0,North West,Mahikeng,2023-06-08,PREMIUM,VERIFIED,HIGH,True
+C0986,Mbali,Jacobs,9410185575183.0,2001-10-21,M,mbali.jacobs853@hotmail.com,27713746863.0,Gauteng,Johannesburg,2017-02-18,PREMIUM,VERIFIED,LOW,True
+C0987,Siyabonga,Mokoena,9209107500187.0,1965-04-25,F,siyabonga_mokoena651@icloud.com,27826847354.0,Free State,Welkom,2026-08-30,RETAIL,VERIFIED,LOW,True
+C0988,Lindiwe,Mkhize,1412189981082.0,1976-11-05,M,lindiwe_mkhize921@hotmail.com,27628753122.0,Western Cape,George,2015-04-28,CORPORATE,VERIFIED,LOW,False
+C0989,Themba,Shabalala,2504148132088.0,1985-02-05,M,themba.shabalala744@gmail.com,27661498030.0,Limpopo,Polokwane,2019-09-16,PREMIUM,VERIFIED,LOW,True
+C0990,Zanele,Jacobs,1509034507189.0,1951-01-08,M,zanelejacobs939@hotmail.com,27823800519.0,Eastern Cape,Makhanda,2017-05-13,RETAIL,VERIFIED,LOW,True
+C0991,Nonhlanhla,Shabalala,8302215129087.0,1951-01-25,F,nonhlanhla.shabalala690@yahoo.com,27731335128.0,Mpumalanga,Nelspruit,2017-09-22,RETAIL,VERIFIED,LOW,True
+C0992,Anele,Mkhize,8006043987180.0,2001-06-29,M,anele_mkhize847@hotmail.com,27812695578.0,North West,Mahikeng,2026-04-07,PREMIUM,VERIFIED,LOW,True
+C0993,Nompumelelo,Molefe,1012268698183.0,1984-01-05,F,nompumelelo_molefe81@yahoo.com,27666849862.0,North West,Rustenburg,2026-06-07,PREMIUM,VERIFIED,LOW,True
+C0994,Lerato,Mahlangu,2407036008187.0,1972-02-06,M,lerato_mahlangu841@outlook.com,27735016612.0,Gauteng,Sandton,2025-12-06,PREMIUM,VERIFIED,MEDIUM,True
+C0995,Lwazi,Ngcobo,1901222195087.0,1993-08-13,M,lwazi.ngcobo876@icloud.com,27658077035.0,Eastern Cape,East London,2023-06-26,RETAIL,VERIFIED,LOW,True
+C0996,Zanele,Naidoo,8602021717185.0,1968-05-14,F,UNKNOWN,27697871859.0,Free State,Welkom,2020-12-15,RETAIL,VERIFIED,LOW,True
+C0997,Nokukhanya,Pretorius,601092338186.0,1968-09-16,F,nokukhanyapretorius894@yahoo.com,27635417392.0,Gauteng,Pretoria,2020-10-24,PREMIUM,VERIFIED,LOW,True
+C0998,Mbali,Pillay,1801148114184.0,2004-06-10,M,mbali.pillay178@hotmail.com,27795667750.0,Eastern Cape,Port Elizabeth,2026-06-02,RETAIL,VERIFIED,LOW,False
+C0999,Naledi,Cele,1403288043087.0,1973-11-08,M,naledicele992@gmail.com,27743010214.0,Eastern Cape,East London,2017-05-15,PREMIUM,VERIFIED,MEDIUM,True
+C1000,Nomsa,Molefe,2409038310183.0,1999-03-14,F,nomsamolefe766@icloud.com,27729589419.0,Free State,Bloemfontein,2019-12-28,PREMIUM,VERIFIED,LOW,True

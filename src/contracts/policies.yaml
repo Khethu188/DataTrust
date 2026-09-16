@@ -1,0 +1,82 @@
+
+# DataTrust — Data Contract: POLICIES
+dataset: policies
+version: "1.0.0"
+owner: data-engineering
+description: "Insurance policy records"
+source: "src/data_generation/generate_data.py"
+refresh_frequency: daily
+
+schema:
+  primary_key: policy_id
+  foreign_keys:
+    - column: customer_id
+      references:
+        dataset: customers
+        column: customer_id
+  columns:
+    policy_id:
+      type: string
+      pattern: "^POL\\d{4}$"
+      nullable: false
+    customer_id:
+      type: string
+      nullable: false
+      pattern: "^C\\d{4}$"
+    policy_type:
+      type: string
+      nullable: false
+      allowed_values: ["LIFE", "FUNERAL", "INVESTMENT", "RETIREMENT", "HEALTH", "SHORT_TERM"]
+    status:
+      type: string
+      nullable: false
+      allowed_values: ["ACTIVE", "LAPSED", "CANCELLED", "MATURED", "PAID_UP"]
+    start_date:
+      type: date
+      nullable: false
+      min_value: "2010-01-01"
+      max_value: "2026-09-15"
+    end_date:
+      type: date
+      nullable: false
+    premium_amount:
+      type: numeric
+      nullable: false
+      min_value: 0.01
+      max_value: 100000
+    cover_amount:
+      type: numeric
+      nullable: false
+      min_value: 1000
+      max_value: 10000000
+    currency:
+      type: string
+      nullable: false
+      allowed_values: ["ZAR"]
+    payment_frequency:
+      type: string
+      nullable: false
+      allowed_values: ["MONTHLY", "QUARTERLY", "ANNUALLY"]
+    beneficiary_count:
+      type: integer
+      nullable: false
+      min_value: 1
+      max_value: 10
+    underwriting_status:
+      type: string
+      nullable: false
+      allowed_values: ["STANDARD", "SUBSTANDARD", "DECLINED", "PREFERRED"]
+
+quality_rules:
+  completeness:
+    min_completeness: 0.98
+    critical_columns: ["policy_id", "customer_id", "premium_amount"]
+  uniqueness:
+    unique_columns: ["policy_id"]
+  volume:
+    min_rows: 100
+    max_rows: 50000
+    max_duplicate_rate: 0.01
+  freshness:
+    max_age_hours: 48
+

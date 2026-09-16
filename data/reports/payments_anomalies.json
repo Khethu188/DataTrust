@@ -1,0 +1,214 @@
+{
+  "dataset": "payments",
+  "health_score": 0,
+  "rows_scanned": 9309,
+  "summary": {
+    "total_anomalies": 10,
+    "critical": 9,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+  },
+  "duration_seconds": 0.053339,
+  "anomalies": [
+    {
+      "anomaly_type": "IQR_OUTLIER",
+      "severity": "HIGH",
+      "column": "amount",
+      "description": "IQR outliers in 'amount': 452 values outside [-3,428.29, 6,152.56]",
+      "affected_rows": 452,
+      "details": {
+        "q1": 563.73,
+        "q3": 2160.54,
+        "iqr": 1596.81,
+        "lower_bound": -3428.29,
+        "upper_bound": 6152.56,
+        "outlier_count": 452,
+        "below_lower": 0,
+        "above_upper": 452
+      },
+      "timestamp": "2026-09-16T12:46:43.890990"
+    },
+    {
+      "anomaly_type": "DUPLICATE_KEY",
+      "severity": "CRITICAL",
+      "column": "policy_id",
+      "description": "Duplicate values in 'policy_id': 4,786 (51.41%)",
+      "affected_rows": 4786,
+      "details": {
+        "column": "policy_id",
+        "duplicate_count": 4786,
+        "duplicate_rate": 0.5141
+      },
+      "timestamp": "2026-09-16T12:46:43.904219"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "payment_id",
+      "description": "Rare categorical values in 'payment_id': 9309 rare categories (9,309 records)",
+      "affected_rows": 9309,
+      "details": {
+        "rare_values": {
+          "PAY000001": 1,
+          "PAY000002": 1,
+          "PAY000003": 1,
+          "PAY000004": 1,
+          "PAY000005": 1,
+          "PAY000006": 1,
+          "PAY000007": 1,
+          "PAY000008": 1,
+          "PAY000009": 1,
+          "PAY000010": 1
+        },
+        "total_categories": 9309,
+        "rare_categories": 9309
+      },
+      "timestamp": "2026-09-16T12:46:43.916094"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "customer_id",
+      "description": "Rare categorical values in 'customer_id': 167 rare categories (1,274 records)",
+      "affected_rows": 1274,
+      "details": {
+        "rare_values": {
+          "C0472": 9,
+          "C0579": 9,
+          "C0962": 9,
+          "C0210": 9,
+          "C0880": 9,
+          "C0326": 9,
+          "C0456": 9,
+          "C0843": 9,
+          "C0305": 9,
+          "C0004": 9
+        },
+        "total_categories": 768,
+        "rare_categories": 167
+      },
+      "timestamp": "2026-09-16T12:46:43.918100"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "account_id",
+      "description": "Rare categorical values in 'account_id': 1271 rare categories (7,415 records)",
+      "affected_rows": 7415,
+      "details": {
+        "rare_values": {
+          "A1460": 9,
+          "A0037": 9,
+          "A1263": 9,
+          "A0157": 9,
+          "A0322": 9,
+          "A0678": 9,
+          "A0183": 9,
+          "A0250": 9,
+          "A1085": 9,
+          "A1417": 9
+        },
+        "total_categories": 1445,
+        "rare_categories": 1271
+      },
+      "timestamp": "2026-09-16T12:46:43.920421"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "policy_id",
+      "description": "Rare categorical values in 'policy_id': 209 rare categories (848 records)",
+      "affected_rows": 848,
+      "details": {
+        "rare_values": {
+          "POL0370": 5,
+          "POL0610": 5,
+          "POL0083": 5,
+          "POL0117": 5,
+          "POL0393": 5,
+          "POL0776": 5,
+          "POL0485": 5,
+          "POL0544": 5,
+          "POL0035": 5,
+          "POL0611": 5
+        },
+        "total_categories": 782,
+        "rare_categories": 209
+      },
+      "timestamp": "2026-09-16T12:46:43.922154"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "payment_date",
+      "description": "Rare categorical values in 'payment_date': 544 rare categories (3,892 records)",
+      "affected_rows": 3892,
+      "details": {
+        "rare_values": {
+          "2024-04-28": 9,
+          "2024-12-18": 9,
+          "2026-04-12": 9,
+          "2024-02-03": 9,
+          "2025-09-08": 9,
+          "2025-12-26": 9,
+          "2025-09-29": 9,
+          "2026-04-11": 9,
+          "2024-10-22": 9,
+          "2025-09-06": 9
+        },
+        "total_categories": 989,
+        "rare_categories": 544
+      },
+      "timestamp": "2026-09-16T12:46:43.925382"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "reference",
+      "description": "Rare categorical values in 'reference': 9309 rare categories (9,309 records)",
+      "affected_rows": 9309,
+      "details": {
+        "rare_values": {
+          "PAYREFCA69061640": 1,
+          "PAYREF39A736434E": 1,
+          "PAYREFECEB36D4A4": 1,
+          "PAYREF596CCC18DB": 1,
+          "PAYREF4943789C5F": 1,
+          "PAYREF948B4AF50A": 1,
+          "PAYREFEC915BA8A7": 1,
+          "PAYREF382E725C19": 1,
+          "PAYREF095E00CEEE": 1,
+          "PAYREF2060871089": 1
+        },
+        "total_categories": 9309,
+        "rare_categories": 9309
+      },
+      "timestamp": "2026-09-16T12:46:43.932983"
+    },
+    {
+      "anomaly_type": "NULL_SPIKE",
+      "severity": "CRITICAL",
+      "column": "policy_id",
+      "description": "High null rate in 'policy_id': 3,741 nulls (40.19%)",
+      "affected_rows": 3741,
+      "details": {
+        "null_count": 3741,
+        "null_rate": 0.4019
+      },
+      "timestamp": "2026-09-16T12:46:43.937120"
+    },
+    {
+      "anomaly_type": "NULL_SPIKE",
+      "severity": "CRITICAL",
+      "column": "failure_reason",
+      "description": "High null rate in 'failure_reason': 8,656 nulls (92.99%)",
+      "affected_rows": 8656,
+      "details": {
+        "null_count": 8656,
+        "null_rate": 0.9299
+      },
+      "timestamp": "2026-09-16T12:46:43.940675"
+    }
+  ]
+}

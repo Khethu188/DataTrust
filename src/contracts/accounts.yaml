@@ -1,0 +1,73 @@
+
+# DataTrust — Data Contract: ACCOUNTS
+dataset: accounts
+version: "1.0.0"
+owner: data-engineering
+description: "Customer bank accounts"
+source: "src/data_generation/generate_data.py"
+refresh_frequency: daily
+
+schema:
+  primary_key: account_id
+  foreign_keys:
+    - column: customer_id
+      references:
+        dataset: customers
+        column: customer_id
+  columns:
+    account_id:
+      type: string
+      pattern: "^A\\d{4}$"
+      nullable: false
+    customer_id:
+      type: string
+      nullable: false
+      pattern: "^C\\d{4}$"
+    account_type:
+      type: string
+      nullable: false
+      allowed_values: ["SAVINGS", "CHEQUE", "FIXED_DEPOSIT", "MONEY_MARKET", "CREDIT"]
+    currency:
+      type: string
+      nullable: false
+      allowed_values: ["ZAR"]
+    balance:
+      type: numeric
+      nullable: false
+      min_value: -200000
+      max_value: 10000000
+    opened_date:
+      type: date
+      nullable: false
+      min_value: "2010-01-01"
+      max_value: "2026-09-15"
+    status:
+      type: string
+      nullable: false
+      allowed_values: ["ACTIVE", "DORMANT", "CLOSED", "FROZEN"]
+    branch_code:
+      type: string
+      nullable: false
+      pattern: "^BR\\d{3}$"
+    interest_rate:
+      type: numeric
+      nullable: false
+      min_value: 0.0
+      max_value: 25.0
+    last_activity_date:
+      type: date
+      nullable: false
+
+quality_rules:
+  completeness:
+    min_completeness: 0.98
+    critical_columns: ["account_id", "customer_id"]
+  uniqueness:
+    unique_columns: ["account_id"]
+  volume:
+    min_rows: 100
+    max_rows: 100000
+    max_duplicate_rate: 0.01
+  freshness:
+    max_age_hours: 48
+

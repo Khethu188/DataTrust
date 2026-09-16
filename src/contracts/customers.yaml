@@ -1,0 +1,99 @@
+
+# DataTrust — Data Contract: CUSTOMERS
+dataset: customers
+version: "1.0.0"
+owner: data-engineering
+description: "Core customer records for the financial institution"
+source: "src/data_generation/generate_data.py"
+refresh_frequency: daily
+
+schema:
+  primary_key: customer_id
+  columns:
+    customer_id:
+      type: string
+      pattern: "^C\\d{4}$"
+      nullable: false
+      description: "Unique customer identifier"
+    first_name:
+      type: string
+      nullable: false
+      min_length: 2
+      max_length: 50
+    last_name:
+      type: string
+      nullable: false
+      min_length: 2
+      max_length: 50
+    id_number:
+      type: string
+      nullable: false
+      pattern: "^\\d{13}$"
+      description: "South African ID number (13 digits)"
+    date_of_birth:
+      type: date
+      nullable: false
+      min_value: "1920-01-01"
+      max_value: "2008-12-31"
+    gender:
+      type: string
+      nullable: false
+      allowed_values: ["M", "F"]
+    email:
+      type: string
+      nullable: false
+      pattern: "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$"
+    phone:
+      type: string
+      nullable: false
+      pattern: "^\\+27\\d{9,10}$"
+    province:
+      type: string
+      nullable: false
+      allowed_values:
+        - "Gauteng"
+        - "Western Cape"
+        - "KwaZulu-Natal"
+        - "Eastern Cape"
+        - "Free State"
+        - "Limpopo"
+        - "Mpumalanga"
+        - "North West"
+        - "Northern Cape"
+    city:
+      type: string
+      nullable: false
+    registration_date:
+      type: date
+      nullable: false
+      min_value: "2010-01-01"
+      max_value: "2026-09-15"
+    customer_segment:
+      type: string
+      nullable: false
+      allowed_values: ["RETAIL", "PREMIUM", "PRIVATE_WEALTH", "CORPORATE"]
+    kyc_status:
+      type: string
+      nullable: false
+      allowed_values: ["VERIFIED", "PENDING", "EXPIRED"]
+    risk_rating:
+      type: string
+      nullable: false
+      allowed_values: ["LOW", "MEDIUM", "HIGH"]
+    is_active:
+      type: boolean
+      nullable: false
+
+quality_rules:
+  completeness:
+    min_completeness: 0.98
+    critical_columns: ["customer_id", "id_number", "email", "phone"]
+  uniqueness:
+    unique_columns: ["customer_id", "id_number", "email"]
+  volume:
+    min_rows: 500
+    max_rows: 50000
+    max_duplicate_rate: 0.01
+  freshness:
+    max_age_hours: 48
+

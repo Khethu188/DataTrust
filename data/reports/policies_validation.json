@@ -1,0 +1,221 @@
+{
+  "dataset": "policies",
+  "overall_verdict": "PASS",
+  "trust_score": 100.0,
+  "summary": {
+    "total_checks": 22,
+    "passed": 22,
+    "warnings": 0,
+    "failed": 0
+  },
+  "duration_seconds": 0.011993,
+  "checks": [
+    {
+      "check_name": "schema_missing_columns",
+      "category": "SCHEMA",
+      "verdict": "PASS",
+      "message": "All expected columns present",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.826847"
+    },
+    {
+      "check_name": "schema_unexpected_columns",
+      "category": "SCHEMA",
+      "verdict": "PASS",
+      "message": "No unexpected columns",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.826853"
+    },
+    {
+      "check_name": "completeness_overall",
+      "category": "COMPLETENESS",
+      "verdict": "PASS",
+      "message": "Overall completeness: 100.0% (threshold: 98%)",
+      "details": {
+        "completeness": 1.0,
+        "threshold": 0.98,
+        "null_cells": 0,
+        "total_cells": 9408
+      },
+      "timestamp": "2026-09-16T12:46:42.828008"
+    },
+    {
+      "check_name": "completeness_policy_id",
+      "category": "COMPLETENESS",
+      "verdict": "PASS",
+      "message": "Column 'policy_id': 0 nulls (100.0% complete)",
+      "details": {
+        "column": "policy_id",
+        "null_count": 0,
+        "completeness": 1.0
+      },
+      "timestamp": "2026-09-16T12:46:42.828218"
+    },
+    {
+      "check_name": "completeness_customer_id",
+      "category": "COMPLETENESS",
+      "verdict": "PASS",
+      "message": "Column 'customer_id': 0 nulls (100.0% complete)",
+      "details": {
+        "column": "customer_id",
+        "null_count": 0,
+        "completeness": 1.0
+      },
+      "timestamp": "2026-09-16T12:46:42.828371"
+    },
+    {
+      "check_name": "completeness_premium_amount",
+      "category": "COMPLETENESS",
+      "verdict": "PASS",
+      "message": "Column 'premium_amount': 0 nulls (100.0% complete)",
+      "details": {
+        "column": "premium_amount",
+        "null_count": 0,
+        "completeness": 1.0
+      },
+      "timestamp": "2026-09-16T12:46:42.828501"
+    },
+    {
+      "check_name": "uniqueness_policy_id",
+      "category": "UNIQUENESS",
+      "verdict": "PASS",
+      "message": "Column 'policy_id': all values unique",
+      "details": {
+        "column": "policy_id",
+        "duplicate_count": 0
+      },
+      "timestamp": "2026-09-16T12:46:42.828912"
+    },
+    {
+      "check_name": "uniqueness_duplicate_rows",
+      "category": "UNIQUENESS",
+      "verdict": "PASS",
+      "message": "Duplicate rows: 0 (0.00%)",
+      "details": {
+        "duplicate_rows": 0,
+        "duplicate_rate": 0.0,
+        "threshold": 0.01
+      },
+      "timestamp": "2026-09-16T12:46:42.830840"
+    },
+    {
+      "check_name": "volume_row_count",
+      "category": "VOLUME",
+      "verdict": "PASS",
+      "message": "Row count 784 within range [100, 50,000]",
+      "details": {
+        "row_count": 784,
+        "min_rows": 100,
+        "max_rows": 50000
+      },
+      "timestamp": "2026-09-16T12:46:42.830859"
+    },
+    {
+      "check_name": "validity_policy_id_pattern",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'policy_id': all values match pattern",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.831676"
+    },
+    {
+      "check_name": "validity_customer_id_pattern",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'customer_id': all values match pattern",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.832343"
+    },
+    {
+      "check_name": "validity_policy_type_allowed",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'policy_type': all values in allowed set",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.832781"
+    },
+    {
+      "check_name": "validity_status_allowed",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'status': all values in allowed set",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.833142"
+    },
+    {
+      "check_name": "validity_start_date_date_range",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'start_date': all dates valid and in range",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.834452"
+    },
+    {
+      "check_name": "validity_premium_amount_range",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'premium_amount': all values within range",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.834944"
+    },
+    {
+      "check_name": "validity_cover_amount_range",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'cover_amount': all values within range",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.835222"
+    },
+    {
+      "check_name": "validity_currency_allowed",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'currency': all values in allowed set",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.835623"
+    },
+    {
+      "check_name": "validity_payment_frequency_allowed",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'payment_frequency': all values in allowed set",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.836211"
+    },
+    {
+      "check_name": "validity_beneficiary_count_range",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'beneficiary_count': all values within range",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.836638"
+    },
+    {
+      "check_name": "validity_underwriting_status_allowed",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'underwriting_status': all values in allowed set",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.837239"
+    },
+    {
+      "check_name": "fk_customer_id_to_customers",
+      "category": "CONSISTENCY",
+      "verdict": "PASS",
+      "message": "FK 'customer_id' \u2192 'customers.customer_id': all references valid",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.838761"
+    },
+    {
+      "check_name": "freshness_age",
+      "category": "FRESHNESS",
+      "verdict": "PASS",
+      "message": "Data age: 0.0 hours (max: 48 hours)",
+      "details": {
+        "age_hours": 0.0,
+        "max_age_hours": 48
+      },
+      "timestamp": "2026-09-16T12:46:42.838803"
+    }
+  ]
+}

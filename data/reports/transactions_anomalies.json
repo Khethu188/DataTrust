@@ -1,0 +1,201 @@
+{
+  "dataset": "transactions",
+  "health_score": 0,
+  "rows_scanned": 45730,
+  "summary": {
+    "total_anomalies": 8,
+    "critical": 8,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "duration_seconds": 0.380064,
+  "anomalies": [
+    {
+      "anomaly_type": "IQR_OUTLIER",
+      "severity": "CRITICAL",
+      "column": "amount",
+      "description": "IQR outliers in 'amount': 5,298 values outside [-9,228.87, 13,995.85]",
+      "affected_rows": 5298,
+      "details": {
+        "q1": 448.09,
+        "q3": 4318.88,
+        "iqr": 3870.79,
+        "lower_bound": -9228.87,
+        "upper_bound": 13995.85,
+        "outlier_count": 5298,
+        "below_lower": 0,
+        "above_upper": 5298
+      },
+      "timestamp": "2026-09-16T12:46:44.196837"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "transaction_id",
+      "description": "Rare categorical values in 'transaction_id': 45730 rare categories (45,730 records)",
+      "affected_rows": 45730,
+      "details": {
+        "rare_values": {
+          "TX000001": 1,
+          "TX000002": 1,
+          "TX000003": 1,
+          "TX000004": 1,
+          "TX000005": 1,
+          "TX000006": 1,
+          "TX000007": 1,
+          "TX000008": 1,
+          "TX000009": 1,
+          "TX000010": 1
+        },
+        "total_categories": 45730,
+        "rare_categories": 45730
+      },
+      "timestamp": "2026-09-16T12:46:44.314342"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "customer_id",
+      "description": "Rare categorical values in 'customer_id': 336 rare categories (10,613 records)",
+      "affected_rows": 10613,
+      "details": {
+        "rare_values": {
+          "C0543": 45,
+          "C0040": 44,
+          "C0597": 44,
+          "C0954": 44,
+          "C0229": 44,
+          "C0861": 44,
+          "C0016": 44,
+          "C0467": 43,
+          "C0316": 43,
+          "C0965": 43
+        },
+        "total_categories": 754,
+        "rare_categories": 336
+      },
+      "timestamp": "2026-09-16T12:46:44.320953"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "account_id",
+      "description": "Rare categorical values in 'account_id': 1438 rare categories (45,253 records)",
+      "affected_rows": 45253,
+      "details": {
+        "rare_values": {
+          "A0411": 45,
+          "A0746": 45,
+          "A0285": 45,
+          "A0347": 45,
+          "A0138": 45,
+          "A0463": 45,
+          "A0628": 45,
+          "A0954": 44,
+          "A1122": 44,
+          "A1214": 44
+        },
+        "total_categories": 1448,
+        "rare_categories": 1438
+      },
+      "timestamp": "2026-09-16T12:46:44.327025"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "transaction_date",
+      "description": "Rare categorical values in 'transaction_date': 482 rare categories (19,491 records)",
+      "affected_rows": 19491,
+      "details": {
+        "rare_values": {
+          "2025-06-11": 45,
+          "2025-01-22": 45,
+          "2025-02-20": 45,
+          "2024-03-02": 45,
+          "2025-02-07": 45,
+          "2026-03-07": 45,
+          "2024-03-24": 45,
+          "2024-05-30": 45,
+          "2026-01-20": 45,
+          "2025-06-30": 45
+        },
+        "total_categories": 990,
+        "rare_categories": 482
+      },
+      "timestamp": "2026-09-16T12:46:44.337868"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "transaction_time",
+      "description": "Rare categorical values in 'transaction_time': 35691 rare categories (45,730 records)",
+      "affected_rows": 45730,
+      "details": {
+        "rare_values": {
+          "03:54:58": 6,
+          "01:55:22": 5,
+          "10:05:21": 5,
+          "10:30:34": 5,
+          "10:19:59": 5,
+          "20:05:03": 5,
+          "03:04:40": 5,
+          "18:27:46": 5,
+          "23:18:48": 5,
+          "14:45:12": 5
+        },
+        "total_categories": 35691,
+        "rare_categories": 35691
+      },
+      "timestamp": "2026-09-16T12:46:44.352329"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "description",
+      "description": "Rare categorical values in 'description': 45572 rare categories (45,730 records)",
+      "affected_rows": 45730,
+      "details": {
+        "rare_values": {
+          "Transfer - Ref 880510": 2,
+          "Debit Order - Ref 323553": 2,
+          "Interest - Ref 454808": 2,
+          "Deposit - Ref 126672": 2,
+          "Withdrawal - Ref 635101": 2,
+          "Transfer - Ref 432177": 2,
+          "Reversal - Ref 783294": 2,
+          "Transfer - Ref 408725": 2,
+          "Payment - Ref 783486": 2,
+          "Payment - Ref 172628": 2
+        },
+        "total_categories": 45572,
+        "rare_categories": 45572
+      },
+      "timestamp": "2026-09-16T12:46:44.475851"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "reference_number",
+      "description": "Rare categorical values in 'reference_number': 45730 rare categories (45,730 records)",
+      "affected_rows": 45730,
+      "details": {
+        "rare_values": {
+          "REF85FC1D6AB57A": 1,
+          "REFBB59E683680B": 1,
+          "REF3E623BBC6C58": 1,
+          "REFFAE5057CEFCE": 1,
+          "REF91E286EDFCA1": 1,
+          "REFD490C52D8F52": 1,
+          "REF55D6DC90AC68": 1,
+          "REF04EF132B168E": 1,
+          "REF511D56AD0A85": 1,
+          "REF078C8035BE09": 1
+        },
+        "total_categories": 45730,
+        "rare_categories": 45730
+      },
+      "timestamp": "2026-09-16T12:46:44.551040"
+    }
+  ]
+}

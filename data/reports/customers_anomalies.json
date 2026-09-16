@@ -1,0 +1,159 @@
+{
+  "dataset": "customers",
+  "health_score": 0,
+  "rows_scanned": 1000,
+  "summary": {
+    "total_anomalies": 6,
+    "critical": 6,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "duration_seconds": 0.0184,
+  "anomalies": [
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "customer_id",
+      "description": "Rare categorical values in 'customer_id': 1000 rare categories (1,000 records)",
+      "affected_rows": 1000,
+      "details": {
+        "rare_values": {
+          "C0001": 1,
+          "C0002": 1,
+          "C0003": 1,
+          "C0004": 1,
+          "C0005": 1,
+          "C0006": 1,
+          "C0007": 1,
+          "C0008": 1,
+          "C0009": 1,
+          "C0010": 1
+        },
+        "total_categories": 1000,
+        "rare_categories": 1000
+      },
+      "timestamp": "2026-09-16T12:46:43.871918"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "id_number",
+      "description": "Rare categorical values in 'id_number': 980 rare categories (980 records)",
+      "affected_rows": 980,
+      "details": {
+        "rare_values": {
+          "6611248935089.0": 1,
+          "512145574182.0": 1,
+          "1906193150080.0": 1,
+          "703156216188.0": 1,
+          "2008054339083.0": 1,
+          "2511149771086.0": 1,
+          "2312098201088.0": 1,
+          "2605080949089.0": 1,
+          "1211216118188.0": 1,
+          "7505227953088.0": 1
+        },
+        "total_categories": 981,
+        "rare_categories": 980
+      },
+      "timestamp": "2026-09-16T12:46:43.874502"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "date_of_birth",
+      "description": "Rare categorical values in 'date_of_birth': 946 rare categories (946 records)",
+      "affected_rows": 946,
+      "details": {
+        "rare_values": {
+          "1987-11-08": 1,
+          "1969-04-26": 1,
+          "1970-06-12": 1,
+          "1969-09-14": 1,
+          "2000-05-12": 1,
+          "1984-03-27": 1,
+          "1959-07-19": 1,
+          "1957-01-24": 1,
+          "1990-07-04": 1,
+          "1961-11-14": 1
+        },
+        "total_categories": 972,
+        "rare_categories": 946
+      },
+      "timestamp": "2026-09-16T12:46:43.875533"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "email",
+      "description": "Rare categorical values in 'email': 980 rare categories (980 records)",
+      "affected_rows": 980,
+      "details": {
+        "rare_values": {
+          "naledi.nkosi224@gmail.com": 1,
+          "dumisani.jacobs390@gmail.com": 1,
+          "lwazi.zulu888@gmail.com": 1,
+          "busisiwe.mahlangu842@gmail.com": 1,
+          "khethukuthula_molefe920@hotmail.com": 1,
+          "lerato_cele995@hotmail.com": 1,
+          "naledingcobo204@hotmail.com": 1,
+          "khethukuthula.botha779@icloud.com": 1,
+          "nonhlanhla.molefe66@yahoo.com": 1,
+          "bongani_zwane827@yahoo.com": 1
+        },
+        "total_categories": 981,
+        "rare_categories": 980
+      },
+      "timestamp": "2026-09-16T12:46:43.877108"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "phone",
+      "description": "Rare categorical values in 'phone': 980 rare categories (980 records)",
+      "affected_rows": 980,
+      "details": {
+        "rare_values": {
+          "27679478454.0": 1,
+          "27637022674.0": 1,
+          "27637377459.0": 1,
+          "27616292423.0": 1,
+          "27827700828.0": 1,
+          "27811192619.0": 1,
+          "27647273233.0": 1,
+          "27813109911.0": 1,
+          "27711352896.0": 1,
+          "27744194548.0": 1
+        },
+        "total_categories": 981,
+        "rare_categories": 980
+      },
+      "timestamp": "2026-09-16T12:46:43.878065"
+    },
+    {
+      "anomaly_type": "RARE_CATEGORY",
+      "severity": "CRITICAL",
+      "column": "registration_date",
+      "description": "Rare categorical values in 'registration_date': 803 rare categories (803 records)",
+      "affected_rows": 803,
+      "details": {
+        "rare_values": {
+          "2015-08-06": 1,
+          "2021-03-27": 1,
+          "2023-12-31": 1,
+          "2023-02-13": 1,
+          "2017-07-27": 1,
+          "2018-08-16": 1,
+          "2017-11-17": 1,
+          "2016-09-09": 1,
+          "2025-04-03": 1,
+          "2015-03-06": 1
+        },
+        "total_categories": 899,
+        "rare_categories": 803
+      },
+      "timestamp": "2026-09-16T12:46:43.880175"
+    }
+  ]
+}

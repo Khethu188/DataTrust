@@ -1,0 +1,258 @@
+{
+  "dataset": "transactions",
+  "overall_verdict": "PASS",
+  "trust_score": 100.0,
+  "summary": {
+    "total_checks": 25,
+    "passed": 25,
+    "warnings": 0,
+    "failed": 0
+  },
+  "duration_seconds": 0.24653,
+  "checks": [
+    {
+      "check_name": "schema_missing_columns",
+      "category": "SCHEMA",
+      "verdict": "PASS",
+      "message": "All expected columns present",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.842672"
+    },
+    {
+      "check_name": "schema_unexpected_columns",
+      "category": "SCHEMA",
+      "verdict": "PASS",
+      "message": "No unexpected columns",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.842681"
+    },
+    {
+      "check_name": "completeness_overall",
+      "category": "COMPLETENESS",
+      "verdict": "PASS",
+      "message": "Overall completeness: 100.0% (threshold: 97%)",
+      "details": {
+        "completeness": 1.0,
+        "threshold": 0.97,
+        "null_cells": 0,
+        "total_cells": 548760
+      },
+      "timestamp": "2026-09-16T12:46:42.862389"
+    },
+    {
+      "check_name": "completeness_transaction_id",
+      "category": "COMPLETENESS",
+      "verdict": "PASS",
+      "message": "Column 'transaction_id': 0 nulls (100.0% complete)",
+      "details": {
+        "column": "transaction_id",
+        "null_count": 0,
+        "completeness": 1.0
+      },
+      "timestamp": "2026-09-16T12:46:42.864262"
+    },
+    {
+      "check_name": "completeness_customer_id",
+      "category": "COMPLETENESS",
+      "verdict": "PASS",
+      "message": "Column 'customer_id': 0 nulls (100.0% complete)",
+      "details": {
+        "column": "customer_id",
+        "null_count": 0,
+        "completeness": 1.0
+      },
+      "timestamp": "2026-09-16T12:46:42.865899"
+    },
+    {
+      "check_name": "completeness_account_id",
+      "category": "COMPLETENESS",
+      "verdict": "PASS",
+      "message": "Column 'account_id': 0 nulls (100.0% complete)",
+      "details": {
+        "column": "account_id",
+        "null_count": 0,
+        "completeness": 1.0
+      },
+      "timestamp": "2026-09-16T12:46:42.867541"
+    },
+    {
+      "check_name": "completeness_amount",
+      "category": "COMPLETENESS",
+      "verdict": "PASS",
+      "message": "Column 'amount': 0 nulls (100.0% complete)",
+      "details": {
+        "column": "amount",
+        "null_count": 0,
+        "completeness": 1.0
+      },
+      "timestamp": "2026-09-16T12:46:42.867740"
+    },
+    {
+      "check_name": "uniqueness_transaction_id",
+      "category": "UNIQUENESS",
+      "verdict": "PASS",
+      "message": "Column 'transaction_id': all values unique",
+      "details": {
+        "column": "transaction_id",
+        "duplicate_count": 0
+      },
+      "timestamp": "2026-09-16T12:46:42.879319"
+    },
+    {
+      "check_name": "uniqueness_reference_number",
+      "category": "UNIQUENESS",
+      "verdict": "PASS",
+      "message": "Column 'reference_number': all values unique",
+      "details": {
+        "column": "reference_number",
+        "duplicate_count": 0
+      },
+      "timestamp": "2026-09-16T12:46:42.888687"
+    },
+    {
+      "check_name": "uniqueness_duplicate_rows",
+      "category": "UNIQUENESS",
+      "verdict": "PASS",
+      "message": "Duplicate rows: 0 (0.00%)",
+      "details": {
+        "duplicate_rows": 0,
+        "duplicate_rate": 0.0,
+        "threshold": 0.005
+      },
+      "timestamp": "2026-09-16T12:46:42.962472"
+    },
+    {
+      "check_name": "volume_row_count",
+      "category": "VOLUME",
+      "verdict": "PASS",
+      "message": "Row count 45,730 within range [1,000, 1,000,000]",
+      "details": {
+        "row_count": 45730,
+        "min_rows": 1000,
+        "max_rows": 1000000
+      },
+      "timestamp": "2026-09-16T12:46:42.962492"
+    },
+    {
+      "check_name": "validity_transaction_id_pattern",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'transaction_id': all values match pattern",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:42.988009"
+    },
+    {
+      "check_name": "validity_customer_id_pattern",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'customer_id': all values match pattern",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:43.006419"
+    },
+    {
+      "check_name": "validity_account_id_pattern",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'account_id': all values match pattern",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:43.024468"
+    },
+    {
+      "check_name": "validity_amount_range",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'amount': all values within range",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:43.025187"
+    },
+    {
+      "check_name": "validity_currency_allowed",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'currency': all values in allowed set",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:43.028212"
+    },
+    {
+      "check_name": "validity_transaction_date_date_range",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'transaction_date': all dates valid and in range",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:43.040913"
+    },
+    {
+      "check_name": "validity_transaction_time_pattern",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'transaction_time': all values match pattern",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:43.062682"
+    },
+    {
+      "check_name": "validity_transaction_type_allowed",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'transaction_type': all values in allowed set",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:43.066100"
+    },
+    {
+      "check_name": "validity_channel_allowed",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'channel': all values in allowed set",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:43.071406"
+    },
+    {
+      "check_name": "validity_status_allowed",
+      "category": "VALIDITY",
+      "verdict": "PASS",
+      "message": "Column 'status': all values in allowed set",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:43.074992"
+    },
+    {
+      "check_name": "fk_customer_id_to_customers",
+      "category": "CONSISTENCY",
+      "verdict": "PASS",
+      "message": "FK 'customer_id' \u2192 'customers.customer_id': all references valid",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:43.080774"
+    },
+    {
+      "check_name": "fk_account_id_to_accounts",
+      "category": "CONSISTENCY",
+      "verdict": "PASS",
+      "message": "FK 'account_id' \u2192 'accounts.account_id': all references valid",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:43.085639"
+    },
+    {
+      "check_name": "statistical_amount_outliers",
+      "category": "STATISTICAL",
+      "verdict": "PASS",
+      "message": "Column 'amount': 0 outliers detected (0.00%)",
+      "details": {
+        "z_score_outliers": 0,
+        "iqr_outliers": 0,
+        "outlier_rate": 0.0,
+        "mean": 3772.45,
+        "std": 5028.55
+      },
+      "timestamp": "2026-09-16T12:46:43.089125"
+    },
+    {
+      "check_name": "freshness_age",
+      "category": "FRESHNESS",
+      "verdict": "PASS",
+      "message": "Data age: 0.0 hours (max: 24 hours)",
+      "details": {
+        "age_hours": 0.0,
+        "max_age_hours": 24
+      },
+      "timestamp": "2026-09-16T12:46:43.089158"
+    }
+  ]
+}

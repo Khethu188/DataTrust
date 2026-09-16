@@ -1,0 +1,16 @@
+customer_id,first_name,last_name,id_number,date_of_birth,gender,email,phone,province,city,registration_date,customer_segment,kyc_status,risk_rating,is_active,_quarantine_reason
+C0890,Zanele,Petersen,1010120975082.0,1987-06-22,M,zanele_petersen114@gmail.com,27714600370.0,KwaZulu-Natal,Pietermaritzburg,2019-02-08,CORPORATE,VERIFIED,MEDIUM,True,EXACT_DUPLICATE
+C0186,Mandla,Dlamini,8602093209081.0,1985-04-01,M,mandla.dlamini734@icloud.com,27712808009.0,KwaZulu-Natal,Ballito,2024-04-18,RETAIL,VERIFIED,MEDIUM,True,EXACT_DUPLICATE
+C0097,Mpho,Pretorius,2603026504182.0,1975-12-21,M,mpho_pretorius582@gmail.com,27832800206.0,Gauteng,Pretoria,2022-07-07,RETAIL,EXPIRED,LOW,True,EXACT_DUPLICATE
+C0642,Bongani,Mokoena,509075656082.0,2003-10-21,F,,27763977821.0,Eastern Cape,Makhanda,2026-05-19,RETAIL,VERIFIED,LOW,True,EXACT_DUPLICATE
+C0873,Thandiwe,Shabalala,2605119639187.0,1956-09-08,F,thandiweshabalala48@gmail.com,27748262031.0,KwaZulu-Natal,Durban,2023-09-30,RETAIL,VERIFIED,LOW,True,EXACT_DUPLICATE
+C0508,Naledi,Maharaj,6008222410182.0,1996-12-08,F,naledimaharaj681@hotmail.com,27656094327.0,North West,Mahikeng,2025-12-02,RETAIL,VERIFIED,LOW,True,EXACT_DUPLICATE
+C0073,Mpho,Radebe,1301138224183.0,1984-08-23,M,mpho.radebe29@outlook.com,27712662338.0,North West,Mahikeng,2022-07-09,PREMIUM,VERIFIED,LOW,True,EXACT_DUPLICATE
+C0152,Mthunzi,Govender,501119783080.0,1975-03-16,M,mthunzigovender367@icloud.com,27824905100.0,Northern Cape,Upington,2018-07-31,RETAIL,VERIFIED,LOW,True,EXACT_DUPLICATE
+C0123,Thandiwe,Chauke,6605088366087.0,1983-07-26,F,thandiwechauke603@icloud.com,27793529080.0,Limpopo,Tzaneen,2022-09-26,CORPORATE,VERIFIED,LOW,False,EXACT_DUPLICATE
+C0958,Tshepo,Zulu,303261249184.0,1995-11-17,M,tshepozulu158@outlook.com,27747998722.0,Western Cape,Stellenbosch,2026-03-15,CORPORATE,VERIFIED,LOW,True,EXACT_DUPLICATE
+C0134,Sandile,Cele,2401021631180.0,1961-02-23,M,sandile_cele1@icloud.com,27744394336.0,North West,Mahikeng,2017-12-16,PRIVATE_WEALTH,VERIFIED,MEDIUM,True,EXACT_DUPLICATE
+C0732,Thandiwe,Maharaj,604152436080.0,1957-02-16,M,thandiwe.maharaj152@hotmail.com,27638531631.0,Eastern Cape,East London,2017-10-30,RETAIL,VERIFIED,MEDIUM,True,EXACT_DUPLICATE
+C0066,Mthunzi,Van der Merwe,2006057205087.0,1989-09-03,F,mthunzivandermerwe58@outlook.com,27729511700.0,North West,Mahikeng,2016-08-30,RETAIL,VERIFIED,LOW,True,EXACT_DUPLICATE
+C0256,Sibusiso,Zwane,7012242024081.0,1990-04-26,F,sibusisozwane725@gmail.com,27739584338.0,North West,Rustenburg,2018-08-02,RETAIL,VERIFIED,MEDIUM,False,EXACT_DUPLICATE
+C0455,Thandiwe,Williams,,1990-11-10,F,thandiwe.williams304@outlook.com,27682998223.0,Free State,Bloemfontein,2018-11-02,RETAIL,VERIFIED,LOW,True,EXACT_DUPLICATE

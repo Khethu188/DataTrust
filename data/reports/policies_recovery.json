@@ -1,0 +1,76 @@
+{
+  "dataset": "policies",
+  "rows_before": 800,
+  "rows_after": 784,
+  "quarantined_rows": 16,
+  "recovery_rate": 98.0,
+  "total_actions": 6,
+  "total_rows_fixed": 81,
+  "duration_seconds": 0.064126,
+  "actions": [
+    {
+      "action_type": "NULL_IMPUTATION",
+      "column": "customer_id",
+      "description": "Filled 16 nulls in 'customer_id'",
+      "rows_affected": 16,
+      "strategy": "UNKNOWN",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.442835"
+    },
+    {
+      "action_type": "NULL_IMPUTATION",
+      "column": "premium_amount",
+      "description": "Filled 16 nulls in 'premium_amount'",
+      "rows_affected": 16,
+      "strategy": "median (2975.19)",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.457514"
+    },
+    {
+      "action_type": "NEGATIVE_AMOUNT_FIX",
+      "column": "premium_amount",
+      "description": "Converted 20 negative values to absolute in 'premium_amount'",
+      "rows_affected": 20,
+      "strategy": "absolute_value",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.467739"
+    },
+    {
+      "action_type": "OUTLIER_CAPPING",
+      "column": "premium_amount",
+      "description": "Capped 9 outliers in 'premium_amount' to [0.01, 27,521.42]",
+      "rows_affected": 9,
+      "strategy": "iqr_winsorization",
+      "details": {
+        "lower_bound": 0.01,
+        "upper_bound": 27521.42,
+        "capped_below": 0,
+        "capped_above": 9
+      },
+      "timestamp": "2026-09-16T12:46:41.471439"
+    },
+    {
+      "action_type": "OUTLIER_CAPPING",
+      "column": "cover_amount",
+      "description": "Capped 4 outliers in 'cover_amount' to [1,000.00, 4,789,704.66]",
+      "rows_affected": 4,
+      "strategy": "iqr_winsorization",
+      "details": {
+        "lower_bound": 1000.0,
+        "upper_bound": 4789704.66,
+        "capped_below": 0,
+        "capped_above": 4
+      },
+      "timestamp": "2026-09-16T12:46:41.474317"
+    },
+    {
+      "action_type": "FOREIGN_KEY_QUARANTINE",
+      "column": "customer_id",
+      "description": "Quarantined 16 records with broken FK 'customer_id' -> 'customers.customer_id'",
+      "rows_affected": 16,
+      "strategy": "quarantine_orphans",
+      "details": {},
+      "timestamp": "2026-09-16T12:46:41.501695"
+    }
+  ]
+}
