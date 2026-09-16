@@ -11,7 +11,7 @@ class TestRecoveryEngine:
         df = make_customers(100)
         df.loc[0:9, "province"] = None
         mode_val = df["province"].mode().iloc[0]
-        df["province"].fillna(mode_val, inplace=True)
+        df["province"] = df["province"].fillna(mode_val)
         assert df["province"].isnull().sum() == 0
 
     def test_duplicate_removal(self):
