@@ -80,7 +80,7 @@ jobs:
           push: false
           tags: datatrust:latest
 
-   smoke-test:
+  smoke-test:
     name: Pipeline Smoke Test
     runs-on: ubuntu-latest
     needs: docker
