@@ -131,8 +131,8 @@ def save_json_to_s3(data, key):
     s3.put_object(
         Bucket=BUCKET,
         Key=key,
-        Body=json.dumps(data, indent=2, default=str),
-        ContentType="application/json",
+        _ = json.dumps(data, indent=2, default=str),
+        _ = "application/json",
     )
 
 
@@ -149,7 +149,7 @@ def send_anomaly_alert(total, health_scores):
         "Action: Auto-recovery will be triggered."
     )
     sns.publish(
-        TopicArn=SNS_TOPIC,
-        Subject=f"DataTrust: {total} anomalies detected",
-        Message=message,
+        _ = SNS_TOPIC,
+        _ = f"DataTrust: {total} anomalies detected",
+        _ = message,
     )

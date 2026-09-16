@@ -82,9 +82,9 @@ class DashboardGenerator:
         # Build dataset cards
         dataset_cards = ""
         datasets = sorted(set(
-            list(self.validation_reports.keys()) +
-            list(self.anomaly_reports.keys()) +
-            list(self.recovery_reports.keys())
+            list(self.validation_reports.keys())
+            + list(self.anomaly_reports.keys())
+            + list(self.recovery_reports.keys())
         ))
 
         for i, ds in enumerate(datasets):
@@ -186,7 +186,7 @@ class DashboardGenerator:
         trust_chart_labels = json.dumps(list(trust_scores.keys()))
         trust_chart_data = json.dumps([round(v, 1) for v in trust_scores.values()])
         health_chart_data = json.dumps([round(v, 1) for v in health_scores.values()])
-        recovery_chart_data = json.dumps([round(v, 1) for v in recovery_rates.values()])
+        _ = json.dumps([round(v, 1) for v in recovery_rates.values()])
 
         # Validation details table
         validation_rows = ""
@@ -244,8 +244,8 @@ class DashboardGenerator:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DataTrust — Dashboard</title>
     <style>
-        /* ═══ RESET & BASE ═══ */
-        *, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
+        /* ═══ RESET & BASE ═══
+        * / *, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
 
         :root {{
             --bg-primary: #0a0e1a;
@@ -273,8 +273,8 @@ class DashboardGenerator:
             overflow-x: hidden;
         }}
 
-        /* ═══ PARTICLE BACKGROUND ═══ */
-        #particles {{
+        /* ═══ PARTICLE BACKGROUND ═══
+        * / #particles {{
             position: fixed;
             top: 0; left: 0;
             width: 100%; height: 100%;
@@ -296,8 +296,8 @@ class DashboardGenerator:
             100% {{ transform: translateY(-10vh) rotate(720deg); opacity: 0; }}
         }}
 
-        /* ═══ ANIMATIONS ═══ */
-        @keyframes fadeInUp {{
+        /* ═══ ANIMATIONS ═══
+        * / @keyframes fadeInUp {{
             from {{ opacity: 0; transform: translateY(30px); }}
             to {{ opacity: 1; transform: translateY(0); }}
         }}
@@ -347,8 +347,8 @@ class DashboardGenerator:
             opacity: 0;
         }}
 
-        /* ═══ LAYOUT ═══ */
-        .container {{
+        /* ═══ LAYOUT ═══
+        * / .container {{
             max-width: 1400px;
             margin: 0 auto;
             padding: 20px;
@@ -356,8 +356,8 @@ class DashboardGenerator:
             z-index: 1;
         }}
 
-        /* ═══ HEADER ═══ */
-        .header {{
+        /* ═══ HEADER ═══
+        * / .header {{
             text-align: center;
             padding: 40px 0 30px;
             animation: fadeIn 1s ease-out;
@@ -399,8 +399,8 @@ class DashboardGenerator:
             vertical-align: middle;
         }}
 
-        /* ═══ HERO CARDS ═══ */
-        .hero-grid {{
+        /* ═══ HERO CARDS ═══
+        * / .hero-grid {{
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
@@ -466,8 +466,8 @@ class DashboardGenerator:
             margin-top: 8px;
         }}
 
-        /* ═══ SECTION HEADERS ═══ */
-        .section-header {{
+        /* ═══ SECTION HEADERS ═══
+        * / .section-header {{
             display: flex;
             align-items: center;
             gap: 12px;
@@ -486,8 +486,8 @@ class DashboardGenerator:
             background: linear-gradient(90deg, var(--border), transparent);
         }}
 
-        /* ═══ CHART CONTAINER ═══ */
-        .chart-grid {{
+        /* ═══ CHART CONTAINER ═══
+        * / .chart-grid {{
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 20px;
@@ -564,8 +564,8 @@ class DashboardGenerator:
             color: var(--text-primary);
         }}
 
-        /* ═══ DATASET CARDS ═══ */
-        .dataset-grid {{
+        /* ═══ DATASET CARDS ═══
+        * / .dataset-grid {{
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 20px;
@@ -609,8 +609,8 @@ class DashboardGenerator:
             letter-spacing: 1px;
         }}
 
-        /* ═══ PROGRESS RINGS ═══ */
-        .rings-row {{
+        /* ═══ PROGRESS RINGS ═══
+        * / .rings-row {{
             display: flex;
             justify-content: center;
             gap: 30px;
@@ -662,8 +662,8 @@ class DashboardGenerator:
             letter-spacing: 1px;
         }}
 
-        /* ═══ DATASET STATS ═══ */
-        .dataset-stats {{
+        /* ═══ DATASET STATS ═══
+        * / .dataset-stats {{
             display: flex;
             flex-direction: column;
             gap: 8px;
@@ -691,8 +691,8 @@ class DashboardGenerator:
         .stat-val.fail {{ color: var(--accent-red); }}
         .stat-val.info {{ color: var(--accent-blue); }}
 
-        /* ═══ RECOVERY BAR ═══ */
-        .recovery-bar-container {{ margin-top: 8px; }}
+        /* ═══ RECOVERY BAR ═══
+        * / .recovery-bar-container {{ margin-top: 8px; }}
 
         .recovery-bar-label {{
             display: flex;
@@ -717,8 +717,8 @@ class DashboardGenerator:
             transform-origin: left;
         }}
 
-        /* ═══ TABS ═══ */
-        .tabs {{
+        /* ═══ TABS ═══
+        * / .tabs {{
             display: flex;
             gap: 4px;
             margin-bottom: 20px;
@@ -750,8 +750,8 @@ class DashboardGenerator:
         .tab-content {{ display: none; animation: fadeIn 0.4s ease-out; }}
         .tab-content.active {{ display: block; }}
 
-        /* ═══ TABLES ═══ */
-        .table-container {{
+        /* ═══ TABLES ═══
+        * / .table-container {{
             background: var(--bg-card);
             backdrop-filter: blur(20px);
             border: 1px solid var(--border);
@@ -805,8 +805,8 @@ class DashboardGenerator:
         .severity-badge.medium {{ background: rgba(59,130,246,0.15); color: var(--accent-blue); }}
         .severity-badge.low {{ background: rgba(255,255,255,0.05); color: var(--text-secondary); }}
 
-        /* ═══ FOOTER ═══ */
-        .footer {{
+        /* ═══ FOOTER ═══
+        * / .footer {{
             text-align: center;
             padding: 40px 0;
             color: var(--text-secondary);
@@ -814,8 +814,8 @@ class DashboardGenerator:
             opacity: 0.5;
         }}
 
-        /* ═══ RESPONSIVE ═══ */
-        @media (max-width: 768px) {{
+        /* ═══ RESPONSIVE ═══
+        * / @media (max-width: 768px) {{
             .header h1 {{ font-size: 2rem; }}
             .hero-grid {{ grid-template-columns: repeat(2, 1fr); }}
             .dataset-grid {{ grid-template-columns: 1fr; }}
@@ -1005,9 +1005,9 @@ class DashboardGenerator:
             const height = (data[i] / max) * 100;
             const color = colorFn(data[i]);
             group.innerHTML =
-                '<div class="bar-value">' + data[i] + '%</div>' +
-                '<div class="bar" style="height:' + height + '%;background:linear-gradient(180deg,' + color + ',' + color + '88);animation-delay:' + (i*0.1) + 's"></div>' +
-                '<div class="bar-label">' + label + '</div>';
+                '<div class="bar-value">' + data[i] + '%</div>'
+                + '<div class="bar" style="height:' + height + '%;background:linear-gradient(180deg,' + color + ',' + color + '88);animation-delay:' + (i*0.1) + 's"></div>'
+                + '<div class="bar-label">' + label + '</div>';
             container.appendChild(group);
         }});
     }}

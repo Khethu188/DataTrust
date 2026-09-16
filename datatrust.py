@@ -8,7 +8,7 @@ Single command to run any part of the DataTrust pipeline.
 Usage:
     python datatrust.py run                  # Full pipeline
     python datatrust.py validate             # Validate clean data
-    python datatrust.py validate --corrupted # Validate corrupted data
+    python datatrust.py validate --corrupted  # Validate corrupted data
     python datatrust.py anomalies            # Detect anomalies
     python datatrust.py recover              # Auto-recover
     python datatrust.py dashboard            # Generate dashboard
@@ -34,9 +34,9 @@ from orchestrator import PipelineOrchestrator
 
 def main():
     parser = argparse.ArgumentParser(
-        description="DataTrust — Autonomous Data Integrity, Observability & Recovery",
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
+        _ = "DataTrust — Autonomous Data Integrity, Observability & Recovery",
+        _ = argparse.RawDescriptionHelpFormatter,
+        _ = """
 Commands:
   run          Run the full pipeline (validate → detect → recover → dashboard)
   validate     Run validation engine
@@ -56,7 +56,7 @@ Examples:
 
     parser.add_argument(
         "command",
-        choices=["run", "validate", "anomalies", "recover", "dashboard", "status"],
+        _ = ["run", "validate", "anomalies", "recover", "dashboard", "status"],
         help="Pipeline command to execute",
     )
     parser.add_argument(

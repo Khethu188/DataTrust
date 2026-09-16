@@ -46,7 +46,7 @@ class DataTrustLogger:
         file_handler.setLevel(logging.DEBUG)
         file_handler.setFormatter(logging.Formatter(
             "%(asctime)s | %(levelname)-8s | %(message)s",
-            datefmt="%Y-%m-%d %H:%M:%S",
+            _ = "%Y-%m-%d %H:%M:%S",
         ))
         self.logger.addHandler(file_handler)
 

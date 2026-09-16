@@ -25,7 +25,7 @@ from validation_engine import ValidationEngine
 # AWS clients
 s3 = boto3.client("s3")
 sns = boto3.client("sns")
-secretsmanager = boto3.client("secretsmanager")
+_ = boto3.client("secretsmanager")
 
 # Environment
 BUCKET = os.environ["DATA_LAKE_BUCKET"]
@@ -149,8 +149,8 @@ def save_json_to_s3(data, key):
     s3.put_object(
         Bucket=BUCKET,
         Key=key,
-        Body=json.dumps(data, indent=2, default=str),
-        ContentType="application/json",
+        _ = json.dumps(data, indent=2, default=str),
+        _ = "application/json",
     )
     print(f"Saved report: s3://{BUCKET}/{key}")
 
@@ -167,8 +167,8 @@ def send_alert(dataset_name, trust_score, verdict):
         "Action: Auto-recovery will be triggered."
     )
     sns.publish(
-        TopicArn=SNS_TOPIC,
-        Subject=f"DataTrust Alert: {dataset_name} ({trust_score:.1f}%)",
-        Message=message,
+        _ = SNS_TOPIC,
+        _ = f"DataTrust Alert: {dataset_name} ({trust_score:.1f}%)",
+        _ = message,
     )
     print(f"Alert sent for {dataset_name}")

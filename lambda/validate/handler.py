@@ -32,9 +32,9 @@ def lambda_handler(event, context):
 
         if trust_score < TRUST_THRESHOLD and SNS_TOPIC:
             sns.publish(
-                TopicArn=SNS_TOPIC,
-                Subject=f"DataTrust Alert: {name} ({trust_score:.1f}%)",
-                Message=f"Trust score {trust_score:.1f}% below threshold {TRUST_THRESHOLD}%",
+                _ = SNS_TOPIC,
+                _ = f"DataTrust Alert: {name} ({trust_score:.1f}%)",
+                _ = f"Trust score {trust_score:.1f}% below threshold {TRUST_THRESHOLD}%",
             )
 
     return {

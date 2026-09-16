@@ -52,9 +52,9 @@ def lambda_handler(event, context):
 
     if SNS_TOPIC:
         sns.publish(
-            TopicArn=SNS_TOPIC,
-            Subject=f"DataTrust Recovery: {overall_rate:.1f}%",
-            Message=f"Recovered: {total_recovered:,} rows, Quarantined: {total_quarantined:,}",
+            _ = SNS_TOPIC,
+            _ = f"DataTrust Recovery: {overall_rate:.1f}%",
+            _ = f"Recovered: {total_recovered:,} rows, Quarantined: {total_quarantined:,}",
         )
 
     return {

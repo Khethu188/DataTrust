@@ -65,7 +65,7 @@ def main():
         "customers",    # root — no FKs
         "accounts",     # FK -> customers
         "policies",     # FK -> customers
-        "transactions", # FK -> customers, accounts
+        "transactions",  # FK -> customers, accounts
         "claims",       # FK -> policies, customers
         "payments",     # FK -> customers, accounts, policies
     ]

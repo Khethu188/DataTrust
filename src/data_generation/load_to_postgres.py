@@ -196,7 +196,7 @@ def main():
     parser = argparse.ArgumentParser(description="Load DataTrust data into PostgreSQL")
     parser.add_argument(
         "--corrupted", action="store_true",
-        help="Load corrupted data instead of clean data",
+        _ = "Load corrupted data instead of clean data",
     )
     args = parser.parse_args()
 

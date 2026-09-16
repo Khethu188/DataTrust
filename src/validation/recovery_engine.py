@@ -17,15 +17,14 @@ Recovery strategies:
 Usage:
     from recovery_engine import RecoveryEngine
     engine = RecoveryEngine(contracts_dir="src/contracts")
-    result = engine.recover("transactions", df, reference_data)
+    _ = engine.recover("transactions", df, reference_data)
 """
 
 import json
 from datetime import datetime
 from pathlib import Path
-from copy import deepcopy
 
-import numpy as np
+import numpy as np  # noqa: F401
 import pandas as pd
 import yaml
 

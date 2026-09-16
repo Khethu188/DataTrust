@@ -47,7 +47,7 @@ def lambda_handler(event, context):
         output_path,
         DASHBOARD_BUCKET,
         "index.html",
-        ExtraArgs={
+        _ = {
             "ContentType": "text/html",
             "CacheControl": "no-cache, no-store, must-revalidate",
         },

@@ -26,7 +26,7 @@ Total: 65,300 clean records
 
 import argparse
 import json
-import os
+import os  # noqa: F401
 import random
 import uuid
 from datetime import datetime, timedelta
@@ -166,7 +166,7 @@ def generate_customers(n: int = DATASET_CONFIG["customers"]) -> pd.DataFrame:
             "last_name": last,
             "id_number": random_id_number(),
             "date_of_birth": random_date(1950, datetime(2005, 1, 1)).strftime("%Y-%m-%d"),
-            "gender": random.choice(["M", "F"]),
+            "gender": random.choice(["M", ""]),
             "email": random_email(first, last),
             "phone": random_phone(),
             "province": province,

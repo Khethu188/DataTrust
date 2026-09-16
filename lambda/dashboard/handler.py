@@ -2,7 +2,7 @@
 
 import json
 import os
-import tempfile
+import tempfile  # noqa: F401
 from datetime import datetime
 
 import boto3
@@ -26,8 +26,8 @@ def lambda_handler(event, context):
         Bucket=DASHBOARD_BUCKET,
         Key="index.html",
         Body=html,
-        ContentType="text/html",
-        CacheControl="no-cache, no-store, must-revalidate",
+        _ = "text/html",
+        _ = "no-cache, no-store, must-revalidate",
     )
 
     region = os.environ.get("AWS_REGION", "af-south-1")

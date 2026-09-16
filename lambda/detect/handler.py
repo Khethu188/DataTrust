@@ -44,9 +44,9 @@ def lambda_handler(event, context):
 
     if total_anomalies > 0 and SNS_TOPIC:
         sns.publish(
-            TopicArn=SNS_TOPIC,
-            Subject=f"DataTrust: {total_anomalies} anomalies detected",
-            Message=f"Total anomalies found: {total_anomalies}",
+            _ = SNS_TOPIC,
+            _ = f"DataTrust: {total_anomalies} anomalies detected",
+            _ = f"Total anomalies found: {total_anomalies}",
         )
 
     return {

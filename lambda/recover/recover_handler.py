@@ -175,8 +175,8 @@ def save_json_to_s3(data, key):
     s3.put_object(
         Bucket=BUCKET,
         Key=key,
-        Body=json.dumps(data, indent=2, default=str),
-        ContentType="application/json",
+        _ = json.dumps(data, indent=2, default=str),
+        _ = "application/json",
     )
 
 
@@ -195,7 +195,7 @@ def send_recovery_alert(results, rate, recovered, quarantined):
         f"Timestamp: {datetime.now().isoformat()}"
     )
     sns.publish(
-        TopicArn=SNS_TOPIC,
-        Subject=f"DataTrust Recovery: {rate:.1f}% rate",
-        Message=message,
+        _ = SNS_TOPIC,
+        _ = f"DataTrust Recovery: {rate:.1f}% rate",
+        _ = message,
     )

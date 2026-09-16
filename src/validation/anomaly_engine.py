@@ -10,13 +10,12 @@ Uses statistical methods (Z-score, IQR) and machine learning
 Usage:
     from anomaly_engine import AnomalyDetectionEngine
     engine = AnomalyDetectionEngine()
-    results = engine.detect_all(df_transactions, "transactions")
+    _ = engine.detect_all(df_transactions, "transactions")
 """
 
 import json
 from datetime import datetime
 from pathlib import Path
-from typing import Any
 
 import numpy as np
 import pandas as pd

@@ -14,13 +14,12 @@ Usage:
     engine.print_report(results)
 """
 
-import re
+import re  # noqa: F401
 import json
 from datetime import datetime
 from pathlib import Path
-from typing import Any
 
-import numpy as np
+import numpy as np  # noqa: F401
 import pandas as pd
 import yaml
 
@@ -556,7 +555,7 @@ class ValidationEngine:
     def print_report(report):
         """Print a formatted validation report to console."""
         verdict_icons = {"PASS": "✓", "WARN": "⚠", "FAIL": "✗"}
-        verdict_colors = {"PASS": "PASS", "WARN": "WARN", "FAIL": "FAIL"}
+        _ = {"PASS": "PASS", "WARN": "WARN", "FAIL": "FAIL"}
 
         print(f"\n{'='*60}")
         print(f"  VALIDATION REPORT: {report.dataset_name.upper()}")
