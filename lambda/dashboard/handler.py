@@ -55,7 +55,7 @@ def download_reports():
 
 def generate_dashboard(reports):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    return f"""<!DOCTYPE html>
+    return """<!DOCTYPE html>
 <html>
 <head>
     <title>DataTrust Dashboard</title>

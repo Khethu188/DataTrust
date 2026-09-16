@@ -187,7 +187,7 @@ def send_recovery_alert(results, rate, recovered, quarantined):
         for n, r in results.items()
     )
     message = (
-        f"🔧 DataTrust — Recovery Complete\n\n"
+        "🔧 DataTrust — Recovery Complete\n\n"
         f"Overall rate:  {rate:.1f}%\n"
         f"Rows recovered:    {recovered:,}\n"
         f"Rows quarantined:  {quarantined:,}\n\n"
@@ -199,4 +199,3 @@ def send_recovery_alert(results, rate, recovered, quarantined):
         Subject=f"DataTrust Recovery: {rate:.1f}% rate",
         Message=message,
     )
-

@@ -299,7 +299,7 @@ class ValidationEngine:
         quality = contract.get("quality_rules", {})
         volume = quality.get("volume", {})
         min_rows = volume.get("min_rows", 0)
-        max_rows = volume.get("max_rows", float("inf"))
+        max_rows = volume.get("max_rows", float("in"))
 
         row_count = len(df)
         if min_rows <= row_count <= max_rows:
@@ -443,7 +443,7 @@ class ValidationEngine:
                 report.add(CheckResult(
                     f"fk_{fk_col}_to_{ref_dataset}", "CONSISTENCY", "WARN",
                     f"Cannot validate FK '{fk_col}' → '{ref_dataset}.{ref_col}': "
-                    f"reference data not registered",
+                    "reference data not registered",
                 ))
                 continue
 
@@ -594,4 +594,3 @@ class ValidationEngine:
             json.dump(report.to_dict(), f, indent=2, default=str)
         print(f"  Saved report: {filepath}")
         return filepath
-

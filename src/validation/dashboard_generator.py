@@ -112,7 +112,7 @@ class DashboardGenerator:
             ts_color = "#00ff88" if ts >= 80 else "#ffaa00" if ts >= 60 else "#ff4466"
             hs_color = "#00ff88" if hs >= 80 else "#ffaa00" if hs >= 60 else "#ff4466"
 
-            dataset_cards += f"""
+            dataset_cards += """
             <div class="dataset-card" style="animation-delay: {i * 0.1}s">
                 <div class="dataset-header">
                     <h3>{ds.upper()}</h3>
@@ -195,7 +195,7 @@ class DashboardGenerator:
             for check in val.get("checks", []):
                 verdict = check.get("verdict", "N/A")
                 v_class = "pass" if verdict == "PASS" else "fail" if verdict == "FAIL" else "warn"
-                validation_rows += f"""
+                validation_rows += """
                 <tr>
                     <td>{ds}</td>
                     <td>{check.get("check_name", "N/A")}</td>
@@ -210,7 +210,7 @@ class DashboardGenerator:
             for a in anom.get("anomalies", []):
                 sev = a.get("severity", "LOW")
                 s_class = sev.lower()
-                anomaly_rows += f"""
+                anomaly_rows += """
                 <tr>
                     <td>{ds}</td>
                     <td>{a.get("anomaly_type", "N/A")}</td>
@@ -225,7 +225,7 @@ class DashboardGenerator:
         for ds in datasets:
             rec = self.recovery_reports.get(ds, {})
             for action in rec.get("actions", []):
-                recovery_rows += f"""
+                recovery_rows += """
                 <tr>
                     <td>{ds}</td>
                     <td>{action.get("action_type", "N/A")}</td>
@@ -237,7 +237,7 @@ class DashboardGenerator:
 
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-        html = f"""<!DOCTYPE html>
+        html = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -1056,4 +1056,3 @@ if __name__ == "__main__":
     gen = DashboardGenerator()
     gen.generate()
     print("Open data/dashboard/index.html in your browser")
-

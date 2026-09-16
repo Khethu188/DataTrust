@@ -89,4 +89,3 @@ def download_reports():
                 print(f"Downloaded: {filename}")
 
     return tmpdir
-

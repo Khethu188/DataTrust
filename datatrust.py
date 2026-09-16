@@ -92,7 +92,7 @@ Examples:
         orchestrator = PipelineOrchestrator(config_path=args.config)
     except FileNotFoundError:
         print(f"  ERROR: Config file not found: {args.config}")
-        print(f"  Make sure config.yaml exists in the project root.")
+        print("  Make sure config.yaml exists in the project root.")
         sys.exit(1)
 
     # Route commands
@@ -128,7 +128,7 @@ Examples:
                 subprocess.run(["open", dashboard_path])
             else:
                 subprocess.run(["xdg-open", dashboard_path])
-            print(f"\n  Opened dashboard in browser!")
+            print("\n  Opened dashboard in browser!")
 
     elif args.command == "status":
         orchestrator.run_status()
@@ -138,4 +138,3 @@ Examples:
 
 if __name__ == "__main__":
     main()
-

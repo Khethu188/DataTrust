@@ -158,13 +158,13 @@ def save_json_to_s3(data, key):
 def send_alert(dataset_name, trust_score, verdict):
     """Send SNS alert for low trust score."""
     message = (
-        f"⚠️ DataTrust Alert — Low Trust Score\n\n"
+        "⚠️ DataTrust Alert — Low Trust Score\n\n"
         f"Dataset:     {dataset_name}\n"
         f"Trust Score: {trust_score:.1f}%\n"
         f"Verdict:     {verdict}\n"
         f"Threshold:   {TRUST_THRESHOLD}%\n"
         f"Timestamp:   {datetime.now().isoformat()}\n\n"
-        f"Action: Auto-recovery will be triggered."
+        "Action: Auto-recovery will be triggered."
     )
     sns.publish(
         TopicArn=SNS_TOPIC,
@@ -172,4 +172,3 @@ def send_alert(dataset_name, trust_score, verdict):
         Message=message,
     )
     print(f"Alert sent for {dataset_name}")
-

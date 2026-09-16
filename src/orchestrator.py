@@ -262,14 +262,14 @@ class PipelineOrchestrator:
             anom_reports = list(reports_path.glob("*_anomalies.json"))
             rec_reports = list(reports_path.glob("*_recovery.json"))
 
-            self.log.info(f"\n  Reports:")
+            self.log.info("\n  Reports:")
             self.log.info(f"    Validation:  {len(val_reports)}")
             self.log.info(f"    Anomaly:     {len(anom_reports)}")
             self.log.info(f"    Recovery:    {len(rec_reports)}")
 
             # Show latest trust scores
             if val_reports:
-                self.log.info(f"\n  Latest Trust Scores:")
+                self.log.info("\n  Latest Trust Scores:")
                 for f in sorted(val_reports):
                     with open(f) as fh:
                         data = json.load(fh)
@@ -285,7 +285,7 @@ class PipelineOrchestrator:
             self.log.info(f"\n  Dashboard: {dashboard_path}")
             self.log.info(f"    Last updated: {mod_time.strftime('%Y-%m-%d %H:%M:%S')}")
         else:
-            self.log.warning(f"\n  Dashboard not generated yet")
+            self.log.warning("\n  Dashboard not generated yet")
 
         self.log.separator()
 
@@ -305,4 +305,3 @@ class _StageTimer:
         duration = time.time() - self.start
         self.orchestrator.stage_times[self.stage_name] = duration
         self.orchestrator.log.info(f"  Stage '{self.stage_name}' completed in {duration:.1f}s")
-

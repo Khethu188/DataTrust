@@ -100,4 +100,3 @@ def sample_policies(sample_customers):
         "end_date": pd.date_range("2024-01-01", periods=50, freq="7D").strftime("%Y-%m-%d"),
         "status": np.random.choice(["active", "lapsed", "cancelled", "expired"], 50),
     })
-

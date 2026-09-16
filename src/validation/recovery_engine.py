@@ -645,4 +645,3 @@ class RecoveryEngine:
             json.dump(report.to_dict(), f, indent=2, default=str)
         print(f"  Saved report: {filepath}")
         return filepath
-

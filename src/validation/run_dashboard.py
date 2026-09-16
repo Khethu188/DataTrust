@@ -52,7 +52,7 @@ def main():
         print(f"    - {f.name}")
 
     # Generate dashboard
-    print(f"\n  Generating dashboard...")
+    print("\n  Generating dashboard...")
     generator = DashboardGenerator(reports_dir=args.reports_dir)
 
     print(f"  Validation reports: {len(generator.validation_reports)}")
@@ -61,7 +61,7 @@ def main():
 
     output_path = generator.generate(args.output)
 
-    print(f"\n  Dashboard ready!")
+    print("\n  Dashboard ready!")
     print(f"  Open in browser: {output_path.resolve()}")
 
     # Auto-open in browser
@@ -82,4 +82,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

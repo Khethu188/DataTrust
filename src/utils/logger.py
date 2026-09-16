@@ -94,4 +94,3 @@ class DataTrustLogger:
 
     def separator(self):
         self.logger.info("-" * 60)
-

@@ -164,4 +164,3 @@ class TestRecoveryEngine:
         recovered, quarantine, report = engine.recover("test", df)
         assert report is not None
         assert len(recovered) == 0
-

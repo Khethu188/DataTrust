@@ -121,7 +121,7 @@ def main():
     quarantine_dir = Path("data/quarantine")
     quarantine_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"\nSaving quarantined records...")
+    print("\nSaving quarantined records...")
     total_quarantined = 0
     for name, df in all_quarantine.items():
         filepath = quarantine_dir / f"{name}_quarantine.csv"
@@ -206,4 +206,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

@@ -106,4 +106,3 @@ class TestValidationEngine:
         report = engine.validate("customers", df, datetime.now())
         assert report is not None
         assert report.trust_score is not None
-

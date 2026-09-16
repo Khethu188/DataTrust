@@ -165,4 +165,3 @@ class TestAnomalyDetectionEngine:
         assert "health_score" in d
         assert "summary" in d
         assert "anomalies" in d
-

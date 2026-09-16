@@ -142,15 +142,14 @@ def send_anomaly_alert(total, health_scores):
         f"  {name}: {score:.1f}%" for name, score in health_scores.items()
     )
     message = (
-        f"🔍 DataTrust — Anomalies Detected\n\n"
+        "🔍 DataTrust — Anomalies Detected\n\n"
         f"Total anomalies: {total}\n\n"
         f"Health Scores:\n{scores_text}\n\n"
         f"Timestamp: {datetime.now().isoformat()}\n"
-        f"Action: Auto-recovery will be triggered."
+        "Action: Auto-recovery will be triggered."
     )
     sns.publish(
         TopicArn=SNS_TOPIC,
         Subject=f"DataTrust: {total} anomalies detected",
         Message=message,
     )
-
