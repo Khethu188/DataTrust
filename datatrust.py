@@ -34,9 +34,9 @@ from orchestrator import PipelineOrchestrator
 
 def main():
     parser = argparse.ArgumentParser(
-        _ = "DataTrust — Autonomous Data Integrity, Observability & Recovery",
-        _ = argparse.RawDescriptionHelpFormatter,
-        _ = """
+        description="DataTrust — Autonomous Data Integrity, Observability & Recovery",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
 Commands:
   run          Run the full pipeline (validate → detect → recover → dashboard)
   validate     Run validation engine
@@ -54,9 +54,10 @@ Examples:
         """,
     )
 
+
     parser.add_argument(
         "command",
-        _ = ["run", "validate", "anomalies", "recover", "dashboard", "status"],
+        choices=["run", "validate", "anomalies", "recover", "dashboard", "status"],
         help="Pipeline command to execute",
     )
     parser.add_argument(
